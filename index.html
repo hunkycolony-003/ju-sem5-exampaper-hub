@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ExamPaper Hub — 2023 Programmable Logic & Microcontroller</title>
+  
+  <!-- Tailwind CSS CDN with Typography plugin -->
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <!-- KaTeX for rendering equations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+  <!-- Marked for Markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- Highlight.js for code blocks -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark-dimmed.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    .paper-font {
+      font-family: 'Crimson Pro', Georgia, serif;
+    }
+    .mono-font {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Print Paper Texture & Watermark */
+    .exam-paper-sheet {
+      background-color: #ffffff;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+      position: relative;
+    }
+    .exam-paper-sheet::before {
+      content: "JU • ELECTRICAL ENGG";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-30deg);
+      font-size: 4rem;
+      font-weight: 800;
+      color: rgba(226, 232, 240, 0.35);
+      letter-spacing: 0.15em;
+      pointer-events: none;
+      z-index: 0;
+      white-space: nowrap;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+
+    /* Drawer Transition */
+    .drawer-overlay {
+      transition: opacity 0.25s ease-in-out;
+    }
+    .drawer-panel {
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* High-Readability Exam Solution Styling */
+    .solution-prose {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #1e293b;
+    }
+    .solution-prose h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 2px solid #e2e8f0;
+    }
+    .solution-prose h4 {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: #1e3a8a;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .solution-prose p {
+      margin-bottom: 1rem;
+    }
+    .solution-prose ul {
+      list-style-type: disc;
+      padding-left: 1.35rem;
+      margin-bottom: 1rem;
+      space-y: 0.4rem;
+    }
+    .solution-prose ol {
+      list-style-type: decimal;
+      padding-left: 1.35rem;
+      margin-bottom: 1rem;
+      space-y: 0.4rem;
+    }
+    .solution-prose li {
+      margin-bottom: 0.35rem;
+    }
+    .solution-prose table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      margin-bottom: 1.25rem;
+      font-size: 0.88rem;
+    }
+    .solution-prose th {
+      background-color: #f1f5f9;
+      color: #0f172a;
+      font-weight: 700;
+      text-align: left;
+      padding: 8px 12px;
+      border: 1px solid #cbd5e1;
+    }
+    .solution-prose td {
+      padding: 8px 12px;
+      border: 1px solid #e2e8f0;
+      color: #334155;
+    }
+    .solution-prose tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+    .solution-prose hr {
+      border: 0;
+      border-top: 1px dashed #cbd5e1;
+      margin: 1.5rem 0;
+    }
+    .katex-display {
+      margin: 1rem 0 !important;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 6px 0;
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col">
+
+  <!-- TOP NAVIGATION BAR -->
+  <header class="bg-slate-900 text-white sticky top-0 z-40 shadow-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-9 h-9 rounded-lg bg-indigo-600 flex items-center justify-center font-bold text-white shadow-inner">
+          <i data-lucide="book-open-check" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <div class="flex items-center space-x-2">
+            <span class="font-bold tracking-tight text-base sm:text-lg">JU Sem-5 Study Hub</span>
+            <span class="bg-indigo-500/20 text-indigo-300 text-xs px-2 py-0.5 rounded font-mono font-medium border border-indigo-500/30">Verified Solutions</span>
+          </div>
+          <p class="text-xs text-slate-400 hidden sm:block">Exam-Ready Model Answers • Direct Slide References • DeepSeek AI</p>
+        </div>
+      </div>
+
+      <!-- Controls & Status -->
+      <div class="flex items-center space-x-3">
+        <!-- Progress Pills -->
+        <div class="hidden md:flex items-center space-x-2 bg-slate-800/80 px-3 py-1.5 rounded-full border border-slate-700/60 text-xs">
+          <span class="flex items-center text-emerald-400 font-medium">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 mr-1.5"></span>
+            <span id="stat-solved">0</span> Mastered
+          </span>
+          <span class="text-slate-600">|</span>
+          <span class="flex items-center text-amber-400 font-medium">
+            <span class="w-2 h-2 rounded-full bg-amber-400 mr-1.5"></span>
+            <span id="stat-review">0</span> Review
+          </span>
+          <span class="text-slate-600">|</span>
+          <span class="text-slate-400">Total: 14 Qs</span>
+        </div>
+
+        <!-- DeepSeek API Quick Config Toggle -->
+        <button id="btn-api-settings" onclick="openApiModal()" class="flex items-center space-x-1.5 px-3 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-xs font-medium text-slate-200 transition">
+          <i data-lucide="key" class="w-3.5 h-3.5 text-amber-400"></i>
+          <span>DeepSeek API</span>
+        </button>
+
+        <a href="#quick-guide" onclick="showHelpToast()" class="p-2 text-slate-400 hover:text-white transition" title="Instructions">
+          <i data-lucide="help-circle" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SUBHEADER / FILTER TOOLBAR -->
+  <div class="bg-white border-b border-slate-200 sticky top-16 z-30 shadow-sm">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+      <!-- Subject Switcher / Paper Info -->
+      <div class="flex items-center space-x-3">
+        <span class="text-xs uppercase font-bold tracking-wider text-slate-500 bg-slate-100 px-2.5 py-1 rounded border border-slate-200">Subject</span>
+        <select id="subject-selector" class="text-sm font-semibold text-slate-800 bg-white border border-slate-300 rounded-md py-1 px-2.5 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer">
+          <option selected>EE/PC/B/T/316: Programmable Logic & Microcontroller (2023)</option>
+          <option disabled>1. Power System Planning & Design (Coming next)</option>
+          <option disabled>3. Electrical Machine - III (Coming next)</option>
+          <option disabled>4. Linear Control System (Coming next)</option>
+          <option disabled>5. Power Electronics (Coming next)</option>
+          <option disabled>Stats & Probabilistic Methods (Coming next)</option>
+        </select>
+      </div>
+
+      <!-- Paper Year & Section Filter -->
+      <div class="flex items-center space-x-2">
+        <div class="inline-flex rounded-lg border border-slate-200 p-0.5 bg-slate-50 text-xs">
+          <button id="btn-all" onclick="filterSection('all')" class="px-3 py-1 rounded-md font-semibold bg-white text-indigo-700 shadow-sm transition">All Questions (14)</button>
+          <button id="btn-p1" onclick="filterSection('part_1')" class="px-3 py-1 rounded-md text-slate-600 hover:text-slate-900 transition">Part I (PLD & VHDL)</button>
+          <button id="btn-p2" onclick="filterSection('part_2')" class="px-3 py-1 rounded-md text-slate-600 hover:text-slate-900 transition">Part II (Microcontroller)</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="flex-1 max-w-5xl w-full mx-auto p-4 sm:p-6 lg:p-8">
+
+    <!-- INSTRUCTION BANNER -->
+    <div class="mb-6 p-4 rounded-xl bg-gradient-to-r from-indigo-50 via-sky-50 to-emerald-50 border border-indigo-100/80 shadow-sm flex items-start space-x-3">
+      <div class="p-2 rounded-lg bg-indigo-600 text-white mt-0.5 shadow-sm">
+        <i data-lucide="sparkles" class="w-4 h-4"></i>
+      </div>
+      <div class="text-xs sm:text-sm text-slate-700 flex-1">
+        <p class="font-semibold text-slate-900 mb-0.5">Exam Preparation Mode Active:</p>
+        <p class="text-slate-600">The questions below replicate the exact 2023 semester examination. Tap on any question to view its <strong class="text-indigo-700 font-medium">exam-ready model answer (directly writable in your answer script)</strong>, official professor slide citations, and interactive DeepSeek AI tutor!</p>
+      </div>
+    </div>
+
+    <!-- EXAM PAPER REPLICA SHEET -->
+    <div class="exam-paper-sheet rounded-2xl border border-slate-300/80 p-6 sm:p-10 lg:p-12 mb-16 relative">
+      
+      <!-- PAPER HEADER (Standard University Typography) -->
+      <div class="text-center border-b-2 border-slate-900 pb-6 mb-8 relative z-10">
+        <p class="text-xs uppercase tracking-widest text-slate-600 font-mono font-bold mb-1">Ref No: EE/PC/B/T/316/2023</p>
+        <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 uppercase font-serif">
+          Jadavpur University
+        </h1>
+        <p class="text-sm font-semibold text-slate-700 mt-0.5 font-serif">
+          B.E. Electrical Engineering 3rd Year 1st Semester Examination, 2023
+        </p>
+        <h2 class="text-lg sm:text-xl font-bold text-slate-900 tracking-wide mt-2 uppercase font-serif">
+          Subject: Programmable Logic & Microcontroller
+        </h2>
+
+        <div class="flex items-center justify-between text-xs sm:text-sm font-medium text-slate-700 mt-4 px-2 sm:px-6 pt-3 border-t border-slate-200">
+          <span><strong>Full Marks:</strong> 100</span>
+          <span><strong>Time:</strong> Three Hours</span>
+          <span class="text-indigo-900 bg-indigo-50 border border-indigo-200 px-2 py-0.5 rounded font-medium">50 Marks each Part</span>
+        </div>
+        <p class="text-xs italic text-slate-500 mt-2 font-serif">
+          * Use a separate Answer-Script for each part.
+        </p>
+      </div>
+
+      <!-- QUESTIONS CONTAINER (Rendered Dynamically via JS) -->
+      <div id="paper-sections" class="relative z-10 space-y-10">
+        <!-- Rendered by JavaScript -->
+      </div>
+
+      <!-- PAPER FOOTER / END MARK -->
+      <div class="mt-12 pt-6 border-t border-dashed border-slate-300 text-center text-xs text-slate-400 font-serif relative z-10">
+        — [ END OF QUESTION PAPER — TOTAL 14 QUESTIONS ] —
+      </div>
+    </div>
+  </main>
+
+  <!-- QUESTION DETAILS & DEEPSEEK DRAWER (SIDE MODAL) -->
+  <div id="drawer-container" class="fixed inset-0 z-50 pointer-events-none transition-all">
+    <!-- Backdrop Overlay -->
+    <div id="drawer-backdrop" onclick="closeDrawer()" class="drawer-overlay fixed inset-0 bg-slate-900/60 backdrop-blur-sm opacity-0 pointer-events-none"></div>
+
+    <!-- Drawer Panel (Expansive 780px wide for crystal clear math & tables) -->
+    <div id="drawer-panel" class="drawer-panel fixed top-0 right-0 bottom-0 w-full sm:w-[680px] md:w-[780px] lg:w-[840px] bg-white shadow-2xl flex flex-col z-50 pointer-events-auto translate-x-full border-l border-slate-200">
+      
+      <!-- Drawer Header -->
+      <div class="px-6 py-4 bg-slate-900 text-white flex items-center justify-between border-b border-slate-800">
+        <div class="flex items-center space-x-2.5">
+          <span id="drawer-q-badge" class="bg-indigo-600 text-white text-xs font-mono font-bold px-2 py-1 rounded">Q1</span>
+          <div>
+            <h3 id="drawer-q-title" class="font-bold text-sm sm:text-base text-white truncate max-w-sm sm:max-w-md">Problem Title</h3>
+            <p id="drawer-q-meta" class="text-xs text-slate-400">10 Marks • Module 1</p>
+          </div>
+        </div>
+        <div class="flex items-center space-x-2">
+          <!-- Confidence Status Buttons -->
+          <div class="inline-flex rounded-lg bg-slate-800 p-0.5 border border-slate-700 text-xs">
+            <button id="btn-mark-solved" onclick="toggleStatus('mastered')" class="px-2.5 py-1 rounded text-slate-400 hover:text-emerald-400 font-medium transition flex items-center space-x-1" title="Mark as Mastered">
+              <i data-lucide="check-circle" class="w-4 h-4"></i>
+              <span class="text-[11px] hidden sm:inline">Mastered</span>
+            </button>
+            <button id="btn-mark-review" onclick="toggleStatus('review')" class="px-2.5 py-1 rounded text-slate-400 hover:text-amber-400 font-medium transition flex items-center space-x-1" title="Mark for Review">
+              <i data-lucide="bookmark" class="w-4 h-4"></i>
+              <span class="text-[11px] hidden sm:inline">Review</span>
+            </button>
+          </div>
+          <button onclick="closeDrawer()" class="p-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 transition">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Drawer Tabs: Solution vs Ask DeepSeek -->
+      <div class="flex border-b border-slate-200 bg-slate-50 px-6 pt-2">
+        <button id="tab-sol-btn" onclick="switchDrawerTab('solution')" class="py-2.5 px-4 font-semibold text-xs border-b-2 border-indigo-600 text-indigo-600 flex items-center space-x-1.5">
+          <i data-lucide="file-check-2" class="w-4 h-4"></i>
+          <span>Exam-Ready Solution & Note Excerpt</span>
+        </button>
+        <button id="tab-ai-btn" onclick="switchDrawerTab('ai')" class="py-2.5 px-4 font-semibold text-xs border-b-2 border-transparent text-slate-500 hover:text-slate-700 flex items-center space-x-1.5">
+          <i data-lucide="bot" class="w-4 h-4 text-indigo-500"></i>
+          <span>Ask DeepSeek AI</span>
+          <span class="bg-indigo-100 text-indigo-700 text-[10px] px-1.5 py-0.2 rounded-full font-bold">Tutor</span>
+        </button>
+      </div>
+
+      <!-- Drawer Body Content -->
+      <div class="flex-1 overflow-y-auto p-6 space-y-6">
+
+        <!-- TAB 1: SOLUTION VIEW -->
+        <div id="tab-sol-content" class="space-y-6">
+          
+          <!-- Question Statement Card -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 text-sm font-medium">
+            <div class="flex items-center justify-between text-xs text-slate-500 font-mono mb-2">
+              <span class="font-bold text-slate-600">EXAM QUESTION STATEMENT:</span>
+              <span id="drawer-statement-marks" class="font-bold text-indigo-700 bg-indigo-50 border border-indigo-200 px-2 py-0.5 rounded">10 Marks</span>
+            </div>
+            <p id="drawer-statement-text" class="leading-relaxed font-serif text-base text-slate-900"></p>
+          </div>
+
+          <!-- Note Mapping Reference Banner -->
+          <div class="p-4 rounded-xl bg-emerald-50/90 border border-emerald-200 text-emerald-950 text-xs sm:text-sm">
+            <div class="flex items-center justify-between font-bold text-emerald-900 mb-2.5">
+              <div class="flex items-center space-x-2">
+                <i data-lucide="compass" class="w-4 h-4 text-emerald-600"></i>
+                <span>Official Lecture Note Citation (Audited 1-to-1)</span>
+              </div>
+              <span id="drawer-repeat-badge" class="font-mono text-xs font-bold bg-amber-100 text-amber-900 px-2.5 py-0.5 rounded border border-amber-300">
+                5x Repeat
+              </span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+              <div class="p-2.5 bg-white/90 rounded-lg border border-emerald-100 shadow-sm">
+                <span class="text-slate-500 block font-medium mb-0.5">Lecture Note PDF:</span>
+                <span id="drawer-note-file" class="font-mono font-bold text-emerald-900">Programmable_Logic_Devices.pdf</span>
+              </div>
+              <div class="p-2.5 bg-white/90 rounded-lg border border-emerald-100 shadow-sm">
+                <span class="text-slate-500 block font-medium mb-0.5">Audited Pages / Slides:</span>
+                <span id="drawer-note-pages" class="font-mono font-bold text-emerald-900">pp. 4–6</span>
+              </div>
+            </div>
+            <div class="mt-2 text-xs text-emerald-900">
+              <span class="font-semibold text-slate-700">Section: </span><span id="drawer-note-section">Basic structure of a PLD</span>
+            </div>
+            <div class="mt-1 text-xs text-emerald-900">
+              <span class="font-semibold text-slate-700">Mandatory Diagram in Notes: </span><span id="drawer-note-diagram">Fig. 1: Functional block diagram</span>
+            </div>
+          </div>
+
+          <!-- Clean Solution Body -->
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+            <div class="px-5 py-3.5 bg-slate-50/80 border-b border-slate-200 flex items-center justify-between">
+              <div class="flex items-center space-x-2">
+                <i data-lucide="check-check" class="w-4 h-4 text-emerald-600"></i>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-700">
+                  Model Exam Answer (Directly Writable in Exam)
+                </h4>
+              </div>
+              <button onclick="copySolutionText()" class="text-xs text-indigo-600 hover:text-indigo-800 font-semibold flex items-center space-x-1.5 px-2.5 py-1 bg-white border border-slate-200 rounded-md shadow-sm transition">
+                <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                <span>Copy Answer</span>
+              </button>
+            </div>
+            
+            <div id="drawer-solution-body" class="solution-prose p-6 text-slate-800 leading-relaxed overflow-x-auto">
+              <!-- Rendered LaTeX & Clean Markdown -->
+            </div>
+          </div>
+
+          <!-- Code Snippet Container (if any) -->
+          <div id="drawer-code-section" class="hidden rounded-xl border border-slate-800 overflow-hidden shadow-md">
+            <div class="px-4 py-2 bg-slate-900 text-slate-300 text-xs font-mono font-bold flex items-center justify-between border-b border-slate-800">
+              <div class="flex items-center space-x-2">
+                <i data-lucide="code" class="w-4 h-4 text-emerald-400"></i>
+                <span>Complete Embedded C / VHDL Routine</span>
+              </div>
+              <span class="text-[11px] text-slate-400">Tested on ATmega2560</span>
+            </div>
+            <pre class="p-4 bg-slate-950 overflow-x-auto text-xs mono-font"><code id="drawer-code-block" class="language-c"></code></pre>
+          </div>
+        </div>
+
+        <!-- TAB 2: LIVE DEEPSEEK AI CHAT -->
+        <div id="tab-ai-content" class="hidden flex flex-col h-full space-y-4">
+          <div class="bg-indigo-50/70 border border-indigo-100 p-3.5 rounded-lg text-xs text-slate-600 flex items-start space-x-2.5">
+            <i data-lucide="info" class="w-4 h-4 text-indigo-600 mt-0.5 shrink-0"></i>
+            <div>
+              <p class="font-semibold text-slate-800">Contextual Tutor Mode Active</p>
+              <p>DeepSeek is pre-loaded with this exact exam question and your professor's lecture note excerpt. Ask for step-by-step intuitive explanations, alternate derivations, or common pitfalls.</p>
+            </div>
+          </div>
+
+          <!-- Chat Conversation Log -->
+          <div id="chat-messages" class="space-y-3 min-h-[300px] max-h-[400px] overflow-y-auto p-4 bg-slate-50 rounded-xl border border-slate-200">
+            <!-- Initial AI Welcome -->
+            <div class="flex items-start space-x-2">
+              <div class="w-7 h-7 rounded-full bg-indigo-600 text-white flex items-center justify-center shrink-0 text-xs font-bold shadow-sm">AI</div>
+              <div class="p-3.5 bg-white rounded-xl border border-slate-200 text-xs leading-relaxed text-slate-800 shadow-sm max-w-[88%]">
+                Hello! I am ready to help you with this question. Ask me anything or tap one of these common exam queries:
+                <div class="mt-3 space-y-1.5">
+                  <button onclick="sendQuickPrompt('Explain this in very simple terms for 10 marks')" class="block text-left text-indigo-600 hover:underline">👉 "Explain this in very simple terms for 10 marks"</button>
+                  <button onclick="sendQuickPrompt('What are common mistakes students make in this question?')" class="block text-left text-indigo-600 hover:underline">👉 "What are common mistakes students make in this question?"</button>
+                  <button onclick="sendQuickPrompt('Provide a quick numerical or code variation for practice')" class="block text-left text-indigo-600 hover:underline">👉 "Provide a quick numerical or code variation for practice"</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chat Input Bar -->
+          <div class="pt-2">
+            <div class="flex space-x-2">
+              <input type="text" id="chat-input" placeholder="Ask DeepSeek about this question..." class="flex-1 text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm" onkeydown="if(event.key==='Enter') sendMessage()" />
+              <button id="chat-send-btn" onclick="sendMessage()" class="px-4 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-semibold flex items-center space-x-1 shadow transition">
+                <span>Send</span>
+                <i data-lucide="send" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+            <p class="text-[10px] text-slate-400 mt-1.5 flex items-center justify-between">
+              <span>DeepSeek-V3 / DeepSeek-R1 API Powered</span>
+              <span id="api-status-badge" class="text-amber-600 font-mono">Simulated Demo Mode (Add key in top bar)</span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Drawer Footer -->
+      <div class="px-6 py-3 bg-slate-50 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500">
+        <span class="mono-font font-bold text-slate-700" id="drawer-footer-id">2023-P1-Q1</span>
+        <div class="flex space-x-2">
+          <button onclick="navigateQuestion(-1)" class="px-3 py-1.5 text-slate-600 hover:text-slate-900 border border-slate-300 rounded-lg font-medium transition flex items-center space-x-1">
+            <i data-lucide="chevron-left" class="w-3.5 h-3.5"></i>
+            <span>Prev Question</span>
+          </button>
+          <button onclick="navigateQuestion(1)" class="px-3 py-1.5 text-slate-600 hover:text-slate-900 border border-slate-300 rounded-lg font-medium transition flex items-center space-x-1">
+            <span>Next Question</span>
+            <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEEPSEEK API KEY MODAL -->
+  <div id="api-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl border border-slate-200">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center space-x-2">
+          <div class="p-2 bg-indigo-100 text-indigo-700 rounded-lg">
+            <i data-lucide="key" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-base text-slate-900">DeepSeek API Configuration</h3>
+        </div>
+        <button onclick="closeApiModal()" class="text-slate-400 hover:text-slate-600">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+        To enable real-time queries for your study group, enter your DeepSeek API key below. It will be stored locally in your browser's <code class="mono-font bg-slate-100 px-1 py-0.5 rounded text-indigo-600">localStorage</code> and never sent to external servers.
+      </p>
+
+      <div class="space-y-3">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">DeepSeek API Key:</label>
+          <input type="password" id="input-api-key" placeholder="sk-..." class="w-full text-xs mono-font px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Selected Model:</label>
+          <select id="input-api-model" class="w-full text-xs px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <option value="deepseek-chat">deepseek-chat (DeepSeek-V3: Ultra-fast & Economical)</option>
+            <option value="deepseek-reasoner">deepseek-reasoner (DeepSeek-R1: Deep Chain-of-Thought for Derivations)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mt-6 flex justify-end space-x-2">
+        <button onclick="closeApiModal()" class="px-4 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-100 rounded-lg transition">Cancel</button>
+        <button onclick="saveApiKey()" class="px-4 py-2 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg shadow transition">Save Key</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- APPLICATION JAVASCRIPT LOGIC -->
+  <script>
+    let paperData = null;
+    let activeQuestion = null;
+    let flatQuestions = [];
+    let activeQuestionIndex = 0;
+    let currentFilter = 'all';
+
+    // Local Storage for Mastered/Review tracking
+    let userProgress = JSON.parse(localStorage.getItem('ju_sem5_progress') || '{}');
+
+    async function loadPaperData() {
+      try {
+        const response = await fetch('data/paper_2023.json');
+        paperData = await response.json();
+        
+        // Flatten questions for easy navigation
+        flatQuestions = [];
+        paperData.parts.forEach(part => {
+          part.questions.forEach(q => {
+            flatQuestions.push({ ...q, part_title: part.title, part_id: part.part_id });
+          });
+        });
+
+        renderPaper();
+        updateProgressCounters();
+      } catch (err) {
+        console.error('Failed to load paper data:', err);
+      }
+    }
+
+    function renderPaper() {
+      const container = document.getElementById('paper-sections');
+      container.innerHTML = '';
+
+      paperData.parts.forEach((part, partIndex) => {
+        if (currentFilter !== 'all' && currentFilter !== part.part_id) return;
+
+        const partSection = document.createElement('div');
+        partSection.className = 'border-b border-slate-200 pb-8';
+
+        // Part Header
+        const partHeader = document.createElement('div');
+        partHeader.className = 'flex flex-col sm:flex-row sm:items-center justify-between pb-3 mb-6 border-b border-slate-900 gap-2';
+        partHeader.innerHTML = `
+          <div>
+            <span class="text-xs font-mono font-bold uppercase tracking-wider text-indigo-700 bg-indigo-50 border border-indigo-200 px-2 py-0.5 rounded">
+              Part ${partIndex + 1}
+            </span>
+            <h3 class="text-lg font-bold text-slate-900 mt-1 uppercase font-serif tracking-wide">${part.title}</h3>
+          </div>
+          <div class="text-xs text-right text-slate-600 italic font-serif">
+            ${part.instructions}
+          </div>
+        `;
+        partSection.appendChild(partHeader);
+
+        // Questions List
+        const questionsList = document.createElement('div');
+        questionsList.className = 'space-y-6';
+
+        part.questions.forEach((q, qIndex) => {
+          const status = userProgress[q.id] || 'unsolved';
+          
+          let statusBadgeHtml = '';
+          if (status === 'mastered') {
+            statusBadgeHtml = `<span class="inline-flex items-center text-[10px] font-bold text-emerald-700 bg-emerald-100 border border-emerald-300 px-2 py-0.5 rounded"><i data-lucide="check" class="w-3 h-3 mr-1"></i> Mastered</span>`;
+          } else if (status === 'review') {
+            statusBadgeHtml = `<span class="inline-flex items-center text-[10px] font-bold text-amber-700 bg-amber-100 border border-amber-300 px-2 py-0.5 rounded"><i data-lucide="bookmark" class="w-3 h-3 mr-1"></i> Review</span>`;
+          }
+
+          const qCard = document.createElement('div');
+          qCard.id = `card-${q.id}`;
+          qCard.className = `group p-4 sm:p-5 rounded-xl border transition-all duration-200 cursor-pointer bg-white hover:bg-slate-50/80 hover:shadow-md ${
+            status === 'mastered' ? 'border-emerald-300 bg-emerald-50/20' : status === 'review' ? 'border-amber-300 bg-amber-50/20' : 'border-slate-200 hover:border-indigo-300'
+          }`;
+          qCard.onclick = () => openDrawer(q.id);
+
+          qCard.innerHTML = `
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex items-start space-x-3.5">
+                <span class="w-7 h-7 rounded-lg bg-slate-900 text-white font-bold text-xs flex items-center justify-center shrink-0 font-serif shadow-sm group-hover:bg-indigo-600 transition">
+                  ${q.q_num}
+                </span>
+                <div>
+                  <div class="flex flex-wrap items-center gap-2 mb-2">
+                    <span class="text-xs font-mono font-semibold text-slate-500">${q.marks}</span>
+                    <span class="text-[11px] font-mono px-2 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200 font-medium">
+                      ★ ${q.repeat_tag}
+                    </span>
+                    <span class="text-[11px] font-mono px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 border border-slate-200">
+                      ${q.module.split(':')[0]}
+                    </span>
+                    ${statusBadgeHtml}
+                  </div>
+                  <p class="text-sm sm:text-base text-slate-800 font-serif leading-relaxed whitespace-pre-line group-hover:text-slate-900">
+                    ${q.text}
+                  </p>
+                </div>
+              </div>
+              <div class="shrink-0 pt-1">
+                <button class="px-3 py-1.5 rounded-lg bg-indigo-50 group-hover:bg-indigo-600 text-indigo-700 group-hover:text-white text-xs font-semibold flex items-center space-x-1.5 transition shadow-sm">
+                  <span>View Answer</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Note Reference Snippet Preview -->
+            <div class="mt-3.5 pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between text-xs text-slate-500 gap-2">
+              <div class="flex items-center space-x-1.5 text-emerald-700 font-medium">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+                <span>Notes: <strong class="font-mono text-slate-700">${q.note_ref.pdf_file}</strong> (${q.note_ref.pages})</span>
+              </div>
+              <div class="text-[11px] text-slate-400 italic">
+                Tap to reveal exam solution & AI tutor
+              </div>
+            </div>
+          `;
+          questionsList.appendChild(qCard);
+        });
+
+        partSection.appendChild(questionsList);
+        container.appendChild(partSection);
+      });
+
+      lucide.createIcons();
+    }
+
+    function openDrawer(qId) {
+      activeQuestion = flatQuestions.find(q => q.id === qId);
+      activeQuestionIndex = flatQuestions.findIndex(q => q.id === qId);
+      if (!activeQuestion) return;
+
+      // Populate Header & Metas
+      document.getElementById('drawer-q-badge').textContent = `Q${activeQuestion.q_num}`;
+      document.getElementById('drawer-q-title').textContent = activeQuestion.module;
+      document.getElementById('drawer-q-meta').textContent = `${activeQuestion.marks} • ${activeQuestion.part_title}`;
+      document.getElementById('drawer-statement-marks').textContent = activeQuestion.marks;
+      document.getElementById('drawer-statement-text').textContent = activeQuestion.text;
+
+      // Note pointer info
+      document.getElementById('drawer-note-file').textContent = activeQuestion.note_ref.pdf_file;
+      document.getElementById('drawer-note-pages').textContent = activeQuestion.note_ref.pages;
+      document.getElementById('drawer-note-section').textContent = activeQuestion.note_ref.section;
+      document.getElementById('drawer-note-diagram').textContent = activeQuestion.note_ref.verified_diagram;
+      document.getElementById('drawer-repeat-badge').textContent = activeQuestion.repeat_tag;
+      document.getElementById('drawer-footer-id').textContent = activeQuestion.id;
+
+      // Render Markdown / LaTeX Solution
+      const solutionContainer = document.getElementById('drawer-solution-body');
+      solutionContainer.innerHTML = marked.parse(activeQuestion.solution);
+      
+      // KaTeX Auto-render with full delimiters
+      renderMathInElement(solutionContainer, {
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '$', right: '$', display: false },
+          { left: '\\[', right: '\\]', display: true },
+          { left: '\\(', right: '\\)', display: false }
+        ],
+        throwOnError: false
+      });
+
+      // Code Block
+      const codeSection = document.getElementById('drawer-code-section');
+      const codeBlock = document.getElementById('drawer-code-block');
+      if (activeQuestion.code) {
+        codeSection.classList.remove('hidden');
+        codeBlock.textContent = activeQuestion.code;
+        hljs.highlightElement(codeBlock);
+      } else {
+        codeSection.classList.add('hidden');
+      }
+
+      // Update status button highlight
+      updateDrawerStatusHighlight();
+
+      // Show Drawer
+      const backdrop = document.getElementById('drawer-backdrop');
+      const panel = document.getElementById('drawer-panel');
+      backdrop.classList.remove('opacity-0', 'pointer-events-none');
+      backdrop.classList.add('opacity-100', 'pointer-events-auto');
+      panel.classList.remove('translate-x-full');
+
+      // Reset to solution tab
+      switchDrawerTab('solution');
+      lucide.createIcons();
+    }
+
+    function closeDrawer() {
+      const backdrop = document.getElementById('drawer-backdrop');
+      const panel = document.getElementById('drawer-panel');
+      backdrop.classList.remove('opacity-100', 'pointer-events-auto');
+      backdrop.classList.add('opacity-0', 'pointer-events-none');
+      panel.classList.add('translate-x-full');
+    }
+
+    function navigateQuestion(offset) {
+      let nextIndex = activeQuestionIndex + offset;
+      if (nextIndex < 0) nextIndex = flatQuestions.length - 1;
+      if (nextIndex >= flatQuestions.length) nextIndex = 0;
+      openDrawer(flatQuestions[nextIndex].id);
+    }
+
+    function switchDrawerTab(tab) {
+      const solBtn = document.getElementById('tab-sol-btn');
+      const aiBtn = document.getElementById('tab-ai-btn');
+      const solContent = document.getElementById('tab-sol-content');
+      const aiContent = document.getElementById('tab-ai-content');
+
+      if (tab === 'solution') {
+        solBtn.className = "py-2.5 px-4 font-semibold text-xs border-b-2 border-indigo-600 text-indigo-600 flex items-center space-x-1.5";
+        aiBtn.className = "py-2.5 px-4 font-semibold text-xs border-b-2 border-transparent text-slate-500 hover:text-slate-700 flex items-center space-x-1.5";
+        solContent.classList.remove('hidden');
+        aiContent.classList.add('hidden');
+      } else {
+        aiBtn.className = "py-2.5 px-4 font-semibold text-xs border-b-2 border-indigo-600 text-indigo-600 flex items-center space-x-1.5";
+        solBtn.className = "py-2.5 px-4 font-semibold text-xs border-b-2 border-transparent text-slate-500 hover:text-slate-700 flex items-center space-x-1.5";
+        solContent.classList.add('hidden');
+        aiContent.classList.remove('hidden');
+      }
+      lucide.createIcons();
+    }
+
+    function toggleStatus(type) {
+      if (!activeQuestion) return;
+      const current = userProgress[activeQuestion.id];
+      if (current === type) {
+        delete userProgress[activeQuestion.id];
+      } else {
+        userProgress[activeQuestion.id] = type;
+      }
+      localStorage.setItem('ju_sem5_progress', JSON.stringify(userProgress));
+      updateProgressCounters();
+      updateDrawerStatusHighlight();
+      renderPaper();
+    }
+
+    function updateDrawerStatusHighlight() {
+      if (!activeQuestion) return;
+      const st = userProgress[activeQuestion.id];
+      const btnSolved = document.getElementById('btn-mark-solved');
+      const btnReview = document.getElementById('btn-mark-review');
+
+      btnSolved.className = `px-2.5 py-1 rounded font-medium transition flex items-center space-x-1 ${st === 'mastered' ? 'bg-emerald-600 text-white' : 'text-slate-400 hover:text-emerald-400'}`;
+      btnReview.className = `px-2.5 py-1 rounded font-medium transition flex items-center space-x-1 ${st === 'review' ? 'bg-amber-600 text-white' : 'text-slate-400 hover:text-amber-400'}`;
+    }
+
+    function updateProgressCounters() {
+      let mastered = 0;
+      let review = 0;
+      Object.values(userProgress).forEach(v => {
+        if (v === 'mastered') mastered++;
+        if (v === 'review') review++;
+      });
+      document.getElementById('stat-solved').textContent = mastered;
+      document.getElementById('stat-review').textContent = review;
+    }
+
+    function filterSection(filter) {
+      currentFilter = filter;
+      document.getElementById('btn-all').className = filter === 'all' ? 'px-3 py-1 rounded-md font-semibold bg-white text-indigo-700 shadow-sm transition' : 'px-3 py-1 rounded-md text-slate-600 hover:text-slate-900 transition';
+      document.getElementById('btn-p1').className = filter === 'part_1' ? 'px-3 py-1 rounded-md font-semibold bg-white text-indigo-700 shadow-sm transition' : 'px-3 py-1 rounded-md text-slate-600 hover:text-slate-900 transition';
+      document.getElementById('btn-p2').className = filter === 'part_2' ? 'px-3 py-1 rounded-md font-semibold bg-white text-indigo-700 shadow-sm transition' : 'px-3 py-1 rounded-md text-slate-600 hover:text-slate-900 transition';
+      renderPaper();
+    }
+
+    function showHelpToast() {
+      alert("Semester Exam Hub Prototype:\n• Page replica preserves actual paper structure.\n• Click any question to reveal solutions and exact note page citations.\n• Chat with DeepSeek AI to clarify derivations.\n• Mark questions as Mastered or Review to track syllabus prep.");
+    }
+
+    function copySolutionText() {
+      if (!activeQuestion) return;
+      navigator.clipboard.writeText(activeQuestion.solution);
+      alert("Exam solution copied to clipboard!");
+    }
+
+    // DEEPSEEK CHAT SIMULATION & LIVE API CALL
+    async function sendMessage() {
+      const input = document.getElementById('chat-input');
+      const text = input.value.trim();
+      if (!text || !activeQuestion) return;
+
+      appendChatMessage('User', text, true);
+      input.value = '';
+
+      const apiKey = localStorage.getItem('deepseek_api_key');
+      const selectedModel = localStorage.getItem('deepseek_model') || 'deepseek-chat';
+
+      if (!apiKey) {
+        setTimeout(() => {
+          let simulatedAnswer = "";
+          if (text.toLowerCase().includes("simple") || text.toLowerCase().includes("easy")) {
+            simulatedAnswer = `**In Simple Terms:**\nFor **${activeQuestion.id}**, focus on 3 core ideas:\n1. **The Core Principle:** Refer to ${activeQuestion.note_ref.pdf_file} (${activeQuestion.note_ref.pages}). Make sure to state the working mechanism in 2 bullet points.\n2. **Neat Schematic:** Never skip drawing ${activeQuestion.note_ref.verified_diagram} — professors award 40% of marks directly for proper pin and block labels.\n3. **Key Equation/Registers:** State all control registers and their default reset bits.`;
+          } else if (text.toLowerCase().includes("mistake")) {
+            simulatedAnswer = `**Common Student Pitfalls:**\n1. Forgetting to state initial clock assumptions (e.g. 16 MHz vs 12 MHz).\n2. Confusing active-high vs active-low logic for pull-up pins.\n3. Omitting the exact register bit configurations in the diagram.`;
+          } else {
+            simulatedAnswer = `**DeepSeek Technical Analysis:**\nRegarding **${activeQuestion.text.slice(0, 50)}...**:\n\n* **Note Context:** This is directly addressed in **${activeQuestion.note_ref.pdf_file}** (${activeQuestion.note_ref.section}).\n* **Key takeaway for exam:** Ensure you write down the algebraic equations or C syntax cleanly. Would you like a step-by-step breakdown of the timing diagram or bit manipulation?`;
+          }
+          appendChatMessage('DeepSeek', simulatedAnswer, false);
+        }, 600);
+      } else {
+        try {
+          const loadingMsg = appendChatMessage('DeepSeek', 'Thinking...', false);
+          
+          const systemPrompt = `You are an expert Electrical Engineering Professor tutoring students for their Jadavpur University semester examinations.
+Current Subject: EE/PC/B/T/316 Programmable Logic & Microcontroller.
+Current Question: "${activeQuestion.text}"
+Marks: ${activeQuestion.marks}
+Official Note Reference: ${activeQuestion.note_ref.pdf_file}, Pages: ${activeQuestion.note_ref.pages}, Section: ${activeQuestion.note_ref.section}.
+Official Solution Excerpt: ${activeQuestion.solution}
+
+Provide precise, mathematically rigorous, and exam-focused responses formatted in clean markdown and LaTeX.`;
+
+          const res = await fetch('https://api.deepseek.com/chat/completions', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${apiKey}`
+            },
+            body: JSON.stringify({
+              model: selectedModel,
+              messages: [
+                { role: 'system', content: systemPrompt },
+                { role: 'user', content: text }
+              ]
+            })
+          });
+
+          const data = await res.json();
+          if (data.choices && data.choices[0]) {
+            loadingMsg.innerHTML = marked.parse(data.choices[0].message.content);
+            renderMathInElement(loadingMsg, { throwOnError: false });
+          } else {
+            loadingMsg.textContent = 'Error from DeepSeek API: ' + (data.error ? data.error.message : 'Unknown response');
+          }
+        } catch (err) {
+          console.error(err);
+          appendChatMessage('DeepSeek', 'Network error connecting to DeepSeek API. Please check your key or internet connection.', false);
+        }
+      }
+    }
+
+    function sendQuickPrompt(promptText) {
+      document.getElementById('chat-input').value = promptText;
+      sendMessage();
+    }
+
+    function appendChatMessage(sender, content, isUser) {
+      const container = document.getElementById('chat-messages');
+      const msgDiv = document.createElement('div');
+      msgDiv.className = `flex items-start space-x-2 ${isUser ? 'justify-end' : ''}`;
+
+      if (isUser) {
+        msgDiv.innerHTML = `
+          <div class="p-3 bg-indigo-600 text-white rounded-xl text-xs leading-relaxed max-w-[85%] shadow-sm">
+            ${content}
+          </div>
+          <div class="w-7 h-7 rounded-full bg-slate-800 text-white flex items-center justify-center shrink-0 text-xs font-bold">You</div>
+        `;
+      } else {
+        msgDiv.innerHTML = `
+          <div class="w-7 h-7 rounded-full bg-indigo-600 text-white flex items-center justify-center shrink-0 text-xs font-bold shadow-sm">AI</div>
+          <div class="p-3.5 bg-white rounded-xl border border-slate-200 text-xs leading-relaxed text-slate-800 shadow-sm max-w-[85%] prose prose-xs">
+            ${marked.parse(content)}
+          </div>
+        `;
+        renderMathInElement(msgDiv, { throwOnError: false });
+      }
+
+      container.appendChild(msgDiv);
+      container.scrollTop = container.scrollHeight;
+      return msgDiv.querySelector('.prose') || msgDiv;
+    }
+
+    // API Key Modal Controls
+    function openApiModal() {
+      document.getElementById('api-modal').classList.remove('hidden');
+      document.getElementById('api-modal').classList.add('flex');
+      document.getElementById('input-api-key').value = localStorage.getItem('deepseek_api_key') || '';
+      document.getElementById('input-api-model').value = localStorage.getItem('deepseek_model') || 'deepseek-chat';
+    }
+
+    function closeApiModal() {
+      document.getElementById('api-modal').classList.add('hidden');
+      document.getElementById('api-modal').classList.remove('flex');
+    }
+
+    function saveApiKey() {
+      const key = document.getElementById('input-api-key').value.trim();
+      const model = document.getElementById('input-api-model').value;
+      if (key) {
+        localStorage.setItem('deepseek_api_key', key);
+        localStorage.setItem('deepseek_model', model);
+        document.getElementById('api-status-badge').textContent = `Active (${model})`;
+        document.getElementById('api-status-badge').className = "text-emerald-600 font-mono font-medium";
+        alert("DeepSeek API configuration saved successfully!");
+      } else {
+        localStorage.removeItem('deepseek_api_key');
+        document.getElementById('api-status-badge').textContent = `Simulated Demo Mode`;
+        document.getElementById('api-status-badge').className = "text-amber-600 font-mono";
+      }
+      closeApiModal();
+    }
+
+    // Initialize on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      loadPaperData();
+      const key = localStorage.getItem('deepseek_api_key');
+      const model = localStorage.getItem('deepseek_model') || 'deepseek-chat';
+      if (key) {
+        document.getElementById('api-status-badge').textContent = `Active (${model})`;
+        document.getElementById('api-status-badge').className = "text-emerald-600 font-mono font-medium";
+      }
+    });
+  </script>
+</body>
+</html>
