@@ -334,56 +334,56 @@
     <div id="drawer-backdrop" onclick="closeDrawer()" class="fixed inset-0 bg-slate-900/50 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-200"></div>
 
     <!-- Drawer Panel -->
-    <div id="drawer-panel" class="fixed top-0 right-0 bottom-0 w-full sm:w-[85vw] md:w-[75vw] lg:w-[760px] xl:w-[840px] max-w-[92vw] bg-white shadow-2xl flex flex-col z-50 pointer-events-auto translate-x-full transition-transform duration-300 border-l border-slate-200">
+    <div id="drawer-panel" class="fixed top-0 right-0 bottom-0 w-full sm:w-[85vw] sm:max-w-[600px] md:w-[75vw] md:max-w-[680px] lg:w-[65vw] lg:max-w-[760px] xl:w-[820px] bg-white shadow-2xl flex flex-col z-50 pointer-events-auto translate-x-full transition-transform duration-300 border-l border-slate-200">
       
-      <!-- Drawer Header -->
-      <div class="px-6 py-4 bg-slate-900 text-white flex items-center justify-between border-b border-slate-800 shrink-0">
-        <div class="flex items-center space-x-3">
-          <span id="drawer-q-badge" class="bg-indigo-600 text-white text-xs font-mono font-bold px-2.5 py-1 rounded">Q1</span>
-          <div>
-            <h3 id="drawer-q-title" class="font-bold text-sm sm:text-base text-white truncate max-w-sm sm:max-w-md">Problem Module</h3>
-            <p id="drawer-q-meta" class="text-xs text-slate-400">10 Marks • Part I</p>
+      <!-- Drawer Header (Responsive Mobile, Tablet, Desktop) -->
+      <div class="px-4 sm:px-6 py-3 sm:py-4 bg-slate-900 text-white flex items-center justify-between border-b border-slate-800 shrink-0 gap-2">
+        <div class="flex items-center space-x-2 sm:space-x-3 min-w-0">
+          <span id="drawer-q-badge" class="bg-indigo-600 text-white text-xs font-mono font-bold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded shrink-0">Q1</span>
+          <div class="min-w-0">
+            <h3 id="drawer-q-title" class="font-bold text-xs sm:text-base text-white truncate max-w-[130px] sm:max-w-xs md:max-w-md">Problem Module</h3>
+            <p id="drawer-q-meta" class="text-[10px] sm:text-xs text-slate-400 truncate">10 Marks • Part I</p>
           </div>
         </div>
 
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-1.5 sm:space-x-2 shrink-0">
           <!-- Confidence Status Selector in Drawer -->
-          <div class="inline-flex rounded-lg bg-slate-800 p-0.5 border border-slate-700 text-xs">
-            <button id="drawer-btn-mastered" onclick="setDrawerStatus('mastered')" class="status-btn px-2.5 py-1 rounded text-slate-400 hover:text-emerald-400 font-medium flex items-center space-x-1" title="Mark as Mastered">
+          <div class="inline-flex rounded-lg bg-slate-800 p-0.5 border border-slate-700 text-[11px] sm:text-xs">
+            <button id="drawer-btn-mastered" onclick="setDrawerStatus('mastered')" class="status-btn px-2 sm:px-2.5 py-1 rounded text-slate-400 hover:text-emerald-400 font-medium flex items-center space-x-1" title="Mark as Mastered">
               <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-              <span>Mastered</span>
+              <span class="hidden sm:inline">Mastered</span>
             </button>
-            <button id="drawer-btn-review" onclick="setDrawerStatus('review')" class="status-btn px-2.5 py-1 rounded text-slate-400 hover:text-amber-400 font-medium flex items-center space-x-1" title="Mark for Review">
+            <button id="drawer-btn-review" onclick="setDrawerStatus('review')" class="status-btn px-2 sm:px-2.5 py-1 rounded text-slate-400 hover:text-amber-400 font-medium flex items-center space-x-1" title="Mark for Review">
               <span class="w-2 h-2 rounded-full bg-amber-400"></span>
-              <span>Review</span>
+              <span class="hidden sm:inline">Review</span>
             </button>
-            <button id="drawer-btn-unsolved" onclick="setDrawerStatus('unsolved')" class="status-btn px-2.5 py-1 rounded text-slate-400 hover:text-slate-200 font-medium flex items-center space-x-1" title="Mark as Unsolved">
+            <button id="drawer-btn-unsolved" onclick="setDrawerStatus('unsolved')" class="status-btn px-2 sm:px-2.5 py-1 rounded text-slate-400 hover:text-slate-200 font-medium flex items-center space-x-1" title="Mark as Unsolved">
               <span class="w-2 h-2 rounded-full bg-slate-400"></span>
-              <span>Unsolved</span>
+              <span class="hidden sm:inline">Reset</span>
             </button>
           </div>
           
-          <button onclick="closeDrawer()" class="p-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 transition" title="Close Drawer">
+          <button onclick="closeDrawer()" class="p-1 sm:p-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 transition" title="Close Drawer">
             <i data-lucide="x" class="w-5 h-5"></i>
           </button>
         </div>
       </div>
 
-      <!-- Drawer Tabs: Solution vs DeepSeek -->
-      <div class="flex border-b border-slate-200 bg-slate-50 px-6 pt-2 shrink-0">
-        <button id="tab-sol-btn" onclick="switchDrawerTab('solution')" class="py-2.5 px-4 font-semibold text-xs border-b-2 border-indigo-600 text-indigo-600 flex items-center space-x-1.5">
-          <i data-lucide="file-check-2" class="w-4 h-4"></i>
-          <span>Exam-Ready Model Answer & Slide Reference</span>
+      <!-- Drawer Tabs: Solution vs DeepSeek (Mobile & Tablet Adaptive) -->
+      <div class="flex border-b border-slate-200 bg-slate-50 px-3 sm:px-6 pt-1.5 sm:pt-2 shrink-0 gap-1">
+        <button id="tab-sol-btn" onclick="switchDrawerTab('solution')" class="py-2 sm:py-2.5 px-2.5 sm:px-4 font-semibold text-xs border-b-2 border-indigo-600 text-indigo-600 flex items-center space-x-1 sm:space-x-1.5">
+          <i data-lucide="file-check-2" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+          <span><span class="hidden sm:inline">Exam-Ready </span>Solution<span class="hidden md:inline"> & Slide Ref</span></span>
         </button>
-        <button id="tab-ai-btn" onclick="switchDrawerTab('ai')" class="py-2.5 px-4 font-semibold text-xs border-b-2 border-transparent text-slate-500 hover:text-slate-700 flex items-center space-x-1.5">
-          <i data-lucide="bot" class="w-4 h-4 text-indigo-500"></i>
-          <span>Ask DeepSeek AI Tutor</span>
-          <span class="bg-indigo-100 text-indigo-700 text-[10px] px-1.5 py-0.2 rounded-full font-bold">Interactive</span>
+        <button id="tab-ai-btn" onclick="switchDrawerTab('ai')" class="py-2 sm:py-2.5 px-2.5 sm:px-4 font-semibold text-xs border-b-2 border-transparent text-slate-500 hover:text-slate-700 flex items-center space-x-1 sm:space-x-1.5">
+          <i data-lucide="bot" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-500"></i>
+          <span>Ask DeepSeek<span class="hidden md:inline"> AI</span></span>
+          <span class="bg-indigo-100 text-indigo-700 text-[9px] sm:text-[10px] px-1.5 py-0.2 rounded-full font-bold">AI</span>
         </button>
       </div>
 
       <!-- Drawer Body -->
-      <div class="flex-1 overflow-y-auto p-6 space-y-6">
+      <div class="flex-1 overflow-y-auto p-3.5 sm:p-6 space-y-4 sm:space-y-6">
 
         <!-- TAB 1: SOLUTION VIEW -->
         <div id="tab-sol-content" class="space-y-6">
@@ -502,15 +502,15 @@
 
       </div>
 
-      <!-- Drawer Footer Navigation -->
-      <div class="px-6 py-3 bg-slate-50 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500 shrink-0">
-        <span class="mono-font font-bold text-slate-700" id="drawer-footer-id">2023-P1-Q1</span>
-        <div class="flex space-x-2">
-          <button onclick="navigateQuestion(-1)" class="px-3 py-1.5 text-slate-600 hover:text-slate-900 border border-slate-300 rounded-lg font-medium transition flex items-center space-x-1">
+      <!-- Drawer Footer Navigation (Responsive) -->
+      <div class="px-4 sm:px-6 py-2.5 sm:py-3 bg-slate-50 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500 shrink-0">
+        <span class="mono-font font-bold text-slate-700 text-[11px] sm:text-xs" id="drawer-footer-id">2023-P1-Q1</span>
+        <div class="flex space-x-1.5 sm:space-x-2">
+          <button onclick="navigateQuestion(-1)" class="px-2.5 sm:px-3 py-1.5 text-slate-600 hover:text-slate-900 border border-slate-300 rounded-lg font-medium transition flex items-center space-x-1">
             <i data-lucide="chevron-left" class="w-3.5 h-3.5"></i>
             <span>Prev</span>
           </button>
-          <button onclick="navigateQuestion(1)" class="px-3 py-1.5 text-slate-600 hover:text-slate-900 border border-slate-300 rounded-lg font-medium transition flex items-center space-x-1">
+          <button onclick="navigateQuestion(1)" class="px-2.5 sm:px-3 py-1.5 text-slate-600 hover:text-slate-900 border border-slate-300 rounded-lg font-medium transition flex items-center space-x-1">
             <span>Next</span>
             <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
           </button>
