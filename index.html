@@ -81,15 +81,19 @@
       background: #94a3b8;
     }
 
-    /* Interactive Question Row Hover State */
+    /* Subtle Question Row Styles (Clean & Neutral Unsolved State) */
     .question-row {
       transition: all 0.15s ease-in-out;
       border-left: 3px solid transparent;
+      background-color: rgba(255, 255, 255, 0.75);
     }
     .question-row:hover {
-      background-color: #f8fafc;
-      border-left-color: #4f46e5;
+      background-color: #ffffff;
+      border-left-color: #6366f1;
+      box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.05);
     }
+    
+    /* Confidence Tracker State Highlights */
     .question-row.status-mastered {
       background-color: #f0fdf4;
       border-left-color: #16a34a;
@@ -99,8 +103,9 @@
       border-left-color: #d97706;
     }
     .question-row.status-unsolved {
-      background-color: #fff1f2;
-      border-left-color: #e11d48;
+      /* Clean neutral state without loud red background */
+      background-color: rgba(255, 255, 255, 0.75);
+      border-left-color: transparent;
     }
 
     /* Solution Drawer Typography */
@@ -176,6 +181,11 @@
       padding: 4px 0;
     }
 
+    /* Status Pill Transitions */
+    .status-btn {
+      transition: all 0.15s ease;
+    }
+
     @media print {
       body { background: #fff !important; }
       header, .top-toolbar, #drawer-container { display: none !important; }
@@ -200,25 +210,24 @@
         </div>
       </div>
 
-      <!-- Real-time Confidence Tracker Header -->
+      <!-- Real-time Exam Rule Simulator & Confidence Tracker Summary -->
       <div class="flex items-center space-x-3">
-        <!-- Confidence Tracker Summary Pill -->
-        <div class="hidden sm:flex items-center space-x-2.5 bg-slate-800/95 px-3 py-1.5 rounded-lg border border-slate-700/70 text-xs">
-          <span class="text-slate-400 font-medium">Confidence:</span>
-          <span class="inline-flex items-center text-emerald-400 font-mono font-semibold" title="Mastered Questions">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 mr-1.5"></span>
-            <span id="stat-mastered">0</span> 🟩
-          </span>
+        <!-- Confidence Counter Pills -->
+        <div class="hidden sm:flex items-center space-x-2 bg-slate-800/90 px-3.5 py-1.5 rounded-lg border border-slate-700/70 text-xs">
+          <div class="flex items-center space-x-1.5" title="Questions Mastered">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+            <span class="text-slate-300 font-medium"><strong id="summary-mastered" class="text-emerald-400 font-mono">0</strong> Mastered</span>
+          </div>
           <span class="text-slate-600">|</span>
-          <span class="inline-flex items-center text-amber-400 font-mono font-semibold" title="Needs Review Questions">
-            <span class="w-2 h-2 rounded-full bg-amber-500 mr-1.5"></span>
-            <span id="stat-review">0</span> 🟨
-          </span>
+          <div class="flex items-center space-x-1.5" title="Questions Needing Review">
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+            <span class="text-slate-300 font-medium"><strong id="summary-review" class="text-amber-400 font-mono">0</strong> Review</span>
+          </div>
           <span class="text-slate-600">|</span>
-          <span class="inline-flex items-center text-rose-400 font-mono font-semibold" title="Unsolved Questions">
-            <span class="w-2 h-2 rounded-full bg-rose-500 mr-1.5"></span>
-            <span id="stat-unsolved">14</span> 🟥
-          </span>
+          <div class="flex items-center space-x-1.5" title="Unsolved Questions">
+            <span class="w-2.5 h-2.5 rounded-full bg-slate-500"></span>
+            <span class="text-slate-300 font-medium"><strong id="summary-unsolved" class="text-slate-400 font-mono">14</strong> Unsolved</span>
+          </div>
         </div>
 
         <!-- DeepSeek Config -->
@@ -238,11 +247,17 @@
         <span class="font-semibold text-slate-900">EE/PC/B/T/316 — Programmable Logic & Microcontroller (2023)</span>
       </div>
 
-      <div class="flex items-center space-x-4">
-        <span class="text-slate-500 italic hidden md:inline">💡 Tap directly on any question to view its solution</span>
-        <button onclick="resetConfidence()" class="text-slate-500 hover:text-rose-600 transition flex items-center space-x-1">
-          <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
-          <span>Reset Confidence</span>
+      <div class="flex items-center space-x-3">
+        <!-- Live Choice Validator Tracker -->
+        <div class="flex items-center space-x-3 text-xs font-medium">
+          <span class="text-slate-600">Part I Choice: <strong id="tracker-p1" class="font-mono text-amber-600">0/5</strong></span>
+          <span class="text-slate-300">|</span>
+          <span class="text-slate-600">Part II Choice: <strong id="tracker-p2" class="font-mono text-amber-600">0/4</strong></span>
+        </div>
+        <span class="text-slate-300">|</span>
+        <button onclick="resetProgress()" class="text-slate-500 hover:text-rose-600 transition flex items-center space-x-1">
+          <i data-lucide="rotate-ccw" class="w-3 h-3"></i>
+          <span>Reset Tracking</span>
         </button>
       </div>
     </div>
@@ -313,18 +328,18 @@
         </div>
 
         <div class="flex items-center space-x-3">
-          <!-- Confidence Selector in Drawer -->
+          <!-- Confidence Status Selector in Drawer -->
           <div class="inline-flex rounded-lg bg-slate-800 p-0.5 border border-slate-700 text-xs">
-            <button id="btn-drawer-mastered" onclick="setConfidence(activeQuestion.id, 'mastered')" class="px-2.5 py-1 rounded text-slate-400 hover:text-emerald-400 font-medium transition flex items-center space-x-1" title="Mark as Mastered">
-              <span class="w-2 h-2 rounded-full bg-emerald-500 mr-1"></span>
+            <button id="drawer-btn-mastered" onclick="setDrawerStatus('mastered')" class="status-btn px-2.5 py-1 rounded text-slate-400 hover:text-emerald-400 font-medium flex items-center space-x-1" title="Mark as Mastered">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
               <span>Mastered</span>
             </button>
-            <button id="btn-drawer-review" onclick="setConfidence(activeQuestion.id, 'review')" class="px-2.5 py-1 rounded text-slate-400 hover:text-amber-400 font-medium transition flex items-center space-x-1" title="Needs Review">
-              <span class="w-2 h-2 rounded-full bg-amber-500 mr-1"></span>
+            <button id="drawer-btn-review" onclick="setDrawerStatus('review')" class="status-btn px-2.5 py-1 rounded text-slate-400 hover:text-amber-400 font-medium flex items-center space-x-1" title="Mark for Review">
+              <span class="w-2 h-2 rounded-full bg-amber-400"></span>
               <span>Review</span>
             </button>
-            <button id="btn-drawer-unsolved" onclick="setConfidence(activeQuestion.id, 'unsolved')" class="px-2.5 py-1 rounded text-slate-400 hover:text-rose-400 font-medium transition flex items-center space-x-1" title="Unsolved">
-              <span class="w-2 h-2 rounded-full bg-rose-500 mr-1"></span>
+            <button id="drawer-btn-unsolved" onclick="setDrawerStatus('unsolved')" class="status-btn px-2.5 py-1 rounded text-slate-400 hover:text-slate-200 font-medium flex items-center space-x-1" title="Mark as Unsolved">
+              <span class="w-2 h-2 rounded-full bg-slate-400"></span>
               <span>Unsolved</span>
             </button>
           </div>
@@ -532,8 +547,8 @@
     let flatQuestions = [];
     let activeQuestionIndex = 0;
 
-    // Confidence Tracker Object: { [qId]: 'mastered' | 'review' | 'unsolved' }
-    let confidenceData = JSON.parse(localStorage.getItem('ju_sem5_confidence_2023') || '{}');
+    // Confidence Tracker Storage: 'mastered' | 'review' | 'unsolved' (default)
+    let userConfidence = JSON.parse(localStorage.getItem('ju_sem5_confidence_2023') || '{}');
 
     async function loadPaperData() {
       try {
@@ -548,7 +563,7 @@
         });
 
         renderExamPaper();
-        updateConfidenceCounters();
+        updateSummaryCounters();
       } catch (err) {
         console.error('Failed to load paper data:', err);
       }
@@ -563,6 +578,11 @@
         partSection.className = 'border-b border-slate-300 pb-10';
 
         // Official Part Header & Instructions Block
+        const isPart1 = part.part_id === 'part_1';
+        const ruleRequired = isPart1 ? 5 : 4; // Part I: 5 Qs; Part II: 4 Qs (Q6 + 3)
+        const attemptedCount = getPartAttemptCount(part.part_id);
+        const ruleMet = attemptedCount === ruleRequired;
+
         const headerDiv = document.createElement('div');
         headerDiv.className = 'mb-6 pb-3 border-b-2 border-slate-900 flex flex-col sm:flex-row sm:items-center justify-between gap-3';
         
@@ -588,6 +608,9 @@
             <div class="text-xs text-amber-900 paper-font font-semibold mt-0.5">
               ${part.instructions}
             </div>
+            <div class="text-[11px] font-mono mt-1 ${ruleMet ? 'text-emerald-700 font-bold' : attemptedCount > ruleRequired ? 'text-rose-600 font-bold' : 'text-slate-600'}">
+              Selected in choices: <strong>${attemptedCount}</strong> / ${ruleRequired} ${ruleMet ? '✓ (Choice satisfied)' : attemptedCount > ruleRequired ? '⚠️ (Exceeds required)' : ''}
+            </div>
           </div>
         `;
         partSection.appendChild(headerDiv);
@@ -597,52 +620,40 @@
         listDiv.className = 'space-y-4';
 
         part.questions.forEach((q) => {
-          const status = confidenceData[q.id] || 'unsolved';
+          const status = userConfidence[q.id] || 'unsolved';
           const isCompulsory = q.text.toLowerCase().includes('(compulsory)') || q.id === '2023-P2-Q6';
 
           const row = document.createElement('div');
           row.id = `q-row-${q.id}`;
-          row.className = `question-row group p-4 sm:p-5 rounded-lg border cursor-pointer ${
-            status === 'mastered' ? 'status-mastered border-emerald-300 shadow-xs' : 
-            status === 'review' ? 'status-review border-amber-300 shadow-xs' : 
-            'status-unsolved border-slate-200 bg-white/70 hover:border-slate-300 hover:shadow-xs'
-          }`;
+          row.className = `question-row group p-4 sm:p-5 rounded-lg border cursor-pointer status-${status}`;
           row.onclick = () => openDrawer(q.id);
 
-          // 3-way Confidence cycle button icon & color
-          let statusBadgeHtml = '';
+          // Status Badge Pill
+          let statusBadge = '';
           if (status === 'mastered') {
-            statusBadgeHtml = `
-              <button onclick="event.stopPropagation(); cycleConfidence('${q.id}')" 
-                      class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 flex items-center space-x-1 hover:bg-emerald-200 transition" 
-                      title="Status: Mastered (Click to change)">
-                <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
-                <span>🟩 Mastered</span>
-              </button>
-            `;
+            statusBadge = `<span class="inline-flex items-center text-[10px] font-bold text-emerald-800 bg-emerald-100 border border-emerald-300 px-2 py-0.5 rounded"><span class="w-1.5 h-1.5 rounded-full bg-emerald-600 mr-1.5"></span>Mastered</span>`;
           } else if (status === 'review') {
-            statusBadgeHtml = `
-              <button onclick="event.stopPropagation(); cycleConfidence('${q.id}')" 
-                      class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-amber-100 text-amber-800 border border-amber-300 flex items-center space-x-1 hover:bg-amber-200 transition" 
-                      title="Status: Needs Review (Click to change)">
-                <span class="w-2 h-2 rounded-full bg-amber-600"></span>
-                <span>🟨 Needs Review</span>
-              </button>
-            `;
+            statusBadge = `<span class="inline-flex items-center text-[10px] font-bold text-amber-800 bg-amber-100 border border-amber-300 px-2 py-0.5 rounded"><span class="w-1.5 h-1.5 rounded-full bg-amber-600 mr-1.5"></span>Review</span>`;
           } else {
-            statusBadgeHtml = `
-              <button onclick="event.stopPropagation(); cycleConfidence('${q.id}')" 
-                      class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-rose-50 text-rose-700 border border-rose-200 flex items-center space-x-1 hover:bg-rose-100 transition" 
-                      title="Status: Unsolved (Click to change)">
-                <span class="w-2 h-2 rounded-full bg-rose-500"></span>
-                <span>🟥 Unsolved</span>
-              </button>
-            `;
+            // Subtle, non-intrusive unsolved badge
+            statusBadge = `<span class="inline-flex items-center text-[10px] font-medium text-slate-400 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">Unsolved</span>`;
           }
 
           row.innerHTML = `
             <div class="flex items-start justify-between gap-4">
-              <div class="flex items-start space-x-3.5">
+              <div class="flex items-start space-x-3.5 flex-1">
+                
+                <!-- Quick 3-State Confidence Switcher on Paper Row -->
+                <div class="mt-1 flex items-center space-x-1 shrink-0" onclick="event.stopPropagation();" title="Quick Confidence Toggle">
+                  <button onclick="cycleStatus('${q.id}')" class="w-6 h-6 rounded border flex items-center justify-center transition shadow-2xs ${
+                    status === 'mastered' ? 'bg-emerald-600 border-emerald-600 text-white' : 
+                    status === 'review' ? 'bg-amber-500 border-amber-500 text-white' : 
+                    'bg-white border-slate-300 text-slate-300 hover:border-slate-400 hover:text-slate-400'
+                  }">
+                    <i data-lucide="${status === 'mastered' ? 'check' : status === 'review' ? 'bookmark' : 'circle'}" class="w-3.5 h-3.5"></i>
+                  </button>
+                </div>
+
                 <!-- Question Number (Official Paper Style) -->
                 <span class="font-serif font-bold text-base text-slate-900 shrink-0 w-6 pt-0.5">
                   ${q.q_num}.
@@ -654,12 +665,13 @@
                     ${q.text}
                   </p>
 
-                  <!-- Minimal Discrete Citation Footnote & Inline Confidence Tracker -->
+                  <!-- Minimal Discrete Footnote -->
                   <div class="mt-2.5 flex flex-wrap items-center gap-2 text-xs text-slate-500 font-mono">
                     <span class="bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-semibold text-[11px]">
                       ${q.marks}
                     </span>
                     ${isCompulsory ? '<span class="bg-rose-100 text-rose-800 border border-rose-200 px-2 py-0.5 rounded font-semibold text-[11px]">Compulsory</span>' : ''}
+                    ${statusBadge}
                     <span class="text-slate-400">•</span>
                     <span class="text-emerald-700 flex items-center">
                       <i data-lucide="book" class="w-3 h-3 mr-1"></i>
@@ -667,8 +679,6 @@
                     </span>
                     <span class="text-slate-400">•</span>
                     <span class="text-amber-700">${q.repeat_tag}</span>
-                    <span class="text-slate-400">•</span>
-                    ${statusBadgeHtml}
                   </div>
                 </div>
               </div>
@@ -690,66 +700,111 @@
       lucide.createIcons();
     }
 
-    function setConfidence(qId, status) {
-      if (!qId) return;
-      confidenceData[qId] = status;
-      localStorage.setItem('ju_sem5_confidence_2023', JSON.stringify(confidenceData));
-      updateConfidenceCounters();
-      renderExamPaper();
-      if (activeQuestion && activeQuestion.id === qId) {
-        updateDrawerConfidenceHighlight();
-      }
-    }
-
-    function cycleConfidence(qId) {
-      const current = confidenceData[qId] || 'unsolved';
-      let next = 'mastered';
+    function cycleStatus(qId) {
+      const current = userConfidence[qId] || 'unsolved';
+      let next = 'unsolved';
       if (current === 'unsolved') next = 'mastered';
       else if (current === 'mastered') next = 'review';
       else if (current === 'review') next = 'unsolved';
-      setConfidence(qId, next);
+
+      if (next === 'unsolved') {
+        delete userConfidence[qId];
+      } else {
+        userConfidence[qId] = next;
+      }
+      localStorage.setItem('ju_sem5_confidence_2023', JSON.stringify(userConfidence));
+      updateSummaryCounters();
+      renderExamPaper();
+      if (activeQuestion && activeQuestion.id === qId) {
+        updateDrawerStatusBtns();
+      }
     }
 
-    function updateDrawerConfidenceHighlight() {
+    function setDrawerStatus(status) {
       if (!activeQuestion) return;
-      const status = confidenceData[activeQuestion.id] || 'unsolved';
-      const btnM = document.getElementById('btn-drawer-mastered');
-      const btnR = document.getElementById('btn-drawer-review');
-      const btnU = document.getElementById('btn-drawer-unsolved');
-
-      btnM.className = `px-2.5 py-1 rounded font-medium transition flex items-center space-x-1 ${status === 'mastered' ? 'bg-emerald-600 text-white font-bold' : 'text-slate-400 hover:text-emerald-400'}`;
-      btnR.className = `px-2.5 py-1 rounded font-medium transition flex items-center space-x-1 ${status === 'review' ? 'bg-amber-600 text-white font-bold' : 'text-slate-400 hover:text-amber-400'}`;
-      btnU.className = `px-2.5 py-1 rounded font-medium transition flex items-center space-x-1 ${status === 'unsolved' ? 'bg-rose-600 text-white font-bold' : 'text-slate-400 hover:text-rose-400'}`;
+      if (status === 'unsolved') {
+        delete userConfidence[activeQuestion.id];
+      } else {
+        userConfidence[activeQuestion.id] = status;
+      }
+      localStorage.setItem('ju_sem5_confidence_2023', JSON.stringify(userConfidence));
+      updateSummaryCounters();
+      updateDrawerStatusBtns();
+      renderExamPaper();
     }
 
-    function updateConfidenceCounters() {
+    function updateDrawerStatusBtns() {
+      if (!activeQuestion) return;
+      const status = userConfidence[activeQuestion.id] || 'unsolved';
+
+      const btnM = document.getElementById('drawer-btn-mastered');
+      const btnR = document.getElementById('drawer-btn-review');
+      const btnU = document.getElementById('drawer-btn-unsolved');
+
+      btnM.className = `status-btn px-2.5 py-1 rounded font-medium flex items-center space-x-1 ${
+        status === 'mastered' ? 'bg-emerald-600 text-white' : 'text-slate-400 hover:text-emerald-400'
+      }`;
+      btnR.className = `status-btn px-2.5 py-1 rounded font-medium flex items-center space-x-1 ${
+        status === 'review' ? 'bg-amber-600 text-white' : 'text-slate-400 hover:text-amber-400'
+      }`;
+      btnU.className = `status-btn px-2.5 py-1 rounded font-medium flex items-center space-x-1 ${
+        status === 'unsolved' ? 'bg-slate-700 text-white' : 'text-slate-400 hover:text-slate-200'
+      }`;
+    }
+
+    function getPartAttemptCount(partId) {
+      if (!paperData) return 0;
+      let count = 0;
+      const part = paperData.parts.find(p => p.part_id === partId);
+      if (part) {
+        part.questions.forEach(q => {
+          // Counted if either Mastered or Review
+          const st = userConfidence[q.id];
+          if (st === 'mastered' || st === 'review') count++;
+        });
+      }
+      return count;
+    }
+
+    function updateSummaryCounters() {
       let mastered = 0;
       let review = 0;
-      let unsolved = 0;
+      let total = flatQuestions.length || 14;
 
-      flatQuestions.forEach(q => {
-        const st = confidenceData[q.id] || 'unsolved';
+      Object.values(userConfidence).forEach(st => {
         if (st === 'mastered') mastered++;
-        else if (st === 'review') review++;
-        else unsolved++;
+        if (st === 'review') review++;
       });
+      let unsolved = Math.max(0, total - (mastered + review));
 
-      const elM = document.getElementById('stat-mastered');
-      const elR = document.getElementById('stat-review');
-      const elU = document.getElementById('stat-unsolved');
+      document.getElementById('summary-mastered').textContent = mastered;
+      document.getElementById('summary-review').textContent = review;
+      document.getElementById('summary-unsolved').textContent = unsolved;
 
-      if (elM) elM.textContent = mastered;
-      if (elR) elR.textContent = review;
-      if (elU) elU.textContent = unsolved;
+      // Update Subheader Part choice trackers
+      const p1 = getPartAttemptCount('part_1');
+      const p2 = getPartAttemptCount('part_2');
+
+      const el1 = document.getElementById('tracker-p1');
+      const el2 = document.getElementById('tracker-p2');
+
+      if (el1) {
+        el1.textContent = `${p1}/5`;
+        el1.className = `font-mono font-bold ${p1 === 5 ? 'text-emerald-600' : p1 > 5 ? 'text-rose-600' : 'text-amber-600'}`;
+      }
+      if (el2) {
+        el2.textContent = `${p2}/4`;
+        el2.className = `font-mono font-bold ${p2 === 4 ? 'text-emerald-600' : p2 > 4 ? 'text-rose-600' : 'text-amber-600'}`;
+      }
     }
 
-    function resetConfidence() {
-      if (confirm("Reset all question confidence statuses to Unsolved?")) {
-        confidenceData = {};
+    function resetProgress() {
+      if (confirm("Reset all question confidence statuses and choices?")) {
+        userConfidence = {};
         localStorage.removeItem('ju_sem5_confidence_2023');
-        updateConfidenceCounters();
+        updateSummaryCounters();
         renderExamPaper();
-        if (activeQuestion) updateDrawerConfidenceHighlight();
+        if (activeQuestion) updateDrawerStatusBtns();
       }
     }
 
@@ -799,7 +854,7 @@
         codeSection.classList.add('hidden');
       }
 
-      updateDrawerConfidenceHighlight();
+      updateDrawerStatusBtns();
 
       // Show Drawer
       const backdrop = document.getElementById('drawer-backdrop');
@@ -938,7 +993,7 @@ Provide precise, mathematically rigorous, and exam-focused responses formatted i
         `;
       } else {
         msgDiv.innerHTML = `
-          <div class="w-7 h-7 rounded-full bg-indigo-600 text-white flex items-center justify-center shrink-0 text-xs font-bold shadow-xs">AI</div>
+          <div class="w-6 h-6 rounded-full bg-indigo-600 text-white flex items-center justify-center shrink-0 text-xs font-bold shadow-xs">AI</div>
           <div class="p-3.5 bg-white rounded-xl border border-slate-200 text-xs leading-relaxed text-slate-800 shadow-xs max-w-[85%] prose prose-xs">
             ${marked.parse(content)}
           </div>
