@@ -1,15 +1,22 @@
 #!/usr/bin/env python3
-"""Rebuild data/index.json and flat data/questions.json inside ju-sem5-exampaper-hub."""
+"""Rebuild data/index.json, data/questions.json, and data/images.json inside ju-sem5-exampaper-hub."""
 
 import json
 import re
 from datetime import datetime, timezone
 from pathlib import Path
 
+try:
+    from PIL import Image
+except ImportError:
+    Image = None
+
 DATA_DIR = Path(__file__).resolve().parent
+REPO_ROOT = DATA_DIR.parent
 PAPERS_DIR = DATA_DIR / "papers"
 INDEX_PATH = DATA_DIR / "index.json"
 QUESTIONS_PATH = DATA_DIR / "questions.json"
+IMAGES_PATH = DATA_DIR / "images.json"
 SOLVED_2023_PATH = DATA_DIR / "paper_2023.json"
 MIN_YEAR = 2022
 
@@ -64,9 +71,23 @@ def slug_qnum(qnum: str, fallback_idx: int) -> str:
     return cleaned or f"q{fallback_idx:02d}"
 
 
+def get_image_dims(src: str):
+    if not src or src.startswith("data:") or Image is None:
+        return None, None
+    img_path = REPO_ROOT / src
+    if not img_path.is_file():
+        return None, None
+    try:
+        with Image.open(img_path) as im:
+            return im.width, im.height
+    except Exception:
+        return None, None
+
+
 def rebuild() -> None:
     subjects_out = []
     flat_questions = []
+    flat_images = []
 
     for subj in SUBJECT_CATALOG:
         sid = subj["id"]
@@ -107,11 +128,69 @@ def rebuild() -> None:
                                 suffix += 1
                             used_ids.add(qid)
                             row["questionId"] = qid
-                            if "images" not in row:
+                            if "images" not in row or row["images"] is None:
                                 row["images"] = []
 
-                            if row.get("diagramSvg") or row.get("images"):
+                            imgs = row.get("images") or []
+                            if row.get("diagramSvg") or imgs:
                                 has_diagram = True
+
+                            for img_idx, img_entry in enumerate(imgs, start=1):
+                                if isinstance(img_entry, str):
+                                    src = img_entry
+                                    caption = row.get("diagramCaption") or ""
+                                    alt = caption or f"{subj['name']} {paper.get('yearLabel')} Q{row.get('qNum')}"
+                                    img_id = f"{qid}-img{img_idx}"
+                                    norm_entry = {"imageId": img_id, "src": src, "alt": alt, "caption": caption}
+                                    imgs[img_idx - 1] = norm_entry
+                                else:
+                                    src = img_entry.get("src") or ""
+                                    caption = img_entry.get("caption") or ""
+                                    alt = img_entry.get("alt") or caption or f"{subj['name']} {paper.get('yearLabel')} Q{row.get('qNum')}"
+                                    img_id = img_entry.get("imageId") or f"{qid}-img{img_idx}"
+                                    img_entry["imageId"] = img_id
+                                    img_entry.setdefault("alt", alt)
+
+                                w, h = get_image_dims(src)
+                                flat_images.append({
+                                    "imageId": img_id,
+                                    "kind": "raster",
+                                    "questionId": qid,
+                                    "subjectId": sid,
+                                    "subjectName": subj["name"],
+                                    "subjectCode": subj["codePrefix"],
+                                    "paperId": paper["id"],
+                                    "year": paper.get("year"),
+                                    "yearLabel": paper.get("yearLabel") or str(paper.get("year") or ""),
+                                    "part": part_label,
+                                    "qNum": row.get("qNum"),
+                                    "topic": row.get("topic"),
+                                    "src": src,
+                                    "alt": alt,
+                                    "caption": caption or None,
+                                    "width": w,
+                                    "height": h,
+                                })
+
+                            if row.get("diagramSvg"):
+                                flat_images.append({
+                                    "imageId": f"{qid}-svg1",
+                                    "kind": "svg",
+                                    "questionId": qid,
+                                    "subjectId": sid,
+                                    "subjectName": subj["name"],
+                                    "subjectCode": subj["codePrefix"],
+                                    "paperId": paper["id"],
+                                    "year": paper.get("year"),
+                                    "yearLabel": paper.get("yearLabel") or str(paper.get("year") or ""),
+                                    "part": part_label,
+                                    "qNum": row.get("qNum"),
+                                    "topic": row.get("topic"),
+                                    "src": None,
+                                    "alt": row.get("diagramCaption") or f"Q{row.get('qNum')} Diagram",
+                                    "caption": row.get("diagramCaption"),
+                                    "svg": row.get("diagramSvg"),
+                                })
 
                             flat_questions.append({
                                 "questionId": qid,
@@ -131,7 +210,7 @@ def rebuild() -> None:
                                 "co": row.get("co"),
                                 "topic": row.get("topic"),
                                 "textLatex": row.get("textLatex") or "",
-                                "images": row.get("images") or [],
+                                "images": imgs,
                                 "diagramSvg": row.get("diagramSvg"),
                                 "diagramCaption": row.get("diagramCaption"),
                                 "sourcePdf": paper.get("sourcePdf"),
@@ -159,7 +238,7 @@ def rebuild() -> None:
                     },
                 ))
 
-            # Preserve the repo's original annotated 2023 paper entry right alongside 2023
+            # Preserve the repo's original annotated 2023 paper entry for PLM
             if sid == "plm" and SOLVED_2023_PATH.is_file():
                 solved = json.loads(SOLVED_2023_PATH.read_text(encoding="utf-8"))
                 solved_q_count = sum(len(pt.get("questions") or []) for pt in solved.get("parts") or [])
@@ -189,24 +268,38 @@ def rebuild() -> None:
         subj_entry["papers"] = papers_meta
         subjects_out.append(subj_entry)
 
+    now_iso = datetime.now(timezone.utc).isoformat(timespec="seconds")
+
     index_payload = {
         "schemaVersion": "1.0",
         "university": "Jadavpur University",
         "program": "B.E. Electrical Engineering · 3rd Year 1st Semester",
         "assetsDir": "data/assets",
-        "updatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "updatedAt": now_iso,
         "subjects": subjects_out,
     }
     INDEX_PATH.write_text(json.dumps(index_payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
     questions_payload = {
         "schemaVersion": "1.0",
-        "updatedAt": index_payload["updatedAt"],
+        "updatedAt": now_iso,
         "totalQuestions": len(flat_questions),
         "questions": flat_questions,
     }
     QUESTIONS_PATH.write_text(json.dumps(questions_payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"Rebuilt repo data/: {sum(len(s['papers']) for s in subjects_out)} paper entries, {len(flat_questions)} questions")
+
+    images_payload = {
+        "schemaVersion": "1.0",
+        "updatedAt": now_iso,
+        "totalImages": len(flat_images),
+        "images": flat_images,
+    }
+    IMAGES_PATH.write_text(json.dumps(images_payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+    print(
+        f"Rebuilt repo data/: {sum(len(s['papers']) for s in subjects_out)} papers, "
+        f"{len(flat_questions)} questions, {len(flat_images)} images"
+    )
 
 
 if __name__ == "__main__":

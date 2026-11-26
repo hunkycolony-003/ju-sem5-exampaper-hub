@@ -1,0 +1,334 @@
+{
+  "id": "pspd-2024s",
+  "subjectId": "pspd",
+  "year": 2024,
+  "sortKey": 2024.1,
+  "yearLabel": "2024 (S)",
+  "examType": "Supplementary",
+  "sourcePdf": "2024 - Power System Planning and Design S.pdf",
+  "hasDiagram": false,
+  "parts": [
+    {
+      "partLabel": "PART - I",
+      "refCode": "Ex/EE/PC/B/T/312/2024(s)",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING THIRD YEAR FIRST SEM SUPPLE EXAMINATION, 2024",
+        "POWER SYSTEM PLANNING AND DESIGN"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for this part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": null,
+      "sharedNote": null,
+      "footerNote": "[ Turn over",
+      "rows": [
+        {
+          "kind": "group",
+          "label": "Answer any five"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Function and Characteristics of Line Supports",
+          "textLatex": "What are the main function and characteristics of line supports?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024s-p1-1a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Stringing Chart",
+          "textLatex": "What is Stringing chart and why is it important?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024s-p1-1b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Catenary Sag Derivation (Level Supports)",
+          "textLatex": "Derive an expression for sag of a line supported between two supports of the same height by catenary method.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024s-p1-2a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "2",
+          "co": null,
+          "topic": "Minimum Ground Clearance",
+          "textLatex": "Calculate the clearance of the lowest conductor above ground for a $132\\text{ kV}$ and $400\\text{ kV}$ transmission line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024s-p1-2b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.",
+          "marks": "5+5",
+          "co": null,
+          "topic": "Insulator Failure & ACSR Conductor",
+          "textLatex": "Discuss the following:<br>a) Electrical failure of insulators<br>b) ACSR Conductor",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024s-p1-3",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Underground Cables vs Overhead Conductors",
+          "textLatex": "What are the advantages and disadvantages of underground cables over overhead conductors?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024s-p1-4a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Sag Calculation with Ice Coating",
+          "textLatex": "Calculate the sag of a transmission line conductor consisting of hard drawn copper $120\\text{ mm}^2$ cross section, the conductor used has $37$ strands each of diameter $2.11\\text{ mm}$ having weight of $1118\\text{ kg/km}$ and has a span of $200\\text{ m}$ at level support. The conductor has an ultimate tensile stress of $42.2\\text{ kg/mm}^2$ and allowable tension should not exceed $1/4^{\\text{th}}$ of ultimate strength. Consider ice coating of $10\\text{ mm}$ and density of ice as $0.915\\text{ gm/cc}$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024s-p1-4b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.",
+          "marks": "10",
+          "co": null,
+          "topic": "Single-Core Cable Potential Gradient & Economical Size",
+          "textLatex": "Show that in a single core cable, $\\frac{g_{\\max}}{g_{\\min}} = \\frac{R}{r}$ where $g_{\\max}$ and $g_{\\min}$ are the maximum and minimum potential gradients and $r$ and $R$ are the core radius and overall sheath radius respectively. Find out the condition for most economical size of cable.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024s-p1-5",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Murray Loop Short-Circuit Fault Test",
+          "textLatex": "Discuss Murray Loop Test to locate short circuit fault for an underground cable with necessary circuit diagram.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024s-p1-6a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "XLPE Cable Insulation Advantages",
+          "textLatex": "Discuss the advantages of using XLPE insulation over the other cable insulation materials.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024s-p1-6b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "7.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Criteria for Suggesting Tariff",
+          "textLatex": "What are the criteria for suggesting tariff?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024s-p1-7a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "7.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Generation Guided Tariff",
+          "textLatex": "Explain generation guided tariff.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024s-p1-7b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "8.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Load Factor & Availability Factor",
+          "textLatex": "Explain load factor and availability factor.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024s-p1-8a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "8.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Load Forecasting via Linear Regression",
+          "textLatex": "The average demand of an industrial estate for the last four years is given below. Using the method of linear regression estimate the prospective demands for 2024 and 2025.<br><table><thead><tr><th>Year</th><th>2020</th><th>2021</th><th>2022</th><th>2023</th></tr></thead><tbody><tr><td>Demand (MW)</td><td>120</td><td>136</td><td>152</td><td>166</td></tr></tbody></table>",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024s-p1-8b",
+          "images": []
+        }
+      ]
+    },
+    {
+      "partLabel": "PART II",
+      "refCode": "Ex/EE/PC/B/T/312/2024(S)",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING THIRD YEAR FIRST SEMESTER SUPPLEMENTARY EXAM 2024",
+        "POWER SYSTEM PLANNING AND DESIGN"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for this part)",
+      "scriptNote": "Use separate answer script for each part.",
+      "instructions": "Figures in the margin indicate full marks",
+      "sharedNote": null,
+      "footerNote": "[ Turn over",
+      "rows": [
+        {
+          "kind": "group",
+          "label": "Group-A — Answer any three of the following questions"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.",
+          "marks": "10",
+          "co": null,
+          "topic": "Untransposed 3-Phase 4-Wire Neutral Induction & Voltage Drop",
+          "textLatex": "A three phase four wire, $50\\text{ Hz}$, $10\\text{ km}$ long untransposed line has four wires ($1\\text{ cm}$ dia) spaced horizontally $2\\text{ m}$ apart in a plane. The wires in order are carrying currents $I_a, I_b$ and $I_c$. The currents are $(-30 + j50)\\text{ A}$, $(-25 + j55)\\text{ A}$ and $(55 - j105)\\text{ A}$. Determine (a) flux linkages of the neutral and voltage induced in the neutral wire, (b) the voltage drop in each of three phase wires.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024s-p2-1",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.",
+          "marks": "10",
+          "co": null,
+          "topic": "Nominal-Pi vs Equivalent-Pi Parameters",
+          "textLatex": "A three phase $200\\text{ km}$ long line has a resistance of $0.05\\text{ ohm/km/phase}$, a reactance of $0.4\\text{ ohm/km/phase}$ and a capacitive admittance of $j0.5\\times 10^{-4}\\text{ mho/km/phase}$. Calculate series and shunt parameters of the nominal-$\\pi$ and equivalent-$\\pi$ circuit for the above line. Which of these two circuits is a more faithful representation of the line? Justify your answer.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024s-p2-2",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.",
+          "marks": "10",
+          "co": null,
+          "topic": "Inductance & Capacitance of Symmetrically Spaced 3-Phase Line",
+          "textLatex": "Derive the expression for inductance and capacitance of a three phase transmission line with symmetrically spaced conductors of radius '$r$' cm. Distance between any of the two conductors is '$D$' m.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024s-p2-3",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "GMR of 7-Strand Conductor",
+          "textLatex": "Derive expression for the G.M.R of a stranded conductor consisting of seven identical strands. Each strand has $20\\text{ cm}$ diameter.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024s-p2-4a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Single-Phase Line Capacitance & Effect of Earth",
+          "textLatex": "Calculate the phase to neutral capacitance per km of a single phase two wire overhead transmission line. Conductors are spaced $3\\text{ m}$ apart horizontally and $7.5\\text{ m}$ above the ground. Conductor radius is $0.35\\text{ cm}$. Compare the result obtained by neglecting and considering the effect of earth.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024s-p2-4b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.",
+          "marks": "10",
+          "co": null,
+          "topic": "Inductance of Transposed Three-Phase Double-Circuit Line",
+          "textLatex": "Derive expression for the inductance of three phase double circuit line. Assume that the line is evenly transposed.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024s-p2-5",
+          "images": []
+        },
+        {
+          "kind": "group",
+          "label": "Group-B — Answer any two of the following questions"
+        },
+        {
+          "kind": "question",
+          "qNum": "6.",
+          "marks": "10",
+          "co": null,
+          "topic": "Characteristic Impedance & Surge Impedance Loading",
+          "textLatex": "What is characteristic impedance of transmission line? Determine its value for single phase two wire overhead transmission line consisting of solid conductors of circular cross section. What do you mean by SIL of a transmission line?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024s-p2-6",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "7.",
+          "marks": "10",
+          "co": null,
+          "topic": "Travelling Waves on Long Transmission Lines",
+          "textLatex": "Show that voltage and current at any point of a long transmission line can be resolved into two traveling waves in opposite direction.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024s-p2-7",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "8.",
+          "marks": "5+5",
+          "co": null,
+          "topic": "Nominal-Pi ABCD Parameters, Sending End Voltage & Loss",
+          "textLatex": "A three phase $250\\text{ km}$ long transmission line has a resistance of $0.05\\text{ ohm/km/phase}$, a reactance of $0.4\\text{ ohm/km/phase}$ and a capacitive admittance of $j0.5\\times 10^{-4}\\text{ mho/km/phase}$. Calculate ABCD parameter of the line using nominal-$\\pi$ model. Calculate the sending end voltage, line loss if the above line delivers at receiving end a load of $20\\text{ MW}$ at $33\\text{ kV}$ and at $0.8$ lagging power factor.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024s-p2-8",
+          "images": []
+        }
+      ]
+    }
+  ]
+}

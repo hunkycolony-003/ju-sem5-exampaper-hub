@@ -1,0 +1,436 @@
+{
+  "id": "pspd-2026",
+  "subjectId": "pspd",
+  "year": 2026,
+  "sortKey": 2026.0,
+  "yearLabel": "2026",
+  "examType": "Regular",
+  "sourcePdf": "2026 - Power System Planning and Design.pdf",
+  "hasDiagram": true,
+  "parts": [
+    {
+      "partLabel": "PART - I",
+      "refCode": "Ex/EE/PC/B/T/312/2026",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING THIRD YEAR FIRST SEMESTER EXAM 2026",
+        "POWER SYSTEM PLANNING AND DESIGN"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for this part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": null,
+      "sharedNote": null,
+      "footerNote": "[ Turn over",
+      "rows": [
+        {
+          "kind": "group",
+          "label": "Group A — (Answer any four questions)"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Factors Affecting Sag",
+          "textLatex": "Illustrate the factors affecting sag.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p1-1a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Stringing Chart & Transmission Lines",
+          "textLatex": "Explain Stringing chart and its importance with respect to transmission lines.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p1-1b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "3",
+          "co": null,
+          "topic": "Tangent vs Deviation Tower",
+          "textLatex": "Differentiate between tangent tower and deviation tower.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p1-2a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "7",
+          "co": null,
+          "topic": "Sag & Tension Calculation with Wind and Ice",
+          "textLatex": "A transmission line conductor consists of hard drawn copper conductor $120\\text{ mm}^2$ cross-section; the conductor used is $37/2.11\\text{ mm}$ having weight of $1118\\text{ kg/km}$ and has a span of $200\\text{ meters}$. The supporting structures being level. The conductor has an ultimate tensile stress of $42.2\\text{ kg/mm}^2$ and allowable tension is not to exceed $1/4^{\\text{th}}$ of ultimate strength. Find (i) the sag in still air (ii) the sag with a wind pressure of $60\\text{ kg/m}^2$ and an ice coating of $10\\text{ mm}$. (iii) also find the vertical sag under the condition in (ii). Assume density of ice as $0.915\\text{ gm/cc}$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p1-2b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Suspension Insulators",
+          "textLatex": "Discuss the advantages and disadvantages of suspension insulators.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p1-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "V-String Insulators",
+          "textLatex": "Discuss the advantages of V-string insulators.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p1-3b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Charging Current in Underground Cables",
+          "textLatex": "Define charging current in underground cables. Also explain its effects on underground cables.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p1-4a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Murray Loop Earth Fault Test",
+          "textLatex": "In a test for a fault to earth on a $520\\text{ m}$ length of cable having a resistance of $1.1\\text{ }\\Omega$ per $1000\\text{ m}$, the faulty cable is looped with a sound cable of the same length but having a resistance of $2.29\\text{ }\\Omega$ per $1000\\text{ m}$. The resistances of the other two arms of the testing network at the balance are in the ratio of $2.7:1$. Calculate the distance to fault from the testing end of the cable.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p1-4b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Insulation Resistance of Underground Cable",
+          "textLatex": "With the help of a suitable diagram show that the insulation resistance of an underground cable varies inversely as its length.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p1-5a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Overhead Line vs Underground Cable",
+          "textLatex": "Discuss the advantages and disadvantages of overhead transmission line and underground cable.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p1-5b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(a)",
+          "marks": "3+3",
+          "co": null,
+          "topic": "Cadmium Copper & All Aluminum Conductors",
+          "textLatex": "Discuss the features of (i) cadmium copper conductor (ii) All Aluminum Conductor.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p1-6a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Minimum Ground Clearance",
+          "textLatex": "Calculate the minimum clearance of the lowest conductor above ground for a $132\\text{ kV}$ and $400\\text{ kV}$ transmission line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p1-6b",
+          "images": []
+        },
+        {
+          "kind": "group",
+          "label": "Group B — (Answer any one question)"
+        },
+        {
+          "kind": "question",
+          "qNum": "7.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Economical Power Factor Improvement",
+          "textLatex": "Explain how the power factor of a consumer can be improved economically.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p1-7a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "7.(b)",
+          "marks": "2",
+          "co": null,
+          "topic": "Availability Factor",
+          "textLatex": "Explain availability factor.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p1-7b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "8.",
+          "marks": "10",
+          "co": null,
+          "topic": "Load Forecasting via Linear Regression",
+          "textLatex": "The average demand of an industrial estate for the last five years is given below. Using the method of linear regression estimate the prospective demands for 2026 and 2027. If the data for 2025 is not available, estimate the demand for the same two years by using the same method.<br><table><thead><tr><th>Year</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th></tr></thead><tbody><tr><td>Demand (MW)</td><td>200</td><td>252</td><td>299</td><td>354</td><td>402</td></tr></tbody></table>",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p1-8",
+          "images": []
+        }
+      ]
+    },
+    {
+      "partLabel": "PART II",
+      "refCode": "Ex/EE/PC/B/T/312/2026",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING THIRD YEAR FIRST SEMESTER EXAMINATION 2026",
+        "POWER SYSTEM PLANNING AND DESIGN"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use separate answer script for each part.",
+      "instructions": "Figures in the margin indicate full marks",
+      "sharedNote": null,
+      "footerNote": "[ Turn over",
+      "rows": [
+        {
+          "kind": "group",
+          "label": "Group-A — Answer any two questions out of three"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "5",
+          "co": null,
+          "topic": "Flux Linkages of a Group of Conductors",
+          "textLatex": "Derive an expression for the flux linkages of one conductor in a group of $n$ conductors carrying currents whose sum is zero.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p2-1a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "5",
+          "co": null,
+          "topic": "Geometric Mean Radius of 7-Strand Conductor",
+          "textLatex": "Calculate geometric mean radius of a stranded conductor consisting of seven identical strands. Each strand has $18\\text{ cm}$ diameter.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p2-1b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "3",
+          "co": null,
+          "topic": "Double Circuit Transmission Lines",
+          "textLatex": "What are the advantages of double circuit transmission lines?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p2-2a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "7",
+          "co": null,
+          "topic": "Capacitance of Double-Circuit Three-Phase Line",
+          "textLatex": "Fig.1 shows the arrangement of a double circuit three phase line. If the diameter of each conductor is $2\\text{ cm}$, determine the total capacitance per km per phase of the line. Assume that the transmission line is fully transposed.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p2-2b",
+          "images": [
+            {
+              "src": "data/assets/pspd/pspd-2026/fig_p2_2b_double_circuit.png",
+              "caption": "Fig. 1: Double-circuit three-phase transmission line conductor arrangement",
+              "imageId": "pspd-2026-p2-2b-img1",
+              "alt": "Fig. 1: Double-circuit three-phase transmission line conductor arrangement"
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "5",
+          "co": null,
+          "topic": "Electromagnetic Interference & Transposition",
+          "textLatex": "What is electromagnetic interference? Explain with suitable derivation how transposition of power transmission line helps to reduce this effect.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p2-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "5",
+          "co": null,
+          "topic": "Induced Voltage on Telephone Line",
+          "textLatex": "Determine the voltage induced per km in the telephone line if the current in the power line is $50\\text{ A}$. Neglect the telephone line current.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p2-3b",
+          "images": [
+            {
+              "src": "data/assets/pspd/pspd-2026/fig_p2_3b_telephone_interference.png",
+              "caption": "Fig. 2: Power line and telephone line conductor spacing",
+              "imageId": "pspd-2026-p2-3b-img1",
+              "alt": "Fig. 2: Power line and telephone line conductor spacing"
+            }
+          ]
+        },
+        {
+          "kind": "group",
+          "label": "Group-B — Answer any three questions out of four"
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "5",
+          "co": null,
+          "topic": "Equivalent ABCD Constants in Parallel Lines",
+          "textLatex": "Derive the expressions of the equivalent ABCD constants when two transmission lines are connected in parallel.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p2-4a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "5",
+          "co": null,
+          "topic": "Line Length for Equal Sending & Receiving Voltage/Current",
+          "textLatex": "Determine the length of an overhead transmission line for which sending end voltage and current are numerically equal to the receiving end voltage and current.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p2-4b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(a)",
+          "marks": "3",
+          "co": null,
+          "topic": "Capacitance in Medium Transmission Lines",
+          "textLatex": "How is capacitance considered for medium lines?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p2-5a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(b)",
+          "marks": "7",
+          "co": null,
+          "topic": "Nominal T Medium Line Analysis",
+          "textLatex": "Determine the charging current and transmission efficiency of a $250\\text{ km}$ long $50\\text{ Hz}$ three phase transmission line delivering $50\\text{ MW}$ at $220\\text{ kV}$ and $0.9$ power factor lag. The series impedance and shunt admittance of the line are $(40+j10)\\text{ }\\Omega$ and $(914\\times 10^{-6})\\text{ }\\mu\\mho$ respectively. Consider nominal T arrangement of the line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p2-5b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(a)",
+          "marks": "3",
+          "co": null,
+          "topic": "Power Loss in Open-Circuited Transmission Line",
+          "textLatex": "Explain why an open-circuited transmission line encounter power loss?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p2-6a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(b)",
+          "marks": "7",
+          "co": null,
+          "topic": "Surge Impedance Loading & Propagation Constant",
+          "textLatex": "Discuss the significance of surge impedance loading and propagation constant in transmission line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p2-6b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "7.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Travelling Waves on Long Transmission Lines",
+          "textLatex": "Prove that voltage at any point of a long transmission line may be resolved into two travelling waves.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p2-7a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "7.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Velocity of Travelling Waves",
+          "textLatex": "Derive the expression for the velocity of travelling waves in transmission lines. Why the velocity of travelling waves is less in underground cables compared to overhead transmission lines?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p2-7b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "8.",
+          "marks": "10",
+          "co": null,
+          "topic": "Long Transmission Line Distributed Parameters & ABCD",
+          "textLatex": "A three phase $50\\text{ Hz}$ transmission line delivers $18\\text{ MW}$ at $110\\text{ kV}$ at $0.9$ lagging power factor. The line is $180\\text{ km}$ long and the conductors are placed at the corners of an equilateral triangle of $3\\text{ m}$ side. The radius and resistance of each conductor are $0.6\\text{ cm}$ and $0.2\\text{ ohm per km}$. Determine i) A and B constants of the line ii) sending end voltage and iii) voltage regulation of the line. Assume that the line parameters are distributed throughout the length of the line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2026-p2-8",
+          "images": []
+        }
+      ]
+    }
+  ]
+}

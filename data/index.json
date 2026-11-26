@@ -3,7 +3,7 @@
   "university": "Jadavpur University",
   "program": "B.E. Electrical Engineering · 3rd Year 1st Semester",
   "assetsDir": "data/assets",
-  "updatedAt": "2026-11-26T18:33:07+00:00",
+  "updatedAt": "2026-11-26T19:24:32+00:00",
   "subjects": [
     {
       "order": 1,
@@ -11,7 +11,73 @@
       "codePrefix": "Ex/EE/PC/B/T/312",
       "name": "Power System Planning & Design",
       "paperTitle": "POWER SYSTEM PLANNING & DESIGN",
-      "papers": []
+      "papers": [
+        {
+          "id": "pspd-2026",
+          "year": 2026,
+          "sortKey": 2026.0,
+          "yearLabel": "2026",
+          "examType": "Regular",
+          "sourcePdf": "2026 - Power System Planning and Design.pdf",
+          "hasDiagram": true,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 30,
+          "path": "data/papers/pspd/2026.json"
+        },
+        {
+          "id": "pspd-2025",
+          "year": 2025,
+          "sortKey": 2025.0,
+          "yearLabel": "2025",
+          "examType": "Regular",
+          "sourcePdf": "2025 - Power System Planning and Design.pdf",
+          "hasDiagram": true,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 28,
+          "path": "data/papers/pspd/2025.json"
+        },
+        {
+          "id": "pspd-2024",
+          "year": 2024,
+          "sortKey": 2024.2,
+          "yearLabel": "2024",
+          "examType": "Regular",
+          "sourcePdf": "2024 - Power System Planning and Design.pdf",
+          "hasDiagram": true,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 28,
+          "path": "data/papers/pspd/2024.json"
+        },
+        {
+          "id": "pspd-2024s",
+          "year": 2024,
+          "sortKey": 2024.1,
+          "yearLabel": "2024 (S)",
+          "examType": "Supplementary",
+          "sourcePdf": "2024 - Power System Planning and Design S.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 23,
+          "path": "data/papers/pspd/2024s.json"
+        },
+        {
+          "id": "pspd-2023",
+          "year": 2023,
+          "sortKey": 2023.0,
+          "yearLabel": "2023",
+          "examType": "Regular",
+          "sourcePdf": "2023 - Power System Planning and Design.pdf",
+          "hasDiagram": true,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 31,
+          "path": "data/papers/pspd/2023.json"
+        }
+      ]
     },
     {
       "order": 2,

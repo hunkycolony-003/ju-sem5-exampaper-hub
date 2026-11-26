@@ -1,0 +1,433 @@
+{
+  "id": "pspd-2023",
+  "subjectId": "pspd",
+  "year": 2023,
+  "sortKey": 2023.0,
+  "yearLabel": "2023",
+  "examType": "Regular",
+  "sourcePdf": "2023 - Power System Planning and Design.pdf",
+  "hasDiagram": true,
+  "parts": [
+    {
+      "partLabel": "PART - I",
+      "refCode": "Ex/EE/PC/B/T/312/2023",
+      "headerLines": [
+        "B.E ELECTRICAL ENGINEERING THIRD YEAR FIRST SEMESTER EXAMINATION, 2023",
+        "POWER SYSTEM PLANNING AND DESIGN"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for this part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": null,
+      "sharedNote": null,
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "group",
+          "label": "Answer any five"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Parabolic Sag Derivation",
+          "textLatex": "Assuming that the shape of the overhead line can be approximated by a parabola, deduce the expression for calculating sag.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p1-1a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Unequal Support Sag & River Crossing Clearance",
+          "textLatex": "An overhead line has a span of $336\\text{ m}$. The line is supported at a river crossing from two towers whose heights are $33.6\\text{ m}$ and $29\\text{ m}$ above the water level. The weight of conductor is $8.33\\text{ N/m}$ and the tension in the conductor is not to exceed $3.34\\times 10^{4}\\text{ N}$. Determine the clearance between the lowest point on the conductor and water. Also find the horizontal distance of this point from the lower support.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p1-1b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "5",
+          "co": null,
+          "topic": "Cable Grading: Capacitance vs Intersheath",
+          "textLatex": "What do you understand by grading of a cable? What is the difference between capacitance grading and intersheath grading?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p1-2a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "5",
+          "co": null,
+          "topic": "Electric Stress & Economical Size of Single-Core Cable",
+          "textLatex": "Derive the formula for the electric stress in a single core cable. Also, determine the most economical size of a cable.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p1-2b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "3",
+          "co": null,
+          "topic": "V-String Insulators",
+          "textLatex": "Why V strings are used in transmission lines?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p1-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "7",
+          "co": null,
+          "topic": "Transmission Line Vibration Minimization",
+          "textLatex": "Discuss the methods used to minimize vibration in transmission line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p1-3b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Criteria for Suggesting Tariff",
+          "textLatex": "What are the criteria for suggesting tariff?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p1-4a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Generation Guided & Load Guided Tariff",
+          "textLatex": "Explain generation guided and load guided tariff.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p1-4b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Electrical Failures in Insulators",
+          "textLatex": "Explain the electrical failures occurring in an Insulator. How are they taken care of?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p1-5a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Steel Core & ACSR Ampacity",
+          "textLatex": "Justify the statement: The steel in ACSR conductor does not affect its ampacity",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p1-5b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Demand Factor & Load Factor",
+          "textLatex": "What do you understand by demand factor and load factor?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p1-6a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Generating Station Energy, Diversity & Demand Factor",
+          "textLatex": "A generating station supplies the following loads: $150\\text{ MW}$, $120\\text{ MW}$, $85\\text{ MW}$, $60\\text{ MW}$ and $5\\text{ MW}$. The station has a maximum demand of $220\\text{ MW}$. The annual load factor of the station is $0.48$. Calculate (i) the energy supplied annually (ii) the diversity factor and (iii) the demand factor.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p1-6b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "7.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Disadvantages of 3-Core Belted Cable",
+          "textLatex": "What are the disadvantages of using 3 core belted cable? How can they be overcome?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p1-7a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "7.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Single-Core Underground Cable Parameters & Stress",
+          "textLatex": "A $2.5\\text{ km}$ long, $33\\text{ kV}$, three phase underground cable using three single core cables has conductor radius of $1.3\\text{ cm}$ and insulation thickness of $0.8\\text{ cm}$. The power factor of the unloaded cable is $0.03$ and relative permittivity of the dielectric is $3.1$. Determine capacitance per phase, charging current per phase, total charging kVAr, dielectric loss per phase and maximum electric stress in the cable.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p1-7b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "8.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Stringing Chart",
+          "textLatex": "What is Stringing chart and why is it important?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p1-8a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "8.(b)",
+          "marks": "2",
+          "co": null,
+          "topic": "Necessity of Load Forecasting",
+          "textLatex": "Explain the necessity of load forecasting.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p1-8b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "8.(c)",
+          "marks": "4",
+          "co": null,
+          "topic": "Murray Loop Short-Circuit Fault Test",
+          "textLatex": "Illustrate Murray loop test for short circuit fault location with necessary circuit diagram.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p1-8c",
+          "images": []
+        }
+      ]
+    },
+    {
+      "partLabel": "PART II",
+      "refCode": "Ex/EE/PC/B/T/312/2023",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING THIRD YEAR FIRST SEMESTER EXAM 2023",
+        "POWER SYSTEM PLANNING AND DESIGN"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use separate answer script for each part.",
+      "instructions": "Figures in the margin indicate full marks",
+      "sharedNote": null,
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "group",
+          "label": "Answer any five questions."
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Double-Circuit Line Conductor Spacing",
+          "textLatex": "Explain with suitable diagram why in double circuit lines the conductors of the same phase should be spaced at a greater distance and those of the other phases should be spaced as close as possible.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p2-1a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Inductance of Composite Single-Phase Line",
+          "textLatex": "A single phase line has three conductors $a, b, c$ each of diameter $4\\text{ cm}$ and two conductors $d$ and $e$ each of diameter $8\\text{ cm}$ for the return circuit as shown in the figure below. Determine the inductance per unit length of each side and the total inductance of the line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p2-1b",
+          "images": [
+            {
+              "src": "data/assets/pspd/pspd-2023/fig_p2_1b_single_phase_line.png",
+              "caption": "Fig.-1: Single-phase composite line conductor spacing (Side A and Side B)",
+              "imageId": "pspd-2023-p2-1b-img1",
+              "alt": "Fig.-1: Single-phase composite line conductor spacing (Side A and Side B)"
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Equivalent-T Model Parameters",
+          "textLatex": "Derive the expressions for series and shunt parameters of equivalent-T model of a transmission line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p2-2a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Sending End Voltage & Regulation from ABCD Constants",
+          "textLatex": "A $200\\text{ km}$ three phase $50\\text{ Hz}$ transmission line has the following constants: $A = D = 0.96\\angle 1^\\circ$ and $B = 100\\angle 80^\\circ\\text{ ohms}$. If the line supplies a load of $30\\text{ MW}$ at $0.8$ p.f. lag at $132\\text{ kV}$, determine the sending end voltage and voltage regulation.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p2-2b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Electrostatic Induction in Communication Line",
+          "textLatex": "Derive a formula for calculating the voltage developed by electrostatic effect in a communication line due to a nearby power line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p2-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Tuned Power Lines",
+          "textLatex": "Explain what you understand by tuned power lines.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p2-3b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Internal Flux Linkages of a Conductor",
+          "textLatex": "Derive an expression for calculating the internal flux linkages for a conductor carrying current.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p2-4a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "4+2",
+          "co": null,
+          "topic": "Velocity of Travelling Waves",
+          "textLatex": "Derive the expression for the velocity of travelling waves in transmission lines. Why the velocity of travelling waves is less in underground cables compared to overhead transmission lines?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p2-4b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Characteristic Impedance, Velocity & Wavelength",
+          "textLatex": "A $400\\text{ km}$, three phase, $50\\text{ Hz}$, overhead power transmission line has series impedance $z = (0.01+j0.25)\\text{ ohm/km/phase}$ and shunt admittance $y = j4\\times 10^{-6}\\text{ mho/km/phase}$. Calculate (i) the characteristic impedance, (ii) velocity of wave propagation and (iii) wave length of the traveling waves in the line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p2-5a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(b)",
+          "marks": "2+2",
+          "co": null,
+          "topic": "Surge Impedance Loading (SIL)",
+          "textLatex": "What do you understand by Surge Impedance Loading (SIL) of a line? Explain why the higher value SIL is preferred and propose any one method to increase the SIL.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p2-5b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Travelling Waves on Long Transmission Lines",
+          "textLatex": "Show that voltage at any point of a long transmission line can be resolved into two traveling waves in opposite direction.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p2-6a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(b)",
+          "marks": "2+2",
+          "co": null,
+          "topic": "Attenuation Constant & Phase Shift Constant",
+          "textLatex": "What do you understand by attenuation constant and phase shift constant?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p2-6b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "7.(a)",
+          "marks": "5",
+          "co": null,
+          "topic": "AC Resistance vs DC Resistance",
+          "textLatex": "Justify whether the following statements are correct or not:<br>The ac resistance of a conductor is more than dc resistance.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p2-7a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "7.(b)",
+          "marks": "5",
+          "co": null,
+          "topic": "Electromagnetic Interference & Communication Line Transposition",
+          "textLatex": "Justify whether the following statements are correct or not:<br>The electromagnetic interference between power line and communication line can be fully nullified by transposition of communication line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2023-p2-7b",
+          "images": []
+        }
+      ]
+    }
+  ]
+}

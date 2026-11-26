@@ -1,0 +1,405 @@
+{
+  "id": "pspd-2025",
+  "subjectId": "pspd",
+  "year": 2025,
+  "sortKey": 2025.0,
+  "yearLabel": "2025",
+  "examType": "Regular",
+  "sourcePdf": "2025 - Power System Planning and Design.pdf",
+  "hasDiagram": true,
+  "parts": [
+    {
+      "partLabel": "PART - I",
+      "refCode": "Ex/EE/PC/B/T/312/2025",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING THIRD YEAR FIRST SEMESTER EXAM 2025",
+        "POWER SYSTEM PLANNING AND DESIGN"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for this part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": null,
+      "sharedNote": null,
+      "footerNote": "[ Turn over",
+      "rows": [
+        {
+          "kind": "group",
+          "label": "Group A — (Answer any four questions)"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Line Supports Characteristics",
+          "textLatex": "Illustrate the characteristics of line supports of a transmission line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p1-1a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Transmission Line Vibration Minimization",
+          "textLatex": "Discuss the methods used to minimize vibration in transmission line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p1-1b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "3",
+          "co": null,
+          "topic": "Single vs Double Circuit Transmission Lines",
+          "textLatex": "Differentiate between single circuit and double circuit transmission lines.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p1-2a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "7",
+          "co": null,
+          "topic": "Unequal Support Sag & River Crossing Clearance",
+          "textLatex": "An overhead line at a river crossing is supported from two towers at heights of $50\\text{ m}$ and $85\\text{ m}$ above water level, the horizontal distance between the towers being $450\\text{ m}$. If the maximum tension is $3980\\text{ Kgf}$ and the conductor weighs $1.726\\text{ Kgf/m}$, find (a) the minimum clearance of the conductor from the water level (b) the clearance between the conductor and the water level at a point midway between the towers (c) clearance between the conductor and the water level at a point $200\\text{ m}$ from the lower supporting tower.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p1-2b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Electrical Failure of Overhead Insulators",
+          "textLatex": "Discuss the causes for electrical failure of insulators in case of overhead transmission system and how they are prevented.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p1-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Polymer Insulators",
+          "textLatex": "Discuss the advantages of polymer insulators.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p1-3b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "XLPE Cable Insulation",
+          "textLatex": "Discuss the advantages of using XLPE as cable insulation.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p1-4a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "3-Phase Belted Cable Capacitance & Charging Current",
+          "textLatex": "The test results for $1\\text{ km}$ of 3-phase metal sheathed belted cable gave a measured capacitance of $0.7\\text{ }\\mu\\text{F}$ between one conductor and other two bunched together with the sheath and $1.2\\text{ }\\mu\\text{F}$ between the three bunched conductors and sheath. Find (a) capacitance between any pair of conductors (b) the charging current when the cable is connected to $11\\text{ kV}$, $50\\text{ Hz}$ supply.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p1-4b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.",
+          "marks": "10",
+          "co": null,
+          "topic": "Dielectric Stress & Economical Cable Size",
+          "textLatex": "For an insulated cable, prove that $\\frac{g_{\\max}}{g_{\\min}} = \\frac{R}{r}$ where $g_{\\max}$ and $g_{\\min}$ are the maximum and minimum stress of the cable and $r$ and $R$ are the radius of conductor and internal radius of sheath respectively. Also derive the expression for the most economical size of cable.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p1-5",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(a)",
+          "marks": "5",
+          "co": null,
+          "topic": "ACSR Conductor Features",
+          "textLatex": "Discuss the features of ACSR conductor.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p1-6a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(b)",
+          "marks": "5",
+          "co": null,
+          "topic": "Conductor Material Characteristics",
+          "textLatex": "Illustrate the characteristics of conductor materials of a transmission line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p1-6b",
+          "images": []
+        },
+        {
+          "kind": "group",
+          "label": "Group B — (Answer any one question)"
+        },
+        {
+          "kind": "question",
+          "qNum": "7.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Factors Influencing Consumer Tariff",
+          "textLatex": "Illustrate the factors that influence the tariff imposed on a consumer.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p1-7a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "7.(b)",
+          "marks": "2",
+          "co": null,
+          "topic": "Diversity Factor",
+          "textLatex": "Justify why diversity factor is always greater than one.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p1-7b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "8.",
+          "marks": "10",
+          "co": null,
+          "topic": "Load Forecasting via Linear Regression",
+          "textLatex": "The average demand of an industrial estate for the last five years is given below. Using the method of linear regression estimate the prospective demands for 2025 and 2026. If the data for 2024 is not available, estimate the demand for the same two years by using the same method.<br><table><thead><tr><th>Year</th><th>2020</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th></tr></thead><tbody><tr><td>Demand (MW)</td><td>150</td><td>174</td><td>201</td><td>223</td><td>251</td></tr></tbody></table>",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p1-8",
+          "images": []
+        }
+      ]
+    },
+    {
+      "partLabel": "PART II",
+      "refCode": "Ex/EE/PC/B/T/312/2025",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING THIRD YEAR FIRST SEMESTER EXAMINATION 2025",
+        "POWER SYSTEM PLANNING AND DESIGN"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use separate answer script for each part.",
+      "instructions": "Figures in the margin indicate full marks",
+      "sharedNote": null,
+      "footerNote": "[ Turn over",
+      "rows": [
+        {
+          "kind": "group",
+          "label": "Group-A — Answer any two questions out of three"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Transposition & Inductance Equalization",
+          "textLatex": "Show with necessary derivations, how transposition helps in equalizing the inductance in an asymmetrically spaced three phase overhead transmission line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p2-1a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Charging Current of Horizontal 3-Phase Line",
+          "textLatex": "A $110\\text{ kV}$ three phase $50\\text{ Hz}$ transmission line has horizontal configuration with $3.5\\text{ m}$ between adjacent conductors. Determine the charging current per km if the diameter of the conductor is $1\\text{ cm}$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p2-1b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Capacitance Increase Due to Bundling",
+          "textLatex": "Explain why capacitance of transmission line increases due to bundling.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p2-2a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Inductance of Composite Single-Phase Line",
+          "textLatex": "One circuit of a single phase transmission line shown in Fig. 1 comprises of three conductors each having radius of $0.5\\text{ cm}$. The return circuit comprises of two conductors each having radius of $2.5\\text{ cm}$. Determine the total inductance per km of the line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p2-2b",
+          "images": [
+            {
+              "src": "data/assets/pspd/pspd-2025/fig_p2_2b_conductor_x_y.png",
+              "caption": "Fig. 1: Single-phase transmission line composite conductor arrangement (Conductor X and Conductor Y)",
+              "imageId": "pspd-2025-p2-2b-img1",
+              "alt": "Fig. 1: Single-phase transmission line composite conductor arrangement (Conductor X and Conductor Y)"
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Electrostatic Induction in Communication Line",
+          "textLatex": "Derive a formula for calculating the voltage induced in a communication line due to electrostatic effect of a nearby power line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p2-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Skin Effect and Proximity Effect",
+          "textLatex": "Explain skin effect and proximity effect in the context of power transmission line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p2-3b",
+          "images": []
+        },
+        {
+          "kind": "group",
+          "label": "Group-B — Answer any three questions out of four"
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "5",
+          "co": null,
+          "topic": "Surge Impedance Loading",
+          "textLatex": "Explain surge impedance loading with respect to overhead transmission line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p2-4a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "5",
+          "co": null,
+          "topic": "Approximate Voltage Regulation of Short Line",
+          "textLatex": "Deduce the expression for calculating approximate voltage regulation of a short transmission line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p2-4b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "ABCD Constants of Long Transmission Line",
+          "textLatex": "Deduce expressions for the ABCD constants of a long transmission line in terms of its parameters.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p2-5a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Propagation Constant Significance",
+          "textLatex": "Explain the significance of propagation constant in transmission line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p2-5b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(a)",
+          "marks": "5",
+          "co": null,
+          "topic": "Equivalent Pi Circuit of Long Line",
+          "textLatex": "Derive expressions for the parameters of equivalent $\\pi$ circuit of long transmission line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p2-6a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(b)",
+          "marks": "5",
+          "co": null,
+          "topic": "Nominal Pi ABCD Constants Calculation",
+          "textLatex": "A three phase $50\\text{ Hz}$, $300\\text{ km}$ long transmission line has resistance, reactance and shunt admittance of $0.15\\text{ ohm/km/phase}$, $0.5\\text{ ohm/km/phase}$ and $3\\times 10^{-6}\\text{ mho/km/phase}$. Determine the ABCD constants of the line using nominal $\\pi$ representation.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p2-6b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "7.(a)",
+          "marks": "4+2=6",
+          "co": null,
+          "topic": "Nominal T Circuit Sending End Equations & Phasor",
+          "textLatex": "Derive expressions for the sending end voltage and current for a nominal T circuit of a transmission line supplying a lagging load at the receiving end. Draw the phasor diagram.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p2-7a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "7.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Surge Impedance Loading & Travelling Wave Velocity",
+          "textLatex": "A $400\\text{ km}$ long $400\\text{ kV}$ transmission line has series impedance $z = (0.01 + j0.4)\\text{ ohm/km/phase}$ and shunt admittance $y = j2.5\\times 10^{-6}\\text{ mho/km/phase}$. Calculate (i) the surge impedance loading and (ii) velocity wave propagation of travelling wave in the line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2025-p2-7b",
+          "images": []
+        }
+      ]
+    }
+  ]
+}

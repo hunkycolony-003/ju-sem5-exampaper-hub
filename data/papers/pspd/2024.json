@@ -1,0 +1,401 @@
+{
+  "id": "pspd-2024",
+  "subjectId": "pspd",
+  "year": 2024,
+  "sortKey": 2024.2,
+  "yearLabel": "2024",
+  "examType": "Regular",
+  "sourcePdf": "2024 - Power System Planning and Design.pdf",
+  "hasDiagram": true,
+  "parts": [
+    {
+      "partLabel": "PART - I",
+      "refCode": "Ex/EE/PC/B/T/312/2024",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING THIRD YEAR FIRST SEMESTER EXAMINATION, 2024",
+        "POWER SYSTEM PLANNING AND DESIGN"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for this part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": null,
+      "sharedNote": null,
+      "footerNote": "[ Turn over",
+      "rows": [
+        {
+          "kind": "group",
+          "label": "Answer any five"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Vibration in Transmission Lines",
+          "textLatex": "Briefly discuss different types of vibration in transmission lines.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p1-1a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Horizontal vs Vertical Conductor Configuration",
+          "textLatex": "Differentiate between horizontal configuration and vertical configuration of line conductors.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p1-1b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "3",
+          "co": null,
+          "topic": "Ruling Span",
+          "textLatex": "What is ruling span and why is it important?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p1-2a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "7",
+          "co": null,
+          "topic": "Sag-Tension & Temperature Calculation",
+          "textLatex": "An overhead line with stranded copper conductor of size $7/3.45\\text{ mm}$ and cross sectional area $64.55\\text{ mm}^2$ has a span of $160\\text{ m}$ of between level supports. The sag is $3.96\\text{ m}$ at $-5.5^\\circ\\text{C}$ with $9.53\\text{ mm}$ thick ice coating and wind pressure of $40\\text{ kgf/m}^2$ of projected area. Considering the weight of the conductor to be $0.594\\text{ kgf/m}$, modulus of elasticity to be $12700\\text{ kgf/mm}^2$, coefficient of linear expansion to be $1.7 \\times 10^{-5}/^\\circ\\text{C}$ and density of the ice to be $913.5\\text{ kgf}$, calculate the temperature at which the sag will remain the same under conditions of no ice and no wind.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p1-2b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Suspension Insulators",
+          "textLatex": "Discuss the advantages and disadvantages of suspension insulators.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p1-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "All Aluminum Alloy Conductor (AAAC)",
+          "textLatex": "Describe the features of All Aluminum Alloy Conductor.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p1-3b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Cable Sheath and Armouring",
+          "textLatex": "Discuss the functions of sheath and armouring of a cable.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p1-4a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "3-Phase Belted Cable Charging kVAr",
+          "textLatex": "The capacitance measured between any two cores of a three phase belted cable is $0.3\\text{ }\\mu\\text{F/km}$. Calculate the charging kVAr taken by a $5\\text{ km}$ length of this cable when connected to an $11\\text{ kV}$, $50\\text{ Hz}$ supply.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p1-4b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(a)",
+          "marks": "7",
+          "co": null,
+          "topic": "Underground Cable Faults & Identification",
+          "textLatex": "What are the different types of faults that occur in a cable? How are they identified?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p1-5a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(b)",
+          "marks": "3",
+          "co": null,
+          "topic": "Effect of Charging Current on Network",
+          "textLatex": "How does the charging current affect the network?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p1-5b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(a)",
+          "marks": "5",
+          "co": null,
+          "topic": "Insulation Resistance of Underground Cable",
+          "textLatex": "Derive the equation showing that the insulation resistance of a cable varies inversely as the length.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p1-6a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(b)",
+          "marks": "5",
+          "co": null,
+          "topic": "PVC Cable Insulation Advantages",
+          "textLatex": "Discuss the advantages of using PVC insulation over the other cable insulation materials.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p1-6b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "7.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Economical Power Factor Improvement",
+          "textLatex": "Explain how the power factor of a consumer can be improved economically?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p1-7a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "7.(b)",
+          "marks": "2",
+          "co": null,
+          "topic": "Load Factor & Consumer Tariff",
+          "textLatex": "Explain why consumers having poor load factor should pay more?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p1-7b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "8.",
+          "marks": "10",
+          "co": null,
+          "topic": "Load Forecasting via Linear Regression",
+          "textLatex": "The average demand of an industrial estate for the last five years is given below. Using the method of linear regression estimate the prospective demands for 2024 and 2025. If the data for 2023 is not available, estimate the demand for the same two years by using the same method.<br><table><thead><tr><th>Year</th><th>2019</th><th>2020</th><th>2021</th><th>2022</th><th>2023</th></tr></thead><tbody><tr><td>Demand (MW)</td><td>90</td><td>105</td><td>118</td><td>134</td><td>151</td></tr></tbody></table>",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p1-8",
+          "images": []
+        }
+      ]
+    },
+    {
+      "partLabel": "PART II",
+      "refCode": "Ex/EE/PC/B/T/312/2024",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING THIRD YEAR FIRST SEMESTER EXAM 2024",
+        "POWER SYSTEM PLANNING AND DESIGN"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use separate answer script for each part.",
+      "instructions": "Figures in the margin indicate full marks",
+      "sharedNote": null,
+      "footerNote": "[ Turn over",
+      "rows": [
+        {
+          "kind": "group",
+          "label": "Group-A — Answer any three of the following questions"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Inductance of Bundled Conductor Lines",
+          "textLatex": "Explain why the inductance of bundled conductor lines is less than single conductor lines.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p2-1a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Magnetic Flux Linkage of Solid Conductor & Group",
+          "textLatex": "Write down the expression for the magnetic flux linkage of a solid round conductor, considering all flux upto a distance $d$. Hence derive an expression for the flux linkage of any conductor in a group of several conductors carrying a network current zero.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p2-1b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "5",
+          "co": null,
+          "topic": "Capacitance of Double-Circuit Three-Phase Line",
+          "textLatex": "Derive the expression for the capacitance of three phase, asymmetrically spaced and transposed double circuit line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p2-2a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "5",
+          "co": null,
+          "topic": "Inductance of Single-Phase Double-Circuit Line",
+          "textLatex": "Fig. 1 below shows the arrangement of a single phase double circuit overhead transmission line. Conductors $a, a'$ form one circuit and conductors $b, b'$ form return circuit. If the diameter of each conductor is $2.2\\text{ cm}$ determine the total inductance per km per phase of the line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p2-2b",
+          "images": [
+            {
+              "src": "data/assets/pspd/pspd-2024/fig_p2_2b_double_circuit.png",
+              "caption": "Fig. 1: Single-phase double-circuit overhead transmission line conductor arrangement",
+              "imageId": "pspd-2024-p2-2b-img1",
+              "alt": "Fig. 1: Single-phase double-circuit overhead transmission line conductor arrangement"
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "qNum": "3.",
+          "marks": "10",
+          "co": null,
+          "topic": "Effect of Ground on Three-Phase Line Capacitance",
+          "textLatex": "Discuss with the help of mathematical derivation, how ground affects the capacitance of a three phase, asymmetrically spaced and transposed overhead transmission line conductors.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p2-3",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "3+2",
+          "co": null,
+          "topic": "Transposition & Electromagnetic Interference",
+          "textLatex": "Explain with suitable derivation how transposition of power transmission line helps to reduce electromagnetic interference on communication lines. Under what conditions transposition of power transmission lines will not be effective?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p2-4a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "2+3",
+          "co": null,
+          "topic": "Tuned Power Lines",
+          "textLatex": "What do you understand by tuned power lines? Determine the length of a $50\\text{ Hz}$ transmission line for tuning.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p2-4b",
+          "images": []
+        },
+        {
+          "kind": "group",
+          "label": "Group-B — Answer any two of the following questions"
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(a)",
+          "marks": "2+3",
+          "co": null,
+          "topic": "Transmission Line Performance & Parameters",
+          "textLatex": "What do you understand by performance of transmission lines? Explain 'lumped parameter' and 'distributed parameter' of a transmission line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p2-5a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(b)",
+          "marks": "3+2",
+          "co": null,
+          "topic": "Velocity of Travelling Waves",
+          "textLatex": "Determine the velocity of travelling waves in overhead transmission lines. Why the velocity of the same is less in underground cables?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p2-5b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Equivalent ABCD Parameters (Cascade & Parallel)",
+          "textLatex": "Determine the equivalent ABCD parameters of two transmission lines when they are connected in i) cascade and ii) parallel.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p2-6a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Incident & Reflected Voltage at No-Load",
+          "textLatex": "The resistance, inductance and capacitance of a three phase $132\\text{ kV}$, $50\\text{ Hz}$ transmission line are $0.2\\text{ }\\Omega$, $1.3\\text{ mH}$ and $0.01\\text{ }\\mu\\text{F}$ respectively. Determine the magnitude of the incident voltage and reflected voltage at the receiving end under no-load condition.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p2-6b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "7.(a)",
+          "marks": "2",
+          "co": null,
+          "topic": "Voltage Regulation Definition",
+          "textLatex": "Define voltage regulation of a transmission line.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p2-7a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "7.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Transmission Line Voltage Regulation & Shunt Compensation",
+          "textLatex": "A $30\\text{ km}$ long three phase overhead transmission line delivers $2\\text{ MW}$ at $11\\text{ kV}$ at a power factor $0.95$ lagging. Line loss is $5\\%$ of the power delivered. Line inductance is $1.5\\text{ mH}$ per phase per km. Calculate (a) sending end voltage and voltage regulation (b) power factor of the load to make the voltage regulation zero with the help of relevant phasor diagram and (c) the value of capacitor to be connected at the receiving end to reduce regulation to zero.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "pspd-2024-p2-7b",
+          "images": []
+        }
+      ]
+    }
+  ]
+}
