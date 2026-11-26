@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>JU Sem-5 Question Paper Archive</title>
+  <title>JU Sem-5 Exam Archive</title>
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
@@ -22,7 +22,10 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
-    /* iPad / Tablet Touch & Safe Area Enhancements */
+    :root {
+      --spring: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
     html {
       -webkit-text-size-adjust: 100%;
     }
@@ -34,6 +37,7 @@
       -webkit-tap-highlight-color: transparent;
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: #f1f3f6;
+      overflow-x: hidden;
     }
     .overflow-y-auto, .overflow-x-auto {
       -webkit-overflow-scrolling: touch;
@@ -47,6 +51,95 @@
     .mono-font {
       font-family: 'JetBrains Mono', monospace;
     }
+
+    /* Stacked Subject Cards (Home View) */
+    .stack-card {
+      perspective: 1100px;
+      cursor: pointer;
+    }
+    .paper-stack {
+      position: relative;
+      aspect-ratio: 1 / 1.38;
+      width: 100%;
+      max-width: 245px;
+      margin: 0 auto;
+    }
+    .stack-sheet {
+      position: absolute;
+      inset: 0;
+      background: #fdfdfc;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      transition: transform 0.45s var(--spring), box-shadow 0.45s var(--spring), border-color 0.3s ease;
+      transform-origin: center bottom;
+    }
+    .stack-sheet.back-3 {
+      transform: translate(9px, -8px) rotate(3.2deg);
+      background: #f1f5f9;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      z-index: 1;
+    }
+    .stack-sheet.back-2 {
+      transform: translate(-7px, -5px) rotate(-2.4deg);
+      background: #f8fafc;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.07);
+      z-index: 2;
+    }
+    .stack-sheet.back-1 {
+      transform: translate(4px, -3px) rotate(1.1deg);
+      background: #fcfcfd;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      z-index: 3;
+    }
+    .stack-sheet.front {
+      transform: translate(0, 0) rotate(0deg);
+      background: #fdfdfc;
+      box-shadow: 0 8px 22px -6px rgba(15, 23, 42, 0.16), 0 2px 5px rgba(15, 23, 42, 0.08);
+      z-index: 4;
+      overflow: hidden;
+    }
+    .stack-card:hover .stack-sheet.back-3,
+    .stack-card:focus-visible .stack-sheet.back-3 {
+      transform: translate(18px, -15px) rotate(6.5deg);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.09);
+    }
+    .stack-card:hover .stack-sheet.back-2,
+    .stack-card:focus-visible .stack-sheet.back-2 {
+      transform: translate(-15px, -11px) rotate(-5.2deg);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .stack-card:hover .stack-sheet.back-1,
+    .stack-card:focus-visible .stack-sheet.back-1 {
+      transform: translate(8px, -7px) rotate(2.4deg);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.11);
+    }
+    .stack-card:hover .stack-sheet.front,
+    .stack-card:focus-visible .stack-sheet.front {
+      transform: translateY(-10px) scale(1.018);
+      border-color: #6366f1;
+      box-shadow: 0 22px 38px -12px rgba(79, 70, 229, 0.22), 0 6px 14px rgba(0,0,0,0.08);
+    }
+
+    /* Year Paper Card (Paper Selection View) */
+    .year-paper-card {
+      transition: transform 0.38s var(--spring), box-shadow 0.38s var(--spring), border-color 0.25s ease;
+    }
+    .year-paper-card:hover {
+      transform: translateY(-8px) rotate(-0.6deg);
+      box-shadow: 0 20px 34px -12px rgba(79, 70, 229, 0.22), 0 4px 12px rgba(0,0,0,0.08);
+      border-color: #6366f1;
+    }
+
+    @keyframes riseIn {
+      from { opacity: 0; transform: translateY(20px) scale(0.96); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes fanExpand {
+      from { opacity: 0; transform: translateX(-24px) rotate(-3.5deg) scale(0.94); }
+      to { opacity: 1; transform: translateX(0) rotate(0deg) scale(1); }
+    }
+    .animate-rise { animation: riseIn 0.5s var(--spring) both; }
+    .animate-fan { animation: fanExpand 0.45s var(--spring) both; }
 
     /* Print Paper Simulation */
     .printed-paper-sheet {
@@ -64,7 +157,6 @@
       overflow: hidden;
     }
 
-    /* Subtle University Watermark */
     .printed-paper-sheet::before {
       content: "JADAVPUR UNIVERSITY • ELECTRICAL ENGINEERING";
       position: absolute;
@@ -82,22 +174,12 @@
     }
 
     /* Custom Scrollbar */
-    ::-webkit-scrollbar {
-      width: 7px;
-      height: 7px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #f1f5f9;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #cbd5e1;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #94a3b8;
-    }
+    ::-webkit-scrollbar { width: 7px; height: 7px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 
-    /* Subtle Question Row Styles (Clean & Neutral Unsolved State) */
+    /* Question Row Styles */
     .question-row {
       transition: all 0.15s ease-in-out;
       border-left: 3px solid transparent;
@@ -108,8 +190,6 @@
       border-left-color: #6366f1;
       box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.05);
     }
-
-    /* Confidence Tracker State Highlights */
     .question-row.status-mastered {
       background-color: #f0fdf4;
       border-left-color: #16a34a;
@@ -123,7 +203,7 @@
       border-left-color: transparent;
     }
 
-    /* Embedded Tables & Lists inside Question Statements */
+    /* Tables & Lists inside Question Statements */
     .q-rich-body table,
     .shared-note-prose table {
       width: auto;
@@ -154,14 +234,10 @@
       padding-left: 1.4rem;
       margin: 0.35rem 0;
     }
-    .q-rich-body ol[type="i"],
-    .shared-note-prose ol[type="i"] { list-style-type: lower-roman; }
-    .q-rich-body ol[type="a"],
-    .shared-note-prose ol[type="a"] { list-style-type: lower-alpha; }
-    .q-rich-body ol[type="I"],
-    .shared-note-prose ol[type="I"] { list-style-type: upper-roman; }
-    .q-rich-body ol[type="A"],
-    .shared-note-prose ol[type="A"] { list-style-type: upper-alpha; }
+    .q-rich-body ol[type="i"], .shared-note-prose ol[type="i"] { list-style-type: lower-roman; }
+    .q-rich-body ol[type="a"], .shared-note-prose ol[type="a"] { list-style-type: lower-alpha; }
+    .q-rich-body ol[type="I"], .shared-note-prose ol[type="I"] { list-style-type: upper-roman; }
+    .q-rich-body ol[type="A"], .shared-note-prose ol[type="A"] { list-style-type: upper-alpha; }
     .q-rich-body ul,
     .shared-note-prose ul {
       list-style-type: disc;
@@ -175,102 +251,43 @@
       padding: 1px 4px;
       border-radius: 3px;
     }
-    .overline-c {
-      text-decoration: overline;
-    }
+    .overline-c { text-decoration: overline; }
 
     /* SVG & Raster Figure Scaling */
-    .diagram-frame svg {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    .diagram-frame svg,
     .diagram-frame img {
       max-width: 100%;
       height: auto;
       display: block;
       margin-left: auto;
       margin-right: auto;
-      border-radius: 4px;
     }
+    .diagram-frame img { border-radius: 4px; }
 
     /* Solution Drawer Typography */
-    .solution-prose {
-      font-size: 0.95rem;
-      line-height: 1.75;
-      color: #1e293b;
-    }
+    .solution-prose { font-size: 0.95rem; line-height: 1.75; color: #1e293b; }
     .solution-prose h3 {
-      font-size: 1.12rem;
-      font-weight: 700;
-      color: #0f172a;
-      margin-top: 1.5rem;
-      margin-bottom: 0.75rem;
-      padding-bottom: 0.35rem;
-      border-bottom: 2px solid #e2e8f0;
+      font-size: 1.12rem; font-weight: 700; color: #0f172a;
+      margin-top: 1.5rem; margin-bottom: 0.75rem; padding-bottom: 0.35rem; border-bottom: 2px solid #e2e8f0;
     }
-    .solution-prose h4 {
-      font-size: 1rem;
-      font-weight: 700;
-      color: #1e3a8a;
-      margin-top: 1.25rem;
-      margin-bottom: 0.5rem;
-    }
-    .solution-prose p {
-      margin-bottom: 0.9rem;
-    }
-    .solution-prose ul {
-      list-style-type: disc;
-      padding-left: 1.4rem;
-      margin-bottom: 1rem;
-    }
-    .solution-prose ol {
-      list-style-type: decimal;
-      padding-left: 1.4rem;
-      margin-bottom: 1rem;
-    }
-    .solution-prose li {
-      margin-bottom: 0.35rem;
-    }
-    .solution-prose table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-      margin-bottom: 1.25rem;
-      font-size: 0.88rem;
-    }
-    .solution-prose th {
-      background-color: #f1f5f9;
-      color: #0f172a;
-      font-weight: 700;
-      text-align: left;
-      padding: 8px 12px;
-      border: 1px solid #cbd5e1;
-    }
-    .solution-prose td {
-      padding: 8px 12px;
-      border: 1px solid #e2e8f0;
-      color: #334155;
-    }
-    .solution-prose tr:nth-child(even) {
-      background-color: #f8fafc;
-    }
-    .solution-prose hr {
-      border: 0;
-      border-top: 1px dashed #cbd5e1;
-      margin: 1.5rem 0;
-    }
-    .katex-display {
-      margin: 0.85rem 0 !important;
-      overflow-x: auto;
-      overflow-y: hidden;
-      padding: 4px 0;
-    }
+    .solution-prose h4 { font-size: 1rem; font-weight: 700; color: #1e3a8a; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .solution-prose p { margin-bottom: 0.9rem; }
+    .solution-prose ul { list-style-type: disc; padding-left: 1.4rem; margin-bottom: 1rem; }
+    .solution-prose ol { list-style-type: decimal; padding-left: 1.4rem; margin-bottom: 1rem; }
+    .solution-prose li { margin-bottom: 0.35rem; }
+    .solution-prose table { width: 100%; border-collapse: collapse; margin-top: 1rem; margin-bottom: 1.25rem; font-size: 0.88rem; }
+    .solution-prose th { background-color: #f1f5f9; color: #0f172a; font-weight: 700; text-align: left; padding: 8px 12px; border: 1px solid #cbd5e1; }
+    .solution-prose td { padding: 8px 12px; border: 1px solid #e2e8f0; color: #334155; }
+    .solution-prose tr:nth-child(even) { background-color: #f8fafc; }
+    .solution-prose hr { border: 0; border-top: 1px dashed #cbd5e1; margin: 1.5rem 0; }
+    .katex-display { margin: 0.85rem 0 !important; overflow-x: auto; overflow-y: hidden; padding: 4px 0; }
+    .status-btn { transition: all 0.15s ease; }
 
-    .status-btn {
-      transition: all 0.15s ease;
+    @media (prefers-reduced-motion: reduce) {
+      .animate-rise, .animate-fan, .stack-sheet, .year-paper-card {
+        animation: none !important;
+        transition: none !important;
+      }
     }
 
     @media print {
@@ -284,27 +301,34 @@
 
   <!-- TOP HEADER -->
   <header class="bg-slate-900 text-white sticky top-0 z-40 shadow-sm border-b border-slate-800">
-    <div class="max-w-6xl mx-auto px-3 sm:px-6 min-h-14 py-2 flex flex-wrap items-center justify-between gap-2">
-      <div class="flex items-center space-x-2.5 sm:space-x-3 min-w-0">
-        <div class="w-8 h-8 rounded bg-indigo-600 flex items-center justify-center font-bold text-white shadow-sm shrink-0">
-          <i data-lucide="file-text" class="w-4 h-4"></i>
+    <div class="max-w-6xl mx-auto px-3 sm:px-6 h-14 flex items-center justify-between gap-2">
+      <button id="nav-home-btn" class="flex items-center space-x-2.5 sm:space-x-3 text-left group min-w-0 focus:outline-none">
+        <div class="w-8 h-8 rounded bg-indigo-600 group-hover:bg-indigo-500 transition flex items-center justify-center font-bold text-white shadow-sm shrink-0">
+          <i data-lucide="layers" class="w-4 h-4"></i>
         </div>
-        <div class="min-w-0 flex flex-wrap items-center gap-2">
-          <span class="font-bold tracking-tight text-sm sm:text-base whitespace-nowrap">JU Sem-5 Exam Archive</span>
-          <!-- Subject Switcher -->
-          <select
-            id="subject-select"
-            aria-label="Select Subject"
-            class="bg-slate-800 hover:bg-slate-700 text-indigo-200 text-[11px] sm:text-xs font-medium px-2.5 py-1 rounded-md border border-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 max-w-[210px] sm:max-w-[290px] truncate cursor-pointer"
-          >
-            <option>Loading subjects...</option>
-          </select>
+        <div class="min-w-0">
+          <div class="flex items-center space-x-2">
+            <span class="font-bold tracking-tight text-sm sm:text-base truncate">JU Sem-5 Exam Archive</span>
+            <span class="hidden md:inline bg-indigo-500/20 text-indigo-300 text-[11px] px-2 py-0.5 rounded font-mono border border-indigo-500/30">B.E. Electrical</span>
+          </div>
         </div>
-      </div>
+      </button>
 
-      <!-- Confidence Tracker Summary & DeepSeek -->
-      <div class="flex items-center space-x-2 sm:space-x-3">
-        <div class="hidden sm:flex items-center space-x-2 bg-slate-800/90 px-3.5 py-1.5 rounded-lg border border-slate-700/70 text-xs">
+      <!-- Right Header Controls (Home Search OR Paper Confidence Tracker + DeepSeek) -->
+      <div class="flex items-center space-x-2 sm:space-x-3 shrink-0">
+        <!-- Subject Filter (Home View) -->
+        <div id="home-search-wrap" class="relative hidden">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+          <input
+            id="subject-search"
+            type="text"
+            placeholder="Filter subjects..."
+            class="pl-8 pr-3 py-1.5 text-xs bg-slate-800 text-slate-100 placeholder:text-slate-400 border border-slate-700 rounded-lg w-36 sm:w-52 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
+        </div>
+
+        <!-- Confidence Counter Pills (Paper View) -->
+        <div id="header-confidence-wrap" class="hidden sm:flex items-center space-x-2 bg-slate-800/90 px-3.5 py-1.5 rounded-lg border border-slate-700/70 text-xs">
           <div class="flex items-center space-x-1.5" title="Questions Mastered">
             <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
             <span class="text-slate-300 font-medium"><strong id="summary-mastered" class="text-emerald-400 font-mono">0</strong> Mastered</span>
@@ -321,6 +345,7 @@
           </div>
         </div>
 
+        <!-- DeepSeek Config -->
         <button onclick="openApiModal()" class="flex items-center space-x-1.5 px-2.5 sm:px-3 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-xs font-medium text-slate-200 transition">
           <i data-lucide="bot" class="w-3.5 h-3.5 text-indigo-400"></i>
           <span class="hidden md:inline">DeepSeek AI</span>
@@ -329,21 +354,19 @@
     </div>
   </header>
 
-  <!-- SUBHEADER / PAPER YEAR SWITCHER & EXAM CONTROLS -->
-  <div class="bg-white border-b border-slate-200 sticky top-14 z-30 shadow-xs top-toolbar">
-    <div class="max-w-5xl mx-auto px-3 sm:px-4 py-2 flex flex-wrap items-center justify-between gap-2 text-xs">
-      <!-- Year Pills -->
-      <div id="paper-year-pills" class="flex items-center gap-1.5 overflow-x-auto max-w-full py-0.5">
-        <span class="text-[11px] uppercase font-bold tracking-wider text-slate-400 shrink-0 mr-0.5">Papers:</span>
+  <!-- SUBHEADER TOOLBAR (Shown in Paper View: Breadcrumb, Year Pills, Choice Tracker) -->
+  <div id="paper-toolbar" class="hidden bg-white border-b border-slate-200 sticky top-14 z-30 shadow-xs top-toolbar">
+    <div class="max-w-6xl mx-auto px-3 sm:px-6 py-2 flex flex-wrap items-center justify-between gap-2 text-xs">
+      <div class="flex items-center space-x-2 min-w-0 flex-wrap gap-y-1">
+        <button id="toolbar-back-home" class="text-slate-500 hover:text-indigo-600 font-medium transition">Subjects</button>
+        <span class="text-slate-300">/</span>
+        <button id="toolbar-back-subject" class="text-slate-700 hover:text-indigo-600 font-semibold truncate max-w-[180px] sm:max-w-xs transition"></button>
+        <span class="text-slate-300 hidden sm:inline">|</span>
+        <div id="paper-year-pills" class="flex items-center gap-1 overflow-x-auto max-w-full py-0.5"></div>
       </div>
 
-      <!-- Choice Trackers & Reset -->
       <div class="flex items-center space-x-2.5 sm:space-x-3 shrink-0">
-        <div id="choice-trackers" class="flex items-center space-x-2.5 text-xs font-medium">
-          <span class="text-slate-600">Part I: <strong id="tracker-p1" class="font-mono text-amber-600">0/5</strong></span>
-          <span class="text-slate-300">|</span>
-          <span class="text-slate-600">Part II: <strong id="tracker-p2" class="font-mono text-amber-600">0/4</strong></span>
-        </div>
+        <div id="choice-trackers" class="flex items-center space-x-2.5 text-xs font-medium"></div>
         <span class="text-slate-300">|</span>
         <button onclick="resetProgress()" class="text-slate-500 hover:text-rose-600 transition flex items-center space-x-1">
           <i data-lucide="rotate-ccw" class="w-3 h-3"></i>
@@ -353,72 +376,28 @@
     </div>
   </div>
 
-  <!-- MAIN EXAM PAPER CONTAINER -->
-  <main class="flex-1 max-w-4xl w-full mx-auto p-3 sm:p-6 lg:p-8">
-
-    <!-- AUTHENTIC EXAM PAPER SHEET -->
-    <div id="paper-sheet-card" class="printed-paper-sheet rounded-xl p-5 sm:p-10 lg:p-14 mb-16 relative">
-
-      <!-- EXAM PAPER TOP HEADER -->
-      <div class="text-center pb-6 mb-8 border-b-2 border-slate-900 relative z-10">
-        <div class="flex items-center justify-between text-xs text-slate-500 font-mono mb-2 gap-2">
-          <span id="sheet-ref-no" class="truncate">Ref No: ...</span>
-          <span id="sheet-badge" class="border border-slate-300 px-2 py-0.5 rounded text-[11px] text-slate-600 uppercase font-sans shrink-0">Official Archive</span>
-        </div>
-
-        <h1 id="sheet-university" class="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 uppercase paper-font font-serif">
-          Jadavpur University
-        </h1>
-        <p id="sheet-exam-title" class="text-sm font-semibold text-slate-700 mt-0.5 paper-font">
-          B.E. Electrical Engineering 3rd Year 1st Semester Examination
-        </p>
-        <h2 id="sheet-subject-title" class="text-lg sm:text-xl font-bold text-slate-900 tracking-wide mt-2 uppercase paper-font">
-          Subject: —
-        </h2>
-
-        <!-- Marks & Time Matrix Table -->
-        <div id="sheet-meta-grid" class="mt-4 pt-3 border-t border-slate-300 grid grid-cols-3 text-xs sm:text-sm font-medium text-slate-800 paper-font text-center gap-2">
-          <div id="sheet-full-marks"><strong>Full Marks:</strong> 100</div>
-          <div id="sheet-time"><strong>Time:</strong> Three Hours</div>
-          <div id="sheet-dist"><strong>Distribution:</strong> 50 Marks each Part</div>
-        </div>
-        <p id="sheet-script-note" class="text-xs italic text-slate-600 mt-2.5 paper-font">
-          * Use a separate Answer-Script for each part.
-        </p>
-      </div>
-
-      <!-- EXAM PAPER BODY -->
-      <div id="exam-paper-content" class="relative z-10 space-y-12">
-        <div class="py-12 text-center text-sm text-slate-500">Loading database...</div>
-      </div>
-
-      <!-- EXAM PAPER FOOTER -->
-      <div id="sheet-footer" class="mt-14 pt-6 border-t border-dashed border-slate-400 text-center text-xs text-slate-500 paper-font relative z-10">
-        [ END OF QUESTION PAPER ]
-      </div>
-    </div>
+  <!-- MAIN VIEWPORT -->
+  <main id="app-main" class="flex-1 max-w-6xl w-full mx-auto p-4 sm:p-6 lg:p-8">
+    <div class="py-16 text-center text-sm text-slate-500">Loading archive...</div>
   </main>
 
-  <!-- SOLUTION & DEEPSEEK DRAWER -->
+  <!-- SOLUTION & DEEPSEEK DRAWER (80% Slide-Over on Desktop/Tablet, Full on Mobile) -->
   <div id="drawer-container" class="fixed inset-0 z-50 pointer-events-none transition-all">
-    <!-- Backdrop Overlay -->
     <div id="drawer-backdrop" onclick="closeDrawer()" class="fixed inset-0 bg-slate-900/50 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-200"></div>
 
-    <!-- Drawer Panel -->
-    <div id="drawer-panel" class="fixed top-0 right-0 bottom-0 w-full sm:w-[85vw] sm:max-w-[600px] md:w-[78vw] md:max-w-[740px] lg:w-[75vw] lg:max-w-[880px] xl:w-[960px] bg-white shadow-2xl flex flex-col z-50 pointer-events-auto translate-x-full transition-transform duration-300 border-l border-slate-200">
+    <div id="drawer-panel" class="fixed top-0 right-0 bottom-0 w-full sm:w-[85vw] md:w-[80vw] bg-white shadow-2xl flex flex-col z-50 pointer-events-auto translate-x-full transition-transform duration-300 border-l border-slate-200">
 
       <!-- Drawer Header -->
       <div class="px-4 sm:px-6 py-3 sm:py-4 bg-slate-900 text-white flex items-center justify-between border-b border-slate-800 shrink-0 gap-2">
         <div class="flex items-center space-x-2 sm:space-x-3 min-w-0">
           <span id="drawer-q-badge" class="bg-indigo-600 text-white text-xs font-mono font-bold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded shrink-0">Q1</span>
           <div class="min-w-0">
-            <h3 id="drawer-q-title" class="font-bold text-xs sm:text-base text-white truncate max-w-[140px] sm:max-w-xs md:max-w-md">Question</h3>
+            <h3 id="drawer-q-title" class="font-bold text-xs sm:text-base text-white truncate max-w-[140px] sm:max-w-xs md:max-w-lg">Question</h3>
             <p id="drawer-q-meta" class="text-[10px] sm:text-xs text-slate-400 truncate">Marks • Part I</p>
           </div>
         </div>
 
         <div class="flex items-center space-x-1.5 sm:space-x-2 shrink-0">
-          <!-- Confidence Status Selector in Drawer -->
           <div class="inline-flex rounded-lg bg-slate-800 p-0.5 border border-slate-700 text-[11px] sm:text-xs">
             <button id="drawer-btn-mastered" onclick="setDrawerStatus('mastered')" class="status-btn px-2 sm:px-2.5 py-1 rounded text-slate-400 hover:text-emerald-400 font-medium flex items-center space-x-1" title="Mark as Mastered">
               <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
@@ -444,7 +423,7 @@
       <div class="flex border-b border-slate-200 bg-slate-50 px-3 sm:px-6 pt-1.5 sm:pt-2 shrink-0 gap-1">
         <button id="tab-sol-btn" onclick="switchDrawerTab('solution')" class="py-2 sm:py-2.5 px-2.5 sm:px-4 font-semibold text-xs border-b-2 border-indigo-600 text-indigo-600 flex items-center space-x-1 sm:space-x-1.5">
           <i data-lucide="file-check-2" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
-          <span id="tab-sol-label"><span class="hidden sm:inline">Exam-Ready </span>Solution<span class="hidden md:inline"> &amp; Details</span></span>
+          <span><span class="hidden sm:inline">Exam-Ready </span>Solution<span class="hidden md:inline"> &amp; Slide Ref</span></span>
         </button>
         <button id="tab-ai-btn" onclick="switchDrawerTab('ai')" class="py-2 sm:py-2.5 px-2.5 sm:px-4 font-semibold text-xs border-b-2 border-transparent text-slate-500 hover:text-slate-700 flex items-center space-x-1 sm:space-x-1.5">
           <i data-lucide="bot" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-500"></i>
@@ -455,27 +434,25 @@
 
       <!-- Drawer Body -->
       <div class="flex-1 overflow-y-auto p-3.5 sm:p-6 space-y-4 sm:space-y-6">
-
         <!-- TAB 1: QUESTION / SOLUTION VIEW -->
-        <div id="tab-sol-content" class="space-y-5 sm:space-y-6">
-
+        <div id="tab-sol-content" class="max-w-4xl mx-auto space-y-5 sm:space-y-6">
           <!-- Question Statement Card -->
           <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 text-sm font-medium">
             <div class="flex items-center justify-between text-xs text-slate-500 font-mono mb-2 gap-2 flex-wrap">
-              <span id="drawer-group-badge" class="font-bold text-slate-600 uppercase">Question</span>
+              <span id="drawer-group-badge" class="font-bold text-slate-600 uppercase">Question Statement</span>
               <div class="flex items-center gap-2">
-                <button onclick="copyQuestionJson()" class="text-[11px] font-sans font-semibold text-slate-600 hover:text-indigo-700 bg-white border border-slate-200 px-2 py-0.5 rounded transition" title="Copy Question JSON">Copy JSON</button>
-                <button onclick="copyQuestionLatex()" class="text-[11px] font-sans font-semibold text-slate-600 hover:text-indigo-700 bg-white border border-slate-200 px-2 py-0.5 rounded transition" title="Copy Question LaTeX">Copy LaTeX</button>
+                <button onclick="copyQuestionJson()" class="text-[11px] font-sans font-semibold text-slate-600 hover:text-indigo-700 bg-white border border-slate-200 px-2 py-0.5 rounded transition">Copy JSON</button>
+                <button onclick="copyQuestionLatex()" class="text-[11px] font-sans font-semibold text-slate-600 hover:text-indigo-700 bg-white border border-slate-200 px-2 py-0.5 rounded transition">Copy LaTeX</button>
                 <span id="drawer-statement-marks" class="font-bold text-indigo-700 bg-indigo-50 border border-indigo-200 px-2 py-0.5 rounded">10 Marks</span>
               </div>
             </div>
             <div id="drawer-statement-text" class="q-rich-body leading-relaxed paper-font text-base text-slate-900"></div>
           </div>
 
-          <!-- Question Images & SVG Diagrams (if present) -->
+          <!-- Question Images & SVG Diagrams (when present in JSON) -->
           <div id="drawer-media-section" class="hidden space-y-3"></div>
 
-          <!-- Optional Official Slide & PDF Pointer (shown when note_ref is present) -->
+          <!-- Optional Official Slide & PDF Pointer (when note_ref exists) -->
           <div id="drawer-note-section-card" class="hidden p-4 rounded-xl bg-emerald-50/90 border border-emerald-200 text-emerald-950 text-xs sm:text-sm">
             <div class="flex items-center justify-between font-bold text-emerald-900 mb-2 gap-2">
               <div class="flex items-center space-x-2">
@@ -502,7 +479,7 @@
             </div>
           </div>
 
-          <!-- Model Exam Solution Body (shown only when solution exists) -->
+          <!-- Model Exam Solution Body (when solution exists) -->
           <div id="drawer-solution-card" class="hidden bg-white rounded-xl border border-slate-200 shadow-xs overflow-hidden">
             <div class="px-5 py-3.5 bg-slate-50/80 border-b border-slate-200 flex items-center justify-between">
               <div class="flex items-center space-x-2">
@@ -516,7 +493,6 @@
                 <span>Copy</span>
               </button>
             </div>
-
             <div id="drawer-solution-body" class="solution-prose p-6 text-slate-800 leading-relaxed overflow-x-auto"></div>
           </div>
 
@@ -534,7 +510,7 @@
         </div>
 
         <!-- TAB 2: LIVE DEEPSEEK AI CHAT -->
-        <div id="tab-ai-content" class="hidden flex flex-col h-full space-y-4">
+        <div id="tab-ai-content" class="hidden max-w-4xl mx-auto flex flex-col h-full space-y-4">
           <div class="bg-indigo-50/70 border border-indigo-100 p-3.5 rounded-lg text-xs text-slate-600 flex items-start space-x-2.5">
             <i data-lucide="info" class="w-4 h-4 text-indigo-600 mt-0.5 shrink-0"></i>
             <div>
@@ -543,8 +519,7 @@
             </div>
           </div>
 
-          <!-- Chat Messages -->
-          <div id="chat-messages" class="space-y-3 min-h-[300px] max-h-[400px] overflow-y-auto p-4 bg-slate-50 rounded-xl border border-slate-200">
+          <div id="chat-messages" class="space-y-3 min-h-[300px] max-h-[420px] overflow-y-auto p-4 bg-slate-50 rounded-xl border border-slate-200">
             <div class="flex items-start space-x-2">
               <div class="w-7 h-7 rounded-full bg-indigo-600 text-white flex items-center justify-center shrink-0 text-xs font-bold shadow-xs">AI</div>
               <div class="p-3.5 bg-white rounded-xl border border-slate-200 text-xs leading-relaxed text-slate-800 shadow-xs max-w-[88%]">
@@ -558,7 +533,6 @@
             </div>
           </div>
 
-          <!-- Chat Input -->
           <div class="pt-2">
             <div class="flex space-x-2">
               <input type="text" id="chat-input" placeholder="Ask DeepSeek about this question..." class="flex-1 text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-xs" onkeydown="if(event.key==='Enter') sendMessage()" />
@@ -573,7 +547,6 @@
             </p>
           </div>
         </div>
-
       </div>
 
       <!-- Drawer Footer Navigation -->
@@ -635,6 +608,14 @@
 
   <!-- MAIN SCRIPT -->
   <script>
+    const state = {
+      view: 'home', // 'home' | 'subject' | 'paper'
+      subjectId: null,
+      paperId: null,
+      searchQuery: '',
+      examFilter: 'all'
+    };
+
     let dbIndex = null;
     let currentSubject = null;
     let currentPaperRef = null;
@@ -642,11 +623,21 @@
     let activeQuestion = null;
     let flatQuestions = [];
     let activeQuestionIndex = 0;
-    let paperCache = new Map();
+    const rawPaperCache = new Map();
+    const normPaperCache = new Map();
     let userConfidence = {};
 
+    const SUBJECT_BADGE_TONES = {
+      pspd: 'bg-teal-50 text-teal-800 border-teal-200',
+      ispm: 'bg-violet-50 text-violet-800 border-violet-200',
+      em3: 'bg-amber-50 text-amber-900 border-amber-200',
+      lcs: 'bg-sky-50 text-sky-800 border-sky-200',
+      pe: 'bg-rose-50 text-rose-800 border-rose-200',
+      plm: 'bg-indigo-50 text-indigo-800 border-indigo-200'
+    };
+
     // =========================================================================
-    // HTML / SVG / KATEX HELPERS
+    // HTML / SVG / KATEX / PREVIEW HELPERS
     // =========================================================================
     function escapeHtml(str) {
       return String(str ?? '')
@@ -741,15 +732,11 @@
       let match;
 
       while ((match = mathRegex.exec(text)) !== null) {
-        if (match.index > lastIdx) {
-          parts.push({ type: 'html', value: text.slice(lastIdx, match.index) });
-        }
+        if (match.index > lastIdx) parts.push({ type: 'html', value: text.slice(lastIdx, match.index) });
         parts.push({ type: 'math', value: match[0] });
         lastIdx = mathRegex.lastIndex;
       }
-      if (lastIdx < text.length) {
-        parts.push({ type: 'html', value: text.slice(lastIdx) });
-      }
+      if (lastIdx < text.length) parts.push({ type: 'html', value: text.slice(lastIdx) });
 
       const combined = parts.map(seg => {
         if (seg.type === 'math') return escapeMathSegment(seg.value);
@@ -762,6 +749,23 @@
       }).join('');
 
       return sanitizeHtmlFragment(combined);
+    }
+
+    function latexToMiniPreview(raw) {
+      if (!raw) return '';
+      return String(raw)
+        .replace(/<table[\s\S]*?<\/table>/gi, ' [Table] ')
+        .replace(/<[^>]+>/g, ' ')
+        .replace(/\$\$/g, ' ').replace(/(?<!\\)\$/g, '')
+        .replace(/\\\[|\\\]|\\\(|\\\)/g, ' ')
+        .replace(/\\d?frac\s*\{([^{}]*)\}\s*\{([^{}]*)\}/g, '($1)/($2)')
+        .replace(/\\overline\s*\{([^{}]*)\}/g, '$1\u0304')
+        .replace(/\\bar\s*\{([^{}]*)\}/g, '$1\u0304')
+        .replace(/\\(?:text|mathrm|mathbf|mathit|operatorname)\s*\{([^{}]*)\}/g, '$1')
+        .replace(/\\[a-zA-Z]+/g, ' ')
+        .replace(/[{}]/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
     }
 
     function runKatex(el) {
@@ -784,7 +788,7 @@
     }
 
     window.__onKatexLoaded = () => {
-      runKatex(document.getElementById('exam-paper-content'));
+      runKatex(document.getElementById('app-main'));
       runKatex(document.getElementById('drawer-panel'));
     };
 
@@ -817,7 +821,7 @@
     }
 
     // =========================================================================
-    // SCHEMA NORMALIZER (SUPPORTS BOTH LEGACY paper_2023.json & DB PAPERS)
+    // NORMALIZATION & DATA LOADING
     // =========================================================================
     function getStorageKey(paperId) {
       if (paperId === 'plm-2023-solved') return 'ju_sem5_confidence_2023';
@@ -825,14 +829,18 @@
     }
 
     function normalizePaper(raw, subjectMeta, paperMeta) {
+      const pid = (paperMeta && paperMeta.id) || raw.id || 'paper';
       const normalized = {
-        id: (paperMeta && paperMeta.id) || raw.id || 'paper',
+        id: pid,
         subjectId: (subjectMeta && subjectMeta.id) || raw.subjectId || 'plm',
         subjectName: (subjectMeta && subjectMeta.name) || 'Subject',
         subjectCode: (subjectMeta && subjectMeta.codePrefix) || 'Ex/EE/PC/B/T',
         paperTitle: (subjectMeta && subjectMeta.paperTitle) || '',
         yearLabel: (paperMeta && paperMeta.yearLabel) || raw.yearLabel || '',
+        year: (paperMeta && paperMeta.year) || raw.year || '',
         examType: (paperMeta && paperMeta.examType) || raw.examType || 'Regular',
+        hasDiagram: Boolean((paperMeta && paperMeta.hasDiagram) || raw.hasDiagram),
+        hasSolutions: Boolean(paperMeta && paperMeta.hasSolutions),
         refCode: (raw.exam_info && raw.exam_info.subject && `${raw.exam_info.subject.split(':')[0]}/${raw.exam_info.year?.match(/\d{4}/)?.[0] || ''}`) ||
                  ((raw.parts && raw.parts[0] && raw.parts[0].refCode) || `${subjectMeta.codePrefix}/${Math.floor(raw.year || 0)}`),
         university: (raw.exam_info && raw.exam_info.university) || 'Jadavpur University',
@@ -867,6 +875,8 @@
               rows.push({ kind: 'or', label: r.label || 'OR' });
             } else if (r.kind === 'question') {
               qSeq += 1;
+              if (r.solution || r.solutionLatex) normalized.hasSolutions = true;
+              if (r.diagramSvg || (Array.isArray(r.images) && r.images.length)) normalized.hasDiagram = true;
               rows.push({
                 kind: 'question',
                 id: r.questionId || `${normalized.id}-p${pIdx + 1}-q${qSeq}`,
@@ -892,6 +902,8 @@
         } else if (Array.isArray(part.questions)) {
           part.questions.forEach((q, qIdx) => {
             qSeq += 1;
+            if (q.solution) normalized.hasSolutions = true;
+            if (q.diagramSvg || (Array.isArray(q.images) && q.images.length) || q.image) normalized.hasDiagram = true;
             rows.push({
               kind: 'question',
               id: q.id || `${normalized.id}-p${pIdx + 1}-q${qIdx + 1}`,
@@ -915,16 +927,14 @@
           });
         }
 
-        // Infer reasonable required choice target for tracker
         let ruleRequired = null;
         const instr = String(part.instructions || '');
-        if (/answer\s+question\s+no\.\s*6.*any\s+three/i.test(instr) || part.part_id === 'part_2' && rawParts.length === 2 && rows.filter(r => r.kind === 'question').length <= 8) {
+        if (/answer\s+question\s+no\.\s*6.*any\s+three/i.test(instr) || (part.part_id === 'part_2' && rawParts.length === 2 && rows.filter(r => r.kind === 'question').length <= 8)) {
           ruleRequired = 4;
-        } else if (/answer\s+any\s+five/i.test(instr) && rows.some(r => /1\./.test(r.q_num || '') && r.kind === 'question')) {
-          // For standard JU sheets with multiple questions/subparts, track count flexibly
-          const matchAny = instr.match(/any\s+(two|three|four|five|six|1|2|3|4|5|6)/i);
+        } else {
+          const matchAny = instr.match(/any\s+(one|two|three|four|five|six|1|2|3|4|5|6)/i);
           const wordToNum = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6 };
-          if (matchAny) ruleRequired = wordToNum[matchAny[1].toLowerCase()] || Number(matchAny[1]) || 5;
+          if (matchAny) ruleRequired = wordToNum[matchAny[1].toLowerCase()] || Number(matchAny[1]) || null;
         }
 
         return {
@@ -943,178 +953,549 @@
       return normalized;
     }
 
+    async function fetchAndNormalizePaper(subj, ref) {
+      const key = `${subj.id}:${ref.id}`;
+      if (normPaperCache.has(key)) return normPaperCache.get(key);
+      let raw = rawPaperCache.get(ref.path);
+      if (!raw) {
+        const res = await fetch(ref.path, { cache: 'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status} loading ${ref.path}`);
+        raw = await res.json();
+        rawPaperCache.set(ref.path, raw);
+      }
+      const norm = normalizePaper(raw, subj, ref);
+      normPaperCache.set(key, norm);
+      return norm;
+    }
+
+    async function prefetchLatestPreviews() {
+      if (!dbIndex) return;
+      const jobs = [];
+      dbIndex.subjects.forEach(subj => {
+        if (Array.isArray(subj.papers) && subj.papers.length > 0) {
+          jobs.push(fetchAndNormalizePaper(subj, subj.papers[0]).catch(() => null));
+        }
+      });
+      await Promise.all(jobs);
+    }
+
+    async function prefetchSubjectPapers(subj) {
+      if (!subj || !Array.isArray(subj.papers)) return;
+      await Promise.all(subj.papers.map(ref => fetchAndNormalizePaper(subj, ref).catch(() => null)));
+    }
+
     // =========================================================================
-    // DATABASE BOOT & SWITCHING
+    // ROUTING (#/ , #/<subjectId> , #/<subjectId>/<paperId>)
     // =========================================================================
-    async function initApp() {
-      try {
-        const res = await fetch('data/index.json', { cache: 'no-store' });
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        dbIndex = await res.json();
+    function getSubject(id) {
+      return (dbIndex && dbIndex.subjects.find(s => s.id === id)) || null;
+    }
 
-        renderSubjectSelect();
+    function computeHash() {
+      if (state.view === 'home' || !state.subjectId) return '#/';
+      if (state.view === 'subject' || !state.paperId) return `#/${encodeURIComponent(state.subjectId)}`;
+      return `#/${encodeURIComponent(state.subjectId)}/${encodeURIComponent(state.paperId)}`;
+    }
 
-        // Parse hash route (#subjectId/paperId or #subjectId)
-        const rawHash = (window.location.hash || '').replace(/^#\/?/, '');
-        const [hashSubj, hashPaper] = rawHash.split('/').filter(Boolean).map(decodeURIComponent);
+    function syncHash(replace = false) {
+      const target = computeHash();
+      if (window.location.hash !== target) {
+        if (replace && history.replaceState) history.replaceState(null, '', target);
+        else window.location.hash = target;
+      }
+    }
 
-        const defaultSubject =
-          dbIndex.subjects.find(s => s.id === hashSubj) ||
-          dbIndex.subjects.find(s => Array.isArray(s.papers) && s.papers.length > 0) ||
-          dbIndex.subjects[0];
+    async function applyRouteFromHash() {
+      const raw = (window.location.hash || '').replace(/^#\/?/, '');
+      if (!raw) {
+        await goHome(false);
+        return;
+      }
+      const parts = raw.split('/').map(decodeURIComponent).filter(Boolean);
+      const subj = getSubject(parts[0]);
+      if (!subj) {
+        await goHome(false);
+        return;
+      }
+      if (parts.length === 1) {
+        await openSubject(subj.id, false);
+        return;
+      }
+      const paperRef = (subj.papers || []).find(p => p.id === parts[1]);
+      if (!paperRef) {
+        await openSubject(subj.id, false);
+        return;
+      }
+      await openPaper(subj.id, paperRef.id, false);
+    }
 
-        await selectSubject(defaultSubject.id, hashPaper, false);
-      } catch (err) {
-        console.error('Failed to load index.json, falling back to paper_2023.json:', err);
-        // Graceful single-paper fallback if index.json isn't present
-        try {
-          const r2 = await fetch('data/paper_2023.json');
-          const raw2 = await r2.json();
-          const fallbackSubj = { order: 6, id: 'plm', codePrefix: 'Ex/EE/PC/B/T/316', name: 'Prog. Logic & Microcontroller', paperTitle: 'PROGRAMMABLE LOGIC & MICROCONTROLLER', papers: [{ id: 'plm-2023-solved', yearLabel: '2023', path: 'data/paper_2023.json' }] };
-          dbIndex = { subjects: [fallbackSubj] };
-          currentSubject = fallbackSubj;
-          renderSubjectSelect();
-          await loadPaper(fallbackSubj.papers[0], raw2, false);
-        } catch (err2) {
-          document.getElementById('exam-paper-content').innerHTML = `<div class="p-8 text-center text-sm text-rose-600">Could not load archive data (${escapeHtml(err.message)}).</div>`;
+    async function goHome(updateHash = true) {
+      closeDrawer();
+      state.view = 'home';
+      state.subjectId = null;
+      state.paperId = null;
+      state.examFilter = 'all';
+      currentSubject = null;
+      currentPaperRef = null;
+      paperData = null;
+      if (updateHash) syncHash(false);
+      updateChromeVisibility();
+      renderHome();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    async function openSubject(subjectId, updateHash = true) {
+      const subj = getSubject(subjectId);
+      if (!subj) return goHome(updateHash);
+      closeDrawer();
+      state.view = 'subject';
+      state.subjectId = subj.id;
+      state.paperId = null;
+      state.examFilter = 'all';
+      currentSubject = subj;
+      currentPaperRef = null;
+      paperData = null;
+      if (updateHash) syncHash(false);
+      updateChromeVisibility();
+      renderSubjectView();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // Preload all papers in this subject so mini card previews fill smoothly
+      if (subj.papers && subj.papers.length) {
+        await prefetchSubjectPapers(subj);
+        if (state.view === 'subject' && state.subjectId === subj.id) {
+          renderSubjectView();
         }
       }
     }
 
-    function renderSubjectSelect() {
-      const sel = document.getElementById('subject-select');
-      sel.innerHTML = dbIndex.subjects.map(s => {
-        const count = Array.isArray(s.papers) ? s.papers.length : 0;
-        const selected = currentSubject && currentSubject.id === s.id ? 'selected' : '';
-        return `<option value="${escapeHtml(s.id)}" ${selected}>${s.order}. ${escapeHtml(s.name)} (${count})</option>`;
-      }).join('');
+    async function openPaper(subjectId, paperId, updateHash = true) {
+      const subj = getSubject(subjectId);
+      if (!subj) return goHome(updateHash);
+      const ref = (subj.papers || []).find(p => p.id === paperId) || (subj.papers || [])[0];
+      if (!ref) return openSubject(subj.id, updateHash);
 
-      sel.onchange = () => selectSubject(sel.value, null, true);
-    }
-
-    async function selectSubject(subjectId, preferredPaperId = null, updateHash = true) {
-      const subj = dbIndex.subjects.find(s => s.id === subjectId) || dbIndex.subjects[0];
-      if (!subj) return;
-      currentSubject = subj;
-      renderSubjectSelect();
-      renderPaperPills();
-
-      const papers = Array.isArray(subj.papers) ? subj.papers : [];
-      if (!papers.length) {
-        currentPaperRef = null;
-        paperData = null;
-        flatQuestions = [];
-        userConfidence = {};
-        renderEmptySubjectSheet(subj);
-        updateSummaryCounters();
-        if (updateHash) window.location.hash = `#/${encodeURIComponent(subj.id)}`;
-        return;
-      }
-
-      const targetRef = (preferredPaperId && papers.find(p => p.id === preferredPaperId)) || papers[0];
-      await selectPaper(targetRef.id, updateHash);
-    }
-
-    function renderPaperPills() {
-      const bar = document.getElementById('paper-year-pills');
-      const papers = (currentSubject && Array.isArray(currentSubject.papers)) ? currentSubject.papers : [];
-      if (!papers.length) {
-        bar.innerHTML = `<span class="text-[11px] uppercase font-bold tracking-wider text-slate-400">Subject:</span> <span class="font-semibold text-slate-800">${escapeHtml(currentSubject.codePrefix)} — ${escapeHtml(currentSubject.name)}</span>`;
-        return;
-      }
-      bar.innerHTML = `
-        <span class="text-[11px] uppercase font-bold tracking-wider text-slate-400 shrink-0 mr-0.5">Year:</span>
-        ${papers.map(p => {
-          const isActive = currentPaperRef && currentPaperRef.id === p.id;
-          return `
-            <button
-              onclick="selectPaper('${escapeHtml(p.id)}')"
-              class="shrink-0 px-2.5 py-1 rounded-md text-[11px] font-semibold transition ${
-                isActive
-                  ? 'bg-slate-900 text-white shadow-2xs'
-                  : 'bg-slate-100 text-slate-700 hover:bg-indigo-50 hover:text-indigo-700'
-              }"
-            >${escapeHtml(p.yearLabel || String(p.year || ''))}</button>
-          `;
-        }).join('')}
-      `;
-    }
-
-    async function selectPaper(paperId, updateHash = true) {
-      if (!currentSubject) return;
-      const ref = (currentSubject.papers || []).find(p => p.id === paperId) || (currentSubject.papers || [])[0];
-      if (!ref) return;
-      currentPaperRef = ref;
-      renderPaperPills();
       closeDrawer();
+      state.view = 'paper';
+      state.subjectId = subj.id;
+      state.paperId = ref.id;
+      currentSubject = subj;
+      currentPaperRef = ref;
+      if (updateHash) syncHash(false);
+      updateChromeVisibility();
 
-      if (updateHash) {
-        window.location.hash = `#/${encodeURIComponent(currentSubject.id)}/${encodeURIComponent(ref.id)}`;
+      const main = document.getElementById('app-main');
+      main.innerHTML = `<div class="py-16 text-center text-sm text-slate-500">Loading paper...</div>`;
+
+      try {
+        paperData = await fetchAndNormalizePaper(subj, ref);
+        userConfidence = JSON.parse(localStorage.getItem(getStorageKey(paperData.id)) || '{}');
+        flatQuestions = [];
+        paperData.parts.forEach(part => {
+          part.questions.forEach(q => flatQuestions.push(q));
+        });
+
+        document.title = `JU Archive — ${subj.name} (${paperData.yearLabel || ''})`;
+        renderPaperToolbar();
+        renderPaperShellAndContent();
+        updateSummaryCounters();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } catch (err) {
+        main.innerHTML = `<div class="max-w-xl mx-auto p-8 bg-white rounded-xl border border-rose-200 text-center text-sm text-rose-600">Failed to load paper (${escapeHtml(err.message)}).</div>`;
       }
-
-      let raw = paperCache.get(ref.path);
-      if (!raw) {
-        document.getElementById('exam-paper-content').innerHTML = `<div class="py-12 text-center text-sm text-slate-400">Loading paper...</div>`;
-        const res = await fetch(ref.path, { cache: 'no-store' });
-        if (!res.ok) throw new Error(`HTTP ${res.status} loading ${ref.path}`);
-        raw = await res.json();
-        paperCache.set(ref.path, raw);
-      }
-
-      await loadPaper(ref, raw);
     }
 
-    async function loadPaper(ref, raw) {
-      paperData = normalizePaper(raw, currentSubject, ref);
-      userConfidence = JSON.parse(localStorage.getItem(getStorageKey(paperData.id)) || '{}');
+    function updateChromeVisibility() {
+      const searchWrap = document.getElementById('home-search-wrap');
+      const confWrap = document.getElementById('header-confidence-wrap');
+      const toolbar = document.getElementById('paper-toolbar');
+      const main = document.getElementById('app-main');
 
-      flatQuestions = [];
-      paperData.parts.forEach(part => {
-        part.questions.forEach(q => flatQuestions.push(q));
-      });
-
-      document.title = `JU Archive — ${currentSubject.name} (${paperData.yearLabel || ''})`;
-      document.getElementById('sheet-ref-no').textContent = `Ref No: ${paperData.refCode}`;
-      document.getElementById('sheet-badge').textContent = paperData.examType === 'Annotated' ? 'Solved Archive' : (paperData.examType || 'Official Archive');
-      document.getElementById('sheet-university').textContent = paperData.university;
-      document.getElementById('sheet-exam-title').textContent = paperData.examTitle;
-      document.getElementById('sheet-subject-title').textContent = paperData.subjectHeading;
-      document.getElementById('sheet-full-marks').innerHTML = String(paperData.fullMarks).includes(':') ? escapeHtml(paperData.fullMarks) : `<strong>Full Marks:</strong> ${escapeHtml(String(paperData.fullMarks).replace(/Full Marks\s*/i, ''))}`;
-      document.getElementById('sheet-time').innerHTML = String(paperData.timeText).includes(':') ? escapeHtml(paperData.timeText) : `<strong>Time:</strong> ${escapeHtml(paperData.timeText)}`;
-      document.getElementById('sheet-dist').innerHTML = paperData.subMarksText ? `<strong>Distribution:</strong> ${escapeHtml(paperData.subMarksText.replace(/[()]/g, ''))}` : '';
-      document.getElementById('sheet-script-note').textContent = paperData.scriptNote || '';
-      document.getElementById('sheet-footer').textContent = `[ END OF QUESTION PAPER • TOTAL ${flatQuestions.length} QUESTIONS ]`;
-
-      renderExamPaper();
-      updateSummaryCounters();
+      if (state.view === 'home') {
+        document.title = 'JU Sem-5 Exam Archive';
+        searchWrap.classList.remove('hidden');
+        confWrap.classList.add('hidden');
+        confWrap.classList.remove('sm:flex');
+        toolbar.classList.add('hidden');
+        main.className = 'flex-1 max-w-6xl w-full mx-auto p-4 sm:p-6 lg:p-8';
+      } else if (state.view === 'subject') {
+        searchWrap.classList.add('hidden');
+        confWrap.classList.add('hidden');
+        confWrap.classList.remove('sm:flex');
+        toolbar.classList.add('hidden');
+        main.className = 'flex-1 max-w-6xl w-full mx-auto p-4 sm:p-6 lg:p-8';
+      } else {
+        searchWrap.classList.add('hidden');
+        confWrap.classList.remove('hidden');
+        confWrap.classList.add('sm:flex');
+        toolbar.classList.remove('hidden');
+        main.className = 'flex-1 max-w-4xl w-full mx-auto p-3 sm:p-6 lg:p-8';
+      }
     }
 
-    function renderEmptySubjectSheet(subj) {
-      document.title = `JU Archive — ${subj.name}`;
-      document.getElementById('sheet-ref-no').textContent = `Ref No: ${subj.codePrefix}`;
-      document.getElementById('sheet-badge').textContent = 'Upcoming';
-      document.getElementById('sheet-university').textContent = 'Jadavpur University';
-      document.getElementById('sheet-exam-title').textContent = 'B.E. Electrical Engineering 3rd Year 1st Semester Examination';
-      document.getElementById('sheet-subject-title').textContent = `Subject: ${subj.paperTitle || subj.name}`;
-      document.getElementById('sheet-full-marks').innerHTML = '<strong>Full Marks:</strong> 100';
-      document.getElementById('sheet-time').innerHTML = '<strong>Time:</strong> Three Hours';
-      document.getElementById('sheet-dist').innerHTML = '<strong>Distribution:</strong> 50 Marks each Part';
-      document.getElementById('sheet-script-note').textContent = '* Use a separate Answer-Script for each part.';
-      document.getElementById('sheet-footer').textContent = '[ NO PAPERS LOADED YET ]';
-      document.getElementById('exam-paper-content').innerHTML = `
-        <div class="py-12 px-4 text-center border border-dashed border-slate-300 rounded-xl bg-white/70">
-          <p class="text-base font-semibold text-slate-700 paper-font">No question papers added yet for ${escapeHtml(subj.name)}.</p>
-          <p class="text-xs text-slate-500 mt-1">Papers added under <code class="mono-font bg-slate-100 px-1 py-0.5 rounded">data/papers/${escapeHtml(subj.id)}/</code> will appear here automatically.</p>
+    // =========================================================================
+    // MINIATURE PAPER CARD PREVIEW (FOR HOME STACKS & PAPER SELECTION GRID)
+    // =========================================================================
+    function renderMiniPaperContent(subject, normPaper, metaRef) {
+      const yrLabel = (metaRef && metaRef.yearLabel) || (normPaper && normPaper.yearLabel) || '';
+      const examType = (metaRef && metaRef.examType) || (normPaper && normPaper.examType) || 'Regular';
+      const qCount = normPaper
+        ? normPaper.parts.reduce((acc, pt) => acc + pt.questions.length, 0)
+        : (metaRef && metaRef.questionCount) || 0;
+
+      if (!metaRef && !normPaper) {
+        return `
+          <div class="h-full w-full p-3 flex flex-col justify-between select-none text-slate-900 paper-font bg-[#fdfdfc]">
+            <div>
+              <div class="text-right text-[6.5px] font-sans font-bold text-slate-400">${escapeHtml(subject.codePrefix)}</div>
+              <div class="mt-2 text-center text-[7.5px] font-bold uppercase leading-tight text-slate-900">${escapeHtml(subject.paperTitle)}</div>
+            </div>
+            <div class="border border-dashed border-slate-300 rounded p-3 text-center text-[7px] font-sans text-slate-400">
+              No papers
+            </div>
+            <div class="h-2"></div>
+          </div>
+        `;
+      }
+
+      const firstPart = (normPaper && normPaper.parts[0]) || null;
+      const sampleQs = firstPart ? firstPart.questions.slice(0, 4) : [];
+      const refCode = (normPaper && normPaper.refCode) || `${subject.codePrefix}/${Math.floor((metaRef && metaRef.year) || 0)}`;
+      const partSummary = normPaper && normPaper.parts.length > 1
+        ? normPaper.parts.map(p => String(p.title || 'PART').split(':')[0]).join(' · ')
+        : ((firstPart && String(firstPart.title || 'PART I').split(':')[0]) || 'PART I');
+
+      const pillTone = examType === 'Annotated'
+        ? 'bg-emerald-100 text-emerald-900'
+        : examType === 'Supplementary'
+          ? 'bg-amber-100 text-amber-900'
+          : 'bg-slate-100 text-slate-700';
+
+      return `
+        <div class="h-full w-full p-2.5 flex flex-col justify-between select-none text-slate-900 paper-font bg-[#fdfdfc]">
+          <div>
+            <div class="flex items-center justify-between gap-1 mb-1">
+              <span class="px-1.5 py-0.5 rounded text-[7px] font-sans font-semibold uppercase tracking-wider shrink-0 ${pillTone}">
+                ${escapeHtml(yrLabel)}
+              </span>
+              <span class="text-[6px] font-sans font-bold tracking-tight text-slate-600 truncate">${escapeHtml(refCode)}</span>
+            </div>
+
+            <div class="text-center leading-[1.22] px-0.5">
+              <div class="text-[5.8px] font-bold uppercase tracking-tight text-slate-700 line-clamp-2">
+                ${escapeHtml((normPaper && normPaper.examTitle) || `B.E. Electrical Engineering Examination, ${yrLabel}`)}
+              </div>
+              <div class="mt-1 text-[7px] font-bold uppercase tracking-tight text-slate-950 leading-tight line-clamp-2">
+                ${escapeHtml(subject.paperTitle)}
+              </div>
+            </div>
+
+            <div class="mt-1.5 flex items-center justify-between text-[5.3px] font-sans text-slate-600 gap-1">
+              <span class="truncate">${escapeHtml((normPaper && normPaper.timeText) || 'Time: Three hours')}</span>
+              <span class="truncate text-right">${escapeHtml((normPaper && normPaper.fullMarks) || 'Full Marks 100')}</span>
+            </div>
+
+            <div class="mt-1 border border-slate-800 text-[5.6px] leading-[1.28]">
+              <div class="border-b border-slate-800 text-center font-bold py-[1.5px] tracking-wider bg-slate-50 truncate px-1">
+                ${escapeHtml(partSummary)}
+              </div>
+              ${sampleQs.length === 0 ? `
+                <div class="p-2 text-center text-slate-400 font-sans">${qCount} Questions</div>
+              ` : sampleQs.map(q => `
+                <div class="grid grid-cols-[18px_1fr_16px] pt-[2px] border-t border-slate-200/70 first:border-t-0">
+                  <div class="text-center border-r border-slate-800 font-semibold truncate px-[1px]">${escapeHtml(q.q_num || '')}</div>
+                  <div class="px-1 pb-[2.5px] border-r border-slate-800 line-clamp-2 text-slate-800 font-sans">${escapeHtml(latexToMiniPreview(q.text))}</div>
+                  <div class="text-center font-sans text-[5.1px] text-slate-700 truncate px-[1px]">${escapeHtml(q.rawMarks || q.marks || '')}</div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-1 text-[5.5px] font-sans text-slate-500">
+            <span>${qCount} Qs${(metaRef && metaRef.hasSolutions) || (normPaper && normPaper.hasSolutions) ? ' · Solved' : ''}</span>
+            <span class="paper-font text-slate-600">${escapeHtml((firstPart && firstPart.footerNote) || '')}</span>
+          </div>
         </div>
       `;
     }
 
     // =========================================================================
-    // PAPER SHEET RENDERING
+    // VIEW 1: HOMEPAGE (6 STACKED SUBJECT CARDS)
     // =========================================================================
+    function renderHome() {
+      const main = document.getElementById('app-main');
+      if (!dbIndex) return;
+      const q = state.searchQuery.trim().toLowerCase();
+      const subjects = dbIndex.subjects.filter(s =>
+        !q || s.name.toLowerCase().includes(q) || s.codePrefix.toLowerCase().includes(q)
+      );
+      const totalPapers = dbIndex.subjects.reduce((acc, s) => acc + (s.papers ? s.papers.length : 0), 0);
+
+      main.innerHTML = `
+        <section class="mb-7 sm:mb-9 flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white border border-slate-300 text-[11px] font-medium text-slate-700 shadow-2xs mb-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
+              <span>${dbIndex.subjects.length} Subjects · ${totalPapers} Papers</span>
+            </div>
+            <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">Question Paper Vault</h1>
+          </div>
+        </section>
+
+        ${subjects.length === 0 ? `
+          <div class="bg-white border border-slate-200 rounded-xl p-10 text-center">
+            <p class="text-sm text-slate-600">No subjects match "<strong>${escapeHtml(state.searchQuery)}</strong>".</p>
+            <button id="clear-search-btn" class="mt-3 px-3.5 py-1.5 text-xs font-medium bg-slate-900 text-white rounded-lg hover:bg-slate-800">Clear</button>
+          </div>
+        ` : `
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-11 pt-2">
+            ${subjects.map((subject, idx) => {
+              const refs = subject.papers || [];
+              const latestRef = refs[0] || null;
+              const older1 = refs[1] || null;
+              const older2 = refs[2] || null;
+              const latestNorm = latestRef ? normPaperCache.get(`${subject.id}:${latestRef.id}`) : null;
+              const badgeTone = SUBJECT_BADGE_TONES[subject.id] || 'bg-slate-100 text-slate-700 border-slate-200';
+              return `
+                <article
+                  class="stack-card group flex flex-col items-center animate-rise focus:outline-none"
+                  style="animation-delay: ${idx * 65}ms"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Open ${escapeHtml(subject.name)}"
+                  data-subject-id="${escapeHtml(subject.id)}"
+                >
+                  <div class="paper-stack">
+                    <div class="stack-sheet back-3 flex items-start justify-end p-2">
+                      <span class="text-[7px] mono-font text-slate-400">${escapeHtml(older2 ? older2.yearLabel : '')}</span>
+                    </div>
+                    <div class="stack-sheet back-2 flex items-start justify-between p-2">
+                      <span class="text-[7px] mono-font text-slate-400">${escapeHtml(older1 ? older1.yearLabel : '')}</span>
+                      <span class="text-[6.5px] mono-font text-slate-400">${escapeHtml(subject.codePrefix)}</span>
+                    </div>
+                    <div class="stack-sheet back-1"></div>
+                    <div class="stack-sheet front">
+                      ${renderMiniPaperContent(subject, latestNorm, latestRef)}
+                    </div>
+                  </div>
+
+                  <div class="mt-4 text-center max-w-[270px]">
+                    <h2 class="text-sm sm:text-[15px] font-semibold text-slate-900 group-hover:text-indigo-700 transition-colors leading-snug">
+                      ${subject.order}. ${escapeHtml(subject.name)}
+                    </h2>
+                    <div class="mt-1 text-[10.5px] mono-font text-slate-500">${escapeHtml(subject.codePrefix)}</div>
+                    <div class="mt-1.5 flex items-center justify-center gap-2 text-[11px] text-slate-500">
+                      <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full border ${badgeTone} font-medium">
+                        ${refs.length} ${refs.length === 1 ? 'Paper' : 'Papers'}
+                      </span>
+                      ${latestRef ? `<span>Latest: <strong class="text-slate-700">${escapeHtml(latestRef.yearLabel)}</strong></span>` : ''}
+                    </div>
+                  </div>
+                </article>
+              `;
+            }).join('')}
+          </div>
+        `}
+      `;
+
+      document.querySelectorAll('.stack-card').forEach(card => {
+        const go = () => openSubject(card.dataset.subjectId);
+        card.addEventListener('click', go);
+        card.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            go();
+          }
+        });
+      });
+
+      const clearBtn = document.getElementById('clear-search-btn');
+      if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+          state.searchQuery = '';
+          document.getElementById('subject-search').value = '';
+          renderHome();
+        });
+      }
+      lucide.createIcons();
+    }
+
+    // =========================================================================
+    // VIEW 2: EXPANDED SUBJECT PAPER SELECTION PAGE (DESCENDING YEARS)
+    // =========================================================================
+    function renderSubjectView() {
+      const main = document.getElementById('app-main');
+      const subject = currentSubject;
+      if (!subject) return goHome();
+
+      document.title = `JU Archive — ${subject.name}`;
+      const allRefs = subject.papers || [];
+      const availableTypes = [...new Set(allRefs.map(p => p.examType).filter(Boolean))];
+      const refs = allRefs.filter(p => state.examFilter === 'all' || p.examType === state.examFilter);
+
+      main.innerHTML = `
+        <div class="mb-6 flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <button id="back-to-home" class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-600 hover:text-indigo-700 transition-colors mb-2">
+              <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+              <span>All Subjects</span>
+            </button>
+            <h1 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">${subject.order}. ${escapeHtml(subject.name)}</h1>
+            <p class="text-xs sm:text-sm text-slate-500 mt-0.5 mono-font">
+              ${escapeHtml(subject.codePrefix)} · ${allRefs.length} ${allRefs.length === 1 ? 'Paper' : 'Papers'}
+            </p>
+          </div>
+
+          ${availableTypes.length > 1 ? `
+            <div class="inline-flex rounded-lg bg-white border border-slate-200 p-0.5 text-xs shadow-2xs flex-wrap">
+              ${['all', ...availableTypes].map(f => `
+                <button
+                  data-filter="${escapeHtml(f)}"
+                  class="exam-filter-btn px-3 py-1.5 rounded-md font-medium transition-colors ${state.examFilter === f ? 'bg-slate-900 text-white' : 'text-slate-600 hover:text-slate-900'}"
+                >${f === 'all' ? 'All Papers' : escapeHtml(f)}</button>
+              `).join('')}
+            </div>
+          ` : ''}
+        </div>
+
+        ${allRefs.length === 0 ? `
+          <div class="bg-white border border-slate-200 rounded-xl p-10 text-center">
+            <p class="text-sm font-medium text-slate-700">No papers yet for ${escapeHtml(subject.name)}.</p>
+          </div>
+        ` : refs.length === 0 ? `
+          <div class="bg-white border border-slate-200 rounded-xl p-10 text-center">
+            <p class="text-sm text-slate-600">No papers match this filter.</p>
+            <button class="exam-filter-btn mt-3 px-3.5 py-1.5 text-xs font-medium bg-slate-900 text-white rounded-lg hover:bg-slate-800" data-filter="all">Show All</button>
+          </div>
+        ` : `
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            ${refs.map((ref, idx) => {
+              const norm = normPaperCache.get(`${subject.id}:${ref.id}`);
+              const refCode = (norm && norm.refCode) || `${subject.codePrefix}/${Math.floor(ref.year || 0)}`;
+              const isLatestOverall = allRefs[0] && allRefs[0].id === ref.id;
+              return `
+                <div
+                  class="year-paper-card animate-fan bg-[#fdfdfc] border border-slate-300 rounded-lg overflow-hidden cursor-pointer flex flex-col shadow-md"
+                  style="animation-delay: ${Math.min(idx, 10) * 55}ms"
+                  tabindex="0"
+                  role="button"
+                  data-paper-id="${escapeHtml(ref.id)}"
+                >
+                  <div class="aspect-[1/1.38] w-full border-b border-slate-200 overflow-hidden relative">
+                    ${renderMiniPaperContent(subject, norm, ref)}
+                  </div>
+                  <div class="p-3 bg-white flex items-center justify-between gap-2">
+                    <div class="min-w-0">
+                      <div class="text-sm font-bold text-slate-900 flex items-center gap-1.5 flex-wrap">
+                        <span>${escapeHtml(ref.yearLabel || String(ref.year || ''))}</span>
+                        ${isLatestOverall ? `<span class="text-[10px] font-semibold px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-700 border border-indigo-200">Latest</span>` : ''}
+                        ${ref.hasSolutions ? `<span class="text-[10px] font-semibold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200">Solved</span>` : ''}
+                        ${ref.examType === 'Supplementary' ? `<span class="text-[10px] font-medium px-1.5 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200">Supplementary</span>` : ''}
+                      </div>
+                      <div class="text-[11px] text-slate-500 mono-font truncate">${escapeHtml(refCode)}</div>
+                      <div class="text-[10.5px] text-slate-500 mt-0.5">${ref.partCount || 2} Parts · ${ref.questionCount || 0} Qs</div>
+                    </div>
+                    <div class="w-7 h-7 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center shrink-0">
+                      <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </div>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        `}
+      `;
+
+      document.getElementById('back-to-home').addEventListener('click', () => goHome(true));
+      document.querySelectorAll('.exam-filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          state.examFilter = btn.dataset.filter;
+          renderSubjectView();
+        });
+      });
+      document.querySelectorAll('.year-paper-card').forEach(card => {
+        const go = () => openPaper(subject.id, card.dataset.paperId);
+        card.addEventListener('click', go);
+        card.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            go();
+          }
+        });
+      });
+      lucide.createIcons();
+    }
+
+    // =========================================================================
+    // VIEW 3: REPO EXAM PAPER SHEET + CONFIDENCE TRACKER + SLIDE-OVER DRAWER
+    // =========================================================================
+    function renderPaperToolbar() {
+      if (!currentSubject) return;
+      const backSubj = document.getElementById('toolbar-back-subject');
+      backSubj.textContent = `${currentSubject.order}. ${currentSubject.name}`;
+      backSubj.onclick = () => openSubject(currentSubject.id);
+
+      document.getElementById('toolbar-back-home').onclick = () => goHome(true);
+
+      const pillsWrap = document.getElementById('paper-year-pills');
+      const refs = currentSubject.papers || [];
+      pillsWrap.innerHTML = refs.map(p => {
+        const active = currentPaperRef && currentPaperRef.id === p.id;
+        return `
+          <button
+            onclick="openPaper('${escapeHtml(currentSubject.id)}', '${escapeHtml(p.id)}')"
+            class="shrink-0 px-2.5 py-1 rounded-md text-[11px] font-semibold transition ${
+              active ? 'bg-slate-900 text-white shadow-2xs' : 'bg-slate-100 text-slate-700 hover:bg-indigo-50 hover:text-indigo-700'
+            }"
+          >${escapeHtml(p.yearLabel || String(p.year || ''))}</button>
+        `;
+      }).join('');
+    }
+
+    function renderPaperShellAndContent() {
+      const main = document.getElementById('app-main');
+      if (!paperData) return;
+
+      main.innerHTML = `
+        <div class="printed-paper-sheet rounded-xl p-5 sm:p-10 lg:p-14 mb-16 relative">
+          <div class="text-center pb-6 mb-8 border-b-2 border-slate-900 relative z-10">
+            <div class="flex items-center justify-between text-xs text-slate-500 mono-font mb-2 gap-2">
+              <span class="truncate">Ref No: ${escapeHtml(paperData.refCode)}</span>
+              <span class="border border-slate-300 px-2 py-0.5 rounded text-[11px] text-slate-600 uppercase font-sans shrink-0">${escapeHtml(paperData.examType === 'Annotated' ? 'Solved Archive' : (paperData.examType || 'Official Archive'))}</span>
+            </div>
+
+            <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 uppercase paper-font font-serif">
+              ${escapeHtml(paperData.university)}
+            </h1>
+            <p class="text-sm font-semibold text-slate-700 mt-0.5 paper-font">
+              ${escapeHtml(paperData.examTitle)}
+            </p>
+            <h2 class="text-lg sm:text-xl font-bold text-slate-900 tracking-wide mt-2 uppercase paper-font">
+              ${escapeHtml(paperData.subjectHeading)}
+            </h2>
+
+            <div class="mt-4 pt-3 border-t border-slate-300 grid grid-cols-3 text-xs sm:text-sm font-medium text-slate-800 paper-font text-center gap-2">
+              <div>${String(paperData.fullMarks).includes(':') ? escapeHtml(paperData.fullMarks) : `<strong>Full Marks:</strong> ${escapeHtml(String(paperData.fullMarks).replace(/Full Marks\s*/i, ''))}`}</div>
+              <div>${String(paperData.timeText).includes(':') ? escapeHtml(paperData.timeText) : `<strong>Time:</strong> ${escapeHtml(paperData.timeText)}`}</div>
+              <div>${paperData.subMarksText ? `<strong>Distribution:</strong> ${escapeHtml(paperData.subMarksText.replace(/[()]/g, ''))}` : ''}</div>
+            </div>
+            ${paperData.scriptNote ? `<p class="text-xs italic text-slate-600 mt-2.5 paper-font">${escapeHtml(paperData.scriptNote)}</p>` : ''}
+          </div>
+
+          <div id="exam-paper-content" class="relative z-10 space-y-12"></div>
+
+          <div class="mt-14 pt-6 border-t border-dashed border-slate-400 text-center text-xs text-slate-500 paper-font relative z-10">
+            [ END OF QUESTION PAPER • TOTAL ${flatQuestions.length} QUESTIONS ]
+          </div>
+        </div>
+      `;
+
+      renderExamPaper();
+    }
+
     function renderExamPaper() {
       const container = document.getElementById('exam-paper-content');
-      if (!paperData) return;
+      if (!container || !paperData) return;
       container.innerHTML = '';
 
       paperData.parts.forEach((part, partIdx) => {
@@ -1135,7 +1516,7 @@
         headerDiv.innerHTML = `
           <div>
             <div class="flex items-center space-x-2">
-              <span class="text-xs font-mono font-bold tracking-wider uppercase px-2 py-0.5 rounded bg-slate-900 text-white">
+              <span class="text-xs mono-font font-bold tracking-wider uppercase px-2 py-0.5 rounded bg-slate-900 text-white">
                 ${escapeHtml(mainTag)}
               </span>
               <span class="text-xs text-slate-500 font-serif font-bold uppercase tracking-wider">(50 Marks)</span>
@@ -1156,8 +1537,8 @@
               <div class="text-xs text-amber-900 paper-font font-semibold mt-0.5">
                 ${renderRichContent(part.instructions)}
               </div>
-              <div class="text-[11px] font-mono mt-1 ${ruleMet ? 'text-emerald-700 font-bold' : (ruleRequired && attemptedCount > ruleRequired) ? 'text-rose-600 font-bold' : 'text-slate-600'}">
-                Tracked in part: <strong>${attemptedCount}</strong>${ruleRequired ? ` / ${ruleRequired}` : ''} ${ruleMet ? '✓' : (ruleRequired && attemptedCount > ruleRequired) ? '⚠️' : ''}
+              <div class="text-[11px] mono-font mt-1 ${ruleMet ? 'text-emerald-700 font-bold' : (ruleRequired && attemptedCount > ruleRequired) ? 'text-rose-600 font-bold' : 'text-slate-600'}">
+                Tracked: <strong>${attemptedCount}</strong>${ruleRequired ? ` / ${ruleRequired}` : ''} ${ruleMet ? '✓' : (ruleRequired && attemptedCount > ruleRequired) ? '⚠️' : ''}
               </div>
             </div>
           ` : ''}
@@ -1207,7 +1588,6 @@
           row.innerHTML = `
             <div class="flex items-start justify-between gap-3 sm:gap-4">
               <div class="flex items-start space-x-3 sm:space-x-3.5 flex-1 min-w-0">
-                <!-- Quick 3-State Confidence Switcher -->
                 <div class="mt-1 flex items-center shrink-0" onclick="event.stopPropagation();" title="Confidence Toggle">
                   <button onclick="cycleStatus('${escapeHtml(q.id)}')" class="w-6 h-6 rounded border flex items-center justify-center transition shadow-2xs ${
                     status === 'mastered' ? 'bg-emerald-600 border-emerald-600 text-white' :
@@ -1218,19 +1598,17 @@
                   </button>
                 </div>
 
-                <!-- Question Number -->
                 <span class="font-serif font-bold text-base text-slate-900 shrink-0 min-w-[2.2rem] pt-0.5">
                   ${escapeHtml(q.q_num)}${String(q.q_num || '').endsWith('.') ? '' : '.'}
                 </span>
 
-                <!-- Question Body + Media + Discrete Footnote -->
                 <div class="flex-1 min-w-0">
                   <div class="q-rich-body text-sm sm:text-base text-slate-900 paper-font leading-relaxed">
                     ${renderRichContent(q.text)}
                   </div>
                   ${mediaHtml}
 
-                  <div class="mt-2.5 flex flex-wrap items-center gap-2 text-xs text-slate-500 font-mono">
+                  <div class="mt-2.5 flex flex-wrap items-center gap-2 text-xs text-slate-500 mono-font">
                     ${q.marks ? `<span class="bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-semibold text-[11px]">${escapeHtml(q.marks)}</span>` : ''}
                     ${isCompulsory ? '<span class="bg-rose-100 text-rose-800 border border-rose-200 px-2 py-0.5 rounded font-semibold text-[11px]">Compulsory</span>' : ''}
                     ${q.co ? `<span class="bg-slate-100 text-slate-600 border border-slate-200 px-2 py-0.5 rounded text-[11px]">${escapeHtml(q.co)}</span>` : ''}
@@ -1371,7 +1749,7 @@
               ? 'text-rose-600'
               : 'text-amber-600';
         const sep = idx > 0 ? '<span class="text-slate-300">|</span>' : '';
-        return `${sep}<span class="text-slate-600">Part ${idx === 0 ? 'I' : idx === 1 ? 'II' : idx + 1}: <strong class="font-mono font-bold ${colorCls}">${count}${req ? '/' + req : ''}</strong></span>`;
+        return `${sep}<span class="text-slate-600">Part ${idx === 0 ? 'I' : idx === 1 ? 'II' : idx + 1}: <strong class="mono-font font-bold ${colorCls}">${count}${req ? '/' + req : ''}</strong></span>`;
       }).join(' ');
     }
 
@@ -1402,7 +1780,6 @@
       document.getElementById('drawer-statement-text').innerHTML = renderRichContent(activeQuestion.text);
       document.getElementById('drawer-footer-id').textContent = `${activeQuestion.id} (${activeQuestionIndex + 1}/${flatQuestions.length})`;
 
-      // Media (Images & Diagrams)
       const mediaSection = document.getElementById('drawer-media-section');
       const mediaHtml = renderMediaHtml(activeQuestion, true);
       if (mediaHtml) {
@@ -1413,7 +1790,6 @@
         mediaSection.classList.add('hidden');
       }
 
-      // Optional Lecture Note Citation Card
       const noteCard = document.getElementById('drawer-note-section-card');
       if (activeQuestion.note_ref) {
         noteCard.classList.remove('hidden');
@@ -1438,7 +1814,6 @@
         noteCard.classList.add('hidden');
       }
 
-      // Optional Solution Card
       const solCard = document.getElementById('drawer-solution-card');
       const solContainer = document.getElementById('drawer-solution-body');
       if (activeQuestion.solution) {
@@ -1449,7 +1824,6 @@
         solContainer.innerHTML = '';
       }
 
-      // Optional Code Block
       const codeSection = document.getElementById('drawer-code-section');
       const codeBlock = document.getElementById('drawer-code-block');
       if (activeQuestion.code) {
@@ -1542,7 +1916,7 @@
     }
 
     // =========================================================================
-    // DEEPSEEK CHAT SIMULATION & LIVE API CALL
+    // DEEPSEEK CHAT & API MODAL
     // =========================================================================
     async function sendMessage() {
       const input = document.getElementById('chat-input');
@@ -1669,19 +2043,59 @@ Provide precise, mathematically rigorous, exam-focused responses in clean Markdo
       closeApiModal();
     }
 
-    window.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closeDrawer();
-    });
+    // =========================================================================
+    // BOOT & GLOBAL EVENTS
+    // =========================================================================
+    async function boot() {
+      document.getElementById('nav-home-btn').addEventListener('click', () => goHome(true));
+      document.getElementById('subject-search').addEventListener('input', e => {
+        state.searchQuery = e.target.value;
+        if (state.view !== 'home') goHome(true);
+        else renderHome();
+      });
 
-    window.addEventListener('DOMContentLoaded', () => {
-      initApp();
+      window.addEventListener('hashchange', () => {
+        if (!dbIndex) return;
+        if (window.location.hash === computeHash()) return;
+        applyRouteFromHash();
+      });
+
+      window.addEventListener('keydown', e => {
+        const tag = (e.target && e.target.tagName) ? e.target.tagName.toLowerCase() : '';
+        if (tag === 'input' || tag === 'textarea') return;
+        if (e.key === 'Escape') {
+          const panel = document.getElementById('drawer-panel');
+          if (panel && !panel.classList.contains('translate-x-full')) {
+            closeDrawer();
+          } else if (state.view === 'paper' && state.subjectId) {
+            openSubject(state.subjectId, true);
+          } else if (state.view === 'subject') {
+            goHome(true);
+          }
+        }
+      });
+
+      try {
+        const res = await fetch('data/index.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        dbIndex = await res.json();
+        await prefetchLatestPreviews();
+        await applyRouteFromHash();
+      } catch (err) {
+        console.error('Failed to load archive database:', err);
+        document.getElementById('app-main').innerHTML = `<div class="max-w-lg mx-auto p-8 bg-white rounded-xl border border-rose-200 text-center text-sm text-rose-600">Failed to load data/index.json (${escapeHtml(err.message)}).</div>`;
+      }
+
       const key = localStorage.getItem('deepseek_api_key');
       const model = localStorage.getItem('deepseek_model') || 'deepseek-chat';
       if (key) {
         document.getElementById('api-status-badge').textContent = `Active (${model})`;
         document.getElementById('api-status-badge').className = 'text-emerald-600 font-mono font-medium';
       }
-    });
+      lucide.createIcons();
+    }
+
+    window.addEventListener('DOMContentLoaded', boot);
   </script>
 </body>
 </html>
