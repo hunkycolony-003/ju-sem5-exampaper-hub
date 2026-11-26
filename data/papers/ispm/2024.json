@@ -1,0 +1,293 @@
+{
+  "id": "ispm-2024",
+  "subjectId": "ispm",
+  "year": 2024,
+  "sortKey": 2024.2,
+  "yearLabel": "2024",
+  "examType": "Regular",
+  "sourcePdf": "2024 - Introduction to Statistical and Probabilistic Methods.pdf",
+  "hasDiagram": false,
+  "parts": [
+    {
+      "partLabel": "Part-I",
+      "refCode": "Ex/EE/PC/B/T/315/2024",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING",
+        "THIRD YEAR FIRST SEMESTER EXAMINATION 2024",
+        "INTRODUCTION TO STATISTICAL AND PROBABILISTIC METHODS"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": null,
+      "sharedNote": null,
+      "footerNote": "[ Turn over",
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "4",
+          "co": "CO1",
+          "topic": "Conditional Probability and Bayes' Theorem",
+          "textLatex": "Explain the concept of conditional probability. State Bayes Theorem.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024-p1-1a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "4",
+          "co": "CO1",
+          "topic": "Concept of Random Variable",
+          "textLatex": "State and explain the notion of Random Variable.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024-p1-1b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "7",
+          "co": "CO2",
+          "topic": "Square-Law Detector Output Mean for Gaussian Input",
+          "textLatex": "A Gaussian voltage random variable $X$ has a mean value $\\mu_X = 0$ and variance $\\sigma_X^2 = 9$. The voltage $X$ is applied to a square-law, full-wave diode detector with a transfer characteristics $Y = 5X^2$. Find the mean value of the output voltage $Y$. Derive all the steps.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024-p1-2a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "7",
+          "co": "CO2",
+          "topic": "Memoryless Property of Exponential Distribution",
+          "textLatex": "Prove that the Exponential Distribution does have a memory-less property. With the help of a suitable example explain the significance of this property.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024-p1-2b",
+          "images": []
+        },
+        {
+          "kind": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "8",
+          "co": "CO2",
+          "topic": "Markov, Chebyshev and Chernoff Bounds",
+          "textLatex": "Let $X$ be a continuous R.V. having exponential density function with parameter $\\lambda = 1$. Compute $P(X \\ge 7)$. Also determine the corresponding Markov, Chebyshev and Cernoff bounds.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024-p1-2a-2",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "6",
+          "co": "CO2",
+          "topic": "MGF / Characteristic Function of Gamma Distribution",
+          "textLatex": "Derive the moment generating function / the characteristic function of a Gamma distributed R.V. Hence, obtain the mean and variance of the distribution.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024-p1-2b-2",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "6",
+          "co": "CO3",
+          "topic": "Properties of Joint Cumulative Distribution Function",
+          "textLatex": "Enumerate the properties of a joint cumulative distribution function.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024-p1-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "8",
+          "co": "CO3",
+          "topic": "Validity of Joint Probability Distribution Function",
+          "textLatex": "Consider the following function<br>$$G_{X,Y}(x, y) = u(x)u(y)[1 - e^{-(x+y)}]$$<br>Determine whether the function is a valid joint probability distribution function or not. Justify your answer through proper derivations.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024-p1-3b",
+          "images": []
+        },
+        {
+          "kind": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "4",
+          "co": "CO3",
+          "topic": "PDF of Sum of Independent Exponential Random Variables",
+          "textLatex": "Two statistically independent random variables $X$ and $Y$ have respective density functions<br>$$f_X(x) = 5u(x)\\exp(-5x)$$<br>$$f_Y(y) = 2u(y)\\exp(-2y)$$<br>Find the density function of the sum $W = X + Y$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024-p1-3a-2",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "6",
+          "co": "CO3",
+          "topic": "Cross-Correlation and Covariance of Linear Functions",
+          "textLatex": "Let $X$ and $Y$ be statistically independent random variables with $\\mu_X = \\frac{3}{4}$, $E[X^2] = 4$, $\\mu_Y = 1$, $E[Y^2] = 5$. For a random variable $W = X - 2Y + 1$, find<br>a) $R_{XY}$, b) $R_{XW}$, c) $R_{YW}$ and d) $C_{XY}$. Are $X$ and $Y$ uncorrelated?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024-p1-3b-2",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(c)",
+          "marks": "4",
+          "co": "CO3",
+          "topic": "Correlation and Statistical Independence",
+          "textLatex": "Define correlation of two random variables. Explain the effect of statistical independence of the random variables on their correlation.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024-p1-3c",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.",
+          "marks": "7+7",
+          "co": "CO4",
+          "topic": "Random Process, White Noise & Power Spectral Density",
+          "textLatex": "Write short notes on any two<br>i) Concept of Random Process as an extension of Random Variable<br>ii) White Noise<br>iii) Power Spectral Density of a Random Process",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024-p1-4",
+          "images": []
+        }
+      ]
+    },
+    {
+      "partLabel": "Part-II",
+      "refCode": "Ex/EE/PC/B/T/315/2024",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING THIRD YEAR FIRST SEMESTER - 2024",
+        "SUBJECT: INTRODUCTION TO STATISTICAL AND PROBABILISTIC METHODS"
+      ],
+      "timeText": "Time: Three Hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 Marks for each part)",
+      "scriptNote": "Use separate Answer-Script for each part",
+      "instructions": "Two marks for neat and well-organized answers. Answer any three questions. (The symbols used have their usual meanings)",
+      "sharedNote": "To answer the following questions, you can use (with linear interpolation and extrapolation if necessary) the following standard normal distribution table where ever required:<br><table><tbody><tr><th>$z$:</th><td>0.38</td><td>0.39</td><td>0.40</td><td>0.41</td><td>0.42</td><td>0.43</td><td>0.44</td></tr><tr><th>$P(z)$:</th><td>0.6480</td><td>0.6517</td><td>0.6554</td><td>0.6591</td><td>0.6628</td><td>0.7019</td><td>0.7054</td></tr><tr><th>$z$:</th><td>1.95</td><td>1.96</td><td>1.97</td><td>1.98</td><td>1.99</td><td></td><td></td></tr><tr><th>$P(z)$:</th><td>0.9744</td><td>0.9750</td><td>0.9756</td><td>0.9761</td><td>0.9767</td><td></td><td></td></tr></tbody></table>",
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "9",
+          "co": null,
+          "topic": "Distribution of Sample Mean and Sample Variance",
+          "textLatex": "With necessary derivation and clarification, comment on the distribution of sample mean and sample variance when the sample is randomly chosen from a normal population having mean $\\mu$ and variance $\\sigma^2$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024-p2-1a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "7",
+          "co": null,
+          "topic": "Central Limit Theorem Application to Sample Mean",
+          "textLatex": "The amount of water used per day by a person residing in a city has a mean value of $145$ litres with a standard deviation of $60$ litres. If a random sample of $25$ persons is taken, determine the approximate probability that the average amount of water consumed per day by the members of the group exceeds $150$ litres. Clearly mention the assumptions you have to take to solve the problem.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024-p2-1b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "10",
+          "co": null,
+          "topic": "Sample Size & Confidence Interval for Known Variance",
+          "textLatex": "A Signal having value $\\mu$ is transmitted from station A and the value received at station B is normally distributed with mean $\\mu$ and variance $4$. If the successive values received are as follows:<br>5, 8.5, 12, 15, 7, 9, 7.5, 6.5, and $10.5$<br>Determine the sample size so that an interval of length $0.05$ is obtained which we can assert, with $95\\%$ confidence, contains $\\mu$. Deduce the expression for confidence interval you might have used.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024-p2-2a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Confidence Interval for Mean (Unknown Mean & Variance)",
+          "textLatex": "If $X_i$, $i = 1, 2, \\dots, n$ constitute a random sample from a normal population with mean $\\mu$ and variance $\\sigma^2$ where both $\\mu$ and $\\sigma^2$ are unknown, then derive the expression for a $100(1 - \\alpha)\\%$ confidence interval for $\\mu$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024-p2-2b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "10",
+          "co": null,
+          "topic": "Z-Test for Population Mean (Known Variance)",
+          "textLatex": "A public health official claims that the mean home water used is normally distributed having mean, $\\mu = 350$ gallons a day with $\\sigma = 20$ gallons. To verify this claim, a study of $20$ randomly selected homes was performed with the results that the average daily water use of these $20$ homes were as follows:<br>340, 356, 332, 362, 318, 344, 386, 402, 322, 360, 362, 354, 340, 372, 338, 375, 364, 355, 324, and $370$.<br>Verify whether the data contradicts the officials claim with a test of $5\\%$ significance level. Derive the expression that you have used for the test.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024-p2-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Type-II Error for Normal Population Mean",
+          "textLatex": "With necessary derivation, discuss how type-II error is involved for calculating the mean of a normal population.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024-p2-3b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.",
+          "marks": "16",
+          "co": null,
+          "topic": "Least Squares Estimators in Simple Linear Regression",
+          "textLatex": "Derive the expressions for the Least Square Estimators of the Regression Parameters of a simple linear regression model. Also, determine the expected values and variance of those parameters.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024-p2-4",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.",
+          "marks": "6+6+4",
+          "co": null,
+          "topic": "t-Test, Chi-Square Distribution & Continuity Correction",
+          "textLatex": "Write short notes on the followings:<br>(i) Test of the following hypothesis:<br>$H_0: \\mu = \\mu_0$ Vs. $H_1: \\mu \\ne \\mu_0$ for a normal population with mean $\\mu$ and variance $\\sigma^2$, when both the $\\mu$ and $\\sigma^2$ are unknown.<br>(ii) Chi-square distribution<br>(iii) Continuity Correction",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024-p2-5",
+          "images": []
+        }
+      ]
+    }
+  ]
+}

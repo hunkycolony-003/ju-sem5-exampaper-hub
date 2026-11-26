@@ -1,0 +1,288 @@
+{
+  "id": "ispm-2023s",
+  "subjectId": "ispm",
+  "year": 2023,
+  "sortKey": 2023.1,
+  "yearLabel": "2023 (S)",
+  "examType": "Supplementary",
+  "sourcePdf": "2023 - Introduction to Statistical and Probabilistic Methods.pdf",
+  "hasDiagram": false,
+  "parts": [
+    {
+      "partLabel": "Part-I",
+      "refCode": "EX/EE/ES/H/T/325/2023(S)",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING",
+        "THIRD YEAR SECOND SEMESTER SUPPLEMENTARY EXAMINATION 2023",
+        "INTRODUCTION TO STATISTICAL AND PROBABILISTIC METHODS (HONS.)"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Answer any THREE questions. Two marks reserved for neatness and well organized answers.",
+      "sharedNote": "Attached Table: Probability of Standard Normal Random Variable $Z \\le z$ — Standard normal distribution $F(z)$ for $z = 0.00 - 2.99$<br><table><thead><tr><th>$z$</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr></thead><tbody><tr><th>0.0</th><td>.5000</td><td>.5040</td><td>.5080</td><td>.5120</td><td>.5160</td><td>.5199</td><td>.5239</td><td>.5279</td><td>.5319</td><td>.5359</td></tr><tr><th>0.1</th><td>.5398</td><td>.5438</td><td>.5478</td><td>.5517</td><td>.5557</td><td>.5596</td><td>.5636</td><td>.5675</td><td>.5714</td><td>.5753</td></tr><tr><th>0.2</th><td>.5793</td><td>.5832</td><td>.5871</td><td>.5910</td><td>.5948</td><td>.5987</td><td>.6026</td><td>.6064</td><td>.6103</td><td>.6141</td></tr><tr><th>0.3</th><td>.6179</td><td>.6217</td><td>.6255</td><td>.6293</td><td>.6331</td><td>.6368</td><td>.6406</td><td>.6443</td><td>.6480</td><td>.6517</td></tr><tr><th>0.4</th><td>.6554</td><td>.6591</td><td>.6628</td><td>.6664</td><td>.6700</td><td>.6736</td><td>.6772</td><td>.6808</td><td>.6844</td><td>.6879</td></tr><tr><th>0.5</th><td>.6915</td><td>.6950</td><td>.6985</td><td>.7019</td><td>.7054</td><td>.7088</td><td>.7123</td><td>.7157</td><td>.7190</td><td>.7224</td></tr><tr><th>0.6</th><td>.7257</td><td>.7291</td><td>.7324</td><td>.7357</td><td>.7389</td><td>.7422</td><td>.7454</td><td>.7486</td><td>.7517</td><td>.7549</td></tr><tr><th>0.7</th><td>.7580</td><td>.7611</td><td>.7642</td><td>.7673</td><td>.7703</td><td>.7734</td><td>.7764</td><td>.7794</td><td>.7823</td><td>.7852</td></tr><tr><th>0.8</th><td>.7881</td><td>.7910</td><td>.7939</td><td>.7967</td><td>.7995</td><td>.8023</td><td>.8051</td><td>.8078</td><td>.8106</td><td>.8133</td></tr><tr><th>0.9</th><td>.8159</td><td>.8186</td><td>.8212</td><td>.8238</td><td>.8264</td><td>.8289</td><td>.8315</td><td>.8340</td><td>.8365</td><td>.8389</td></tr><tr><th>1.0</th><td>.8413</td><td>.8438</td><td>.8461</td><td>.8485</td><td>.8508</td><td>.8531</td><td>.8554</td><td>.8577</td><td>.8599</td><td>.8621</td></tr><tr><th>1.1</th><td>.8643</td><td>.8665</td><td>.8686</td><td>.8708</td><td>.8729</td><td>.8749</td><td>.8770</td><td>.8790</td><td>.8810</td><td>.8830</td></tr><tr><th>1.2</th><td>.8849</td><td>.8869</td><td>.8888</td><td>.8907</td><td>.8925</td><td>.8944</td><td>.8962</td><td>.8980</td><td>.8997</td><td>.9015</td></tr><tr><th>1.3</th><td>.9032</td><td>.9049</td><td>.9066</td><td>.9082</td><td>.9099</td><td>.9115</td><td>.9131</td><td>.9147</td><td>.9162</td><td>.9177</td></tr><tr><th>1.4</th><td>.9192</td><td>.9207</td><td>.9222</td><td>.9236</td><td>.9251</td><td>.9265</td><td>.9279</td><td>.9292</td><td>.9306</td><td>.9319</td></tr><tr><th>1.5</th><td>.9332</td><td>.9345</td><td>.9357</td><td>.9370</td><td>.9382</td><td>.9394</td><td>.9406</td><td>.9418</td><td>.9429</td><td>.9441</td></tr><tr><th>1.6</th><td>.9452</td><td>.9463</td><td>.9474</td><td>.9484</td><td>.9495</td><td>.9505</td><td>.9515</td><td>.9525</td><td>.9535</td><td>.9545</td></tr><tr><th>1.7</th><td>.9554</td><td>.9564</td><td>.9573</td><td>.9582</td><td>.9591</td><td>.9599</td><td>.9608</td><td>.9616</td><td>.9625</td><td>.9633</td></tr><tr><th>1.8</th><td>.9641</td><td>.9649</td><td>.9656</td><td>.9664</td><td>.9671</td><td>.9678</td><td>.9686</td><td>.9693</td><td>.9699</td><td>.9706</td></tr><tr><th>1.9</th><td>.9713</td><td>.9719</td><td>.9726</td><td>.9732</td><td>.9738</td><td>.9744</td><td>.9750</td><td>.9756</td><td>.9761</td><td>.9767</td></tr><tr><th>2.0</th><td>.9772</td><td>.9778</td><td>.9783</td><td>.9788</td><td>.9793</td><td>.9798</td><td>.9803</td><td>.9808</td><td>.9812</td><td>.9817</td></tr><tr><th>2.1</th><td>.9821</td><td>.9826</td><td>.9830</td><td>.9834</td><td>.9838</td><td>.9842</td><td>.9846</td><td>.9850</td><td>.9854</td><td>.9857</td></tr><tr><th>2.2</th><td>.9861</td><td>.9864</td><td>.9868</td><td>.9871</td><td>.9875</td><td>.9878</td><td>.9881</td><td>.9884</td><td>.9887</td><td>.9890</td></tr><tr><th>2.3</th><td>.9893</td><td>.9896</td><td>.9898</td><td>.9901</td><td>.9904</td><td>.9906</td><td>.9909</td><td>.9911</td><td>.9913</td><td>.9916</td></tr><tr><th>2.4</th><td>.9918</td><td>.9920</td><td>.9922</td><td>.9925</td><td>.9927</td><td>.9929</td><td>.9931</td><td>.9932</td><td>.9934</td><td>.9936</td></tr><tr><th>2.5</th><td>.9938</td><td>.9940</td><td>.9941</td><td>.9943</td><td>.9945</td><td>.9946</td><td>.9948</td><td>.9949</td><td>.9951</td><td>.9952</td></tr><tr><th>2.6</th><td>.9953</td><td>.9955</td><td>.9956</td><td>.9957</td><td>.9959</td><td>.9960</td><td>.9961</td><td>.9962</td><td>.9963</td><td>.9964</td></tr><tr><th>2.7</th><td>.9965</td><td>.9966</td><td>.9967</td><td>.9968</td><td>.9969</td><td>.9970</td><td>.9971</td><td>.9972</td><td>.9973</td><td>.9974</td></tr><tr><th>2.8</th><td>.9974</td><td>.9975</td><td>.9976</td><td>.9977</td><td>.9977</td><td>.9978</td><td>.9979</td><td>.9979</td><td>.9980</td><td>.9981</td></tr><tr><th>2.9</th><td>.9981</td><td>.9982</td><td>.9982</td><td>.9983</td><td>.9984</td><td>.9984</td><td>.9985</td><td>.9985</td><td>.9986</td><td>.9986</td></tr></tbody></table>",
+      "footerNote": "[ Turn over",
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Bayes' Theorem",
+          "textLatex": "A company uses three different assembly lines—$A_1$, $A_2$, and $A_3$—to manufacture a particular component. Of those manufactured by line $A_1$, $5\\%$ need rework to remedy a defect, whereas $8\\%$ of $A_2$'s components need rework and $10\\%$ of $A_3$'s need rework. Suppose that $50\\%$ of all components are produced by line $A_1$, $30\\%$ are produced by line $A_2$, and $20\\%$ come from line $A_3$. If a randomly selected component needs rework, what is the probability that it came from line $A_1$? From line $A_2$? From line $A_3$?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023s-p1-1a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Properties of CDF & PDF (Discrete vs Continuous)",
+          "textLatex": "Enlist the properties of probability distribution functions (pdf) of random variables. How can you distinguish the pdfs of discrete random variables from those of continuous random variables?<br>How can you derive the probability density function from the probability distribution function? Explain.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023s-p1-1b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Normal Distribution & Linear Interpolation",
+          "textLatex": "The breakdown voltage of a randomly chosen diode of a certain type is known to be normally distributed with mean value $40\\text{ V}$ and standard deviation $1.5\\text{ V}$. (i) What is the probability that the breakdown voltage of a single diode is between $39\\text{ V}$ and $42\\text{ V}$? (ii) What value is such that only $15\\%$ of all diodes have breakdown voltages exceeding that value?<br>Use the attached table for standard Gaussian random variable. Perform linear interpolation if necessary.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023s-p1-2a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Memoryless Property of Exponential Distribution",
+          "textLatex": "Prove the 'Lack-of Memory' property of exponential random variables. Explain the significance of this property.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023s-p1-2b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Markov's and Chebyshev's Inequalities",
+          "textLatex": "Derive Markov's inequality and Chebyshev's inequality. Explain the significances of these bounds. Which one is a tighter bound and why?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023s-p1-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Joint PDF, Joint CDF & Marginal Density",
+          "textLatex": "Two random variables, $X$ and $Y$, have a joint probability density function given by<br>$$f(x, y) = Kxy \\quad \\text{for } 0 \\le x \\le 1 \\; ; \\; 0 \\le y \\le 1$$<br>$$= 0 \\text{ elsewhere.}$$<br>(i) Determine the value of $K$ that makes this a valid probability density function.<br>(ii) Determine the joint probability distribution function $F(x, y)$.<br>(iii) Find the joint probability of the event $X \\le \\frac{1}{2}$ and $Y > \\frac{1}{2}$.<br>(iv) Find the marginal density function $f(x)$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023s-p1-3b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Validity of Power Spectral Density Expressions",
+          "textLatex": "If $X(t)$ is a real wide-sense stationary (WSS) random process, examine whether or not the following are valid expressions for power spectral density. Justify your answers.<br>(i) $S_X(\\omega) = \\dfrac{6}{6 + 7\\omega^3}$<br>(ii) $S_X(\\omega) = \\dfrac{40}{4 + \\omega^2}$",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023s-p1-4a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Cross-Correlation Bound for Jointly WSS Processes",
+          "textLatex": "Justify or correct the following statement with suitable reasoning/ derivation<br>\"Magnitude of cross-correlation of two jointly WSS random processes can never exceed the product of the rms values of the processes\".",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023s-p1-4b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(c)",
+          "marks": "4",
+          "co": null,
+          "topic": "Ergodic Process",
+          "textLatex": "What is an Ergodic Process?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023s-p1-4c",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.",
+          "marks": "8+8",
+          "co": null,
+          "topic": "Gamma Distribution, PGF & WSS Autocorrelation Properties",
+          "textLatex": "Write short notes on any two<br>i) Gamma distribution.<br>ii) Probability generating function of random variables and its applications.<br>iii) Properties of autocorrelation functions of WSS random processes",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023s-p1-5",
+          "images": []
+        }
+      ]
+    },
+    {
+      "partLabel": "Part-II",
+      "refCode": "Ex/EE/ES/H/T/325/2023(S)",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING THIRD YEAR SECOND SEMESTER",
+        "SUPPLEMENTARY EXAM - 2023",
+        "SUBJECT: INTRODUCTION TO STATISTICAL & PROBABILISTIC METHODS(HONS.)"
+      ],
+      "timeText": "Time: Three Hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 Marks for each part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Two marks reserved for neat and well-organized answers. Answer any three questions.",
+      "sharedNote": "To answer the following questions, you can use (with linear interpolation and extrapolation if necessary) the following standard normal distribution table where ever required:<br><table><tbody><tr><th>$z$:</th><td>1.6</td><td>1.65</td><td>1.70</td><td>1.80</td><td>1.90</td><td>1.95</td><td>2.0</td><td>2.5</td></tr><tr><th>$P(z)$:</th><td>0.9452</td><td>0.9505</td><td>0.9554</td><td>0.9641</td><td>0.9713</td><td>0.9744</td><td>0.9772</td><td>0.9938</td></tr><tr><th>$z$:</th><td>2.55</td><td>2.60</td><td>2.65</td><td>2.70</td><td></td><td></td><td></td><td></td></tr><tr><th>$P(z)$:</th><td>0.9948</td><td>0.9953</td><td>0.9960</td><td>0.9965</td><td></td><td></td><td></td><td></td></tr></tbody></table>",
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Sample Mean Moments & Central Limit Theorem",
+          "textLatex": "Establish the relations between the expectation and the variance of the sample mean and the corresponding quantities of the population. Also discuss the significance of the central limit theorem.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023s-p2-1a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Bridge Load Normal & CLT Application",
+          "textLatex": "Civil engineers believe that $W$, the amount of weight (in units of $1,000$ pounds) that a certain span of a bridge can withstand without structural damage resulting, is normally distributed with mean $400$ and standard deviation $40$. Suppose that the weight (again, in units of $1,000$ pounds) of a car is a random variable with mean $3$ and standard deviation $0.3$. How many cars would have to be on the bridge span for the probability of structural damage to exceed $0.1$?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023s-p2-1b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Upper Confidence Interval for Normal Mean",
+          "textLatex": "Explain the significance of the term '95% upper confidence interval' in connection with estimation of the mean of a normal population with known variance.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023s-p2-2a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Two-Sided and Upper Confidence Intervals for Normal Mean",
+          "textLatex": "A signal having value $\\mu$ is transmitted from location A and the value received at B is normally distributed with mean $\\mu$ and variance $6.25$. If the successive received values are<br>$6.5, 8.0, 14.5, 9.5, 10.5, 5.0, 7.5, 12.5 \\text{ \\& } 8.5$,<br>then determine the $95\\%$ confidence interval for $\\mu$. Also determine its $99\\%$ upper confidence interval.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023s-p2-2b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "10",
+          "co": null,
+          "topic": "Hypothesis Testing Definitions & Error Types",
+          "textLatex": "Define the terms, (i) Simple Hypothesis, (ii) Composite Hypothesis, (iii) Type I error, (iv) Type II error, (v) Critical Region.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023s-p2-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Hypothesis Testing for Normal Mean (Known Variance)",
+          "textLatex": "Suppose it is known that if a signal of value $\\mu$ is sent from station A, then the value received at station B is normally distributed with mean $\\mu$ and variance $4$. It is suspected that the signal value $\\mu = 8$ will be sent today from A. Test this hypothesis if the same signal value is independently sent five times and the average value received at B is $\\bar{X} = 9.5$. Consider $5\\%$ significance level.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023s-p2-3b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Least Squares Estimators in Simple Linear Regression",
+          "textLatex": "Derive the expressions for the Least Square Estimators of the Regression Parameters of a simple linear regression model.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023s-p2-4a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Expected Values of Simple Linear Regression Parameters",
+          "textLatex": "Determine the expected values of Regression Parameters of a simple linear regression model.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023s-p2-4b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Continuity Correction",
+          "textLatex": "What is \"continuity correction\"? Explain it with a suitable example.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023s-p2-5a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(b)",
+          "marks": "10",
+          "co": null,
+          "topic": "Chi-Square and t-Distribution of Sample Variance & Mean",
+          "textLatex": "If $\\bar{X}$ is the sample mean and $S^2$ is the sample variance from a normal population with mean $\\mu$ and standard deviation $\\sigma$, then show that $(n-1)S^2/\\sigma^2$ has a chi-square distribution with $(n-1)$ degrees of freedom and $\\sqrt{n}(\\bar{X} - \\mu)/S$ has a $t$-distribution with $(n-1)$ degrees of freedom where $n$ is the sample size.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023s-p2-5b",
+          "images": []
+        }
+      ]
+    }
+  ]
+}

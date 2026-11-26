@@ -1,0 +1,312 @@
+{
+  "id": "ispm-2024s",
+  "subjectId": "ispm",
+  "year": 2024,
+  "sortKey": 2024.1,
+  "yearLabel": "2024 (S)",
+  "examType": "Supplementary",
+  "sourcePdf": "2024 - Introduction to Statistical and Probabilistic Methods S.pdf",
+  "hasDiagram": false,
+  "parts": [
+    {
+      "partLabel": "Part-I",
+      "refCode": "Ex/EE/PC/B/T/315/2024(S)",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING",
+        "THIRD YEAR FIRST SEMESTER SUPPLEMENTARY EXAMINATION 2024",
+        "INTRODUCTION TO STATISTICAL AND PROBABILISTIC METHODS"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Answer Any Three Questions. Two marks reserved for neat and well organised answers.",
+      "sharedNote": null,
+      "footerNote": "[ Turn over",
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Joint Probability and Conditional Probability",
+          "textLatex": "Introduce the concept of joint probability and of conditional probability of two random events. What is the relation between the two?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024s-p1-1a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Total Probability and Bayes' Theorem (IC Sources)",
+          "textLatex": "A manufacturing plant makes radios that contains an integrated circuit (IC) supplied by three sources A, B and C. The probability that the IC in a radio came from one of the sources is $1/3$, same for all sources. ICs are known to be defective with probabilities $0.001$, $0.003$ and $0.002$ for sources A, B, C respectively.<br>i) What is the probability that any given radio will contain a defective IC?<br>ii) If a radio contains a defective IC, find the probability that it came from source A. Repeat for sources B and C.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024s-p1-1b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Properties of Cumulative Distribution Function",
+          "textLatex": "Enumerate and justify the properties of a cumulative distribution function.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024s-p1-2a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Density Function from CDF",
+          "textLatex": "A random variable $X$ is known to have a distribution function<br>$$F_X(x) = u(x)\\left[1 - e^{-\\frac{x^2}{b}}\\right],$$<br>where $b > 0$ is a constant. Find its density function.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024s-p1-2b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(c)",
+          "marks": "4",
+          "co": null,
+          "topic": "Normalization of Continuous Probability Density Function",
+          "textLatex": "Find the value of the constant $k$ such that<br>$$f(x) = \\begin{cases} kx(1 - x), & 0 \\le x \\le 1 \\\\ 0, & \\text{otherwise} \\end{cases}$$<br>is a proper density function of a continuous random variable.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024s-p1-2c",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "5",
+          "co": null,
+          "topic": "Poisson Limit of Binomial Distribution",
+          "textLatex": "Prove that Poisson distribution can be derived as the limit of the Binomial distribution.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024s-p1-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "5",
+          "co": null,
+          "topic": "Characteristic Function & Moment Generation",
+          "textLatex": "What is a characteristic function? Discuss how moments can be generated using characteristic function.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024s-p1-3b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(c)",
+          "marks": "6",
+          "co": null,
+          "topic": "Characteristic Function & Expectation of Gamma Distribution",
+          "textLatex": "Derive the characteristic function for a Gamma distributed random variable. From the characteristic function find the expectation of a Gamma distributed random variable.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024s-p1-3c",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "7",
+          "co": null,
+          "topic": "Properties of Joint Density Function",
+          "textLatex": "Enumerate the properties of joint density function.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024s-p1-4a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Statistical Independence and Uncorrelatedness",
+          "textLatex": "When two random variables are said to be statistically independent? If two random variables are statistically independent will they be uncorrelated too? Explain citing suitable reasons.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024s-p1-4b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(c)",
+          "marks": "5",
+          "co": null,
+          "topic": "Second Moment, Expectation & Cross-Correlation",
+          "textLatex": "Let $X$ be a random variable that has a mean value $E[X] = 3$ and variance $\\sigma_X^2 = 2$. Determine the second moment of $X$ about the origin. Let $Y$ be another random variable defined as $Y = -6X + 22$. Find the values of $E[Y]$ and $R_{XY}$. Discuss how the random variables $X$ and $Y$ are related.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024s-p1-4c",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.",
+          "marks": "8+8",
+          "co": null,
+          "topic": "Stationary Process, Markov/Chebyshev & Bivariate Gaussian",
+          "textLatex": "Write short notes on any two.<br>i) Stationary Random Process<br>ii) Markov's and Chebyshev's inequality<br>iii) Bivariate Gaussian distribution",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024s-p1-5",
+          "images": []
+        }
+      ]
+    },
+    {
+      "partLabel": "Part-II",
+      "refCode": "Ex/EE/PC/B/T/315/2024(S)",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING THIRD YEAR FIRST SEMESTER",
+        "SUPPLEMENTARY EXAM - 2024",
+        "SUBJECT: INTRODUCTION TO STATISTICAL AND PROBABILISTIC METHODS"
+      ],
+      "timeText": "Time: Three Hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 Marks for each part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Two marks for neat and well-organized answers. Answer any three questions.",
+      "sharedNote": "To answer the following questions, you can use (with linear interpolation and extrapolation if necessary) the following standard normal distribution table where ever required:<br><table><tbody><tr><th>$z$:</th><td>1.6</td><td>1.65</td><td>1.70</td><td>1.80</td><td>1.90</td><td>1.95</td><td>2.0</td><td>2.5</td></tr><tr><th>$P(z)$:</th><td>0.9452</td><td>0.9505</td><td>0.9554</td><td>0.9641</td><td>0.9713</td><td>0.9744</td><td>0.9772</td><td>0.9938</td></tr><tr><th>$z$:</th><td>2.55</td><td>2.60</td><td>2.65</td><td>2.70</td><td></td><td></td><td></td><td></td></tr><tr><th>$P(z)$:</th><td>0.9948</td><td>0.9953</td><td>0.9960</td><td>0.9965</td><td></td><td></td><td></td><td></td></tr></tbody></table>",
+      "footerNote": "[ Turn over",
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Sample Mean Relations & Central Limit Theorem",
+          "textLatex": "Establish the relations between the expectation and the variance of the sample mean and the corresponding quantities of the population. Also discuss the significance of the central limit theorem.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024s-p2-1a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Central Limit Theorem Application (Insurance Claims)",
+          "textLatex": "An insurance company has $25,000$ automobile policy holders. If the yearly claim of a policy holder is a random variable with mean $320$ and standard deviation $540$, approximate the probability that the total yearly claim exceeds $8.3$ million?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024s-p2-1b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Two-Sided Confidence Interval Estimate (Known Variance)",
+          "textLatex": "Explain with the help of a suitable example, what is 'two-sided percentage confidence interval estimate' of the mean $\\mu$ of a normal population with known variance $\\sigma^2$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024s-p2-2a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "95% Confidence Interval for Signal Mean",
+          "textLatex": "A Signal having value $\\mu$ is transmitted from station A and the value received at station B is normally distributed with mean $\\mu$ and variance $4$. If the successive values received are<br>5, 8.5, 12, 15, 7, 9, 7.5, 6.5, 10.5<br>Find the $95\\%$ confidence interval for $\\mu$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024s-p2-2b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "7",
+          "co": null,
+          "topic": "Continuity Correction",
+          "textLatex": "What is \"continuity correction\"? Explain it with a suitable example.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024s-p2-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "9",
+          "co": null,
+          "topic": "Normal Approximation to Binomial with Continuity Correction",
+          "textLatex": "The ideal size of a first-year class at a particular college is $150$ students. The college, knowing from past experience that, on the average, only $30$ percent of those accepted for admission will actually attend, uses a policy of approving the applications of $450$ students. Compute the probability that more than $150$ first-year students attend this college.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024s-p2-3b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Least Squares Estimators in Simple Linear Regression",
+          "textLatex": "Derive the expressions for the Least Square Estimators of the Regression Parameters of a simple linear regression model.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024s-p2-4a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Expected Values of Linear Regression Parameters",
+          "textLatex": "Determine the expected values of Regression Parameters of a simple linear regression model.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024s-p2-4b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(a)",
+          "marks": "10",
+          "co": null,
+          "topic": "Sample Size Requirement & Type-II Error",
+          "textLatex": "Derive the expression of sample size requirement to meet certain specifications concerning type-II error.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024s-p2-5a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Z-Test for Signal Mean (5% Significance Level)",
+          "textLatex": "Suppose it is known that if a signal of value $\\mu$ is sent from station A, then the value received at station B is normally distributed with mean $\\mu$ and variance $4$. It is suspected that the signal value $\\mu = 8$ will be sent today from A. Test this hypothesis if the same signal value is independently sent five times and the average value received at B is $\\bar{X} = 9.5$. Consider $5\\%$ significance level.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2024s-p2-5b",
+          "images": []
+        }
+      ]
+    }
+  ]
+}

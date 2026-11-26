@@ -1,0 +1,365 @@
+{
+  "id": "ispm-2023",
+  "subjectId": "ispm",
+  "year": 2023,
+  "sortKey": 2023.2,
+  "yearLabel": "2023",
+  "examType": "Regular",
+  "sourcePdf": "2023 - Introduction to Statistical and Probabilstic Methods.pdf",
+  "hasDiagram": false,
+  "parts": [
+    {
+      "partLabel": "Part-I",
+      "refCode": "EX/EE/ES/H/T/325/2023",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING",
+        "THIRD YEAR SECOND SEMESTER EXAMINATION 2023",
+        "INTRODUCTION TO STATISTICAL AND PROBABILISTIC METHODS (HONS.)"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": null,
+      "sharedNote": "Attached Table: Probability of Standard Normal Random Variable $Z \\le z$ — Standard normal distribution $F(z)$ for $z = 0.00 - 2.99$<br><table><thead><tr><th>$z$</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr></thead><tbody><tr><th>0.0</th><td>.5000</td><td>.5040</td><td>.5080</td><td>.5120</td><td>.5160</td><td>.5199</td><td>.5239</td><td>.5279</td><td>.5319</td><td>.5359</td></tr><tr><th>0.1</th><td>.5398</td><td>.5438</td><td>.5478</td><td>.5517</td><td>.5557</td><td>.5596</td><td>.5636</td><td>.5675</td><td>.5714</td><td>.5753</td></tr><tr><th>0.2</th><td>.5793</td><td>.5832</td><td>.5871</td><td>.5910</td><td>.5948</td><td>.5987</td><td>.6026</td><td>.6064</td><td>.6103</td><td>.6141</td></tr><tr><th>0.3</th><td>.6179</td><td>.6217</td><td>.6255</td><td>.6293</td><td>.6331</td><td>.6368</td><td>.6406</td><td>.6443</td><td>.6480</td><td>.6517</td></tr><tr><th>0.4</th><td>.6554</td><td>.6591</td><td>.6628</td><td>.6664</td><td>.6700</td><td>.6736</td><td>.6772</td><td>.6808</td><td>.6844</td><td>.6879</td></tr><tr><th>0.5</th><td>.6915</td><td>.6950</td><td>.6985</td><td>.7019</td><td>.7054</td><td>.7088</td><td>.7123</td><td>.7157</td><td>.7190</td><td>.7224</td></tr><tr><th>0.6</th><td>.7257</td><td>.7291</td><td>.7324</td><td>.7357</td><td>.7389</td><td>.7422</td><td>.7454</td><td>.7486</td><td>.7517</td><td>.7549</td></tr><tr><th>0.7</th><td>.7580</td><td>.7611</td><td>.7642</td><td>.7673</td><td>.7703</td><td>.7734</td><td>.7764</td><td>.7794</td><td>.7823</td><td>.7852</td></tr><tr><th>0.8</th><td>.7881</td><td>.7910</td><td>.7939</td><td>.7967</td><td>.7995</td><td>.8023</td><td>.8051</td><td>.8078</td><td>.8106</td><td>.8133</td></tr><tr><th>0.9</th><td>.8159</td><td>.8186</td><td>.8212</td><td>.8238</td><td>.8264</td><td>.8289</td><td>.8315</td><td>.8340</td><td>.8365</td><td>.8389</td></tr><tr><th>1.0</th><td>.8413</td><td>.8438</td><td>.8461</td><td>.8485</td><td>.8508</td><td>.8531</td><td>.8554</td><td>.8577</td><td>.8599</td><td>.8621</td></tr><tr><th>1.1</th><td>.8643</td><td>.8665</td><td>.8686</td><td>.8708</td><td>.8729</td><td>.8749</td><td>.8770</td><td>.8790</td><td>.8810</td><td>.8830</td></tr><tr><th>1.2</th><td>.8849</td><td>.8869</td><td>.8888</td><td>.8907</td><td>.8925</td><td>.8944</td><td>.8962</td><td>.8980</td><td>.8997</td><td>.9015</td></tr><tr><th>1.3</th><td>.9032</td><td>.9049</td><td>.9066</td><td>.9082</td><td>.9099</td><td>.9115</td><td>.9131</td><td>.9147</td><td>.9162</td><td>.9177</td></tr><tr><th>1.4</th><td>.9192</td><td>.9207</td><td>.9222</td><td>.9236</td><td>.9251</td><td>.9265</td><td>.9279</td><td>.9292</td><td>.9306</td><td>.9319</td></tr><tr><th>1.5</th><td>.9332</td><td>.9345</td><td>.9357</td><td>.9370</td><td>.9382</td><td>.9394</td><td>.9406</td><td>.9418</td><td>.9429</td><td>.9441</td></tr><tr><th>1.6</th><td>.9452</td><td>.9463</td><td>.9474</td><td>.9484</td><td>.9495</td><td>.9505</td><td>.9515</td><td>.9525</td><td>.9535</td><td>.9545</td></tr><tr><th>1.7</th><td>.9554</td><td>.9564</td><td>.9573</td><td>.9582</td><td>.9591</td><td>.9599</td><td>.9608</td><td>.9616</td><td>.9625</td><td>.9633</td></tr><tr><th>1.8</th><td>.9641</td><td>.9649</td><td>.9656</td><td>.9664</td><td>.9671</td><td>.9678</td><td>.9686</td><td>.9693</td><td>.9699</td><td>.9706</td></tr><tr><th>1.9</th><td>.9713</td><td>.9719</td><td>.9726</td><td>.9732</td><td>.9738</td><td>.9744</td><td>.9750</td><td>.9756</td><td>.9761</td><td>.9767</td></tr><tr><th>2.0</th><td>.9772</td><td>.9778</td><td>.9783</td><td>.9788</td><td>.9793</td><td>.9798</td><td>.9803</td><td>.9808</td><td>.9812</td><td>.9817</td></tr><tr><th>2.1</th><td>.9821</td><td>.9826</td><td>.9830</td><td>.9834</td><td>.9838</td><td>.9842</td><td>.9846</td><td>.9850</td><td>.9854</td><td>.9857</td></tr><tr><th>2.2</th><td>.9861</td><td>.9864</td><td>.9868</td><td>.9871</td><td>.9875</td><td>.9878</td><td>.9881</td><td>.9884</td><td>.9887</td><td>.9890</td></tr><tr><th>2.3</th><td>.9893</td><td>.9896</td><td>.9898</td><td>.9901</td><td>.9904</td><td>.9906</td><td>.9909</td><td>.9911</td><td>.9913</td><td>.9916</td></tr><tr><th>2.4</th><td>.9918</td><td>.9920</td><td>.9922</td><td>.9925</td><td>.9927</td><td>.9929</td><td>.9931</td><td>.9932</td><td>.9934</td><td>.9936</td></tr><tr><th>2.5</th><td>.9938</td><td>.9940</td><td>.9941</td><td>.9943</td><td>.9945</td><td>.9946</td><td>.9948</td><td>.9949</td><td>.9951</td><td>.9952</td></tr><tr><th>2.6</th><td>.9953</td><td>.9955</td><td>.9956</td><td>.9957</td><td>.9959</td><td>.9960</td><td>.9961</td><td>.9962</td><td>.9963</td><td>.9964</td></tr><tr><th>2.7</th><td>.9965</td><td>.9966</td><td>.9967</td><td>.9968</td><td>.9969</td><td>.9970</td><td>.9971</td><td>.9972</td><td>.9973</td><td>.9974</td></tr><tr><th>2.8</th><td>.9974</td><td>.9975</td><td>.9976</td><td>.9977</td><td>.9977</td><td>.9978</td><td>.9979</td><td>.9979</td><td>.9980</td><td>.9981</td></tr><tr><th>2.9</th><td>.9981</td><td>.9982</td><td>.9982</td><td>.9983</td><td>.9984</td><td>.9984</td><td>.9985</td><td>.9985</td><td>.9986</td><td>.9986</td></tr></tbody></table>",
+      "footerNote": "[ Turn over",
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "2",
+          "co": "CO1",
+          "topic": "Axioms of Probability",
+          "textLatex": "State and explain the axioms of probability.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p1-1a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "6",
+          "co": "CO1",
+          "topic": "Conditional Probability & Total Probability",
+          "textLatex": "A company sells high fidelity amplifiers capable of generating $10$, $25$ and $50\\text{ W}$ of audio power. It has on hand $100$ of the $10\\text{ W}$ units, of which $15\\%$ are defective, $70$ of the $25\\text{ W}$ units with $10\\%$ defective and $30$ of the $50\\text{ W}$ units with $10\\%$ defective.<br>i) What is the probability that an amplifier sold from the $10\\text{ W}$ units is defective?<br>ii) If each wattage amplifier sells with equal likelihood, what is the probability of a randomly selected unit being $50\\text{ W}$ and defective?<br>iii) What is the probability that a unit randomly selected for sale is defective?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p1-1b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "6",
+          "co": "CO2",
+          "topic": "Gaussian Distribution & Tolerance Rejection",
+          "textLatex": "A production line manufactures $1000\\text{ Ohm}$ resistors that must satisfy a $10\\%$ tolerance.<br>i) If resistance is adequately described by a Gaussian random variable $X$ for which $\\mu_X = 1000\\text{ Ohm}$ and $\\sigma_X = 40\\text{ Ohm}$, what fraction of the resistors is expected to be rejected?<br>ii) If a machine is not properly adjusted, the product resistances change to the case where $\\mu_X = 1050\\text{ Ohm}$ ($5\\%$ shift). What fraction is now rejected?<br>Use the attached table for standard Gaussian random variable.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p1-2a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "4",
+          "co": "CO2",
+          "topic": "Sum of i.i.d. Exponential RVs & Gamma Distribution",
+          "textLatex": "Starting from the expression for the exponential probability density function, show that the sum of several independent and identically distributed exponential random variables is a Gamma random variable.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p1-2b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(c)",
+          "marks": "4",
+          "co": "CO2",
+          "topic": "Chebyshev's Theorem",
+          "textLatex": "Use Chebyshev's theorem to find what percentage of the values will fall between $123$ and $179$ for a dataset with mean of $151$ and standard deviation of $14$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p1-2c",
+          "images": []
+        },
+        {
+          "kind": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "6",
+          "co": "CO2",
+          "topic": "Poisson Approximation to Binomial Distribution",
+          "textLatex": "Prove that Poisson distribution can be used as a convenient approximation to the Binomial distribution under some assumptions.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p1-2a-2",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "4",
+          "co": "CO2",
+          "topic": "Binomial vs Poisson Approximation in Transmission Channel",
+          "textLatex": "A noisy transmission channel has a per digit error probability $p = 0.01$.<br>i) Calculate the probability of more than one error in $10$ received digits.<br>ii) Calculate the same probability using Poisson approximation.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p1-2b-2",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(c)",
+          "marks": "4",
+          "co": "CO2",
+          "topic": "Expectation of Continuous Random Variable",
+          "textLatex": "A random variable has a probability density<br>$$f_X(x) = \\frac{5}{4}(1 - x^4) \\quad 0 < x \\le 1 \\text{ and } 0 \\text{ elsewhere}$$<br>Find $E[X]$, $E[4X+2]$ and $E[X^2]$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p1-2c-2",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "6",
+          "co": "CO3",
+          "topic": "Joint & Marginal PDFs and Statistical Independence",
+          "textLatex": "Two random variables $X$ and $Y$ have a joint probability density function<br>$$f_{X,Y}(x, y) = \\frac{5}{16}x^2 y \\quad 0 < y < x < 2 \\text{ and } 0 \\text{ elsewhere}$$<br>i) Find the marginal density functions of $X$ and $Y$.<br>ii) Are $X$ and $Y$ statistically independent?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p1-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "3",
+          "co": "CO3",
+          "topic": "Valid Joint Probability Density Function",
+          "textLatex": "Find the value of the constant $b$ in terms of $a$ so that the following function becomes a valid joint density function.<br>$$f_{X,Y}(x, y) = b e^{-(x+y)} \\quad 0 < x < a, \\; 0 < y < \\infty \\text{ and } 0 \\text{ elsewhere}$$",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p1-3b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(c)",
+          "marks": "5",
+          "co": "CO3",
+          "topic": "Joint Conditional Distribution & Density Functions",
+          "textLatex": "Introduce the concept of joint conditional probability distribution and density functions.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p1-3c",
+          "images": []
+        },
+        {
+          "kind": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "6",
+          "co": "CO3",
+          "topic": "Covariance & Correlation Coefficient of Linearly Related RVs",
+          "textLatex": "Let $Y = aX + b$ where $X$ and $Y$ are two random variables, $a$ and $b$ are constants and $a$ can assume both positive and negative values.<br>i) Find the covariance of $X$ and $Y$.<br>ii) Find the correlation coefficient of $X$ and $Y$.<br>iii) Comment on the correlation between $X$ and $Y$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p1-3a-2",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "4",
+          "co": "CO3",
+          "topic": "Variance of Weighted Sum of Uncorrelated RVs",
+          "textLatex": "Prove that the variance of a weighted sum of uncorrelated random variables (weights $\\alpha_i$) equals the weighted sum of the variances of the random variables.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p1-3b-2",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(c)",
+          "marks": "4",
+          "co": "CO3",
+          "topic": "Characteristic Function of Linearly Transformed RV",
+          "textLatex": "Let $Y = aX + b$. If $\\Psi_X(\\omega)$ is the characteristic function of $X$, then determine the characteristic function of $Y$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p1-3c-2",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.",
+          "marks": "7+7",
+          "co": "CO4",
+          "topic": "Random Processes: Stationarity, Cross-Correlation & PSD",
+          "textLatex": "Write short notes on any two<br>i) Stationarity and Ergodicity<br>ii) Cross-Correlation function and its properties<br>iii) Power Spectral Density of a Random Process",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p1-4",
+          "images": []
+        }
+      ]
+    },
+    {
+      "partLabel": "Part-II",
+      "refCode": "Ex/EE/ES/H/T/325/2023",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING THIRD YEAR SECOND SEMESTER - 2023",
+        "SUBJECT: INTRODUCTION TO STATISTICAL & PROBABILISTIC METHODS(HONS.)"
+      ],
+      "timeText": "Time: Three Hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 Marks for each part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Two marks for neat and well-organized answers. Answer any three questions.",
+      "sharedNote": "To answer the following questions, you can use (with linear interpolation and extrapolation if necessary) the following standard normal distribution table where ever required:<br><table><tbody><tr><th>$z$:</th><td>1.6</td><td>1.65</td><td>1.70</td><td>1.80</td><td>1.90</td><td>1.95</td><td>2.0</td><td>2.5</td></tr><tr><th>$P(z)$:</th><td>0.9452</td><td>0.9505</td><td>0.9554</td><td>0.9641</td><td>0.9713</td><td>0.9744</td><td>0.9772</td><td>0.9938</td></tr><tr><th>$z$:</th><td>2.55</td><td>2.60</td><td>2.65</td><td>2.70</td><td></td><td></td><td></td><td></td></tr><tr><th>$P(z)$:</th><td>0.9948</td><td>0.9953</td><td>0.9960</td><td>0.9965</td><td></td><td></td><td></td><td></td></tr></tbody></table>",
+      "footerNote": "[ Turn over",
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Chi-Square Distribution of Sample Variance",
+          "textLatex": "If $\\bar{X}$ is the sample mean and $S^2$ is the sample variance from a normal population with mean $\\mu$ and standard deviation $\\sigma$ then show that $(n-1)S^2/\\sigma^2$ has a chi-square distribution with $(n-1)$ degrees of freedom.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p2-1a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Sample Size Determination Using Normal / CLT",
+          "textLatex": "An astronomer wants to measure the distance from her observatory to a distant star. However, due to atmospheric disturbances, any measurement will not yield the exact distance $d$. As a result, the astronomer has decided to make a series of measurements and then use their average value as an estimate of the actual distance. If the astronomer believes that the values of the successive measurements are independent random variables with a mean of $d$ light years and a standard deviation of $2$ light years, how many measurements need she make to be at least $95$ percent certain that her estimate is accurate to within $\\pm .5$ light years?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p2-1b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Confidence Interval for Normal Mean (Known Variance)",
+          "textLatex": "Derive the confidence interval for estimation of the mean of a normal population with known variance.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p2-2a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Two-Sided and Upper Confidence Intervals for Normal Mean",
+          "textLatex": "A signal having value $\\mu$ is transmitted from location A and the value received at B is normally distributed with mean $\\mu$ and variance $4$. If the successive received values are<br>5, 8.5, 12, 15, 7, 9, 7.5, 6.5, 10.5<br>then determine the $95\\%$ confidence interval for $\\mu$. Also determine its $99\\%$ upper confidence interval.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p2-2b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "10",
+          "co": null,
+          "topic": "Sample Size Requirement & Type-II Error",
+          "textLatex": "Derive the expression of sample size requirement to meet certain specifications concerning type-II error.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p2-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Hypothesis Testing for Normal Mean (Known Variance)",
+          "textLatex": "Suppose it is known that if a signal of value $\\mu$ is sent from station A, then the value received at station B is normally distributed with mean $\\mu$ and variance $4$. It is suspected that the signal value $\\mu = 8$ will be sent today from A. Test this hypothesis if the same signal value is independently sent five times and the average value received at B is $\\bar{X} = 9.5$. Consider $5\\%$ significance level.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p2-3b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Least Squares Estimators in Simple Linear Regression",
+          "textLatex": "Derive the expressions for the Least Square Estimators of the Regression Parameters of a simple linear regression model.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p2-4a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Expected Values of Simple Linear Regression Parameters",
+          "textLatex": "Determine the expected values of Regression Parameters of a simple linear regression model.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p2-4b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Continuity Correction",
+          "textLatex": "What is \"continuity correction\"? Explain it with a suitable example.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p2-5a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Normal Approximation to Binomial Distribution",
+          "textLatex": "The ideal size of a first-year class at a particular college is $150$ students. The college, knowing from past experience that, on the average, only $30$ percent of those accepted for admission will actually attend, uses a policy of approving the applications of $450$ students. Compute the probability that more than $150$ first-year students attend this college.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p2-5b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(c)",
+          "marks": "4",
+          "co": null,
+          "topic": "Variance of Sample Mean / n Samples",
+          "textLatex": "Derive the expression of variance of $n$ number of samples.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2023-p2-5c",
+          "images": []
+        }
+      ]
+    }
+  ]
+}

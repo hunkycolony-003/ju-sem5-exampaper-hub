@@ -3,7 +3,7 @@
   "university": "Jadavpur University",
   "program": "B.E. Electrical Engineering · 3rd Year 1st Semester",
   "assetsDir": "data/assets",
-  "updatedAt": "2026-11-26T19:24:32+00:00",
+  "updatedAt": "2026-11-26T19:49:32+00:00",
   "subjects": [
     {
       "order": 1,
@@ -85,7 +85,99 @@
       "codePrefix": "Ex/EE/PC/B/T/315",
       "name": "Introduction to Statistical and Probabilistic Methods",
       "paperTitle": "INTRODUCTION TO STATISTICAL AND PROBABILISTIC METHODS",
-      "papers": []
+      "papers": [
+        {
+          "id": "ispm-2026",
+          "year": 2026,
+          "sortKey": 2026.0,
+          "yearLabel": "2026",
+          "examType": "Regular",
+          "sourcePdf": "2026 - Introduction to Statistical and Probabilistic Methods.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 22,
+          "path": "data/papers/ispm/2026.json"
+        },
+        {
+          "id": "ispm-2025",
+          "year": 2025,
+          "sortKey": 2025.0,
+          "yearLabel": "2025",
+          "examType": "Regular",
+          "sourcePdf": "2025 - Introduction to Statistical and Probabilistic Methods.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 23,
+          "path": "data/papers/ispm/2025.json"
+        },
+        {
+          "id": "ispm-2024",
+          "year": 2024,
+          "sortKey": 2024.2,
+          "yearLabel": "2024",
+          "examType": "Regular",
+          "sourcePdf": "2024 - Introduction to Statistical and Probabilistic Methods.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 20,
+          "path": "data/papers/ispm/2024.json"
+        },
+        {
+          "id": "ispm-2024s",
+          "year": 2024,
+          "sortKey": 2024.1,
+          "yearLabel": "2024 (S)",
+          "examType": "Supplementary",
+          "sourcePdf": "2024 - Introduction to Statistical and Probabilistic Methods S.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 22,
+          "path": "data/papers/ispm/2024s.json"
+        },
+        {
+          "id": "ispm-2023",
+          "year": 2023,
+          "sortKey": 2023.2,
+          "yearLabel": "2023",
+          "examType": "Regular",
+          "sourcePdf": "2023 - Introduction to Statistical and Probabilstic Methods.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 26,
+          "path": "data/papers/ispm/2023.json"
+        },
+        {
+          "id": "ispm-2023s",
+          "year": 2023,
+          "sortKey": 2023.1,
+          "yearLabel": "2023 (S)",
+          "examType": "Supplementary",
+          "sourcePdf": "2023 - Introduction to Statistical and Probabilistic Methods.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 20,
+          "path": "data/papers/ispm/2023s.json"
+        },
+        {
+          "id": "ispm-2022",
+          "year": 2022,
+          "sortKey": 2022.0,
+          "yearLabel": "2022",
+          "examType": "Regular",
+          "sourcePdf": "2022 - 4. Introduction to Statistical and Prbalistic Methods.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 20,
+          "path": "data/papers/ispm/2022.json"
+        }
+      ]
     },
     {
       "order": 3,

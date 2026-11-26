@@ -1,0 +1,329 @@
+{
+  "id": "ispm-2025",
+  "subjectId": "ispm",
+  "year": 2025,
+  "sortKey": 2025.0,
+  "yearLabel": "2025",
+  "examType": "Regular",
+  "sourcePdf": "2025 - Introduction to Statistical and Probabilistic Methods.pdf",
+  "hasDiagram": false,
+  "parts": [
+    {
+      "partLabel": "Part-I",
+      "refCode": "Ex/EE/PC/B/T/315/2025",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING",
+        "THIRD YEAR FIRST SEMESTER EXAMINATION 2025",
+        "INTRODUCTION TO STATISTICAL AND PROBABILISTIC METHODS"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": null,
+      "sharedNote": null,
+      "footerNote": "[ Turn over",
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "4",
+          "co": "CO1",
+          "topic": "Axioms of Probability",
+          "textLatex": "State and explain the axioms of probability.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2025-p1-1a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "4",
+          "co": "CO1",
+          "topic": "Sample Space & Continuous Uniform Probability",
+          "textLatex": "A pointer is spun on a fair wheel of chance having periphery labelled from $0$ to $100$.<br>(a) What is the sample space for this experiment?<br>(b) What is the probability that the pointer will stop between $20$ and $35$, both inclusive?<br>(c) What is the probability that the wheel will stop on $59$?<br>Justify your answers citing suitable reasons.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2025-p1-1b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "8",
+          "co": "CO2",
+          "topic": "Binomial Distribution & Probability Distribution Function",
+          "textLatex": "Assume fluorescent lamps made by a manufacturer have a probability of $0.05$ of being inoperable when new. A person purchases eight of the lamps for home.<br>(a) Plot the probability distribution function for a random variable \"the number of inoperable lamps\".<br>(b) What is the probability that exactly one lamp is operable of the eight?<br>(c) What is the probability that all eight lamps are operable?<br>(d) Determine the probability that one or more lamps are not operable.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2025-p1-2a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "6",
+          "co": "CO2",
+          "topic": "Poisson Approximation to Binomial Distribution",
+          "textLatex": "Prove that Poisson distribution can be used as a convenient approximation to the Binomial distribution under some assumptions.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2025-p1-2b",
+          "images": []
+        },
+        {
+          "kind": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "5",
+          "co": "CO2",
+          "topic": "Characteristic Function & Moment Generation",
+          "textLatex": "What is a characteristic function? For a continuous random variable prove that the characteristic function can be used for generating moments of the random variable following a density function.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2025-p1-2a-2",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "5",
+          "co": "CO2",
+          "topic": "Characteristic Function of Gaussian Random Variable",
+          "textLatex": "Derive the characteristic function of a Gaussian random variable with mean $\\mu$ and variance $\\sigma^2$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2025-p1-2b-2",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(c)",
+          "marks": "4",
+          "co": "CO2",
+          "topic": "Expectation of Function of Uniform Random Variable",
+          "textLatex": "A random variable $X$ is uniformly distributed on the interval $(-5, 15)$. Another random variable $Y = e^{-X/5}$ is defined. Find the expected value of $Y$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2025-p1-2c",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "6",
+          "co": "CO3",
+          "topic": "Properties of Joint Conditional Distribution Function",
+          "textLatex": "Enumerate the properties of a joint conditional distribution function.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2025-p1-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "8",
+          "co": "CO3",
+          "topic": "Joint PDF, Marginal Densities & Statistical Independence",
+          "textLatex": "Two random variables $X$ and $Y$ have a joint probability density function<br>$$f_{XY}(x, y) = \\frac{5}{16} x^2 y \\quad 0 < y < x < 2 \\text{ and } 0 \\text{ elsewhere}$$<br>(a) Find the marginal density functions of $X$ and $Y$.<br>(b) Determine whether $X$ and $Y$ are statistically independent or not.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2025-p1-3b",
+          "images": []
+        },
+        {
+          "kind": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "6",
+          "co": "CO3",
+          "topic": "Properties of Joint Density Function",
+          "textLatex": "Enumerate the properties of joint density function.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2025-p1-3a-2",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "4",
+          "co": "CO3",
+          "topic": "Moments and Variance of Linear Combination",
+          "textLatex": "Let $X$ and $Y$ be statistically independent random variables with $E[X] = 2$ and $E[Y] = 4$. They have second moments $E[X^2] = 8$ and $E[Y^2] = 25$. Consider a random variable $W = 3X - Y$. Determine<br>(a) The mean value of $W$<br>(b) The second moment and the variance of $W$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2025-p1-3b-2",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(c)",
+          "marks": "4",
+          "co": "CO3",
+          "topic": "Correlation, Uncorrelation and Orthogonality",
+          "textLatex": "Define correlation of two random variables. In this context, mathematically differentiate between the notions of uncorrelation and orthogonality.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2025-p1-3c",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.",
+          "marks": "7+7",
+          "co": "CO4",
+          "topic": "WSS Process, Deterministic vs Nondeterministic & Autocorrelation",
+          "textLatex": "Write short notes on any two<br>i) Wide Sense Stationary Random Process<br>ii) Deterministic and nondeterministic Random Process<br>iii) Autocorrelation Function",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2025-p1-4",
+          "images": []
+        }
+      ]
+    },
+    {
+      "partLabel": "Part-II",
+      "refCode": "Ex/EE/PC/B/T/315/2025",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING THIRD YEAR FIRST SEMESTER - 2025",
+        "SUBJECT: INTRODUCTION TO STATISTICAL AND PROBABILISTIC METHODS"
+      ],
+      "timeText": "Time: Three Hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 Marks for each part)",
+      "scriptNote": "Use separate Answer-Script for each part",
+      "instructions": "Two marks for neat and well-organized answers. Answer any three questions. (The symbols used have their usual meanings)",
+      "sharedNote": "To answer the following questions, you can use (with linear interpolation and extrapolation if necessary) the following standard normal distribution table where ever required:<br><table><tbody><tr><th>$z$:</th><td>1.6</td><td>1.65</td><td>1.70</td><td>1.80</td><td>1.90</td><td>1.95</td><td>2.0</td><td>2.5</td></tr><tr><th>$P(z)$:</th><td>0.9452</td><td>0.9505</td><td>0.9554</td><td>0.9641</td><td>0.9713</td><td>0.9744</td><td>0.9772</td><td>0.9938</td></tr><tr><th>$z$:</th><td>2.55</td><td>2.60</td><td>2.65</td><td>2.70</td><td></td><td></td><td></td><td></td></tr><tr><th>$P(z)$:</th><td>0.9948</td><td>0.9953</td><td>0.9960</td><td>0.9965</td><td></td><td></td><td></td><td></td></tr></tbody></table>",
+      "footerNote": "[ Turn over",
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Chi-Square Distribution of Sample Variance",
+          "textLatex": "If $\\bar{X}$ is the sample mean and $S^2$ is the sample variance from a normal population with mean $\\mu$ and standard deviation $\\sigma$ then show that $(n-1)S^2/\\sigma^2$ has a chi-square distribution with $(n-1)$ degrees of freedom.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2025-p2-1a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Sample Size Estimation via Normal Approximation",
+          "textLatex": "An astronomer wants to measure the distance from her observatory to a distant star. However, due to atmospheric disturbances, any measurement will not yield the exact distance $d$. As a result, the astronomer has decided to make a series of measurements and then use their average value as an estimate of the actual distance. If the astronomer believes that the values of the successive measurements are independent random variables with a mean of $d$ light years and a standard deviation of $2$ light years, how many measurements need she make to be at least $95$ percent certain that her estimate is accurate to within $\\pm .5$ light years?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2025-p2-1b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Confidence Interval for Normal Mean (Unknown Variance)",
+          "textLatex": "A signal having value $\\mu$ is transmitted from location A and the value received at B is normally distributed with mean $\\mu$ and unknown variance. If the successive received values are<br>6.5, 8.0, 14.5, 9.5, 10.5, 5.0, 7.5, 12.5, 8.5<br>then determine the $95\\%$ confidence interval for $\\mu$. Consider $t_{0.025, 8} = 2.306$<br>Also determine the sample size so that an interval of length $0.1$ is obtained which can be asserted with $99\\%$ confidence, contains $\\mu$ if the sample variance is $4$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2025-p2-2a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Hypothesis Testing Definitions & Error Types",
+          "textLatex": "Define the terms, (i) Simple Hypothesis, (ii) Critical Region, (iii) Type I error, (iv) Type II error.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2025-p2-2b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Z-Test for Population Mean (Known Variance)",
+          "textLatex": "A public health official claims that the mean home water used is normally distributed having mean, $\\mu = 350$ gallons a day with $\\sigma = 20$ gallons. To verify this claim, a study of $20$ randomly selected homes was performed with the results that the average daily water use of these $20$ homes were as follows:<br>340, 356, 332, 362, 318, 344, 386, 402, 322, 360, 362, 354, 340, 372, 338, 375, 364, 355, 324, and $370$.<br>Verify whether the data contradicts the officials claim with a test of $5\\%$ significance level. Derive the expression that you have used for the test.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2025-p2-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Sample Size Requirement & Type-II Error",
+          "textLatex": "Derive the expression of sample size requirement to meet certain specifications concerning type-II error.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2025-p2-3b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.",
+          "marks": "16",
+          "co": null,
+          "topic": "Least Squares Estimators in Simple Linear Regression",
+          "textLatex": "Derive the expressions for the Least Square Estimators of the Regression Parameters of a simple linear regression model. Also, determine the expected values and variance of those parameters.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2025-p2-4",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(a)",
+          "marks": "5",
+          "co": null,
+          "topic": "Continuity Correction",
+          "textLatex": "What is \"continuity correction\"? Explain it with a suitable example.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2025-p2-5a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(b)",
+          "marks": "5",
+          "co": null,
+          "topic": "Normal Approximation to Binomial with Continuity Correction",
+          "textLatex": "The ideal size of a first-year class at a particular college is $150$ students. The college, knowing from past experience that, on the average, only $30$ percent of those accepted for admission will actually attend, uses a policy of approving the applications of $450$ students. Compute the probability that more than $150$ first-year students attend this college.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2025-p2-5b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(c)",
+          "marks": "6",
+          "co": null,
+          "topic": "Chi-Square Distribution",
+          "textLatex": "Write short notes on 'Chi-square distribution'.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2025-p2-5c",
+          "images": []
+        }
+      ]
+    }
+  ]
+}

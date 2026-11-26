@@ -1,0 +1,286 @@
+{
+  "id": "ispm-2022",
+  "subjectId": "ispm",
+  "year": 2022,
+  "sortKey": 2022.0,
+  "yearLabel": "2022",
+  "examType": "Regular",
+  "sourcePdf": "2022 - 4. Introduction to Statistical and Prbalistic Methods.pdf",
+  "hasDiagram": false,
+  "parts": [
+    {
+      "partLabel": "Part-I",
+      "refCode": "Ex/EE/ES/H/T/325/2022",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING THIRD YEAR SECOND SEMESTER EXAMINATION, 2022",
+        "INTRODUCTION TO STATISTICAL AND PROBABILISTIC METHODS (HONS.)"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Answer any THREE questions. Two marks reserved for neatness and well organized answers.",
+      "sharedNote": null,
+      "footerNote": "[ Turn over",
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Laplace PDF, Probabilities, Variance & Characteristic Function",
+          "textLatex": "The probability density function of a random variable $X$ has the form $f(x) = 4e^{-k|x|} \\; ; \\; -\\infty \\le x \\le +\\infty$.<br>Find the<br>(i) value of $k$.<br>(ii) probability that $X > 1$.<br>(iii) probability that $X \\le -0.5$.<br>(iv) variance of $X$.<br>(v) characteristic function of $X$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2022-p1-1a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Moments of Linear Transformation of Exponential RV",
+          "textLatex": "The random input voltage $Y$ (mV) to an electrical circuit has a cumulative distribution function given by<br>$$F(y) = \\left[1 - e^{-2y}\\right] u(y) \\; ; \\text{ where } u(y) \\text{ is a unit step.}$$<br>$Y$ is first amplified by a gain $= 5$ and then added to a constant offset voltage of $3\\text{ mV}$. Thus, the output is a random variable $Z = 5Y + 3$. Determine the expectation, the mean squared value and the third moment of $Z$. <i>Do not use any transform method.</i>",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2022-p1-1b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Central Moments of Standard Normal Distribution via Transform",
+          "textLatex": "Determine the first four central moments of a random variable with the standard normal distribution, using any appropriate transform method.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2022-p1-2a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Markov, Chebyshev & Chernoff Bounds for Poisson RV",
+          "textLatex": "Let $X$ be a Poisson random variable with parameter $v = \\frac{1}{2}$. Bound the probability of $X \\ge 3$, using the Markov's inequality, the Chebyshev's inequality and the Chernoff bound. Compare these bounds with the exact probability value.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2022-p1-2b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(c)",
+          "marks": "4",
+          "co": null,
+          "topic": "Variance of Sum of Independent Random Variables",
+          "textLatex": "Prove that the variance of the sum of statistically independent random variables is equal to the sum of their variances.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2022-p1-2c",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "2+6",
+          "co": null,
+          "topic": "Covariance of Independent Laplacian and Gamma RVs",
+          "textLatex": "Define covariance of two random variables.<br>$X$ and $Y$ are two statistically independent random variables, such that $X$ has a Laplacian distribution with parameter $\\lambda = 2$ and $Y$ has a Gamma distribution. If $Z = X + Y$, determine the value of the covariance of $X$ and $Z$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2022-p1-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Joint PDF, Marginal PDFs & Correlation",
+          "textLatex": "It is claimed that the joint probability density functions involving two continuous random variables $X$ and $Y$ is<br>$$f(x, y) = \\frac{6}{5}(x + y^2) \\; ; \\; 0 \\le x \\le 1, \\; 0 \\le y \\le 1$$<br>$$= 0 \\text{ otherwise.}$$<br>(i) Prove that $f(x, y)$ is a legitimate probability density function.<br>(ii) Determine the expressions for the marginal probability density functions.<br>(iii) Determine the correlation of $X$ and $Y$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2022-p1-3b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "10",
+          "co": null,
+          "topic": "Autocorrelation & Cross-Correlation of Independent Stationary Processes",
+          "textLatex": "Two statistically independent stationary random processes having sample functions of $X(t)$ and $Y(t)$ have autocorrelation functions of<br>$$R_x(\\tau) = 25e^{-10|\\tau|}\\cos(100\\pi\\tau) \\quad \\text{and}$$<br>$$R_y(\\tau) = 16\\frac{\\sin(50\\pi\\tau)}{50\\pi\\tau} \\quad \\text{respectively.}$$<br>Find the following.<br>(i) Autocorrelation function of $X(t) + Y(t)$<br>(ii) Autocorrelation function of $X(t) - Y(t)$<br>(iii) Both cross-correlation functions involving $X(t)$ and $Y(t)$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2022-p1-4a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Cross Power Spectral Density of LTI System Output and Input",
+          "textLatex": "An LTI system is excited by a WSS random process. Which property of the system relates the cross power spectral density of the output and the input to the power spectral density of the input.<br>Give mathematical derivations starting from the convolution representation of the system.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2022-p1-4b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.",
+          "marks": "8+8",
+          "co": null,
+          "topic": "White Noise, PGF, Bivariate Gaussian & PSD",
+          "textLatex": "Write short notes on any two of the following.<br>(a) White noise.<br>(b) Probability generating function of random variables and its applications.<br>(c) Bivariate Gaussian Distribution.<br>(d) Power spectral density of random processes.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2022-p1-5",
+          "images": []
+        }
+      ]
+    },
+    {
+      "partLabel": "Part-II",
+      "refCode": "Ex/EE/ES/H/T/325/2022",
+      "headerLines": [
+        "B. Electrical Engineering, 3rd Year, 2nd Semester 2021-22",
+        "Introduction to Statistical & Probabilistic Methods"
+      ],
+      "timeText": "Time : 3 hrs",
+      "marksText": "Full marks 50",
+      "subMarksText": null,
+      "scriptNote": null,
+      "instructions": "Answer Any Three Questions. Two marks for well-organized answers.",
+      "sharedNote": null,
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "10",
+          "co": null,
+          "topic": "Chi-Square and t-Distribution Symmetry",
+          "textLatex": "Discuss Chi-square distribution and the $t$-distribution. Also explain, how in case of the latter, $-t_{\\alpha,n} = t_{1-\\alpha,n}$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2022-p2-1a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Expectation & Variance of Sample Mean and Sample Variance",
+          "textLatex": "Show analytically how the sample mean and the sample variance are related to the population mean and the population variance.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2022-p2-1b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Central Limit Theorem",
+          "textLatex": "State and explain the Central Limit Theorem.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2022-p2-2a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Distribution of Sample Mean",
+          "textLatex": "Comment on the distribution of the Sample Mean",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2022-p2-2b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(c)",
+          "marks": "6",
+          "co": null,
+          "topic": "CLT Application to Insurance Claims",
+          "textLatex": "An insurance company has $25,000$ automobile policy holders. If the yearly claim of a policy holder is a random variable with mean $320$ and standard deviation $540$, approximate the probability that the total yearly claim exceeds $8.3$ million.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2022-p2-2c",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Confidence Interval for Normal Mean (Known Variance)",
+          "textLatex": "In a sample from a normal population having unknown mean and known variance, explain how an interval can be specified, for which we can have a certain degree of confidence, for the mean to lie within.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2022-p2-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Maximum Likelihood Estimator",
+          "textLatex": "What is maximum likelihood estimator ?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2022-p2-3b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(c)",
+          "marks": "6",
+          "co": null,
+          "topic": "Sample Size Determination for Distance Estimation",
+          "textLatex": "An astronomer wants to measure the distance from her observatory to a distant star. However, due to atmospheric disturbances, any measurement will not yield the exact distance $d$. As a result, the astronomer has decided to make a series of measurements and then use their average value as an estimate of the actual distance. If the astronomer believes that the values of the successive measurements are independent random variables with a mean of $d$ light years and a standard deviation of two light years, how many measurements need she take to be at least $95$ per cent certain that her estimate is accurate to within $\\pm 0.5$ light years?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2022-p2-3c",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.",
+          "marks": "3+5+8",
+          "co": null,
+          "topic": "Linear Regression, Least Squares & Unbiasedness",
+          "textLatex": "What is linear regression equation? Discuss the least square estimators. Also establish analytically why the least square estimators are unbiased estimators?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2022-p2-4",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.",
+          "marks": "8+8",
+          "co": null,
+          "topic": "F-Distribution, Bayes Estimators & One-Sided Tests",
+          "textLatex": "Write short notes on any two :<br>(a) The $F$ - Distribution ; (b) The Bayes Estimators ; (c) One-sided tests of the null hypothesis.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "ispm-2022-p2-5",
+          "images": []
+        }
+      ]
+    }
+  ]
+}
