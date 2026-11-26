@@ -1,0 +1,216 @@
+{
+  "id": "pe-2022",
+  "subjectId": "pe",
+  "year": 2022,
+  "sortKey": 2022,
+  "yearLabel": "2022",
+  "examType": "Regular",
+  "sourcePdf": "2022 - Power Electronics.pdf",
+  "hasDiagram": false,
+  "parts": [
+    {
+      "partLabel": "PART - II",
+      "refCode": "Ex/EE/PC/B/T/314",
+      "headerLines": [
+        "Bachelor of Electrical Engineering, 3rd Year 1st Sem. Exam, 2022",
+        "SUBJECT: POWER ELECTRONICS"
+      ],
+      "timeText": "Time: Three Hours",
+      "marksText": "Full Marks: 100 (50 each part)",
+      "subMarksText": null,
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Answer question no. 3 and any two from the rest",
+      "sharedNote": "The scan contains two pages, both headed PART - II. The other part is absent.",
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "What is reverse recovery phenomenon in a power diode?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2022-p1-1a"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "5",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Classify power diodes according to their reverse recovery time. What are SRD and HRD? Which one is preferred in real life and why?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2022-p1-1b"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(c)",
+          "marks": "3",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Show how average power loss in a power diode is calculated from its equivalent circuit.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2022-p1-1c"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(d)",
+          "marks": "4",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "What is Schottky diode? What are the advantages and disadvantages of it?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2022-p1-1d"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "3",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Why power BJT is operated in the quasi-saturation region?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2022-p1-2a"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "5",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Explain with the help of circuit diagram how quasi-saturation is implemented.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2022-p1-2b"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(c)",
+          "marks": "8",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Sketch the structure of a power MOSFET and explain its working principle. Why power MOSFET cannot block any reverse voltage?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2022-p1-2c"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "5",
+          "co": null,
+          "topic": "Choppers",
+          "textLatex": "Explain with the help of circuit diagram the working principle of non-isolated Boost DC-DC converter.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2022-p1-3a"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "3",
+          "co": null,
+          "topic": "Choppers",
+          "textLatex": "Why PWM technique is preferred over FM technique for controlling the duty cycle?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2022-p1-3b"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(c)",
+          "marks": "10",
+          "co": null,
+          "topic": "Choppers",
+          "textLatex": "A step-down DC-DC converter is to feed a purely resistive load of 5 Ω. If the input of the converter is 120 V and load current is 10 A, find out the duty cycle needed. If the ON time of the converter is 40 μs, determine the switching frequency.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2022-p1-3c"
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Inverters",
+          "textLatex": "Explain with the help of a circuit diagram the working principle of a full-bridge inverter for distortion-less output voltage in case of an inductive load.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2022-p1-4a"
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(B)",
+          "marks": "8",
+          "co": null,
+          "topic": "Inverters",
+          "textLatex": "With the help of a circuit diagram explain the working principle of a push-pull inverter. Explain how average voltage is controlled. What are the advantage and disadvantage of this inverter?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2022-p1-4b"
+        },
+        {
+          "kind": "group",
+          "label": "5. Write short notes on (any two)"
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "IGBT",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2022-p1-5a"
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Power losses in semiconductor devices",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2022-p1-5b"
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(c)",
+          "marks": "8",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "dV/dt and di/dt protection in SCR",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2022-p1-5c"
+        }
+      ]
+    }
+  ],
+  "sourceNotes": [
+    "The scan contains two pages, both headed PART - II. The other part is absent."
+  ]
+}

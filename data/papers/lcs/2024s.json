@@ -1,0 +1,310 @@
+{
+  "id": "lcs-2024s",
+  "subjectId": "lcs",
+  "year": 2024,
+  "sortKey": 2024.1,
+  "yearLabel": "2024 (S)",
+  "examType": "Supplementary",
+  "sourcePdf": "2024 - Linear Control System S.pdf",
+  "hasDiagram": true,
+  "parts": [
+    {
+      "partLabel": "PART - I",
+      "refCode": "Ex/EE/PC/B/T/313/2024(S)",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING",
+        "THIRD YEAR FIRST SEMESTER SUPPLEMENTARY EXAMINATION 2024",
+        "LINEAR CONTROL SYSTEM"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use Separate Answer script for each part",
+      "instructions": "Answer any three questions from this part. Two marks reserved for neat and well-organized answer",
+      "sharedNote": null,
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Control systems, errors and system types",
+          "textLatex": "Explain the difference between a static system and a dynamic system with appropriate examples.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024s-p1-1a"
+        },
+        {
+          "kind": "question",
+          "qNum": "1(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Time response",
+          "textLatex": "What do you understand by the terms dominant poles and non-dominant poles of a system.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024s-p1-1b"
+        },
+        {
+          "kind": "question",
+          "qNum": "1(c)",
+          "marks": "4",
+          "co": null,
+          "topic": "Control system components and case studies",
+          "textLatex": "Define voltage resolution of a potentiometer. What is the voltage resolution of a carbon potentiometer?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024s-p1-1c"
+        },
+        {
+          "kind": "question",
+          "qNum": "1(d)",
+          "marks": "4",
+          "co": null,
+          "topic": "Time response",
+          "textLatex": "Briefly discuss the effect of addition of a non-minimum phase zero to a critically damped second order system.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024s-p1-1d"
+        },
+        {
+          "kind": "question",
+          "qNum": "2",
+          "marks": "16",
+          "co": null,
+          "topic": "Time response",
+          "textLatex": "For the system shown in Fig. 1, determine the values of gain $K$ and velocity feedback constant $K_h$ so that the maximum overshoot in the unit step response is 0.2 and the peak time is 1 sec. With these values of $K$ and $K_h$, obtain the rise time and settling time.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [
+            {
+              "src": "data/assets/lcs/lcs-2024s/fig_1.png",
+              "caption": "Fig. 1",
+              "imageId": "lcs-2024s-p1-2-img1",
+              "alt": "Fig. 1"
+            }
+          ],
+          "questionId": "lcs-2024s-p1-2"
+        },
+        {
+          "kind": "question",
+          "qNum": "3(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Control systems, errors and system types",
+          "textLatex": "Find the position, velocity and acceleration error constants and corresponding steady-state errors for the unity feedback control system having open-loop transfer function $$G(s)=\\frac{20}{s(s+5)(s+2)},$$",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024s-p1-3a"
+        },
+        {
+          "kind": "question",
+          "qNum": "3(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Control systems, errors and system types",
+          "textLatex": "Find the steady state errors for the system shown in Fig. 2 to the following: (i) unit step input (ii) unit ramp input (iii) unit parabolic input.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [
+            {
+              "src": "data/assets/lcs/lcs-2024s/fig_2.png",
+              "caption": "Fig. 2",
+              "imageId": "lcs-2024s-p1-3b-img1",
+              "alt": "Fig. 2"
+            }
+          ],
+          "questionId": "lcs-2024s-p1-3b"
+        },
+        {
+          "kind": "group",
+          "label": "4. Write short notes on (any two):"
+        },
+        {
+          "kind": "question",
+          "qNum": "4(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Time response",
+          "textLatex": "Effect of output rate feedback on a standard second order system",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024s-p1-4a"
+        },
+        {
+          "kind": "question",
+          "qNum": "4(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Control system components and case studies",
+          "textLatex": "Armature controlled D.C. servo motor",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024s-p1-4b"
+        },
+        {
+          "kind": "question",
+          "qNum": "4(c)",
+          "marks": "8",
+          "co": null,
+          "topic": "Control system components and case studies",
+          "textLatex": "Voltage regulator",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024s-p1-4c"
+        },
+        {
+          "kind": "question",
+          "qNum": "5",
+          "marks": "16",
+          "co": null,
+          "topic": "Control actions and compensation",
+          "textLatex": "The transfer function of a plant is given by $$G(s)=\\frac{K}{s(s+1)(s+2)}.$$ Design a suitable compensator to meet the following specifications:\na) Velocity constant $K_v\\geq10$ sec$^{-1}$.\nb) Phase margin $\\phi_m\\geq30^\\circ$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024s-p1-5"
+        }
+      ]
+    },
+    {
+      "partLabel": "PART - II",
+      "refCode": "Ex/EE/PC/B/T/313/2024(S)",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING",
+        "THIRD YEAR FIRST SEMESTER SUPPLEMENTARY EXAMINATION 2024",
+        "LINEAR CONTROL SYSTEM"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use Separate Answer script for each part",
+      "instructions": "Answer any Three questions. Two Marks are reserved for neat and well organized answers.",
+      "sharedNote": null,
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "Q1a",
+          "marks": "08",
+          "co": null,
+          "topic": "Stability of linear systems",
+          "textLatex": "By means of Routh’s criterion, determine the stability of the system represented by the following characteristic equation. $$q(s)=s^5+s^4+3s^3+9s^2+16s+10=0$$",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024s-p2-q1a"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q1b",
+          "marks": "08",
+          "co": null,
+          "topic": "Stability of linear systems",
+          "textLatex": "Determine the range of gain $K$ such that the feedback system having the following characteristic equation will remain stable. $$q(s)=s^3+3Ks^2+(K+2)s+4=0$$",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024s-p2-q1b"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q2",
+          "marks": "16",
+          "co": null,
+          "topic": "Root locus",
+          "textLatex": "Plot the Root-Locus for a unity feedback system whose open-loop transfer function is as follows $$G(s)H(s)=\\frac{K}{s(s+2)(s+4)}$$ Also determine and indicate on the sketch i) number and angles of asymptotes, ii) the centroid, iii) the breakaway point/ points, if any, iv) intersection of the root locus and the asymptotes with the imaginary axis, if any v) the range of gain $K$ for which the closed loop system remains stable, vi) any other value that has relevance to the plotting of root locus.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024s-p2-q2"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q3",
+          "marks": "16",
+          "co": null,
+          "topic": "Stability of linear systems",
+          "textLatex": "By use of Nyquist criterion, determine whether the closed-loop system having the following open-loop transfer function is stable or not. If not, how many closed-loop poles lie in the right half s-plane? $$G(s)H(s)=\\frac{s+2}{(s+1)(s-1)}$$",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024s-p2-q3"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q4a",
+          "marks": "08",
+          "co": null,
+          "topic": "State variable analysis",
+          "textLatex": "A system is described by $$T(s)=\\frac{C(s)}{U(s)}=\\frac{6s^3+4s^2+3s+10}{s^3+8s^2+4s+20}$$ Define Phase Variables. Find the State Model of the system in Bush Form.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024s-p2-q4a"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q4b",
+          "marks": "08",
+          "co": null,
+          "topic": "State variable analysis",
+          "textLatex": "A linear time invariant system is described by the following state equation. Obtain eigenvalues, eigenvectors and the state equation in canonical form. $$\\begin{bmatrix}\\dot{x}_1\\\\\\dot{x}_2\\\\\\dot{x}_3\\end{bmatrix}=\\begin{bmatrix}0&1&0\\\\0&0&1\\\\-6&-11&-6\\end{bmatrix}\\begin{bmatrix}x_1\\\\x_2\\\\x_3\\end{bmatrix}+\\begin{bmatrix}0\\\\0\\\\1\\end{bmatrix}u$$",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024s-p2-q4b"
+        },
+        {
+          "kind": "group",
+          "label": "Q5. Write short notes any two."
+        },
+        {
+          "kind": "question",
+          "qNum": "Q5(i)",
+          "marks": "08",
+          "co": null,
+          "topic": "Block diagrams and signal flow graphs",
+          "textLatex": "Signal flow graph",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024s-p2-q5i"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q5(ii)",
+          "marks": "08",
+          "co": null,
+          "topic": "State variable analysis",
+          "textLatex": "Diagonalization of a non-diagonal system matrix",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024s-p2-q5ii"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q5(iii)",
+          "marks": "08",
+          "co": null,
+          "topic": "Stability of linear systems",
+          "textLatex": "Ascertaining phase margin and gain margin from open loop polar plot.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024s-p2-q5iii"
+        }
+      ]
+    }
+  ]
+}

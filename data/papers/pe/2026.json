@@ -1,0 +1,298 @@
+{
+  "id": "pe-2026",
+  "subjectId": "pe",
+  "year": 2026,
+  "sortKey": 2026,
+  "yearLabel": "2026",
+  "examType": "Regular",
+  "sourcePdf": "2026 - Power Electronics.pdf",
+  "hasDiagram": false,
+  "parts": [
+    {
+      "partLabel": "PART - I",
+      "refCode": "Ex/EE/PC/B/T/314/2026",
+      "headerLines": [
+        "Bachelor of Electrical Engineering, 3rd Year 1st Semester Exam 2026",
+        "SUBJECT: POWER ELECTRONICS"
+      ],
+      "timeText": "Time: Three Hours",
+      "marksText": "Full Marks: 100 (50 each part)",
+      "subMarksText": null,
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Answer question no. 3 and any two from the rest.",
+      "sharedNote": null,
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "A good power electronic switch should have large forward and reverse blocking capability. - justify. What is the best option in this regard?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2026-p1-1a"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Choppers",
+          "textLatex": "High frequency reduces the size of the overall converter- explain",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2026-p1-1b"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(c)",
+          "marks": "4",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Write the necessity of additional n⁻ layer in power electronics devices.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2026-p1-1c"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(d)",
+          "marks": "4",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Write the construction and features of a Schottky Diode.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2026-p1-1d"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Explain the reverse recovery phenomenon of a junction device.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2026-p1-2a"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "3",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Show that fast recovery may result in destruction of the device.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2026-p1-2b"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(c)",
+          "marks": "7",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Furnish a few important characteristics of Power BJT.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2026-p1-2c"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Choppers",
+          "textLatex": "Discuss different types of duty cycle control used in power converters.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2026-p1-3a"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "3",
+          "co": null,
+          "topic": "Choppers",
+          "textLatex": "Discuss different types of duty cycle control used in power converters. Which type, do you think most suitable in all respect-explain.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2026-p1-3b"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(c)",
+          "marks": "6",
+          "co": null,
+          "topic": "Choppers",
+          "textLatex": "Draw and explain the operation of Boost Chopper with necessary diagrams.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2026-p1-3c"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(d)",
+          "marks": "3",
+          "co": null,
+          "topic": "Choppers",
+          "textLatex": "What is the specialty of Buck-boost Chopper?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2026-p1-3d"
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Inverters",
+          "textLatex": "With the help of a circuit diagram explain the working principle of a Push-Pull inverter.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2026-p1-4a"
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Choppers",
+          "textLatex": "A step-down DC-DC converter is to feeding a purely resistive load of 12 Ω at 32 V. If the input of the converter is 200 V and load current is 12 A, find out the duty cycle needed. If the converter is controlled by a PWM determine the control DC voltage if the carrier (saw-tooth) signal has 2 kHz frequency and 24 V amplitude.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2026-p1-4b"
+        },
+        {
+          "kind": "group",
+          "label": "5. Write short notes on"
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Characteristics of Power MOSFET",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2026-p1-5a"
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Operation of BJT in Quasi-saturation region.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2026-p1-5b"
+        }
+      ]
+    },
+    {
+      "partLabel": "PART - II",
+      "refCode": "Ex/EE/PC/B/T/314/2026",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING THIRD YEAR FIRST SEMESTER EXAM 2026",
+        "SUBJECT: - POWER ELECTRONICS"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for this part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Answer any Three Questions<br>All symbols used have their usual significance<br>(Two marks are reserved for neatness)",
+      "sharedNote": "Some printed items or subparts are outside the supplied syllabus and are omitted.",
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1)",
+          "marks": "16",
+          "co": null,
+          "topic": "Uncontrolled rectifiers",
+          "textLatex": "Describe the principle of operation of a single phase full wave Diode Bridge Rectifier along with the isolation transformer and show the following waveforms assuming the load to be resistive: (i) Output voltage, (ii) Load current, (iii) Diode voltage. (iv) Input Current of the isolation transformer. For the above rectifier also determine: (iv) Average output voltage, (v) Output RMS voltage (vi) Efficiency (vii) Form factor, and (viii) Transformer utilization factor.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2026-p2-1"
+        },
+        {
+          "kind": "question",
+          "qNum": "2) (a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Uncontrolled rectifiers",
+          "textLatex": "Describe the operation with the help of drawing the relevant circuits, wave forms of input voltage and output voltage and current of single phase half wave uncontrolled rectifier feeding R-L-E load.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2026-p2-2a"
+        },
+        {
+          "kind": "question",
+          "qNum": "3)",
+          "marks": "4",
+          "co": null,
+          "topic": "Uncontrolled rectifiers · three-phase half-wave diode",
+          "textLatex": "Explain why it is called three pulse rectifier and also mention the sequence of conduction of diodes.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2026-p2-3"
+        },
+        {
+          "kind": "group",
+          "label": "5) Write short notes on the following:"
+        },
+        {
+          "kind": "question",
+          "qNum": "5) (a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Uncontrolled rectifiers",
+          "textLatex": "Single phase half wave uncontrolled rectifier feeding R load having filter capacitor C across load.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2026-p2-5a"
+        },
+        {
+          "kind": "question",
+          "qNum": "5) (b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Uncontrolled rectifiers",
+          "textLatex": "Single phase half wave uncontrolled rectifier with freewheeling diode feeding a “ R-L” load.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2026-p2-5b"
+        }
+      ]
+    }
+  ],
+  "syllabusExclusions": [
+    "Part II 2(b). Single-phase semi converter with a resistive load.",
+    "Part II 3 and 4. Three-phase rectifiers with a resistive load. Retained the separately stated Part II 3 pulse-count and conduction-sequence request."
+  ]
+}

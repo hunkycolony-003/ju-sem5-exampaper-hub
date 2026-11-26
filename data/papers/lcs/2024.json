@@ -1,0 +1,326 @@
+{
+  "id": "lcs-2024",
+  "subjectId": "lcs",
+  "year": 2024,
+  "sortKey": 2024.2,
+  "yearLabel": "2024",
+  "examType": "Regular",
+  "sourcePdf": "2024 - Linear Control System.pdf",
+  "hasDiagram": true,
+  "parts": [
+    {
+      "partLabel": "PART - I",
+      "refCode": "Ex/EE/PC/B/T/313/2024",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING",
+        "THIRD YEAR FIRST SEMESTER EXAMINATION 2024",
+        "LINEAR CONTROL SYSTEM"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use Separate Answer script for each part",
+      "instructions": "Question nos. 1, 4 and 5 are compulsory\nAnswer any ONE question from Question nos. 2 and 3",
+      "sharedNote": null,
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1(a)",
+          "marks": "4",
+          "co": "CO1",
+          "topic": "Control systems, errors and system types",
+          "textLatex": "Explain the difference between a time invariant system and a time varying system with appropriate examples.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024-p1-1a"
+        },
+        {
+          "kind": "question",
+          "qNum": "1(b)",
+          "marks": "5",
+          "co": "CO2",
+          "topic": "Control systems, errors and system types",
+          "textLatex": "Correct or Justify the following statement, providing proper explanation in support of your answer:\nUse of feedback makes the closed loop control system response relatively sensitive to internal variations in system parameters.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024-p1-1b"
+        },
+        {
+          "kind": "question",
+          "qNum": "1(c)",
+          "marks": "4",
+          "co": "CO1",
+          "topic": "Control system components and case studies",
+          "textLatex": "State four limitations of rotary potentiometers.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024-p1-1c"
+        },
+        {
+          "kind": "question",
+          "qNum": "1(d)",
+          "marks": "2",
+          "co": "CO2",
+          "topic": "Control system components and case studies",
+          "textLatex": "Compare the characteristics of D.C. servomotor when used in armature controlled mode and in field controlled mode.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024-p1-1d"
+        },
+        {
+          "kind": "question",
+          "qNum": "2(a)",
+          "marks": "6",
+          "co": "CO3",
+          "topic": "Control systems, errors and system types",
+          "textLatex": "Find the position, velocity and acceleration error constants and corresponding steady-state errors for the unity feedback control system having the open-loop transfer function $$G(s)=\\frac{10}{(s+1)(s+2)}$$",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024-p1-2a"
+        },
+        {
+          "kind": "question",
+          "qNum": "2(b)",
+          "marks": "9",
+          "co": "CO4",
+          "topic": "Time response",
+          "textLatex": "For the system shown in Fig. 1, determine the values of gain $K$ and velocity feedback constant $K_h$ so that the maximum overshoot in the unit step response is 0.2 and the peak time is 1 sec. With these values of $K$ and $K_h$, obtain the rise time and settling time.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [
+            {
+              "src": "data/assets/lcs/lcs-2024/fig_1.png",
+              "caption": "Fig. 1",
+              "imageId": "lcs-2024-p1-2b-img1",
+              "alt": "Fig. 1"
+            }
+          ],
+          "questionId": "lcs-2024-p1-2b"
+        },
+        {
+          "kind": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "3(a)",
+          "marks": "6",
+          "co": "CO3",
+          "topic": "Control systems, errors and system types",
+          "textLatex": "Given a unity feedback system with forward path transfer function $G(s)=\\frac{10}{s(s+1)^2}$. Find the position, velocity and acceleration error constants.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024-p1-3a"
+        },
+        {
+          "kind": "question",
+          "qNum": "3(b)",
+          "marks": "9",
+          "co": "CO4",
+          "topic": "Time response",
+          "textLatex": "The unity feedback system with a forward path transfer function $G(s)=\\frac{K(s+\\alpha)}{(s+\\beta)^2}$ is to be designed to meet the following specifications: $e_{ss}\\big\\vert_{\\mathrm{position}}=0.1\\,\\mathrm{rad}$ ; Damping ratio = 0.5 and Natural frequency of oscillation = $\\sqrt{10}$. Find the values of $K$, $\\alpha$ and $\\beta$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024-p1-3b"
+        },
+        {
+          "kind": "question",
+          "qNum": "4",
+          "marks": "10",
+          "co": "CO4",
+          "topic": "Time response",
+          "textLatex": "A system is given by the following closed loop transfer function $$M(s)=\\frac{1}{s^2+2s+1}$$ (a) Sketch the response of the above system to a unit step input. (Sketch on plain paper. Graph paper is not required.)\n(b) Analyze the effect of addition of the following to the closed loop transfer function of the system.\n(i) a non-minimum phase zero\n(ii) a zero in the left-half of the s-plane.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024-p1-4"
+        },
+        {
+          "kind": "question",
+          "qNum": "5",
+          "marks": "10",
+          "co": "CO5",
+          "topic": "Control actions and compensation",
+          "textLatex": "The transfer function of a plant is given by $$G(s)=\\frac{K}{s(s+2)(s+5)}.$$ Design a suitable compensator to meet the following specifications:\na) Velocity constant $K_v\\geq10$ sec$^{-1}$.\nb) Phase margin $\\phi_m\\geq35^\\circ$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024-p1-5"
+        }
+      ]
+    },
+    {
+      "partLabel": "PART - II",
+      "refCode": "Ex/EE/PC/B/T/313/2024",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING",
+        "THIRD YEAR FIRST SEMESTER EXAMINATION 2024",
+        "LINEAR CONTROL SYSTEM"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use Separate Answer script for each part",
+      "instructions": "Answer all the Questions.",
+      "sharedNote": "Source note: The first entry of the input vector in the first Question 4(b) appears as 1y in the print. Question 4(c), on the Vander Monde Matrix, falls outside the supplied syllabus and is omitted.",
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "Q1a",
+          "marks": "04",
+          "co": "CO1",
+          "topic": "Stability of linear systems",
+          "textLatex": "Explain the phenomenon of instability due to resonance.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024-p2-q1a"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q1b",
+          "marks": "08",
+          "co": "CO2",
+          "topic": "Stability of linear systems",
+          "textLatex": "By means of Hurwitz Criterion determine the stability of the system represented by the following characteristic equation. $$q(s)=s^4+8s^3+18s^2+16s+5=0$$",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024-p2-q1b"
+        },
+        {
+          "kind": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q1b",
+          "marks": "08",
+          "co": "CO2",
+          "topic": "Stability of linear systems",
+          "textLatex": "The characteristic equation for a certain feedback control system is given below. Determine the range of gain $K$ for which the system will be stable. $$q(s)=s^3+(K+0.5)s^2+4Ks+50=0$$",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024-p2-q1b-2"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q2a",
+          "marks": "06",
+          "co": "CO3",
+          "topic": "Block diagrams and signal flow graphs",
+          "textLatex": "In the context of signal flow graph define source, path and loop.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024-p2-q2a"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q2b",
+          "marks": "06",
+          "co": "CO3",
+          "topic": "Block diagrams and signal flow graphs",
+          "textLatex": "Construct the Signal Flow Graph for the system shown in Fig. P-2. Find out the closed loop transfer function of the system using Mason’s Gain Formula.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [
+            {
+              "src": "data/assets/lcs/lcs-2024/fig_p2.png",
+              "caption": "Fig. P-2",
+              "imageId": "lcs-2024-p2-q2b-img1",
+              "alt": "Fig. P-2"
+            }
+          ],
+          "questionId": "lcs-2024-p2-q2b"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q3",
+          "marks": "12",
+          "co": "CO4",
+          "topic": "Stability of linear systems",
+          "textLatex": "By use of Nyquist criterion, determine whether the closed-loop system having the following open-loop transfer function is stable or not. If, not how many closed-loop poles lie in the right half s-plane? $$G(s)H(s)=\\frac{(1+4s)}{s^2(1+s)(1+2s)}$$",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024-p2-q3"
+        },
+        {
+          "kind": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q3",
+          "marks": "12",
+          "co": "CO4",
+          "topic": "Root locus",
+          "textLatex": "Plot the Root-Locus for a unity feedback system whose open-loop transfer function is as follows $$G(s)H(s)=\\frac{K(s+1)}{s^2(s+3)(s+5)}$$ Also determine and indicate on the sketch i) number and angles of asymptotes, ii) the centroid, iii) the breakaway point/ points, if any, iv) intersection of the root locus and the asymptotes with the imaginary axis, if any v) the range of gain $K$ for which the closed loop system remains stable, vi) any other value that has relevance to the plotting of root locus.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024-p2-q3-2"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q4a",
+          "marks": "07",
+          "co": "CO5",
+          "topic": "State variable analysis",
+          "textLatex": "Explain how a state model developed using physical variables where the system matrix is not a diagonal one can be converted into a state model having a diagonal system matrix. Assume that the closed loop poles are all real and distinct. Derive all the steps.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024-p2-q4a"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q4b",
+          "marks": "07",
+          "co": "CO5",
+          "topic": "State variable analysis",
+          "textLatex": "A linear time invariant system is described by the following state equation. Obtain eigenvalues, eigenvectors and the state model in canonical form. $$\\begin{bmatrix}\\dot{x}_1\\\\\\dot{x}_2\\\\\\dot{x}_3\\end{bmatrix}=\\begin{bmatrix}0&1&0\\\\3&0&2\\\\-12&-7&-6\\end{bmatrix}\\begin{bmatrix}x_1\\\\x_2\\\\x_3\\end{bmatrix}+\\begin{bmatrix}1y\\\\0\\\\2\\end{bmatrix}u$$ $$y=\\begin{bmatrix}1&0&0\\end{bmatrix}\\begin{bmatrix}x_1\\\\x_2\\\\x_3\\end{bmatrix}$$",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024-p2-q4b"
+        },
+        {
+          "kind": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q4a",
+          "marks": "04",
+          "co": "CO5",
+          "topic": "State variable analysis",
+          "textLatex": "Prove that an LTI system can be represented by infinite number of state models.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024-p2-q4a-2"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q4b",
+          "marks": "06",
+          "co": "CO5",
+          "topic": "State variable analysis",
+          "textLatex": "A system is described by $$T(s)=\\frac{Y(s)}{U(s)}=\\frac{2}{s^4+3s^3+3s^2+3s+2}$$ Define Phase Variables. Find the State Model of the system in Bush Form. Derive all the steps.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2024-p2-q4b-2"
+        }
+      ]
+    }
+  ]
+}

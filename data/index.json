@@ -3,7 +3,7 @@
   "university": "Jadavpur University",
   "program": "B.E. Electrical Engineering · 3rd Year 1st Semester",
   "assetsDir": "data/assets",
-  "updatedAt": "2026-11-26T19:49:32+00:00",
+  "updatedAt": "2026-11-26T20:04:21+00:00",
   "subjects": [
     {
       "order": 1,
@@ -185,7 +185,73 @@
       "codePrefix": "Ex/EE/PC/B/T/311",
       "name": "Electrical Machine - III",
       "paperTitle": "ELECTRICAL MACHINE - III",
-      "papers": []
+      "papers": [
+        {
+          "id": "em3-2026",
+          "year": 2026,
+          "sortKey": 2026,
+          "yearLabel": "2026",
+          "examType": "Regular",
+          "sourcePdf": "2026 - Electrical Machines III.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 23,
+          "path": "data/papers/em3/2026.json"
+        },
+        {
+          "id": "em3-2025",
+          "year": 2025,
+          "sortKey": 2025,
+          "yearLabel": "2025",
+          "examType": "Regular",
+          "sourcePdf": "2025 - Electrical Machines - III.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 23,
+          "path": "data/papers/em3/2025.json"
+        },
+        {
+          "id": "em3-2024",
+          "year": 2024,
+          "sortKey": 2024.2,
+          "yearLabel": "2024",
+          "examType": "Regular",
+          "sourcePdf": "2024 - Electrical Machines III.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 25,
+          "path": "data/papers/em3/2024.json"
+        },
+        {
+          "id": "em3-2024s",
+          "year": 2024,
+          "sortKey": 2024.1,
+          "yearLabel": "2024 (S)",
+          "examType": "Supplementary",
+          "sourcePdf": "2024 - Electrical Machines III S.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 21,
+          "path": "data/papers/em3/2024s.json"
+        },
+        {
+          "id": "em3-2023",
+          "year": 2023,
+          "sortKey": 2023,
+          "yearLabel": "2023",
+          "examType": "Regular",
+          "sourcePdf": "2023 - Electrical Machines III.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 24,
+          "path": "data/papers/em3/2023.json"
+        }
+      ]
     },
     {
       "order": 4,
@@ -193,7 +259,73 @@
       "codePrefix": "Ex/EE/PC/B/T/313",
       "name": "Linear Control System",
       "paperTitle": "LINEAR CONTROL SYSTEM",
-      "papers": []
+      "papers": [
+        {
+          "id": "lcs-2026",
+          "year": 2026,
+          "sortKey": 2026.0,
+          "yearLabel": "2026",
+          "examType": "Regular",
+          "sourcePdf": "2026 - Linear Control System.pdf",
+          "hasDiagram": true,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 23,
+          "path": "data/papers/lcs/2026.json"
+        },
+        {
+          "id": "lcs-2025",
+          "year": 2025,
+          "sortKey": 2025.0,
+          "yearLabel": "2025",
+          "examType": "Regular",
+          "sourcePdf": "2025 - Linear Control System.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 11,
+          "path": "data/papers/lcs/2025.json"
+        },
+        {
+          "id": "lcs-2024",
+          "year": 2024,
+          "sortKey": 2024.2,
+          "yearLabel": "2024",
+          "examType": "Regular",
+          "sourcePdf": "2024 - Linear Control System.pdf",
+          "hasDiagram": true,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 21,
+          "path": "data/papers/lcs/2024.json"
+        },
+        {
+          "id": "lcs-2024s",
+          "year": 2024,
+          "sortKey": 2024.1,
+          "yearLabel": "2024 (S)",
+          "examType": "Supplementary",
+          "sourcePdf": "2024 - Linear Control System S.pdf",
+          "hasDiagram": true,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 20,
+          "path": "data/papers/lcs/2024s.json"
+        },
+        {
+          "id": "lcs-2023",
+          "year": 2023,
+          "sortKey": 2023.0,
+          "yearLabel": "2023",
+          "examType": "Regular",
+          "sourcePdf": "2023 - Linear Control System.pdf",
+          "hasDiagram": true,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 23,
+          "path": "data/papers/lcs/2023.json"
+        }
+      ]
     },
     {
       "order": 5,
@@ -201,7 +333,86 @@
       "codePrefix": "Ex/EE/PC/B/T/314",
       "name": "Power Electronics",
       "paperTitle": "POWER ELECTRONICS",
-      "papers": []
+      "papers": [
+        {
+          "id": "pe-2026",
+          "year": 2026,
+          "sortKey": 2026,
+          "yearLabel": "2026",
+          "examType": "Regular",
+          "sourcePdf": "2026 - Power Electronics.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 20,
+          "path": "data/papers/pe/2026.json"
+        },
+        {
+          "id": "pe-2025",
+          "year": 2025,
+          "sortKey": 2025,
+          "yearLabel": "2025",
+          "examType": "Regular",
+          "sourcePdf": "2025 - Power Electronics.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 19,
+          "path": "data/papers/pe/2025.json"
+        },
+        {
+          "id": "pe-2024",
+          "year": 2024,
+          "sortKey": 2024.2,
+          "yearLabel": "2024",
+          "examType": "Regular",
+          "sourcePdf": "2024 - Power Electronics.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 18,
+          "path": "data/papers/pe/2024.json"
+        },
+        {
+          "id": "pe-2024s",
+          "year": 2024,
+          "sortKey": 2024.1,
+          "yearLabel": "2024 (S)",
+          "examType": "Supplementary",
+          "sourcePdf": "2024 - Power Electronics S.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 22,
+          "path": "data/papers/pe/2024s.json"
+        },
+        {
+          "id": "pe-2023",
+          "year": 2023,
+          "sortKey": 2023,
+          "yearLabel": "2023",
+          "examType": "Regular",
+          "sourcePdf": "2023 - Power Electronics.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 1,
+          "questionCount": 5,
+          "path": "data/papers/pe/2023.json"
+        },
+        {
+          "id": "pe-2022",
+          "year": 2022,
+          "sortKey": 2022,
+          "yearLabel": "2022",
+          "examType": "Regular",
+          "sourcePdf": "2022 - Power Electronics.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 1,
+          "questionCount": 15,
+          "path": "data/papers/pe/2022.json"
+        }
+      ]
     },
     {
       "order": 6,

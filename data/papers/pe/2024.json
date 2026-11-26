@@ -1,0 +1,278 @@
+{
+  "id": "pe-2024",
+  "subjectId": "pe",
+  "year": 2024,
+  "sortKey": 2024.2,
+  "yearLabel": "2024",
+  "examType": "Regular",
+  "sourcePdf": "2024 - Power Electronics.pdf",
+  "hasDiagram": false,
+  "parts": [
+    {
+      "partLabel": "PART - I",
+      "refCode": "Ex/EE/PC/B/T/314/2024",
+      "headerLines": [
+        "Bachelor of Electrical Engineering, 3rd Year 1st Sem. Exam, 2023",
+        "SUBJECT: POWER ELECTRONICS"
+      ],
+      "timeText": "Time: Three Hours",
+      "marksText": "Full Marks: 100 (50 each part)",
+      "subMarksText": null,
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Answer question no. 3 and any two from the rest",
+      "sharedNote": "The printed Part I heading says 2023. Its reference and both pages of Part II identify 2024.<br>Two printed Part I items are outside the supplied syllabus.",
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Discuss the circuit equivalent of a power diode with the help of its I-V characteristics",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024-p1-1a"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Discuss the constructional modifications in power diode from a signal diode",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024-p1-1b"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(c)",
+          "marks": "4",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Reverse recovery phenomenon is shown by all junction devices- Justify",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024-p1-1c"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(d)",
+          "marks": "4",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "What is the basic difference between PN junction diode and Schottky diode?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024-p1-1d"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Discuss a few important parameters of Power BJT.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024-p1-2a"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Draw and explain negative base drive of a Power BJT.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024-p1-2b"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(c)",
+          "marks": "4",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Sketch the structure of a power MOSFET and explain its working principle. Why power MOSFET cannot block any reverse voltage? What is SOA? Explain it for Power BJT",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024-p1-2c"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Choppers",
+          "textLatex": "Explain energy balance equation for Buck-Boost Converter with the help of appropriate circuit.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024-p1-3a"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(c)",
+          "marks": "10",
+          "co": null,
+          "topic": "Choppers",
+          "textLatex": "A step-down DC-DC converter is to feeding a purely resistive load of 10 Ω. If the input of the converter is 220 V and load current is 10 A, find out the duty cycle needed. If the converter is controlled by a PWM determine the control DC voltage if the carrier (saw-tooth) signal has 2 kHz frequency and 24 V amplitude.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024-p1-3c"
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Inverters",
+          "textLatex": "With the help of a circuit diagram explain the working principle of a push-pull inverter. Explain how average voltage is controlled. What are the advantage and disadvantage of this inverter?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024-p1-4a"
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Inverters",
+          "textLatex": "Explain two modes of operation of a full bride inverter.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024-p1-4b"
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(c)",
+          "marks": "4",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Draw and explain gate drive circuit of a thyristor.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024-p1-4c"
+        },
+        {
+          "kind": "group",
+          "label": "5. Write short notes on (any two)"
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Construction and operation of Power MOSFET",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024-p1-5a"
+        }
+      ]
+    },
+    {
+      "partLabel": "PART - II",
+      "refCode": "Ex/EE/PC/B/T/314/2024",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING THIRD YEAR FIRST SEMESTER EXAM 2024",
+        "SUBJECT: - POWER ELECTRONICS"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for this part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Answer any Three Questions<br>All symbols used have their usual significance<br>(Two marks are reserved for neatness)",
+      "sharedNote": "Some printed items or subparts are outside the supplied syllabus and are omitted.",
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1)",
+          "marks": "16",
+          "co": null,
+          "topic": "Uncontrolled rectifiers",
+          "textLatex": "Describe the principle of operation of a single phase full wave Diode Rectifier using center tapped transformer and show the following waveforms assuming the load to be resistive: (i) Output voltage, (ii) Load current, (iii) Diode voltage. For the above rectifier also determine: (iv) Average output voltage, (v) Output RMS voltage (vi) Efficiency (vil) Form factor, and (viii) Transformer utilization factor.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024-p2-1"
+        },
+        {
+          "kind": "question",
+          "qNum": "2)",
+          "marks": "4",
+          "co": null,
+          "topic": "Uncontrolled rectifiers · three-phase half-wave diode",
+          "textLatex": "Explain why it is called three pulse rectifier and also mention the sequence of conduction of diodes.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024-p2-2"
+        },
+        {
+          "kind": "group",
+          "label": "5) Write short notes on any two of the following:"
+        },
+        {
+          "kind": "question",
+          "qNum": "5) (i)",
+          "marks": "8",
+          "co": null,
+          "topic": "Uncontrolled rectifiers",
+          "textLatex": "Single phase full wave uncontrolled rectifier feeding R-L-E load.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024-p2-5i"
+        },
+        {
+          "kind": "question",
+          "qNum": "5) (ii)",
+          "marks": "8",
+          "co": null,
+          "topic": "Phase controlled rectifiers",
+          "textLatex": "Single phase fully controlled bridge rectifier with R-L load having free wheeling diode.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024-p2-5ii"
+        },
+        {
+          "kind": "question",
+          "qNum": "5) (iii)",
+          "marks": "8",
+          "co": null,
+          "topic": "Uncontrolled rectifiers",
+          "textLatex": "Single phase half wave uncontrolled rectifier feeding R load having filter capacitor C across load.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024-p2-5iii"
+        }
+      ]
+    }
+  ],
+  "sourceNotes": [
+    "The printed Part I heading says 2023. Its reference and both pages of Part II identify 2024."
+  ],
+  "syllabusExclusions": [
+    "Part I 3(b). Current-limit control is outside the listed chopper control techniques.",
+    "Part I 5(b). The unqualified ON-OFF controller question has no clear syllabus match.",
+    "Part II 2–4. Three-phase rectifiers with a resistive load. Retained the separately stated Part II 2 pulse-count and conduction-sequence request."
+  ]
+}

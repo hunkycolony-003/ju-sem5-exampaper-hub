@@ -1,0 +1,289 @@
+{
+  "id": "pe-2025",
+  "subjectId": "pe",
+  "year": 2025,
+  "sortKey": 2025,
+  "yearLabel": "2025",
+  "examType": "Regular",
+  "sourcePdf": "2025 - Power Electronics.pdf",
+  "hasDiagram": false,
+  "parts": [
+    {
+      "partLabel": "PART - I",
+      "refCode": "Ex/EE/PC/B/T/314/2025",
+      "headerLines": [
+        "Bachelor of Engineering Electrical Engineering, 3rd Year 1st Sem. Exam, 2025",
+        "SUBJECT: POWER ELECTRONICS"
+      ],
+      "timeText": "Time: Three Hours",
+      "marksText": "Full Marks: 100 (50 each part)",
+      "subMarksText": null,
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Answer question no. 1 and any two from the rest",
+      "sharedNote": "The first line of the Part I scan is clipped at the left margin. The 2025 reference is legible.",
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "A good power electronic device should have positive temperature coefficient of resistivity - justify",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2025-p1-1a"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Compare Power diodes and signal diodes.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2025-p1-1b"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(c)",
+          "marks": "6",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "What type of problems a junction device faces due to reverse recovery phenomenon? What type of solution do you suggest?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2025-p1-1c"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(d)",
+          "marks": "4",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Derive the expression power loss in a power diode.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2025-p1-1d"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Discuss a few important parameters of Power MOSFET.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2025-p1-2a"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "3",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Why Power MOSFET is faster that Power BJT as far as switching frequency is concerned?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2025-p1-2b"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(c)",
+          "marks": "7",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Explain two transistor analogy of a thyristor",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2025-p1-2c"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "7",
+          "co": null,
+          "topic": "Choppers",
+          "textLatex": "Draw and explain the operation of a buck converter used to supply ripple free voltage and current.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2025-p1-3a"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Draw and explain the gate protection circuit for a thyristor.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2025-p1-3b"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(c)",
+          "marks": "3",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "For thyristor, are latching current and holding current same?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2025-p1-3c"
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "Inverters",
+          "textLatex": "With the help of a circuit diagram explain the working principle of a Full-bridge inverter.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2025-p1-4a"
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Choppers",
+          "textLatex": "How PWM signals are generated- explain with the help of suitable diagram.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2025-p1-4b"
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(c)",
+          "marks": "4",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Is SOA is applicable for MOSFET – explain.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2025-p1-4c"
+        },
+        {
+          "kind": "group",
+          "label": "5. Write short notes on (any two)"
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Construction and operation of IGBT",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2025-p1-5a"
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Operation of BJT in Quasi-saturation region.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2025-p1-5b"
+        }
+      ]
+    },
+    {
+      "partLabel": "PART - II",
+      "refCode": "Ex/EE/PC/B/T/314/2025",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING THIRD YEAR FIRST SEMESTER EXAM 2025",
+        "SUBJECT: - POWER ELECTRONICS"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for this part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Answer any Three Questions<br>All symbols used have their usual significance<br>(Two marks are reserved for neatness)",
+      "sharedNote": "Some printed items or subparts are outside the supplied syllabus and are omitted.",
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1)",
+          "marks": "16",
+          "co": null,
+          "topic": "Uncontrolled rectifiers",
+          "textLatex": "Describe the principle of operation of a single phase half wave Diode Rectifier and show the following waveforms assuming the load to be resistive. (i) Output voltage, (ii) Load current, (iii) Diode voltage. For the above rectifier also determine: (iv) Average output voltage, (v) Output RMS voltage (vi) Efficiency (vii) Form factor, and (viii) Transformer utilization factor. Also, if a free wheel diode is connected across RL load for above rectifier then draw the waveforms for (ix) Output voltage, (x) Load current, and (xi) Diode voltage.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2025-p2-1"
+        },
+        {
+          "kind": "question",
+          "qNum": "2)",
+          "marks": "4",
+          "co": null,
+          "topic": "Phase controlled rectifiers · three-phase half-wave SCR",
+          "textLatex": "Explain why it is called three pulse rectifier and also mention the sequence of conduction of SCR.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2025-p2-2"
+        },
+        {
+          "kind": "group",
+          "label": "5) Write short notes on any two of the following:"
+        },
+        {
+          "kind": "question",
+          "qNum": "5) (i)",
+          "marks": "8",
+          "co": null,
+          "topic": "Uncontrolled rectifiers",
+          "textLatex": "Single phase half wave uncontrolled rectifier feeding R-L-E load.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2025-p2-5i"
+        },
+        {
+          "kind": "question",
+          "qNum": "5) (iii)",
+          "marks": "8",
+          "co": null,
+          "topic": "Uncontrolled rectifiers",
+          "textLatex": "Single phase full wave uncontrolled rectifier feeding R load having filter capacitor C across load.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2025-p2-5iii"
+        }
+      ]
+    }
+  ],
+  "sourceNotes": [
+    "The first line of the Part I scan is clipped at the left margin. The 2025 reference is legible."
+  ],
+  "syllabusExclusions": [
+    "Part II 2–4. Three-phase rectifiers with a resistive load. Retained the separately stated Part II 2 pulse-count and conduction-sequence request.",
+    "Part II 5(ii). Single-phase semi converter with a resistive load."
+  ]
+}

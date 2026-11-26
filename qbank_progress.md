@@ -1,5 +1,24 @@
 # JU EE 3rd Year 1st Sem Question Bank — Progress & Handoff (`qbank_progress.md`)
 
+## Local status on 27 November 2026
+
+All six subjects are populated in the local 2022–2026 database. This pass added 16 source papers and 313 syllabus-mapped question entries.
+
+| Added subject | Papers | Question entries |
+|---|---:|---:|
+| Electrical Machine III | 5 | 116 |
+| Linear Control System | 5 | 98 |
+| Power Electronics | 6 | 99 |
+
+The rebuilt database has 33 paper entries, including the existing annotated PLM paper. The flat database contains 694 questions and 13 image references.
+
+- The 2025 Linear Control System scan lacks printed pages 4–5. The hub includes the available pages and flags the gap.
+- Power Electronics 2022 contains only Part II, and 2023 contains only Part I. The 2024 regular paper's Part I heading says 2023, while its reference and Part II say 2024. The hub records these differences.
+
+The original handoff below is retained as history.
+
+## Original handoff
+
 **Repository:** `https://github.com/hunkycolony-003/ju-sem5-exampaper-hub` (branch `main`, latest pushed commit before this doc: `9f8ea5f`)  
 **Local Repo Path:** `/Users/soumodeep/.gemini/antigravity/playground/white-prominence/ju-sem5-exampaper-hub`  
 **Source PDFs Root:** `/Users/soumodeep/Resources/EE_3rd_Year_1st_Sem`  

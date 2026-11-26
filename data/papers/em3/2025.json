@@ -1,0 +1,385 @@
+{
+  "id": "em3-2025",
+  "subjectId": "em3",
+  "year": 2025,
+  "sortKey": 2025,
+  "yearLabel": "2025",
+  "examType": "Regular",
+  "sourcePdf": "2025 - Electrical Machines - III.pdf",
+  "hasDiagram": false,
+  "parts": [
+    {
+      "partLabel": "PART - I",
+      "refCode": "Ex/EE/PC/B/T/311/2025",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING EXAMINATION, 2025",
+        "(3rd Year, 1st Semester)",
+        "ELECTRICAL MACHINES - III"
+      ],
+      "timeText": "Time: Three Hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use a separate Answer Script for each part.",
+      "instructions": null,
+      "sharedNote": null,
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "group",
+          "label": "1. Answer any one from (a) and (b):"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "10",
+          "co": null,
+          "topic": "Single-phase induction motors",
+          "textLatex": "Discuss why single phase induction motors do not have a starting torque. \"A single phase motor can be forced to run in either direction' - Justify.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 1,
+          "questionId": "em3-2025-p1-1a"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "10",
+          "co": null,
+          "topic": "Shaded-pole and repulsion-start motors",
+          "textLatex": "What is shaded pole motor? With the help of neat sketch discuss the construction and working principle of shaded pole motor. Mention some application of shaded pole motor.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 1,
+          "questionId": "em3-2025-p1-1b"
+        },
+        {
+          "kind": "group",
+          "label": "2. Answer any one from (a) and (b):"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "10",
+          "co": null,
+          "topic": "Single-phase induction motors",
+          "textLatex": "Derive the equivalent circuit of a single phase induction motor with the help of double revolving field theory.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 1,
+          "questionId": "em3-2025-p1-2a"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "10",
+          "co": null,
+          "topic": "Single-phase induction motors",
+          "textLatex": "Explain how the equivalent circuit parameters of a single phase induction motor can be determined experimentally. State various assumptions made.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 1,
+          "questionId": "em3-2025-p1-2b"
+        },
+        {
+          "kind": "group",
+          "label": "3. Answer any one from (a) and (b):"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "10",
+          "co": null,
+          "topic": "Single-phase induction motors",
+          "textLatex": "Explain the working principle of resistor split phase motor. For Resistor Split Phase Motor find the value of total resistance required for the starting winding to get the maximum starting torque at starting.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 1,
+          "questionId": "em3-2025-p1-3a"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "10",
+          "co": null,
+          "topic": "Single-phase induction motors",
+          "textLatex": "Develop an expression for the resultant torque of a single phase induction motor when running with slip s. Explain how the core losses are accounted for in determining the shaft power output.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 1,
+          "questionId": "em3-2025-p1-3b"
+        },
+        {
+          "kind": "group",
+          "label": "4. Answer any one from (a) and (b):"
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "10",
+          "co": null,
+          "topic": "AC commutator and AC plain series motors",
+          "textLatex": "What is single phase series motor? Explain its working principle. Draw and explain the phasor diagram of a single phase series motor.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 1,
+          "questionId": "em3-2025-p1-4a"
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "10",
+          "co": null,
+          "topic": "AC commutator and AC plain series motors",
+          "textLatex": "Show with the help of phasor diagrams that a compensated series motor possesses better speed-torque characteristics, better power factor operation and improved commutation as compared to an uncompensated series motor.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 2,
+          "questionId": "em3-2025-p1-4b"
+        },
+        {
+          "kind": "group",
+          "label": "5. Answer any one from (a) and (b):"
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(a)",
+          "marks": "10",
+          "co": null,
+          "topic": "Single-phase induction motors",
+          "textLatex": "A 230 V, 4-pole, 50 Hz split-phase induction motor has the following impedance at standstill: <br>Main winding : r = 1.7 Ω, x = 4.5 Ω<br>Starting winding : r = 2.2 Ω, x = 5.5 Ω<br> Determine the value of capacitance to be inserted in series with the starting winding to get maximum starting torque at starting.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 2,
+          "questionId": "em3-2025-p1-5a"
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(b)",
+          "marks": "10",
+          "co": null,
+          "topic": "Single-phase induction motors",
+          "textLatex": "A 230 Volt, Single Phase Induction Motor has the following test results - <br>No-load test : 220 volts, 350 watts, 6 amps.<br>Blocked rotor test: 125 volts, 580 watts, 15 amps.<br> The stator winding resistance is 1.2 Ω measured with direct current. Estimate the power factor, output, efficiency, and the ratio of forward to backward fluxes when slip is 0.5.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 2,
+          "questionId": "em3-2025-p1-5b"
+        }
+      ]
+    },
+    {
+      "partLabel": "PART II",
+      "refCode": "Ex/EE/PC/B/T/311/2025",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING THIRD YEAR FIRST SEMESTER EXAM 2025",
+        "SUBJECT: - ELECTRICAL MACHINES-III"
+      ],
+      "timeText": "Time: Three Hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": null,
+      "sharedNote": null,
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "group",
+          "label": "Q6. Justify the following (any four) (4×2.5)"
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(a)",
+          "marks": "2.5",
+          "co": "CO2 & CO3",
+          "topic": "Synchronous generator and regulation",
+          "textLatex": "OC test is performed at synchronous speed while SC test can be performed at speeds other than synchronous speed.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 3,
+          "questionId": "em3-2025-p2-6a"
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(b)",
+          "marks": "2.5",
+          "co": "CO2 & CO3",
+          "topic": "Salient-pole machines and reactances",
+          "textLatex": "Slip test is not performed at synchronous speed.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 3,
+          "questionId": "em3-2025-p2-6b"
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(c)",
+          "marks": "2.5",
+          "co": "CO2 & CO3",
+          "topic": "Synchronous generator and regulation",
+          "textLatex": "It is not mandatory to laminate the rotor of a cylindrical rotor synchronous machine, but the rotor of salient pole machine is laminated.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 3,
+          "questionId": "em3-2025-p2-6c"
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(d)",
+          "marks": "2.5",
+          "co": "CO2 & CO3",
+          "topic": "Synchronous generator and regulation",
+          "textLatex": "Zero power factor characteristic (ZPFC) of an alternator does not start from origin.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 3,
+          "questionId": "em3-2025-p2-6d"
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(e)",
+          "marks": "2.5",
+          "co": "CO2 & CO3",
+          "topic": "Synchronous generator and regulation",
+          "textLatex": "Emf method to determine voltage regulation of an alternator is pessimistic.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 3,
+          "questionId": "em3-2025-p2-6e"
+        },
+        {
+          "kind": "question",
+          "qNum": "7.(a)",
+          "marks": "10",
+          "co": "CO1",
+          "topic": "Synchronous generator and regulation",
+          "textLatex": "What do you understand by armature reaction of a three phase synchronous generator? Explain with help of diagrams the effect of load power factor on the same.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 3,
+          "questionId": "em3-2025-p2-7a"
+        },
+        {
+          "kind": "or",
+          "label": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "7.(b)",
+          "marks": "10",
+          "co": "CO1",
+          "topic": "Salient-pole machines and reactances",
+          "textLatex": "Develop the phasor diagram of a salient pole alternator both under lagging and leading power factor condition.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 3,
+          "questionId": "em3-2025-p2-7b"
+        },
+        {
+          "kind": "question",
+          "qNum": "8.(a)",
+          "marks": "10",
+          "co": "CO3",
+          "topic": "Excitation, synchronisation and parallel operation",
+          "textLatex": "Develop the power angle characteristics of salient pole alternator. What is synchronizing power coefficient? What is its importance?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 3,
+          "questionId": "em3-2025-p2-8a"
+        },
+        {
+          "kind": "or",
+          "label": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "8.(b)",
+          "marks": "10",
+          "co": "CO3",
+          "topic": "Synchronous generator and regulation",
+          "textLatex": "Discuss how voltage regulation of an alternator can be determined by the Potier Triangle method. Comment on whether this method is applicable for both cylindrical rotor and salient pole synchronous machine.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 3,
+          "questionId": "em3-2025-p2-8b"
+        },
+        {
+          "kind": "group",
+          "label": "Q9. Write short notes on any Two (5×2)"
+        },
+        {
+          "kind": "question",
+          "qNum": "9.(a)",
+          "marks": "5",
+          "co": "CO4",
+          "topic": "Excitation, synchronisation and parallel operation",
+          "textLatex": "Excitation and power circle diagrams of alternator.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 4,
+          "questionId": "em3-2025-p2-9a"
+        },
+        {
+          "kind": "question",
+          "qNum": "9.(b)",
+          "marks": "5",
+          "co": "CO4",
+          "topic": "Excitation, synchronisation and parallel operation",
+          "textLatex": "Synchronization of alternator",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 4,
+          "questionId": "em3-2025-p2-9b"
+        },
+        {
+          "kind": "question",
+          "qNum": "9.(c)",
+          "marks": "5",
+          "co": "CO4",
+          "topic": "Synchronous motors and condensers",
+          "textLatex": "Starting of synchronous motor",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 4,
+          "questionId": "em3-2025-p2-9c"
+        },
+        {
+          "kind": "question",
+          "qNum": "10.(b)",
+          "marks": "10",
+          "co": "CO5",
+          "topic": "Salient-pole machines and reactances",
+          "textLatex": "A 3 phase, star connected, 11kV, 10 pole 50 Hz, salient pole alternator has the following parameters per phase. $X_d$ = 4.0 ohm, $X_q$ = 2.5 ohm and $r_a$=0 Compute the excitation voltage, load angle and the ratio of synchronous power to reluctance power when it is delivering a load of 800A at 0.8 pf lead and rated operating voltage.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 4,
+          "questionId": "em3-2025-p2-10b"
+        }
+      ]
+    }
+  ],
+  "sourceNotes": [
+    "Part II 10(a) alternator efficiency is outside the listed syllabus topics. The source contains handwritten work, which is omitted."
+  ]
+}

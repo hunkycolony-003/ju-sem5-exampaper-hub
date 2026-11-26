@@ -1,0 +1,322 @@
+{
+  "id": "pe-2024s",
+  "subjectId": "pe",
+  "year": 2024,
+  "sortKey": 2024.1,
+  "yearLabel": "2024 (S)",
+  "examType": "Supplementary",
+  "sourcePdf": "2024 - Power Electronics S.pdf",
+  "hasDiagram": false,
+  "parts": [
+    {
+      "partLabel": "PART - I",
+      "refCode": "Ex/EE/PC/B/T/314/2024(S)",
+      "headerLines": [
+        "Bachelor of Electrical Engineering, 3rd Year 1st Semester Supplementary Examination, 2024",
+        "SUBJECT: POWER ELECTRONICS"
+      ],
+      "timeText": "Time: Three Hours",
+      "marksText": "Full Marks: 100 (50 each part)",
+      "subMarksText": null,
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Answer question no. 3 and any two from the rest",
+      "sharedNote": null,
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "What reverse recovery phenomenon in a power diode?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024s-p1-1a"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "5",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Classify power diodes according to their reverse recovery time. What are SRD and HRD? Which one is preferred in real life and why?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024s-p1-1b"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(c)",
+          "marks": "3",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Show how average power loss in a power diode is calculated from its equivalent circuit.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024s-p1-1c"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(d)",
+          "marks": "4",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "What is schottky diode? What are the advantages and disadvantages of it?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024s-p1-1d"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "3",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Why power BJT is operated in the quasi-saturation region?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024s-p1-2a"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "5",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Explain with the help of circuit diagram how quasi-saturation is implemented?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024s-p1-2b"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(c)",
+          "marks": "8",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Sketch the structure of a power MOSFET and explain its working principle. Why power MOSFET cannot block any reverse voltage?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024s-p1-2c"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "5",
+          "co": null,
+          "topic": "Choppers",
+          "textLatex": "Explain with the help of circuit diagram the working principle of non-isolated Boost DC-DC converter.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024s-p1-3a"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "3",
+          "co": null,
+          "topic": "Choppers",
+          "textLatex": "Why PWM technique is preferred over FM technique for controlling the duty cycle?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024s-p1-3b"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(c)",
+          "marks": "10",
+          "co": null,
+          "topic": "Choppers",
+          "textLatex": "A step-down DC-DC converter is to fed a purely resistive load of 5 Ω. If the input of the converter is 120 V and load current is 10 A, find out the duty cycle needed. If the ON time of the converter is 40 μs, determine the switching frequency.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024s-p1-3c"
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Inverters",
+          "textLatex": "Explain with the help of a circuit diagram the working principle of a full-bridge inverter for distortion-less output voltage in case of an inductive load.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024s-p1-4a"
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(B)",
+          "marks": "8",
+          "co": null,
+          "topic": "Inverters",
+          "textLatex": "With the help of a circuit diagram explain the working principle of a push-pull inverter. Explain how average voltage is controlled. What are the advantage and disadvantage of this inverter?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024s-p1-4b"
+        },
+        {
+          "kind": "group",
+          "label": "5. Write short notes on (any two)"
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "IGBT",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024s-p1-5a"
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "Power losses in semiconductor devices",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024s-p1-5b"
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(c)",
+          "marks": "8",
+          "co": null,
+          "topic": "Power semiconductor devices",
+          "textLatex": "dV/dt and di/dt protection in SCR",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024s-p1-5c"
+        }
+      ]
+    },
+    {
+      "partLabel": "PART - II",
+      "refCode": "Ex/EE/PC/B/T/314/2024(S)",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING THIRD YEAR FIRST SEMESTER SUPPLEMENTARY EXAM 2024",
+        "SUBJECT: - POWER ELECTRONICS"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for this part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Answer any Three Questions<br>All symbols used have their usual significance<br>(Two marks are reserved for neatness)",
+      "sharedNote": "Some printed items or subparts are outside the supplied syllabus and are omitted.",
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1)",
+          "marks": "16",
+          "co": null,
+          "topic": "Uncontrolled rectifiers",
+          "textLatex": "Describe the principle of operation of a single phase uncontrolled full wave bridge rectifier with R load and show waveforms of the following: i) Output voltage ii) Load current iii) Diode current iv) Input Line current, and (v) diode voltage. For the above rectifier also determine: (vi) Average output voltage, (vii) Load RMS voltage (viii) Form Factor (ix) Efficiency.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024s-p2-1"
+        },
+        {
+          "kind": "question",
+          "qNum": "2) (a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Uncontrolled rectifiers",
+          "textLatex": "Explain with relevant circuit diagrams and waveforms the operation of a single-phase half-wave uncontrolled rectifier feeding an R-L load having a freewheeling diode. Also, draw the waveform of the load current of this circuit.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024s-p2-2a"
+        },
+        {
+          "kind": "question",
+          "qNum": "2) (b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Uncontrolled rectifiers",
+          "textLatex": "If the single-phase half-wave uncontrolled rectifier is connected with a 230 V,50 Hz A.C supply and the R-L load has the value of R = 100 Ω and L = 0.1H, determine (i) average load current (ii) r.m.s load current, and (iii) the power absorbed by the resistor. Assume the load current conducting up to 40° beyond voltage zero crossing to negative.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024s-p2-2b"
+        },
+        {
+          "kind": "question",
+          "qNum": "3)",
+          "marks": "16 (shared)",
+          "co": null,
+          "topic": "Phase controlled rectifiers · three-phase half-wave SCR",
+          "textLatex": "Explain why it is called three pulse rectifier and also mention the sequence of conduction of SCRs.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024s-p2-3"
+        },
+        {
+          "kind": "question",
+          "qNum": "4)",
+          "marks": "16 (shared)",
+          "co": null,
+          "topic": "Uncontrolled rectifiers · three-phase full-wave diode",
+          "textLatex": "Explain why it is called six pulse rectifier and also mention the sequence of conduction of diodes.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024s-p2-4"
+        },
+        {
+          "kind": "group",
+          "label": "5) Write short notes on any two of the following:"
+        },
+        {
+          "kind": "question",
+          "qNum": "5) (i)",
+          "marks": "8",
+          "co": null,
+          "topic": "Uncontrolled rectifiers",
+          "textLatex": "Single phase half wave uncontrolled rectifier feeding Resistive load having filter capacitor C in parallel across the load.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024s-p2-5i"
+        },
+        {
+          "kind": "question",
+          "qNum": "5) (iii)",
+          "marks": "8",
+          "co": null,
+          "topic": "Uncontrolled rectifiers",
+          "textLatex": "Single phase full wave uncontrolled rectifier with R-L-E load.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2024s-p2-5iii"
+        }
+      ]
+    }
+  ],
+  "syllabusExclusions": [
+    "Part II 3 and 4. Retained the separately stated pulse-count and conduction-sequence requests. The resistive-load portions are outside the specified three-phase load scope.",
+    "Part II 5(ii). Single-phase semi converter with an R-L load. The half-controlled syllabus specifies highly inductive loads."
+  ]
+}

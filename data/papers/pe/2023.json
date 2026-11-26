@@ -1,0 +1,99 @@
+{
+  "id": "pe-2023",
+  "subjectId": "pe",
+  "year": 2023,
+  "sortKey": 2023,
+  "yearLabel": "2023",
+  "examType": "Regular",
+  "sourcePdf": "2023 - Power Electronics.pdf",
+  "hasDiagram": false,
+  "parts": [
+    {
+      "partLabel": "PART - I",
+      "refCode": "Ex/EE/PC/B/T/314/2023",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING THIRD YEAR FIRST SEMESTER EXAM 2023",
+        "SUBJECT: - POWER ELECTRONICS"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for this part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Answer any Three Questions<br>All symbols used have their usual significance<br>(Two marks are reserved for neatness)",
+      "sharedNote": "The scan contains one page, headed PART - I. The other part is absent.<br>Some printed items or subparts are outside the supplied syllabus and are omitted.",
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1) (a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Uncontrolled rectifiers",
+          "textLatex": "With the help of different waveforms describe the principle of operation of a single phase half wave diode rectifier with freewheeling diode feeding a “ R” load.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2023-p1-1a"
+        },
+        {
+          "kind": "question",
+          "qNum": "1) (b)",
+          "marks": "8",
+          "co": null,
+          "topic": "Uncontrolled rectifiers",
+          "textLatex": "With the help of different waveforms describe the principle of operation of a single phase full wave uncontrolled rectifier with freewheeling diode feeding a “ R-L” load.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2023-p1-1b"
+        },
+        {
+          "kind": "group",
+          "label": "5) Write short notes on any two of the following:"
+        },
+        {
+          "kind": "question",
+          "qNum": "5) (i)",
+          "marks": "8",
+          "co": null,
+          "topic": "Uncontrolled rectifiers",
+          "textLatex": "Single phase full wave uncontrolled rectifier feeding R-L-E load.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2023-p1-5i"
+        },
+        {
+          "kind": "question",
+          "qNum": "5) (ii)",
+          "marks": "8",
+          "co": null,
+          "topic": "Phase controlled rectifiers",
+          "textLatex": "Single phase fully controlled bridge rectifier with R-L load.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2023-p1-5ii"
+        },
+        {
+          "kind": "question",
+          "qNum": "5) (iii)",
+          "marks": "8",
+          "co": null,
+          "topic": "Uncontrolled rectifiers",
+          "textLatex": "Single phase full wave uncontrolled rectifier feeding R load having filter capacitor C across load.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "pe-2023-p1-5iii"
+        }
+      ]
+    }
+  ],
+  "sourceNotes": [
+    "The scan contains one page, headed PART - I. The other part is absent."
+  ],
+  "syllabusExclusions": [
+    "Part I 2–4. Three-phase rectifiers with a resistive load. The printed m-pulse average-output request is integrated into each load-specific prompt."
+  ]
+}

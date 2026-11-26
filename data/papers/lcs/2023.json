@@ -1,0 +1,350 @@
+{
+  "id": "lcs-2023",
+  "subjectId": "lcs",
+  "year": 2023,
+  "sortKey": 2023.0,
+  "yearLabel": "2023",
+  "examType": "Regular",
+  "sourcePdf": "2023 - Linear Control System.pdf",
+  "hasDiagram": true,
+  "parts": [
+    {
+      "partLabel": "PART - I",
+      "refCode": "Ex/EE/PC/B/T/313/2023",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING",
+        "THIRD YEAR FIRST SEMESTER EXAMINATION 2023",
+        "LINEAR CONTROL SYSTEM"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use Separate Answer script for each part",
+      "instructions": "Answer any three questions from this part. Two marks reserved for neat and well-organized answer",
+      "sharedNote": null,
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Control systems, errors and system types",
+          "textLatex": "Explain the following statement: Use of feedback makes a control system relatively insensitive to internal variations in system parameters.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2023-p1-1a"
+        },
+        {
+          "kind": "question",
+          "qNum": "1(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Control systems, errors and system types",
+          "textLatex": "State the difference between a time invariant control system and a time varying control system with the help of suitable examples.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2023-p1-1b"
+        },
+        {
+          "kind": "question",
+          "qNum": "1(c)",
+          "marks": "8",
+          "co": null,
+          "topic": "Time response",
+          "textLatex": "The open loop transfer function of a unity feedback control system is given as $$G(s)=\\frac{K}{s(\\tau s+1)}$$ Determine the factor by which the gain $K$ should be multiplied so that the overshoot of the closed loop step response will be reduced from 75% to 25%.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2023-p1-1c"
+        },
+        {
+          "kind": "question",
+          "qNum": "2(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Control systems, errors and system types",
+          "textLatex": "For a closed loop unity feedback system with ramp input, justify the following statement: As type of system increases, the steady state error decreases.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2023-p1-2a"
+        },
+        {
+          "kind": "question",
+          "qNum": "2(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Control systems, errors and system types",
+          "textLatex": "Given a unity feedback system with forward path transfer function $$G(s)=\\frac{20}{s^2(s+4)(s+5)}.$$ Find the steady state errors to the following inputs (i) $20u(t)$ (ii) $20tu(t)$, and (iii) $20t^2u(t)$. All notations have their usual meanings.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2023-p1-2b"
+        },
+        {
+          "kind": "question",
+          "qNum": "2(c)",
+          "marks": "6",
+          "co": null,
+          "topic": "Time response",
+          "textLatex": "The unity feedback system with a forward path transfer function $G(s)=\\frac{K(s+\\alpha)}{(s+\\beta)^2}$ is to be designed to meet the following specifications: $e_{ss}\\big\\vert_{\\mathrm{position}}=0.1\\,\\mathrm{rad}$ ; Damping ratio = 0.5 and Natural frequency of oscillation = $\\sqrt{10}$. Find the values of $K$, $\\alpha$ and $\\beta$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2023-p1-2c"
+        },
+        {
+          "kind": "question",
+          "qNum": "3",
+          "marks": "16",
+          "co": null,
+          "topic": "Control system components and case studies",
+          "textLatex": "For an angular position control servomechanism, given the following:\nMoment of inertia of motor, $J_m=1.40\\times10^{-6}$ kg-m²\nMoment of inertia of load, $J_L=2.70\\times10^{-3}$ kg-m²\nInertia of the gears is negligible.\nGear ratio, $N_1:N_2=1:100$\nThe detection is effected by error detectors which produce an error voltage of one volt for every degree change in input.\nThe motor produces a torque proportional to the applied voltage at its terminals and equals $4\\times10^{-2}$ N-m when the voltage equals 115 V.\nMotor friction, $f_m=7\\times10^{-5}$ N-m/(rad/sec)\nDamping ratio, $\\zeta=0.25$\na) Draw the block diagram of the system\nb) Find the steady state gain and undamped natural frequency of oscillation, $\\omega_n$\nc) Find the steady state error for an input turning with a constant rate of 20 rpm\nd) Also find the amplifier gain",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2023-p1-3"
+        },
+        {
+          "kind": "question",
+          "qNum": "4(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "Time response",
+          "textLatex": "Explain the physical significance of the term damping ratio for second order control systems.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2023-p1-4a"
+        },
+        {
+          "kind": "question",
+          "qNum": "4(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Control system components and case studies",
+          "textLatex": "State what you understand by the term sensitivity of a potentiometric error sensor. What are its units?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2023-p1-4b"
+        },
+        {
+          "kind": "question",
+          "qNum": "4(c)",
+          "marks": "8",
+          "co": null,
+          "topic": "Time response",
+          "textLatex": "A unity feedback control system has a forward path transfer function $$G(s)=\\frac{10}{s(s+1)}.$$ If output rate feedback is introduced with feedback transfer function $(1+T_as)$, what should be the value of $T_a$ to obtain a closed loop damping ratio of 0.5? What would be the change in the peak overshoot due to introduction of the output rate feedback?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2023-p1-4c"
+        },
+        {
+          "kind": "question",
+          "qNum": "5",
+          "marks": "16",
+          "co": null,
+          "topic": "Control actions and compensation",
+          "textLatex": "The transfer function of a plant is given by $$G(s)=\\frac{K}{s(s+2)(s+5)}.$$ Design a suitable compensator to meet the following specifications:\na) Velocity constant $K_v=10$ sec$^{-1}$.\nb) Phase margin $\\phi_m\\geq35^\\circ$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2023-p1-5"
+        }
+      ]
+    },
+    {
+      "partLabel": "PART - II",
+      "refCode": "Ex/EE/PC/B/T/313/2023",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING",
+        "THIRD YEAR FIRST SEMESTER EXAMINATION 2023",
+        "LINEAR CONTROL SYSTEM"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use Separate Answer script for each part",
+      "instructions": "Answer all the Questions.",
+      "sharedNote": null,
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "Q1a",
+          "marks": "04",
+          "co": "CO1",
+          "topic": "Stability of linear systems",
+          "textLatex": "Differentiate between the notions of Absolute Stability and Relative Stability.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2023-p2-q1a"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q1b",
+          "marks": "08",
+          "co": "CO2",
+          "topic": "Stability of linear systems",
+          "textLatex": "By means of Routh’s Criterion determine the stability of the system represented by the following characteristic equation. $$q(s)=s^6+3s^5+5s^4+9s^3+8s^2+6s+4=0$$",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2023-p2-q1b"
+        },
+        {
+          "kind": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q1b",
+          "marks": "08",
+          "co": "CO2",
+          "topic": "Stability of linear systems",
+          "textLatex": "The characteristic equation for a certain feedback control system is given below. Determine the range of gain $K$ for which the system will be stable. $$q(s)=s^3+2Ks^2+(K+2)s+4=0$$",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2023-p2-q1b-2"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q2",
+          "marks": "12",
+          "co": "CO4",
+          "topic": "Stability of linear systems",
+          "textLatex": "For the system described by the following open loop transfer function, sketch the Nyquist plot. Ascertain the range of gain $K$ for which the closed loop system will remain stable using Nyquist Stability criterion only. $$G(s)H(s)=\\frac{K(s+1)}{(1-s)}$$",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2023-p2-q2"
+        },
+        {
+          "kind": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q2",
+          "marks": "12",
+          "co": "CO4",
+          "topic": "Root locus",
+          "textLatex": "Plot the Root-Locus for a unity feedback system whose characteristic equation is $$q(s)=s^4+3s^3+12s^2+(K-16)s+K=0;\\ K\\geq0$$ Also determine and indicate on the sketch, i) number and angles of asymptotes, ii) the centroid, iii) the breakaway point/ points, if any, iv) intersection of the root locus and the asymptotes with the imaginary axis, if any v) the range of gain $K$ for which the closed loop system remains stable, vi) any other value that has relevance to the plotting of root locus.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2023-p2-q2-2"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q3a",
+          "marks": "05",
+          "co": "CO3",
+          "topic": "Block diagrams and signal flow graphs",
+          "textLatex": "State and explain Mason’s Gain Formula.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2023-p2-q3a"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q3b",
+          "marks": "08",
+          "co": "CO3",
+          "topic": "Block diagrams and signal flow graphs",
+          "textLatex": "Construct the Signal Flow Graph for the system shown in Fig. P-3. Find out the closed loop transfer function of the system using Mason’s Gain Formula.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [
+            {
+              "src": "data/assets/lcs/lcs-2023/fig_p3.png",
+              "caption": "Fig. P-3",
+              "imageId": "lcs-2023-p2-q3b-img1",
+              "alt": "Fig. P-3"
+            }
+          ],
+          "questionId": "lcs-2023-p2-q3b"
+        },
+        {
+          "kind": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q3b",
+          "marks": "08",
+          "co": "CO3",
+          "topic": "Block diagrams and signal flow graphs",
+          "textLatex": "Find out the ratio $C(s)/R(s)$ for the multiple-loop system shown in Fig.P-3 using block diagram reduction technique.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [
+            {
+              "src": "data/assets/lcs/lcs-2023/fig_p3.png",
+              "caption": "Fig. P-3",
+              "imageId": "lcs-2023-p2-q3b-2-img1",
+              "alt": "Fig. P-3"
+            }
+          ],
+          "questionId": "lcs-2023-p2-q3b-2"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q4a",
+          "marks": "06",
+          "co": "CO5",
+          "topic": "State variable analysis",
+          "textLatex": "What is a Modal Matrix? Prove that a Modal Matrix can transform a non-diagonal system matrix into a diagonal one.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2023-p2-q4a"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q4b",
+          "marks": "07",
+          "co": "CO5",
+          "topic": "State variable analysis",
+          "textLatex": "A linear time invariant system is described by the following state equation. Obtain eigenvalues, eigenvectors and the state equation in canonical form. $$\\begin{bmatrix}\\dot{x}_1\\\\\\dot{x}_2\\\\\\dot{x}_3\\end{bmatrix}=\\begin{bmatrix}0&1&0\\\\0&0&1\\\\-6&-11&-6\\end{bmatrix}\\begin{bmatrix}x_1\\\\x_2\\\\x_3\\end{bmatrix}+\\begin{bmatrix}0\\\\0\\\\2\\end{bmatrix}u$$",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2023-p2-q4b"
+        },
+        {
+          "kind": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q4a",
+          "marks": "04",
+          "co": "CO5",
+          "topic": "State variable analysis",
+          "textLatex": "Assume that the state model of a single input single output LTI system is given, where $A$ is the system matrix, $B$ is the input matrix, $C$ is the output matrix and $D$ is the transmission matrix with appropriate dimensions. Obtain the transfer function of the system.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2023-p2-q4a-2"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q4b",
+          "marks": "09",
+          "co": "CO5",
+          "topic": "State variable analysis",
+          "textLatex": "A system is described by $$\\begin{bmatrix}\\dot{x}_1\\\\\\dot{x}_2\\\\\\dot{x}_3\\end{bmatrix}=\\begin{bmatrix}-1&-4&-1\\\\-1&-6&-2\\\\-1&-2&-3\\end{bmatrix}\\begin{bmatrix}x_1\\\\x_2\\\\x_3\\end{bmatrix}+\\begin{bmatrix}0\\\\1\\\\1\\end{bmatrix}u$$ and $$y=\\begin{bmatrix}1&1&1\\end{bmatrix}\\begin{bmatrix}x_1\\\\x_2\\\\x_3\\end{bmatrix}$$ Find the transfer fuction of the system.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2023-p2-q4b-2"
+        }
+      ]
+    }
+  ]
+}

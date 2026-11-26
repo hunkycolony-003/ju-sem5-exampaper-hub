@@ -1,0 +1,189 @@
+{
+  "id": "lcs-2025",
+  "subjectId": "lcs",
+  "year": 2025,
+  "sortKey": 2025.0,
+  "yearLabel": "2025",
+  "examType": "Regular",
+  "sourcePdf": "2025 - Linear Control System.pdf",
+  "hasDiagram": false,
+  "parts": [
+    {
+      "partLabel": "PART - I",
+      "refCode": "Ex/EE/PC/B/T/313/2025",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING",
+        "THIRD YEAR FIRST SEMESTER EXAMINATION 2025",
+        "LINEAR CONTROL SYSTEM"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use Separate Answer script for each part",
+      "instructions": "Question nos. 1 and 2 are Compulsory (10+10=20 marks)\nAnswer any one question from Question nos. 3 and 4 (15 marks)\nAnswer any one question from Question nos. 5 and 6 (15 marks)",
+      "sharedNote": "Source note: The scan is faded on printed page 3. The transfer functions in Questions 5 and 6 have been traced over in ink and are transcribed as visible.",
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1(a)",
+          "marks": "4",
+          "co": "CO1",
+          "topic": "Control systems, errors and system types",
+          "textLatex": "State the difference between a static system and a dynamic system with the help of suitable examples.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2025-p1-1a"
+        },
+        {
+          "kind": "question",
+          "qNum": "1(b)",
+          "marks": "2",
+          "co": "CO2",
+          "topic": "Control systems, errors and system types",
+          "textLatex": "Correct or Justify the following statement, providing proper explanation in support of your answer:\nThe system represented by the differential equation $$v(t)=i(t)R+L\\frac{di(t)}{dt}$$ is an example of a time varying system.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2025-p1-1b"
+        },
+        {
+          "kind": "question",
+          "qNum": "1(c)",
+          "marks": "2",
+          "co": "CO1",
+          "topic": "Control system components and case studies",
+          "textLatex": "State what you understand by the term sensitivity of a potentiometric error sensor. What are its units?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2025-p1-1c"
+        },
+        {
+          "kind": "question",
+          "qNum": "1(d)",
+          "marks": "2",
+          "co": "CO2",
+          "topic": "Control systems, errors and system types",
+          "textLatex": "Show that the sensitivity of a system to internal variations in system parameters decreases with the use of feedback.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2025-p1-1d"
+        },
+        {
+          "kind": "question",
+          "qNum": "2(a)",
+          "marks": "4",
+          "co": "CO2",
+          "topic": "Control systems, errors and system types",
+          "textLatex": "For a closed loop unity feedback system with ramp input, justify the following statement: As type of system increases, the steady state error decreases.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2025-p1-2a"
+        },
+        {
+          "kind": "question",
+          "qNum": "2(b)",
+          "marks": "6",
+          "co": "CO3",
+          "topic": "Control systems, errors and system types",
+          "textLatex": "Given a unity feedback system with forward path transfer function $$G(s)=\\frac{20}{s^2(s+4)(s+5)}.$$ Find the steady state errors to the following inputs (i) $20u(t)$ (ii) $20tu(t)$, and (iii) $20t^2u(t)$. All notations have their usual meanings.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2025-p1-2b"
+        },
+        {
+          "kind": "question",
+          "qNum": "3",
+          "marks": "5×3=15",
+          "co": "CO4",
+          "topic": "Control system components and case studies",
+          "textLatex": "For an angular position control servomechanism, given the following:\nMoment of inertia of motor, $J_m=1.40\\times10^{-6}$ kg-m²\nMoment of inertia of load, $J_L=2.70\\times10^{-3}$ kg-m²\nInertia of the gears is negligible.\nGear ratio, $N_1:N_2=1:100$\nThe detection is effected by error detectors which produce an error voltage of one volt for every degree change in input.\nThe motor produces a torque proportional to the applied voltage at its terminals and equals $4\\times10^{-2}$ N-m when the voltage equals 115 V.\nMotor friction, $f_m=7\\times10^{-5}$ N-m/(rad/sec)\nDamping ratio, $\\zeta=0.25$\na) Draw the block diagram of the system\nb) Find the steady state gain and undamped natural frequency of oscillation, $\\omega_n$\nc) Find the steady state error for an input turning with a constant rate of 20 rpm",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2025-p1-3"
+        },
+        {
+          "kind": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "4",
+          "marks": "5×3=15",
+          "co": "CO4",
+          "topic": "Control system components and case studies",
+          "textLatex": "The constants for a voltage regulator are given below:\n<table><tbody><tr><td>Gain $K_A$</td><td>100 V/V</td></tr><tr><td>Field resistance</td><td>200 ohms</td></tr><tr><td>Field inductance</td><td>100 henry</td></tr><tr><td>Field constant</td><td>1 mwb/amp</td></tr><tr><td>Armature resistance</td><td>0.2 ohm</td></tr><tr><td>Armature inductance</td><td>negligible</td></tr><tr><td>Speed</td><td>1000 rpm</td></tr><tr><td>EMF constant</td><td>200 mV/µwb at 1000 rpm</td></tr><tr><td>Load current</td><td>negligible</td></tr><tr><td>Feedback factor</td><td>0.1</td></tr></tbody></table>\na) Find the general expression for the forward transfer function and the error transfer function.\nb) Determine the steady state error voltage to a step input $V_i=V_1u(t)$ and compute this value when $V_1=10$ volts.\nc) What is the steady-state output voltage?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2025-p1-4"
+        },
+        {
+          "kind": "question",
+          "qNum": "5",
+          "marks": "3+4×3=15",
+          "co": null,
+          "topic": "Time response",
+          "textLatex": "Given a system with the following open loop transfer function $$G(s)=\\frac{100}{s(s+20)}$$ a) Sketch the closed loop response of the above system to a unit step input assuming unity negative feedback. (Sketch on plain paper. Graph paper is not required)\nb) Analyze the effect of addition of the following to the closed loop transfer function of the above system:\n(i) A pole to the left half of the s-plane.\n(ii) A zero to the left half of the s-plane\n(iii) A non-minimum phase zero.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2025-p1-5"
+        },
+        {
+          "kind": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "6",
+          "marks": "15",
+          "co": "CO5",
+          "topic": "Control actions and compensation",
+          "textLatex": "The transfer function of a plant is given by $$G(s)=\\frac{K}{s(s+5)(s+10)}.$$ Design a suitable compensator to meet the following specifications:\na) Velocity constant $K_v=1$ sec$^{-1}$.\nb) Phase margin $\\phi_m\\geq45^\\circ$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2025-p1-6"
+        }
+      ]
+    },
+    {
+      "partLabel": "PART - II",
+      "refCode": "Ex/EE/PC/B/T/313/2025",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING",
+        "THIRD YEAR FIRST SEMESTER EXAMINATION 2025",
+        "LINEAR CONTROL SYSTEM"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use Separate Answer script for each part",
+      "instructions": null,
+      "sharedNote": "Source note: Printed pages 4 and 5 are missing from the supplied scan. Printed page 6 contains the alternative Question 4 only.",
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "Q4",
+          "marks": "12",
+          "co": "CO5",
+          "topic": "State variable analysis",
+          "textLatex": "A linear time invariant system is described by the following state equation. Obtain eigenvalues, eigenvectors of the system matrix $A$. What is a Modal Matrix? Obtain the Modal Matrix, $M$ of $A$. Compute $M^{-1}AM$. $$\\begin{bmatrix}\\dot{x}_1\\\\\\dot{x}_2\\\\\\dot{x}_3\\end{bmatrix}=\\begin{bmatrix}0&1&-1\\\\-6&-11&6\\\\-6&-11&5\\end{bmatrix}\\begin{bmatrix}x_1\\\\x_2\\\\x_3\\end{bmatrix}$$",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "lcs-2025-p2-q4"
+        }
+      ]
+    }
+  ]
+}

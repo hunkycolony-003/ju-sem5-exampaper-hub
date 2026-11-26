@@ -1,0 +1,403 @@
+{
+  "id": "em3-2023",
+  "subjectId": "em3",
+  "year": 2023,
+  "sortKey": 2023,
+  "yearLabel": "2023",
+  "examType": "Regular",
+  "sourcePdf": "2023 - Electrical Machines III.pdf",
+  "hasDiagram": false,
+  "parts": [
+    {
+      "partLabel": "PART - I",
+      "refCode": "Ex/EE/PC/B/T/311/2023",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING EXAMINATION, 2023",
+        "(3rd Year, 1st Semester)",
+        "ELECTRICAL MACHINES - III"
+      ],
+      "timeText": "Time: Three Hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use a separate Answer Script for each part.",
+      "instructions": null,
+      "sharedNote": null,
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "group",
+          "label": "1. Answer any one from (a) and (b):"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "10",
+          "co": null,
+          "topic": "Single-phase induction motors",
+          "textLatex": "Discuss why single phase induction motors do not have a starting torque. 'A single phase motor can be forced to run in either direction.' - Justify.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 1,
+          "questionId": "em3-2023-p1-1a"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "10",
+          "co": null,
+          "topic": "Shaded-pole and repulsion-start motors",
+          "textLatex": "What is shaded pole motor? With the help of neat sketch discuss the construction and working principle of shaded pole motor. Mention some application of shaded pole motor.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 1,
+          "questionId": "em3-2023-p1-1b"
+        },
+        {
+          "kind": "group",
+          "label": "2. Answer any one from (a) and (b):"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "10",
+          "co": null,
+          "topic": "Single-phase induction motors",
+          "textLatex": "With the help of double revolving field theory, derive the equivalent circuit of a single phase induction motor.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 1,
+          "questionId": "em3-2023-p1-2a"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "10",
+          "co": null,
+          "topic": "Single-phase induction motors",
+          "textLatex": "How can you determine the equivalent circuit parameters of a single phase induction motor experimentally? Explain. State various assumptions made.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 1,
+          "questionId": "em3-2023-p1-2b"
+        },
+        {
+          "kind": "group",
+          "label": "3. Answer any one from (a) and (b):"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "10",
+          "co": null,
+          "topic": "Single-phase induction motors",
+          "textLatex": "Explain the working principle of resistor split phase motor. For Resistor Split Phase Motor find the value of total resistance required for the starting winding to get the (i) maximum starting torque and <span style=\"text-decoration: line-through\">(ii) maximum torque per ampere at starting.</span>",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 1,
+          "questionId": "em3-2023-p1-3a"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "10",
+          "co": null,
+          "topic": "Single-phase induction motors",
+          "textLatex": "Develop an expression for the resultant torque of a single phase induction motor when running with slip s. Explain how the core losses are accounted for in determining the shaft power output.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 1,
+          "questionId": "em3-2023-p1-3b"
+        },
+        {
+          "kind": "group",
+          "label": "4. Answer any one from (a) and (b):"
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "10",
+          "co": null,
+          "topic": "AC commutator and AC plain series motors",
+          "textLatex": "What is single phase series motor? Explain its working principle. Draw and explain the phasor diagram of a single phase series motor.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 2,
+          "questionId": "em3-2023-p1-4a"
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "10",
+          "co": null,
+          "topic": "AC commutator and AC plain series motors",
+          "textLatex": "Show with the help of phasor diagrams that a compensated series motor possesses better speed-torque characteristics, better power factor operation and improved commutation as compared to an uncompensated series motor.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 2,
+          "questionId": "em3-2023-p1-4b"
+        },
+        {
+          "kind": "group",
+          "label": "5. Answer any one from (a) and (b):"
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(a)",
+          "marks": "10",
+          "co": null,
+          "topic": "Single-phase induction motors",
+          "textLatex": "A 230 V, 4-pole, 50 Hz split-phase induction motor has the following impedance at standstill: <br>Main winding: r = 1.7 Ω, x = 4.5 Ω<br>Starting winding : r = 2.2 Ω, x = 5.5 Ω<br> Determine the value of capacitance to be inserted in series with the starting winding to get (i) maximum starting torque and <span style=\"text-decoration: line-through\">(ii) maximum torque per ampere at starting.</span>",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 2,
+          "questionId": "em3-2023-p1-5a"
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(b)",
+          "marks": "10",
+          "co": null,
+          "topic": "Single-phase induction motors",
+          "textLatex": "A 230 Volt, Single Phase Induction Motor has the following test results - <br>No-load test: 220 volts, 350 watts, 6 amps.<br>Blocked rotor test: 125 volts, 580 watts, 15 amps.<br> The stator winding resistance is 1.2 Ω measured with direct current. Estimate the power factor, output, efficiency, and the ratio of forward to backward fluxes when slip is 0.5.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 2,
+          "questionId": "em3-2023-p1-5b"
+        }
+      ]
+    },
+    {
+      "partLabel": "PART II",
+      "refCode": "Ex/EE/PC/B/T/311/2023",
+      "headerLines": [
+        "B.E. Electrical Engineering - Third Year - First Semester",
+        "Examination, 2023",
+        "SUBJECT: - ELECTRICAL MACHINES-III"
+      ],
+      "timeText": "Time: Three Hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Answer ALL Questions",
+      "sharedNote": null,
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "group",
+          "label": "6. Justify the following (any five): (5×2)"
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(a)",
+          "marks": "2",
+          "co": null,
+          "topic": "Synchronous generator and regulation",
+          "textLatex": "Turbo alternators have larger operating speed compared to hydro alternators of similar rating.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 3,
+          "questionId": "em3-2023-p2-6a"
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(b)",
+          "marks": "2",
+          "co": null,
+          "topic": "Synchronous generator and regulation",
+          "textLatex": "Zero power factor characteristic of an alternator does not start from origin.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 3,
+          "questionId": "em3-2023-p2-6b"
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(c)",
+          "marks": "2",
+          "co": null,
+          "topic": "Synchronous generator and regulation",
+          "textLatex": "OCC of an alternator can shift with speed but SCC remains almost fixed with operating speed.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 3,
+          "questionId": "em3-2023-p2-6c"
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(d)",
+          "marks": "2",
+          "co": null,
+          "topic": "Salient-pole machines and reactances",
+          "textLatex": "Damper bars are not provided in cylindrical rotor alternators.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 3,
+          "questionId": "em3-2023-p2-6d"
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(e)",
+          "marks": "2",
+          "co": null,
+          "topic": "Salient-pole machines and reactances",
+          "textLatex": "Alternator parameters obtained through slip test are not accurate.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 3,
+          "questionId": "em3-2023-p2-6e"
+        },
+        {
+          "kind": "question",
+          "qNum": "6.(f)",
+          "marks": "2",
+          "co": null,
+          "topic": "Synchronous motors and condensers",
+          "textLatex": "Synchronous motors do not have starting torque.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 3,
+          "questionId": "em3-2023-p2-6f"
+        },
+        {
+          "kind": "question",
+          "qNum": "7.(a)",
+          "marks": "10",
+          "co": null,
+          "topic": "Synchronous generator and regulation",
+          "textLatex": "Define synchronous reactance of alternator. Explain how it can be obtained for a cylindrical rotor machine.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 3,
+          "questionId": "em3-2023-p2-7a"
+        },
+        {
+          "kind": "or",
+          "label": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "7.(b)",
+          "marks": "10",
+          "co": null,
+          "topic": "Salient-pole machines and reactances",
+          "textLatex": "Why cylindrical rotor theory is not applicable for salient pole machine? Explain two-reaction theory for alternators.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 3,
+          "questionId": "em3-2023-p2-7b"
+        },
+        {
+          "kind": "question",
+          "qNum": "8.(a)",
+          "marks": "10",
+          "co": null,
+          "topic": "Excitation, synchronisation and parallel operation",
+          "textLatex": "A 100 kVA 3-phase star connected alternator has a synchronous impedance of (1+j10) ohm per phase. It is operating at constant terminal voltage of 6.6 kV with an excitation voltage of 6.2 kV. Find (i) the armature current and load angle under this condition when load p.f. is unity, and (ii) armature current and p.f. corresponding to its maximum power condition.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 3,
+          "questionId": "em3-2023-p2-8a"
+        },
+        {
+          "kind": "or",
+          "label": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "8.(b)",
+          "marks": "10",
+          "co": null,
+          "topic": "Synchronous motors and condensers",
+          "textLatex": "Draw the phasor diagram of synchronous motor under over and under excited condition and sketch the nature of armature current under a varying excitation from low to high value.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 3,
+          "questionId": "em3-2023-p2-8b"
+        },
+        {
+          "kind": "question",
+          "qNum": "9.(a)",
+          "marks": "10",
+          "co": null,
+          "topic": "Excitation, synchronisation and parallel operation",
+          "textLatex": "What is synchronizing power and synchronizing torque? Derive expression for synchronizing power coefficient of a synchronous machine. Also explain the conditions required to be fulfilled during grid synchronization of an alternator.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 4,
+          "questionId": "em3-2023-p2-9a"
+        },
+        {
+          "kind": "or",
+          "label": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "9.(b)",
+          "marks": "10",
+          "co": null,
+          "topic": "Synchronous motors and condensers",
+          "textLatex": "Deduce the expression for active power as a function of load angle for a salient pole synchronous motor and sketch the same. Show with necessary reasons whether the maximum power occurs at a load angle greater or less than 90°. Neglect armature resistance.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 4,
+          "questionId": "em3-2023-p2-9b"
+        },
+        {
+          "kind": "question",
+          "qNum": "10.(a)",
+          "marks": "10",
+          "co": null,
+          "topic": "Synchronous motors and condensers",
+          "textLatex": "A 20 MVA, 3 phase, star connected, 11kV, 12 pole 50 Hz, salient pole synchronous motor has the following parameters: $X_d$= 5 ohm, $X_q$= 3 ohm At full load, 0.8 pf lag and rated voltage, compute (i) the excitation voltage and (ii) load angle.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 4,
+          "questionId": "em3-2023-p2-10a"
+        },
+        {
+          "kind": "or",
+          "label": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "10.(b)",
+          "marks": "10",
+          "co": null,
+          "topic": "Synchronous motors and condensers",
+          "textLatex": "Explain with necessary diagrams, the different starting techniques of synchronous motors.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "sourcePage": 4,
+          "questionId": "em3-2023-p2-10b"
+        }
+      ]
+    }
+  ],
+  "sourceNotes": [
+    "Part I 3(a) and 5(a) show strike-throughs in the source. They are preserved in the transcription."
+  ]
+}
