@@ -52,90 +52,6 @@
       font-family: 'JetBrains Mono', monospace;
     }
 
-    .library-header {
-      color: #3e291b;
-      border-bottom: 1px solid #a98661;
-      background: linear-gradient(105deg, #f1e3cb, #ebd8b8);
-      box-shadow: 0 2px 5px #57341918;
-    }
-    .library-header #subject-search,
-    .library-header #header-confidence-wrap,
-    .library-header #header-deepseek-btn {
-      border-color: #b69368;
-      background-color: #fcf2e1;
-      color: #4d3421;
-    }
-    .library-header #subject-search::placeholder { color: #6b5036; }
-
-    /* Wood frame, dividers and recessed cubbies */
-    .bookcase {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 12px;
-      padding: 12px;
-      border: 1px solid #573419;
-      border-radius: 9px;
-      background:
-        repeating-linear-gradient(2deg, transparent 0 3px, #542b131c 4px, transparent 6px 11px),
-        linear-gradient(110deg, #986b41, #b18455 55%, #855a36);
-      box-shadow: inset 0 1px 0 #f8d7a27a, 0 4px 0 #644329, 0 18px 26px -18px #543921a8;
-    }
-    @media (min-width: 640px) {
-      .bookcase { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-    @media (min-width: 768px) {
-      .bookcase-papers { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    }
-    @media (min-width: 1024px) {
-      .bookcase { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .bookcase-papers { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-    }
-    .shelf-cubby {
-      position: relative;
-      min-width: 0;
-      padding: 20px 14px 14px;
-      border: 1px solid #624025;
-      border-bottom: 8px solid #825733;
-      border-radius: 3px 3px 1px 1px;
-      background:
-        linear-gradient(180deg, #482a19a0, transparent 30%, #472c161f),
-        repeating-linear-gradient(91deg, #995e3426 0 1px, transparent 1px 10px, #b9824d21 11px 13px),
-        #805938;
-      box-shadow: inset 0 2px 12px #3e221bb3, 0 1px 0 #e5b8788c;
-    }
-    .shelf-cubby:focus-visible,
-    .year-paper-card:focus-visible {
-      outline: 3px solid #f9d69a;
-      outline-offset: -3px;
-    }
-    .shelf-label {
-      width: 100%;
-      max-width: 270px;
-      padding: 9px 12px;
-      border: 1px solid #a16f37;
-      border-radius: 4px;
-      background: linear-gradient(145deg, #f5e4bd, #e5c994);
-      box-shadow: inset 0 1px 0 #fff7d5, 0 2px 5px #36201264;
-    }
-    .bookcase .paper-stack { max-width: 174px; }
-    .bookcase-papers .year-paper-card {
-      width: min(100%, 205px);
-      margin: 0 auto;
-      border-left: 6px solid #d2b07d;
-      box-shadow: 3px 7px 12px #35201280;
-    }
-
-    .shelf-paper-details {
-      color: #4d3421;
-      border-top: 1px solid #c3a270;
-      background: linear-gradient(145deg, #eddbb8, #e3c99f);
-    }
-    .shelf-paper-arrow {
-      color: #614323;
-      border: 1px solid #ad8a53;
-      background: #d5b586;
-    }
-
     /* Stacked Subject Cards (Home View) */
     .stack-card {
       perspective: 1100px;
@@ -393,22 +309,22 @@
 <body class="text-slate-800 min-h-screen flex flex-col antialiased">
 
   <!-- TOP HEADER -->
-  <header class="library-header sticky top-0 z-40">
+  <header class="bg-white text-slate-900 sticky top-0 z-40 border-b border-slate-200">
     <div class="max-w-6xl mx-auto px-3 sm:px-5 min-h-14 py-1.5 flex items-center justify-between gap-3">
-      <button id="nav-home-btn" class="min-w-0 flex-1 sm:flex-initial rounded text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#825733]">
-        <span class="block paper-font text-lg sm:text-2xl font-bold tracking-tight leading-none">JU EE Question Paper Vault</span>
-        <span class="hidden sm:block text-[11px] text-[#624a33] mt-0.5">Jadavpur University · B.E. Electrical Engineering · 3rd Yr Sem I · 2022–2026</span>
+      <button id="nav-home-btn" class="min-w-0 flex-1 sm:flex-initial rounded text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600">
+        <span class="block text-sm sm:text-base font-semibold tracking-tight leading-tight">JU EE Question Paper Vault</span>
+        <span class="hidden sm:block text-[11px] text-slate-500 mt-0.5">Jadavpur University · B.E. Electrical Engineering · 3rd Yr Sem I · 2022–2026</span>
       </button>
 
       <div class="flex items-center gap-2 shrink-0">
         <div id="home-search-wrap" class="relative hidden">
-          <i data-lucide="search" class="w-3.5 h-3.5 text-[#6b5036] absolute left-2.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+          <i data-lucide="search" class="w-3.5 h-3.5 text-slate-500 absolute left-2.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
           <input
             id="subject-search"
             type="search"
             aria-label="Filter subjects or codes"
             placeholder="Filter subjects"
-            class="pl-8 pr-2 py-1.5 text-xs border rounded-md w-28 sm:w-48 focus:outline-none focus:ring-2 focus:ring-[#987144]"
+            class="pl-8 pr-2 py-1.5 text-xs bg-slate-50 text-slate-900 placeholder:text-slate-500 border border-slate-200 rounded-md w-28 sm:w-48 focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
         </div>
 
@@ -432,7 +348,7 @@
 
         <!-- DeepSeek Config (Paper View) -->
         <button id="header-deepseek-btn" onclick="openApiModal()" class="hidden items-center space-x-1.5 px-2.5 py-1.5 bg-white hover:bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700 transition shrink-0">
-          <i data-lucide="bot" class="w-3.5 h-3.5 text-[#825733]"></i>
+          <i data-lucide="bot" class="w-3.5 h-3.5 text-indigo-600"></i>
           <span class="hidden lg:inline">DeepSeek AI</span>
         </button>
       </div>
@@ -1324,7 +1240,7 @@
             <button id="clear-search-btn" class="mt-3 px-3.5 py-1.5 text-xs font-medium bg-slate-900 text-white rounded-lg hover:bg-slate-800">Clear</button>
           </div>
         ` : `
-          <div class="bookcase">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-11 pt-2">
             ${subjects.map((subject, idx) => {
               const refs = subject.papers || [];
               const latestRef = refs[0] || null;
@@ -1334,7 +1250,7 @@
               const badgeTone = SUBJECT_BADGE_TONES[subject.id] || 'bg-slate-100 text-slate-700 border-slate-200';
               return `
                 <article
-                  class="stack-card shelf-cubby group flex flex-col items-center animate-rise"
+                  class="stack-card group flex flex-col items-center animate-rise focus:outline-none"
                   style="animation-delay: ${idx * 65}ms"
                   tabindex="0"
                   role="button"
@@ -1355,7 +1271,7 @@
                     </div>
                   </div>
 
-                  <div class="shelf-label mt-4 text-center">
+                  <div class="mt-4 text-center max-w-[270px]">
                     <h2 class="text-sm sm:text-[15px] font-semibold text-slate-900 group-hover:text-indigo-700 transition-colors leading-snug">
                       ${subject.order}. ${escapeHtml(subject.name)}
                     </h2>
@@ -1444,37 +1360,35 @@
             <button class="exam-filter-btn mt-3 px-3.5 py-1.5 text-xs font-medium bg-slate-900 text-white rounded-lg hover:bg-slate-800" data-filter="all">Show All</button>
           </div>
         ` : `
-          <div class="bookcase bookcase-papers">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             ${refs.map((ref, idx) => {
               const norm = normPaperCache.get(`${subject.id}:${ref.id}`);
               const refCode = (norm && norm.refCode) || `${subject.codePrefix}/${Math.floor(ref.year || 0)}`;
               const isLatestOverall = allRefs[0] && allRefs[0].id === ref.id;
               return `
-                <div class="shelf-cubby">
-                  <div
-                    class="year-paper-card animate-fan bg-[#fdfdfc] border border-slate-300 rounded-lg overflow-hidden cursor-pointer flex flex-col shadow-md"
-                    style="animation-delay: ${Math.min(idx, 10) * 55}ms"
-                    tabindex="0"
-                    role="button"
-                    data-paper-id="${escapeHtml(ref.id)}"
-                  >
-                    <div class="aspect-[1/1.38] w-full overflow-hidden relative">
-                      ${renderMiniPaperContent(subject, norm, ref)}
+                <div
+                  class="year-paper-card animate-fan bg-[#fdfdfc] border border-slate-300 rounded-lg overflow-hidden cursor-pointer flex flex-col shadow-md"
+                  style="animation-delay: ${Math.min(idx, 10) * 55}ms"
+                  tabindex="0"
+                  role="button"
+                  data-paper-id="${escapeHtml(ref.id)}"
+                >
+                  <div class="aspect-[1/1.38] w-full border-b border-slate-200 overflow-hidden relative">
+                    ${renderMiniPaperContent(subject, norm, ref)}
+                  </div>
+                  <div class="p-3 bg-white flex items-center justify-between gap-2">
+                    <div class="min-w-0">
+                      <div class="text-sm font-bold text-slate-900 flex items-center gap-1.5 flex-wrap">
+                        <span>${escapeHtml(ref.yearLabel || String(ref.year || ''))}</span>
+                        ${isLatestOverall ? `<span class="text-[10px] font-semibold px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-700 border border-indigo-200">Latest</span>` : ''}
+                        ${ref.hasSolutions ? `<span class="text-[10px] font-semibold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200">Solved</span>` : ''}
+                        ${ref.examType === 'Supplementary' ? `<span class="text-[10px] font-medium px-1.5 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200">Supplementary</span>` : ''}
+                      </div>
+                      <div class="text-[11px] text-slate-500 mono-font truncate">${escapeHtml(refCode)}</div>
+                      <div class="text-[10.5px] text-slate-500 mt-0.5">${ref.partCount || 2} Parts · ${ref.questionCount || 0} Qs</div>
                     </div>
-                    <div class="shelf-paper-details p-3 flex items-center justify-between gap-2">
-                      <div class="min-w-0">
-                        <div class="text-sm font-bold flex items-center gap-1.5 flex-wrap">
-                          <span>${escapeHtml(ref.yearLabel || String(ref.year || ''))}</span>
-                          ${isLatestOverall ? `<span class="text-[10px] font-semibold px-1.5 py-0.5 rounded bg-[#ead1a2] text-[#593711] border border-[#b78b48]">Latest</span>` : ''}
-                          ${ref.hasSolutions ? `<span class="text-[10px] font-semibold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200">Solved</span>` : ''}
-                          ${ref.examType === 'Supplementary' ? `<span class="text-[10px] font-medium px-1.5 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200">Supplementary</span>` : ''}
-                        </div>
-                        <div class="text-[11px] text-[#624a33] mono-font truncate">${escapeHtml(refCode)}</div>
-                        <div class="text-[10.5px] text-[#624a33] mt-0.5">${ref.partCount || 2} Parts · ${ref.questionCount || 0} Qs</div>
-                      </div>
-                      <div class="shelf-paper-arrow w-7 h-7 rounded-full flex items-center justify-center shrink-0">
-                        <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-                      </div>
+                    <div class="w-7 h-7 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center shrink-0">
+                      <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
                     </div>
                   </div>
                 </div>
