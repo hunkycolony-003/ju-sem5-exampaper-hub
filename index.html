@@ -7,6 +7,25 @@
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ju: {
+              50: '#fff3f5',
+              100: '#ffe4e9',
+              200: '#f9c7d2',
+              500: '#cb2448',
+              600: '#bc082b',
+              700: '#9e0826',
+              800: '#7f1025'
+            }
+          }
+        }
+      }
+    };
+  </script>
   <!-- KaTeX for rendering equations -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous" />
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
@@ -36,7 +55,7 @@
       padding-right: env(safe-area-inset-right);
       -webkit-tap-highlight-color: transparent;
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: #f1f3f6;
+      background-color: #e3e8ef;
       overflow-x: hidden;
     }
     .overflow-y-auto, .overflow-x-auto {
@@ -116,8 +135,8 @@
     .stack-card:hover .stack-sheet.front,
     .stack-card:focus-visible .stack-sheet.front {
       transform: translateY(-10px) scale(1.018);
-      border-color: #6366f1;
-      box-shadow: 0 22px 38px -12px rgba(79, 70, 229, 0.22), 0 6px 14px rgba(0,0,0,0.08);
+      border-color: #bc082b;
+      box-shadow: 0 22px 38px -12px rgba(188, 8, 43, 0.18), 0 6px 14px rgba(0,0,0,0.08);
     }
 
     /* Year Paper Card (Paper Selection View) */
@@ -126,8 +145,8 @@
     }
     .year-paper-card:hover {
       transform: translateY(-8px) rotate(-0.6deg);
-      box-shadow: 0 20px 34px -12px rgba(79, 70, 229, 0.22), 0 4px 12px rgba(0,0,0,0.08);
-      border-color: #6366f1;
+      box-shadow: 0 20px 34px -12px rgba(188, 8, 43, 0.18), 0 4px 12px rgba(0,0,0,0.08);
+      border-color: #bc082b;
     }
 
     @keyframes riseIn {
@@ -187,7 +206,7 @@
     }
     .question-row:hover {
       background-color: #ffffff;
-      border-left-color: #6366f1;
+      border-left-color: #bc082b;
       box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.05);
     }
     .question-row.status-mastered {
@@ -309,22 +328,28 @@
 <body class="text-slate-800 min-h-screen flex flex-col antialiased">
 
   <!-- TOP HEADER -->
-  <header class="bg-white text-slate-900 sticky top-0 z-40 border-b border-slate-200">
+  <header class="bg-white text-slate-900 sticky top-0 z-40 border-b border-ju-600">
+    <div class="bg-ju-600 text-white">
+      <div class="max-w-6xl mx-auto px-3 sm:px-5 h-6 flex items-center justify-between gap-3 text-[11px] font-semibold">
+        <span>Jadavpur University</span>
+        <span>2022–2026</span>
+      </div>
+    </div>
     <div class="max-w-6xl mx-auto px-3 sm:px-5 min-h-14 py-1.5 flex items-center justify-between gap-3">
-      <button id="nav-home-btn" class="min-w-0 flex-1 sm:flex-initial rounded text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600">
-        <span class="block text-sm sm:text-base font-semibold tracking-tight leading-tight">JU EE Question Paper Vault</span>
-        <span class="hidden sm:block text-[11px] text-slate-500 mt-0.5">Jadavpur University · B.E. Electrical Engineering · 3rd Yr Sem I · 2022–2026</span>
+      <button id="nav-home-btn" class="min-w-0 flex-1 sm:flex-initial rounded text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ju-600">
+        <span class="block paper-font text-lg sm:text-2xl font-bold tracking-tight leading-none">JU EE Question Paper Vault</span>
+        <span class="hidden sm:block text-[11px] text-slate-500 mt-0.5">B.E. Electrical Engineering · Third Year, First Semester</span>
       </button>
 
       <div class="flex items-center gap-2 shrink-0">
         <div id="home-search-wrap" class="relative hidden">
-          <i data-lucide="search" class="w-3.5 h-3.5 text-slate-500 absolute left-2.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+          <i data-lucide="search" class="w-3.5 h-3.5 text-[#3d61b9] absolute left-2.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
           <input
             id="subject-search"
             type="search"
             aria-label="Filter subjects or codes"
             placeholder="Filter subjects"
-            class="pl-8 pr-2 py-1.5 text-xs bg-slate-50 text-slate-900 placeholder:text-slate-500 border border-slate-200 rounded-md w-28 sm:w-48 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            class="pl-8 pr-2 py-1.5 text-xs bg-slate-50 text-slate-900 placeholder:text-slate-500 border border-slate-200 rounded-md w-28 sm:w-48 focus:outline-none focus:ring-2 focus:ring-ju-500"
           />
         </div>
 
@@ -348,7 +373,7 @@
 
         <!-- DeepSeek Config (Paper View) -->
         <button id="header-deepseek-btn" onclick="openApiModal()" class="hidden items-center space-x-1.5 px-2.5 py-1.5 bg-white hover:bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700 transition shrink-0">
-          <i data-lucide="bot" class="w-3.5 h-3.5 text-indigo-600"></i>
+          <i data-lucide="bot" class="w-3.5 h-3.5 text-ju-600"></i>
           <span class="hidden lg:inline">DeepSeek AI</span>
         </button>
       </div>
@@ -356,12 +381,12 @@
   </header>
 
   <!-- SUBHEADER TOOLBAR (Shown in Paper View: Breadcrumb, Year Pills, Choice Tracker) -->
-  <div id="paper-toolbar" class="hidden bg-white border-b border-slate-200 sticky top-14 z-30 shadow-xs top-toolbar">
+  <div id="paper-toolbar" class="hidden bg-white border-b border-slate-200 sticky top-[81px] z-30 shadow-xs top-toolbar">
     <div class="max-w-6xl mx-auto px-3 sm:px-5 py-2 flex flex-wrap items-center justify-between gap-2 text-xs">
       <div class="flex items-center space-x-1.5 min-w-0 max-w-full flex-wrap gap-y-1">
-        <button id="toolbar-back-home" class="text-slate-500 hover:text-indigo-600 font-medium transition shrink-0">Subjects</button>
+        <button id="toolbar-back-home" class="text-slate-500 hover:text-ju-600 font-medium transition shrink-0">Subjects</button>
         <span class="text-slate-300 shrink-0">/</span>
-        <button id="toolbar-back-subject" class="text-slate-700 hover:text-indigo-600 font-semibold truncate max-w-[160px] sm:max-w-[230px] transition"></button>
+        <button id="toolbar-back-subject" class="text-slate-700 hover:text-ju-600 font-semibold truncate max-w-[160px] sm:max-w-[230px] transition"></button>
         <span class="text-slate-300 hidden sm:inline shrink-0">|</span>
         <div id="paper-year-pills" class="flex items-center gap-1 overflow-x-auto max-w-full py-0.5"></div>
       </div>
@@ -391,7 +416,7 @@
       <!-- Drawer Header -->
       <div class="px-4 sm:px-6 py-3 sm:py-4 bg-slate-900 text-white flex items-center justify-between border-b border-slate-800 shrink-0 gap-2">
         <div class="flex items-center space-x-2 sm:space-x-3 min-w-0">
-          <span id="drawer-q-badge" class="bg-indigo-600 text-white text-xs font-mono font-bold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded shrink-0">Q1</span>
+          <span id="drawer-q-badge" class="bg-ju-600 text-white text-xs font-mono font-bold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded shrink-0">Q1</span>
           <div class="min-w-0">
             <h3 id="drawer-q-title" class="font-bold text-xs sm:text-base text-white truncate max-w-[140px] sm:max-w-xs md:max-w-lg">Question</h3>
             <p id="drawer-q-meta" class="text-[10px] sm:text-xs text-slate-400 truncate">Marks • Part I</p>
@@ -422,14 +447,14 @@
 
       <!-- Drawer Tabs -->
       <div class="flex border-b border-slate-200 bg-slate-50 px-3 sm:px-6 pt-1.5 sm:pt-2 shrink-0 gap-1">
-        <button id="tab-sol-btn" onclick="switchDrawerTab('solution')" class="py-2 sm:py-2.5 px-2.5 sm:px-4 font-semibold text-xs border-b-2 border-indigo-600 text-indigo-600 flex items-center space-x-1 sm:space-x-1.5">
+        <button id="tab-sol-btn" onclick="switchDrawerTab('solution')" class="py-2 sm:py-2.5 px-2.5 sm:px-4 font-semibold text-xs border-b-2 border-ju-600 text-ju-600 flex items-center space-x-1 sm:space-x-1.5">
           <i data-lucide="file-check-2" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
           <span><span class="hidden sm:inline">Exam-Ready </span>Solution<span class="hidden md:inline"> &amp; Slide Ref</span></span>
         </button>
         <button id="tab-ai-btn" onclick="switchDrawerTab('ai')" class="py-2 sm:py-2.5 px-2.5 sm:px-4 font-semibold text-xs border-b-2 border-transparent text-slate-500 hover:text-slate-700 flex items-center space-x-1 sm:space-x-1.5">
-          <i data-lucide="bot" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-500"></i>
+          <i data-lucide="bot" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-ju-500"></i>
           <span>Ask DeepSeek<span class="hidden md:inline"> AI</span></span>
-          <span class="bg-indigo-100 text-indigo-700 text-[9px] sm:text-[10px] px-1.5 py-0.2 rounded-full font-bold">AI</span>
+          <span class="bg-ju-100 text-ju-700 text-[9px] sm:text-[10px] px-1.5 py-0.2 rounded-full font-bold">AI</span>
         </button>
       </div>
 
@@ -442,9 +467,9 @@
             <div class="flex items-center justify-between text-xs text-slate-500 font-mono mb-2 gap-2 flex-wrap">
               <span id="drawer-group-badge" class="font-bold text-slate-600 uppercase">Question Statement</span>
               <div class="flex items-center gap-2">
-                <button onclick="copyQuestionJson()" class="text-[11px] font-sans font-semibold text-slate-600 hover:text-indigo-700 bg-white border border-slate-200 px-2 py-0.5 rounded transition">Copy JSON</button>
-                <button onclick="copyQuestionLatex()" class="text-[11px] font-sans font-semibold text-slate-600 hover:text-indigo-700 bg-white border border-slate-200 px-2 py-0.5 rounded transition">Copy LaTeX</button>
-                <span id="drawer-statement-marks" class="font-bold text-indigo-700 bg-indigo-50 border border-indigo-200 px-2 py-0.5 rounded">10 Marks</span>
+                <button onclick="copyQuestionJson()" class="text-[11px] font-sans font-semibold text-slate-600 hover:text-ju-700 bg-white border border-slate-200 px-2 py-0.5 rounded transition">Copy JSON</button>
+                <button onclick="copyQuestionLatex()" class="text-[11px] font-sans font-semibold text-slate-600 hover:text-ju-700 bg-white border border-slate-200 px-2 py-0.5 rounded transition">Copy LaTeX</button>
+                <span id="drawer-statement-marks" class="font-bold text-ju-700 bg-ju-50 border border-ju-200 px-2 py-0.5 rounded">10 Marks</span>
               </div>
             </div>
             <div id="drawer-statement-text" class="q-rich-body leading-relaxed paper-font text-base text-slate-900"></div>
@@ -489,7 +514,7 @@
                   Model Exam Solution (Directly Writable in Exam Script)
                 </h4>
               </div>
-              <button onclick="copySolutionText()" class="text-xs text-indigo-600 hover:text-indigo-800 font-semibold flex items-center space-x-1 px-2.5 py-1 bg-white border border-slate-200 rounded-md shadow-xs transition">
+              <button onclick="copySolutionText()" class="text-xs text-ju-600 hover:text-ju-800 font-semibold flex items-center space-x-1 px-2.5 py-1 bg-white border border-slate-200 rounded-md shadow-xs transition">
                 <i data-lucide="copy" class="w-3.5 h-3.5"></i>
                 <span>Copy</span>
               </button>
@@ -512,8 +537,8 @@
 
         <!-- TAB 2: LIVE DEEPSEEK AI CHAT -->
         <div id="tab-ai-content" class="hidden max-w-4xl mx-auto flex flex-col h-full space-y-4">
-          <div class="bg-indigo-50/70 border border-indigo-100 p-3.5 rounded-lg text-xs text-slate-600 flex items-start space-x-2.5">
-            <i data-lucide="info" class="w-4 h-4 text-indigo-600 mt-0.5 shrink-0"></i>
+          <div class="bg-ju-50/70 border border-ju-100 p-3.5 rounded-lg text-xs text-slate-600 flex items-start space-x-2.5">
+            <i data-lucide="info" class="w-4 h-4 text-ju-600 mt-0.5 shrink-0"></i>
             <div>
               <p class="font-semibold text-slate-800">Contextual Tutor Mode</p>
               <p>DeepSeek is pre-loaded with this exact exam question and any available note references. Ask for step-by-step derivations or alternative numerical variants.</p>
@@ -522,13 +547,13 @@
 
           <div id="chat-messages" class="space-y-3 min-h-[300px] max-h-[420px] overflow-y-auto p-4 bg-slate-50 rounded-xl border border-slate-200">
             <div class="flex items-start space-x-2">
-              <div class="w-7 h-7 rounded-full bg-indigo-600 text-white flex items-center justify-center shrink-0 text-xs font-bold shadow-xs">AI</div>
+              <div class="w-7 h-7 rounded-full bg-ju-600 text-white flex items-center justify-center shrink-0 text-xs font-bold shadow-xs">AI</div>
               <div class="p-3.5 bg-white rounded-xl border border-slate-200 text-xs leading-relaxed text-slate-800 shadow-xs max-w-[88%]">
                 Hello! Ask me anything regarding this question or try one of these shortcuts:
                 <div class="mt-3 space-y-1.5">
-                  <button onclick="sendQuickPrompt('Explain this in simple terms for full marks')" class="block text-left text-indigo-600 hover:underline">👉 "Explain this in simple terms for full marks"</button>
-                  <button onclick="sendQuickPrompt('What are common mistakes students make in this question?')" class="block text-left text-indigo-600 hover:underline">👉 "What are common mistakes students make in this question?"</button>
-                  <button onclick="sendQuickPrompt('Provide a quick numerical or code variation for practice')" class="block text-left text-indigo-600 hover:underline">👉 "Provide a quick numerical or code variation for practice"</button>
+                  <button onclick="sendQuickPrompt('Explain this in simple terms for full marks')" class="block text-left text-ju-600 hover:underline">👉 "Explain this in simple terms for full marks"</button>
+                  <button onclick="sendQuickPrompt('What are common mistakes students make in this question?')" class="block text-left text-ju-600 hover:underline">👉 "What are common mistakes students make in this question?"</button>
+                  <button onclick="sendQuickPrompt('Provide a quick numerical or code variation for practice')" class="block text-left text-ju-600 hover:underline">👉 "Provide a quick numerical or code variation for practice"</button>
                 </div>
               </div>
             </div>
@@ -536,8 +561,8 @@
 
           <div class="pt-2">
             <div class="flex space-x-2">
-              <input type="text" id="chat-input" placeholder="Ask DeepSeek about this question..." class="flex-1 text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-xs" onkeydown="if(event.key==='Enter') sendMessage()" />
-              <button id="chat-send-btn" onclick="sendMessage()" class="px-4 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-semibold flex items-center space-x-1 shadow transition">
+              <input type="text" id="chat-input" placeholder="Ask DeepSeek about this question..." class="flex-1 text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-ju-500 shadow-xs" onkeydown="if(event.key==='Enter') sendMessage()" />
+              <button id="chat-send-btn" onclick="sendMessage()" class="px-4 py-2.5 bg-ju-600 hover:bg-ju-700 text-white rounded-xl text-xs font-semibold flex items-center space-x-1 shadow transition">
                 <span>Send</span>
                 <i data-lucide="send" class="w-3.5 h-3.5"></i>
               </button>
@@ -572,7 +597,7 @@
     <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl border border-slate-200">
       <div class="flex items-center justify-between mb-4">
         <div class="flex items-center space-x-2">
-          <div class="p-2 bg-indigo-100 text-indigo-700 rounded-lg">
+          <div class="p-2 bg-ju-100 text-ju-700 rounded-lg">
             <i data-lucide="key" class="w-5 h-5"></i>
           </div>
           <h3 class="font-bold text-base text-slate-900">DeepSeek API Configuration</h3>
@@ -583,17 +608,17 @@
       </div>
 
       <p class="text-xs text-slate-600 mb-4 leading-relaxed">
-        Enter your DeepSeek API key below. It will be stored locally in your browser's <code class="mono-font bg-slate-100 px-1 py-0.5 rounded text-indigo-600">localStorage</code>.
+        Enter your DeepSeek API key below. It will be stored locally in your browser's <code class="mono-font bg-slate-100 px-1 py-0.5 rounded text-ju-600">localStorage</code>.
       </p>
 
       <div class="space-y-3">
         <div>
           <label class="block text-xs font-semibold text-slate-700 mb-1">DeepSeek API Key:</label>
-          <input type="password" id="input-api-key" placeholder="sk-..." class="w-full text-xs mono-font px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+          <input type="password" id="input-api-key" placeholder="sk-..." class="w-full text-xs mono-font px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-ju-500" />
         </div>
         <div>
           <label class="block text-xs font-semibold text-slate-700 mb-1">Selected Model:</label>
-          <select id="input-api-model" class="w-full text-xs px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          <select id="input-api-model" class="w-full text-xs px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-ju-500">
             <option value="deepseek-chat">deepseek-chat (DeepSeek-V3: Fast &amp; Economical)</option>
             <option value="deepseek-reasoner">deepseek-reasoner (DeepSeek-R1: Deep Chain-of-Thought)</option>
           </select>
@@ -602,7 +627,7 @@
 
       <div class="mt-6 flex justify-end space-x-2">
         <button onclick="closeApiModal()" class="px-4 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-100 rounded-lg transition">Cancel</button>
-        <button onclick="saveApiKey()" class="px-4 py-2 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg shadow transition">Save Key</button>
+        <button onclick="saveApiKey()" class="px-4 py-2 text-xs font-semibold text-white bg-ju-600 hover:bg-ju-700 rounded-lg shadow transition">Save Key</button>
       </div>
     </div>
   </div>
@@ -634,7 +659,7 @@
       em3: 'bg-amber-50 text-amber-900 border-amber-200',
       lcs: 'bg-sky-50 text-sky-800 border-sky-200',
       pe: 'bg-rose-50 text-rose-800 border-rose-200',
-      plm: 'bg-indigo-50 text-indigo-800 border-indigo-200'
+      plm: 'bg-ju-50 text-ju-800 border-ju-200'
     };
 
     // =========================================================================
@@ -1227,10 +1252,10 @@
         <section class="mb-7 sm:mb-9 flex flex-wrap items-center justify-between gap-3">
           <div>
             <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white border border-slate-300 text-[11px] font-medium text-slate-700 shadow-2xs mb-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-ju-600"></span>
               <span>${dbIndex.subjects.length} Subjects · ${totalPapers} Papers</span>
             </div>
-            <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">Question Paper Vault</h1>
+            <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-ju-700">Question Paper Vault</h1>
           </div>
         </section>
 
@@ -1272,7 +1297,7 @@
                   </div>
 
                   <div class="mt-4 text-center max-w-[270px]">
-                    <h2 class="text-sm sm:text-[15px] font-semibold text-slate-900 group-hover:text-indigo-700 transition-colors leading-snug">
+                    <h2 class="text-sm sm:text-[15px] font-semibold text-slate-900 group-hover:text-ju-700 transition-colors leading-snug">
                       ${subject.order}. ${escapeHtml(subject.name)}
                     </h2>
                     <div class="mt-1 text-[10.5px] mono-font text-slate-500">${escapeHtml(subject.codePrefix)}</div>
@@ -1328,7 +1353,7 @@
       main.innerHTML = `
         <div class="mb-6 flex flex-wrap items-center justify-between gap-3">
           <div>
-            <button id="back-to-home" class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-600 hover:text-indigo-700 transition-colors mb-2">
+            <button id="back-to-home" class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-600 hover:text-ju-700 transition-colors mb-2">
               <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
               <span>All Subjects</span>
             </button>
@@ -1380,7 +1405,7 @@
                     <div class="min-w-0">
                       <div class="text-sm font-bold text-slate-900 flex items-center gap-1.5 flex-wrap">
                         <span>${escapeHtml(ref.yearLabel || String(ref.year || ''))}</span>
-                        ${isLatestOverall ? `<span class="text-[10px] font-semibold px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-700 border border-indigo-200">Latest</span>` : ''}
+                        ${isLatestOverall ? `<span class="text-[10px] font-semibold px-1.5 py-0.5 rounded bg-ju-50 text-ju-700 border border-ju-200">Latest</span>` : ''}
                         ${ref.hasSolutions ? `<span class="text-[10px] font-semibold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200">Solved</span>` : ''}
                         ${ref.examType === 'Supplementary' ? `<span class="text-[10px] font-medium px-1.5 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200">Supplementary</span>` : ''}
                       </div>
@@ -1437,7 +1462,7 @@
           <button
             onclick="openPaper('${escapeHtml(currentSubject.id)}', '${escapeHtml(p.id)}')"
             class="shrink-0 px-2.5 py-1 rounded-md text-[11px] font-semibold transition ${
-              active ? 'bg-slate-900 text-white shadow-2xs' : 'bg-slate-100 text-slate-700 hover:bg-indigo-50 hover:text-indigo-700'
+              active ? 'bg-slate-900 text-white shadow-2xs' : 'bg-slate-100 text-slate-700 hover:bg-ju-50 hover:text-ju-700'
             }"
           >${escapeHtml(p.yearLabel || String(p.year || ''))}</button>
         `;
@@ -1620,7 +1645,7 @@
                 </div>
               </div>
 
-              <div class="shrink-0 pt-1 text-slate-400 group-hover:text-indigo-600 transition">
+              <div class="shrink-0 pt-1 text-slate-400 group-hover:text-ju-600 transition">
                 <i data-lucide="chevron-right" class="w-5 h-5"></i>
               </div>
             </div>
@@ -1862,12 +1887,12 @@
       const aiContent = document.getElementById('tab-ai-content');
 
       if (tab === 'solution') {
-        solBtn.className = 'py-2 sm:py-2.5 px-2.5 sm:px-4 font-semibold text-xs border-b-2 border-indigo-600 text-indigo-600 flex items-center space-x-1 sm:space-x-1.5';
+        solBtn.className = 'py-2 sm:py-2.5 px-2.5 sm:px-4 font-semibold text-xs border-b-2 border-ju-600 text-ju-600 flex items-center space-x-1 sm:space-x-1.5';
         aiBtn.className = 'py-2 sm:py-2.5 px-2.5 sm:px-4 font-semibold text-xs border-b-2 border-transparent text-slate-500 hover:text-slate-700 flex items-center space-x-1 sm:space-x-1.5';
         solContent.classList.remove('hidden');
         aiContent.classList.add('hidden');
       } else {
-        aiBtn.className = 'py-2 sm:py-2.5 px-2.5 sm:px-4 font-semibold text-xs border-b-2 border-indigo-600 text-indigo-600 flex items-center space-x-1 sm:space-x-1.5';
+        aiBtn.className = 'py-2 sm:py-2.5 px-2.5 sm:px-4 font-semibold text-xs border-b-2 border-ju-600 text-ju-600 flex items-center space-x-1 sm:space-x-1.5';
         solBtn.className = 'py-2 sm:py-2.5 px-2.5 sm:px-4 font-semibold text-xs border-b-2 border-transparent text-slate-500 hover:text-slate-700 flex items-center space-x-1 sm:space-x-1.5';
         solContent.classList.add('hidden');
         aiContent.classList.remove('hidden');
@@ -1988,12 +2013,12 @@ Provide precise, mathematically rigorous, exam-focused responses in clean Markdo
 
       if (isUser) {
         msgDiv.innerHTML = `
-          <div class="p-3 bg-indigo-600 text-white rounded-xl text-xs leading-relaxed max-w-[85%] shadow-xs">${escapeHtml(content)}</div>
+          <div class="p-3 bg-ju-600 text-white rounded-xl text-xs leading-relaxed max-w-[85%] shadow-xs">${escapeHtml(content)}</div>
           <div class="w-6 h-6 rounded-full bg-slate-800 text-white flex items-center justify-center shrink-0 text-xs font-bold">You</div>
         `;
       } else {
         msgDiv.innerHTML = `
-          <div class="w-6 h-6 rounded-full bg-indigo-600 text-white flex items-center justify-center shrink-0 text-xs font-bold shadow-xs">AI</div>
+          <div class="w-6 h-6 rounded-full bg-ju-600 text-white flex items-center justify-center shrink-0 text-xs font-bold shadow-xs">AI</div>
           <div class="p-3.5 bg-white rounded-xl border border-slate-200 text-xs leading-relaxed text-slate-800 shadow-xs max-w-[85%] prose prose-xs">
             ${marked.parse(content)}
           </div>
