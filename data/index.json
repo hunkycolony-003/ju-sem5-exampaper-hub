@@ -1,0 +1,175 @@
+{
+  "schemaVersion": "1.0",
+  "university": "Jadavpur University",
+  "program": "B.E. Electrical Engineering · 3rd Year 1st Semester",
+  "assetsDir": "data/assets",
+  "updatedAt": "2026-11-26T18:18:10+00:00",
+  "subjects": [
+    {
+      "order": 1,
+      "id": "pspd",
+      "codePrefix": "Ex/EE/PC/B/T/312",
+      "name": "Power System Planning & Design",
+      "paperTitle": "POWER SYSTEM PLANNING & DESIGN",
+      "papers": []
+    },
+    {
+      "order": 2,
+      "id": "ispm",
+      "codePrefix": "Ex/EE/PC/B/T/315",
+      "name": "Introduction to Statistical and Probabilistic Methods",
+      "paperTitle": "INTRODUCTION TO STATISTICAL AND PROBABILISTIC METHODS",
+      "papers": []
+    },
+    {
+      "order": 3,
+      "id": "em3",
+      "codePrefix": "Ex/EE/PC/B/T/311",
+      "name": "Electrical Machine - III",
+      "paperTitle": "ELECTRICAL MACHINE - III",
+      "papers": []
+    },
+    {
+      "order": 4,
+      "id": "lcs",
+      "codePrefix": "Ex/EE/PC/B/T/313",
+      "name": "Linear Control System",
+      "paperTitle": "LINEAR CONTROL SYSTEM",
+      "papers": []
+    },
+    {
+      "order": 5,
+      "id": "pe",
+      "codePrefix": "Ex/EE/PC/B/T/314",
+      "name": "Power Electronics",
+      "paperTitle": "POWER ELECTRONICS",
+      "papers": []
+    },
+    {
+      "order": 6,
+      "id": "plm",
+      "codePrefix": "Ex/EE/PC/B/T/316",
+      "name": "Prog. Logic & Microcontroller",
+      "paperTitle": "PROGRAMMABLE LOGIC & MICROCONTROLLER",
+      "papers": [
+        {
+          "id": "plm-2025",
+          "year": 2025,
+          "sortKey": 2025.0,
+          "yearLabel": "2025",
+          "examType": "Regular",
+          "sourcePdf": "2025 - Programmable Logic & Microcontroller.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 27,
+          "path": "data/papers/plm/2025.json"
+        },
+        {
+          "id": "plm-2024",
+          "year": 2024,
+          "sortKey": 2024.2,
+          "yearLabel": "2024",
+          "examType": "Regular",
+          "sourcePdf": "2024 - Programmable Logic & Microcontroller.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 23,
+          "path": "data/papers/plm/2024.json"
+        },
+        {
+          "id": "plm-2024s",
+          "year": 2024,
+          "sortKey": 2024.1,
+          "yearLabel": "2024 (S)",
+          "examType": "Supplementary",
+          "sourcePdf": "2024 - Programmable logic and Microcontroller S.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 18,
+          "path": "data/papers/plm/2024s.json"
+        },
+        {
+          "id": "plm-2023-solved",
+          "year": 2023,
+          "sortKey": 2023.1,
+          "yearLabel": "2023 (Solved)",
+          "examType": "Annotated",
+          "sourcePdf": "2023 Examination Archive",
+          "hasDiagram": false,
+          "hasSolutions": true,
+          "partCount": 2,
+          "questionCount": 14,
+          "path": "data/paper_2023.json"
+        },
+        {
+          "id": "plm-2023",
+          "year": 2023,
+          "sortKey": 2023.0,
+          "yearLabel": "2023",
+          "examType": "Regular",
+          "sourcePdf": "2023 - Programmable Logic & Microcontroller.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 20,
+          "path": "data/papers/plm/2023.json"
+        },
+        {
+          "id": "plm-2019",
+          "year": 2019,
+          "sortKey": 2019.0,
+          "yearLabel": "2019",
+          "examType": "Regular",
+          "sourcePdf": "2019 - Programmable Logic & Microcontroller.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 44,
+          "path": "data/papers/plm/2019.json"
+        },
+        {
+          "id": "plm-2018",
+          "year": 2018,
+          "sortKey": 2018.0,
+          "yearLabel": "2018",
+          "examType": "Regular",
+          "sourcePdf": "2018 - Programmable Logic & Microcontroller.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 15,
+          "path": "data/papers/plm/2018.json"
+        },
+        {
+          "id": "plm-2017_plm",
+          "year": 2017,
+          "sortKey": 2017.1,
+          "yearLabel": "2017 (S)",
+          "examType": "Supplementary",
+          "sourcePdf": "2017 - Programmable Logic & Microcontroller.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 14,
+          "path": "data/papers/plm/2017_plm.json"
+        },
+        {
+          "id": "plm-2017_mc",
+          "year": 2017,
+          "sortKey": 2017.0,
+          "yearLabel": "2017 (MC)",
+          "examType": "Supplementary",
+          "sourcePdf": "2017 - Microprocessors and Microcontrollers.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 2,
+          "questionCount": 17,
+          "path": "data/papers/plm/2017_mc.json"
+        }
+      ]
+    }
+  ]
+}

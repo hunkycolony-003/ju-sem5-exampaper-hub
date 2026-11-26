@@ -1,0 +1,393 @@
+{
+  "id": "plm-2025",
+  "subjectId": "plm",
+  "year": 2025,
+  "sortKey": 2025.0,
+  "yearLabel": "2025",
+  "examType": "Regular",
+  "sourcePdf": "2025 - Programmable Logic & Microcontroller.pdf",
+  "hasDiagram": false,
+  "parts": [
+    {
+      "partLabel": "PART I",
+      "refCode": "Ex/EE/PC/T/316/2025",
+      "headerLines": [
+        "B. E. ELECTRICAL ENGINEERING 3RD YR 1ST SEMESTER EXAMINATION, 2025",
+        "SUBJECT: - PROGRAMMABLE LOGIC & MICROCONTROLLER"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Answer question no. 1 and any two from the rest of the questions.",
+      "sharedNote": null,
+      "footerNote": "[ Turn over",
+      "rows": [
+        {
+          "kind": "group",
+          "label": "1. Answer any FIVE. (5×4)"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "PLA Input Buffers",
+          "textLatex": "Why buffers are used at the input side of PLA?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p1-1a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Configurable Hardware Switching Techniques",
+          "textLatex": "Name different switching techniques employed in configurable hardware.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p1-1b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(c)",
+          "marks": "4",
+          "co": null,
+          "topic": "Out-of-Board vs In-System Programming (ISP)",
+          "textLatex": "'Out of Board Programming is always desired compared to In-System Programming'- Justify in favour of or against the statement.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p1-1c",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(d)",
+          "marks": "4",
+          "co": null,
+          "topic": "ROM as PLD",
+          "textLatex": "How can ROM be used as PLD?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p1-1d",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(e)",
+          "marks": "4",
+          "co": null,
+          "topic": "SPLD vs CPLD",
+          "textLatex": "Distinguish between SPLDs and CPLDs.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p1-1e",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(f)",
+          "marks": "4",
+          "co": null,
+          "topic": "ASIC Fundamentals",
+          "textLatex": "What is an ASIC?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p1-1f",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(g)",
+          "marks": "4",
+          "co": null,
+          "topic": "VHDL IEEE Standard Logic States",
+          "textLatex": "What are the different logic states available in VHDL as per IEEE standard?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p1-1g",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "7",
+          "co": null,
+          "topic": "Macrocell Architecture & Output Modes",
+          "textLatex": "Explain with proper circuit diagram, how a single macrocell can be used to implement various outputs.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p1-2a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "SRAM Cell Structure & Functionality",
+          "textLatex": "Describe the structure and functionality of SRAM cell with proper diagram.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p1-2b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "10",
+          "co": null,
+          "topic": "Programmable Array Logic (PAL) Operation",
+          "textLatex": "Illustrate with relevant circuits the operation of a PAL device.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p1-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "5",
+          "co": null,
+          "topic": "Programmable OR Matrix",
+          "textLatex": "Draw neatly an OR matrix and show how different minterms can be ORed.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p1-3b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "10",
+          "co": null,
+          "topic": "Commercial FPGA Chip Architecture",
+          "textLatex": "Describe with neat circuit diagram, the functionality of a commercially available FPGA chip.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p1-4a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "5",
+          "co": null,
+          "topic": "PLA Implementation of 3-Bit Odd Parity Generator",
+          "textLatex": "Develop and show the programmed structure of a PLA implementing an odd parity generator of 3-bit input.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p1-4b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(a)",
+          "marks": "9",
+          "co": null,
+          "topic": "VHDL 2-to-4 Decoder & Testbench",
+          "textLatex": "Write in VHDL a complete program of 2-to-4 Decoder, along with its test bench program.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p1-5a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "VHDL OR Gate & Testbench",
+          "textLatex": "Develop a program in VHDL to develop an OR gate. Write a testbench program to test it.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p1-5b",
+          "images": []
+        }
+      ]
+    },
+    {
+      "partLabel": "PART II",
+      "refCode": "EX/EE/PC/B/T/316/2025",
+      "headerLines": [
+        "B. E. ELECTRICAL ENGINEERING 3RD YEAR 1ST SEMESTER EXAMINATION 2025",
+        "SUBJECT: - PROGRAMMABLE LOGIC AND MICROCONTROLLER"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": null,
+      "sharedNote": null,
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "group",
+          "label": "1. Compare (any TWO): (5+5)"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "5",
+          "co": "CO1-K1",
+          "topic": "Harvard vs Princeton Architecture",
+          "textLatex": "Harvard architecture and Princeton architecture",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p2-1a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "5",
+          "co": "CO1-K1",
+          "topic": "Volatile vs Non-Volatile Memory",
+          "textLatex": "Volatile memory and Non-volatile memory",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p2-1b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(c)",
+          "marks": "5",
+          "co": "CO1-K1",
+          "topic": "RISC vs CISC Processing Technology",
+          "textLatex": "RISC and CISC technology of processing",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p2-1c",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "10",
+          "co": "CO2-K1",
+          "topic": "AVR On-Chip Timer/Counter Control Registers",
+          "textLatex": "What are the name of registers associated with on-chip timers and counters? How do they control operations of timer and counter? Explain with appropriate bit format of registers and functionality of each of the bits in an organized manner.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p2-2a",
+          "images": []
+        },
+        {
+          "kind": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "10",
+          "co": "CO2-K1",
+          "topic": "AVR DDR & PIN Registers",
+          "textLatex": "Explain the functionality of Data Direction Register (DDR) and Port Input Register (PIN) with appropriate circuit diagram.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p2-2b",
+          "images": []
+        },
+        {
+          "kind": "group",
+          "label": "3. Write program (any TWO) to implement the following tasks: (2×5=10)"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "5",
+          "co": "CO3",
+          "topic": "AVR Port I/O & Switch-Controlled LEDs",
+          "textLatex": "Eight LEDs are connected to eight pins of a port. Read a switch. If the switch is HIGH, turn on four alternate LEDs. If the switch is LOW, all the LEDs should blink visually.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p2-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "5",
+          "co": "CO3",
+          "topic": "AVR Analog Voltage Threshold & ASCII Output",
+          "textLatex": "A voltage in the scale $0\\text{--}5\\text{ V}$ is read. If the voltage is below $2.5\\text{ V}$, send the ASCII character L to PORTA. Otherwise send H to the port.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p2-3b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(c)",
+          "marks": "5",
+          "co": "CO3",
+          "topic": "AVR Bit-by-Bit Serial Port Transfer",
+          "textLatex": "Read a data through PORTB. Send it bit-by-bit though PC0, i.e., LSB of PORTC.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p2-3c",
+          "images": []
+        },
+        {
+          "kind": "group",
+          "label": "4. Answer any ONE: (1×10=10)"
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "10",
+          "co": "CO4-K3",
+          "topic": "AVR Timer-3 PWM / Pulse Generation (4 Hz, 60% Duty)",
+          "textLatex": "Write a program using Timer-3 to generate a pulse of $4\\text{ Hz}$ at a duty cycle of $60\\%$. Explain your solution stating necessary assumptions and clarification.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p2-4a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "10",
+          "co": "CO4-K3",
+          "topic": "AVR Interrupt-Driven ADC & Concurrent LED Blinking",
+          "textLatex": "Write a program to read analog data through channel-1 of the ADC of AVR. The analog data, after conversion to digital equivalent, should be sent to PORTA. Use $5\\text{ V}$ as reference and configure ADC clock at $125\\text{ kHz}$. ADC needs to be set in interrupt driven mode. The main program is used to blink LED at a rate of $100\\text{ Hz}$. Explain your solution.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p2-4b",
+          "images": []
+        },
+        {
+          "kind": "group",
+          "label": "5. Answer any ONE: (1×10=10)"
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(a)",
+          "marks": "10",
+          "co": "CO5-K4",
+          "topic": "AVR Timer and Counter Flags",
+          "textLatex": "Write short note on:<br>Flags of timer and counter",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p2-5a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(b)",
+          "marks": "10",
+          "co": "CO5-K4",
+          "topic": "AVR Motor Field Pulse Train & Power Failure Alarm",
+          "textLatex": "To run a motor its field winding is energized with a pulse train. The pulse is generated at a frequency and a duty cycle of $20\\text{ Hz}$ and $80\\%$, respectively, through PORTD.7. A pin PORTD.0 is used to scan the power line continuously. If there is a power failure, the pin reads 1. Consequently a buzzer connected to PORTB.0 generates alarm. The buzzer is active low. Write a program to implement the task mentioned above.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2025-p2-5b",
+          "images": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "id": "plm-2024s",
+  "subjectId": "plm",
+  "year": 2024,
+  "sortKey": 2024.1,
+  "yearLabel": "2024 (S)",
+  "examType": "Supplementary",
+  "sourcePdf": "2024 - Programmable logic and Microcontroller S.pdf",
+  "hasDiagram": false,
+  "parts": [
+    {
+      "partLabel": "PART I",
+      "refCode": "Ex/EE/PC/B/T/316/2024(S)",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING THIRD YEAR FIRST SEMESTER SUPPLEMENTARY EXAMINATION- 2024",
+        "PROGRAMMABLE LOGIC & MICROCONTROLLER"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Answer any FIVE:",
+      "sharedNote": null,
+      "footerNote": "[ Turn over",
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.",
+          "marks": "10",
+          "co": null,
+          "topic": "PLA AND-Matrix & PLA vs PAL",
+          "textLatex": "Illustrate with relevant circuits the principle of operation of an AND-matrix within a PLA device. State the differences between PLA and PAL",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024s-p1-1",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.",
+          "marks": "10",
+          "co": null,
+          "topic": "PLA Full-Adder Circuit Implementation",
+          "textLatex": "Using a diode-based AND matrix and transistorized OR matrix, draw a complete circuit to implement a full-adder block. Explain your solution.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024s-p1-2",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.",
+          "marks": "2+4+4",
+          "co": null,
+          "topic": "PLD Switching, IC Speed & CPLD Programming",
+          "textLatex": "Name different switching technologies used in PLD.<br>What are the factors on which speed of an IC chip depends?<br>What are the programming techniques available for CPLDs? Discuss briefly.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024s-p1-3",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.",
+          "marks": "10",
+          "co": null,
+          "topic": "Altera MAX7000 Architecture",
+          "textLatex": "Describe with neat circuit diagram, the functionality of Altera MAX7000 chip",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024s-p1-4",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.",
+          "marks": "4+6",
+          "co": null,
+          "topic": "SRAM Cell & Antifuse FPGA Switching",
+          "textLatex": "What are the merits and demerits of SRAM cell used in a programmable switch? Discuss the antifuse switching technology employed in FPGA with proper example.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024s-p1-5",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "6.",
+          "marks": "10",
+          "co": null,
+          "topic": "VHDL Tri-State Gate & Testbench",
+          "textLatex": "Develop a Tri-stated gate with proper test bench program in VHDL. Draw the timing diagrams for input and output signals.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024s-p1-6",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "7.",
+          "marks": "3+7",
+          "co": null,
+          "topic": "FPGA Lookup Table (LUT)",
+          "textLatex": "What is an LUT? How is it used to implement the logic function $f = ab + \\bar{c}$ in FPGA Structure?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024s-p1-7",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "8.",
+          "marks": "5+5",
+          "co": null,
+          "topic": "Macrocell & VHDL Logic States",
+          "textLatex": "Write short notes on:<br>a) Macrocell<br>b) different logic states available in VHDL",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024s-p1-8",
+          "images": []
+        }
+      ]
+    },
+    {
+      "partLabel": "PART II",
+      "refCode": "EX/EE/PC/B/T/316/2024(S)",
+      "headerLines": [
+        "B. E. ELECTRICAL ENGINEERING 3RD YEAR 1ST SEMESTER SUPPLEMENTARY EXAMINATION",
+        "SUBJECT: - PROGRAMMABLE LOGIC AND MICROCONTROLLER"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Answer any THREE. Two marks reserved for neat and well organized answer.",
+      "sharedNote": null,
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.",
+          "marks": "4x4=16",
+          "co": null,
+          "topic": "Microprocessor & Architecture Comparisons",
+          "textLatex": "Compare (any FOUR):<br>(i) Harvard Architecture and Princeton Architecture<br>(ii) RISC processor and CISC processor<br>(iii) RAM vs ROM<br>(iv) Microprocessor and Microcontroller<br>(v) Timer and Counter",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024s-p2-1",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "4",
+          "co": null,
+          "topic": "DDR and PIN Registers",
+          "textLatex": "Explain the functions of DDR and PIN registers.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024s-p2-2a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Switch Interfacing Circuit",
+          "textLatex": "Draw a circuit using a switch to generate logic 1 and 0 for different states of the switch. Explain your solution.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024s-p2-2b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(c)",
+          "marks": "4",
+          "co": null,
+          "topic": "Bootloader",
+          "textLatex": "What is a bootloader? Mention the purpose of its use.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024s-p2-2c",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(d)",
+          "marks": "4",
+          "co": null,
+          "topic": "High-Current LED Interfacing",
+          "textLatex": "How do you connect high current LED with a pin of microcontroller? Explain with appropriate circuit diagram.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024s-p2-2d",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "5x2=10",
+          "co": null,
+          "topic": "AVR Port I/O & Bit Manipulation Programming",
+          "textLatex": "Write a program segment to:<br>(i) read bit-5 of PORTC<br>(ii) set bit-3 of PORTA without modifying other bits<br>(iii) Reset bit-6 of PORTD without modifying other bits<br>(iv) shift the content of PORTB by an amount mentioned in program<br>(v) calculate the execution time of a block of commands",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024s-p2-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "LED Toggling Program",
+          "textLatex": "Write a program to toggle LED connected to bit-4 of PORTB at a frequency of 10Hz.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024s-p2-3b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "10",
+          "co": null,
+          "topic": "Timer-3 Pulse Generation",
+          "textLatex": "Write a program using Timer-3 to generate a pulse of 100Hz at a duty cycle of 50%. Explain your solution stating necessary assumptions, if any.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024s-p2-4a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Switch Comparison & ASCII Output",
+          "textLatex": "Read two switches connected to pin-0 and pin-1 of PORTC. If they are same, send the ASCII character S through PORTE, else send ASCII character D. Write the program.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024s-p2-4b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.",
+          "marks": "8+8",
+          "co": null,
+          "topic": "Timers, Bit Manipulation & Serial-Parallel Conversion",
+          "textLatex": "Write Short notes on (any TWO):<br>(a) Settings to configure and control timer operation on microcontroller<br>(b) Bit manipulation using microcontroller<br>(c) Conversion between serial and parallel data",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024s-p2-5",
+          "images": []
+        }
+      ]
+    }
+  ]
+}

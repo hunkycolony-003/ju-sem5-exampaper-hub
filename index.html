@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>B.E. Examination Archive — 2023 Programmable Logic & Microcontroller</title>
-  
+  <title>JU Sem-5 Question Paper Archive</title>
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
   <!-- KaTeX for rendering equations -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" />
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="window.__onKatexLoaded && window.__onKatexLoaded()"></script>
   <!-- Marked for Markdown rendering -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <!-- Highlight.js for code blocks -->
@@ -22,7 +22,6 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
-    
     /* iPad / Tablet Touch & Safe Area Enhancements */
     html {
       -webkit-text-size-adjust: 100%;
@@ -33,17 +32,14 @@
       padding-left: env(safe-area-inset-left);
       padding-right: env(safe-area-inset-right);
       -webkit-tap-highlight-color: transparent;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #f1f3f6;
     }
     .overflow-y-auto, .overflow-x-auto {
       -webkit-overflow-scrolling: touch;
     }
     .question-row {
       touch-action: manipulation;
-    }
-
-    body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: #f1f3f6;
     }
     .paper-font {
       font-family: 'Crimson Pro', Georgia, serif;
@@ -55,16 +51,17 @@
     /* Print Paper Simulation */
     .printed-paper-sheet {
       background-color: #fdfdfc;
-      background-image: 
+      background-image:
         radial-gradient(#e5e7eb 0.75px, transparent 0.75px),
         radial-gradient(#f3f4f6 0.75px, #fdfdfc 0.75px);
       background-size: 30px 30px;
       background-position: 0 0, 15px 15px;
-      box-shadow: 
-        0 1px 3px rgba(0,0,0,0.06), 
+      box-shadow:
+        0 1px 3px rgba(0,0,0,0.06),
         0 8px 24px -4px rgba(0,0,0,0.08),
         0 0 0 1px rgba(0,0,0,0.05);
       position: relative;
+      overflow: hidden;
     }
 
     /* Subtle University Watermark */
@@ -111,7 +108,7 @@
       border-left-color: #6366f1;
       box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.05);
     }
-    
+
     /* Confidence Tracker State Highlights */
     .question-row.status-mastered {
       background-color: #f0fdf4;
@@ -122,9 +119,81 @@
       border-left-color: #d97706;
     }
     .question-row.status-unsolved {
-      /* Clean neutral state without loud red background */
       background-color: rgba(255, 255, 255, 0.75);
       border-left-color: transparent;
+    }
+
+    /* Embedded Tables & Lists inside Question Statements */
+    .q-rich-body table,
+    .shared-note-prose table {
+      width: auto;
+      max-width: 100%;
+      margin: 0.65rem auto;
+      border-collapse: collapse;
+      font-size: 0.85em;
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+    }
+    .q-rich-body table th,
+    .q-rich-body table td,
+    .shared-note-prose table th,
+    .shared-note-prose table td {
+      border: 1px solid #64748b;
+      padding: 5px 9px;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .q-rich-body table th,
+    .shared-note-prose table th {
+      background-color: #f1f5f9;
+      font-weight: 600;
+      color: #0f172a;
+    }
+    .q-rich-body ol,
+    .shared-note-prose ol {
+      list-style-type: decimal;
+      padding-left: 1.4rem;
+      margin: 0.35rem 0;
+    }
+    .q-rich-body ol[type="i"],
+    .shared-note-prose ol[type="i"] { list-style-type: lower-roman; }
+    .q-rich-body ol[type="a"],
+    .shared-note-prose ol[type="a"] { list-style-type: lower-alpha; }
+    .q-rich-body ol[type="I"],
+    .shared-note-prose ol[type="I"] { list-style-type: upper-roman; }
+    .q-rich-body ol[type="A"],
+    .shared-note-prose ol[type="A"] { list-style-type: upper-alpha; }
+    .q-rich-body ul,
+    .shared-note-prose ul {
+      list-style-type: disc;
+      padding-left: 1.4rem;
+      margin: 0.35rem 0;
+    }
+    .q-rich-body code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85em;
+      background-color: #f1f5f9;
+      padding: 1px 4px;
+      border-radius: 3px;
+    }
+    .overline-c {
+      text-decoration: overline;
+    }
+
+    /* SVG & Raster Figure Scaling */
+    .diagram-frame svg {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .diagram-frame img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 4px;
     }
 
     /* Solution Drawer Typography */
@@ -200,7 +269,6 @@
       padding: 4px 0;
     }
 
-    /* Status Pill Transitions */
     .status-btn {
       transition: all 0.15s ease;
     }
@@ -216,22 +284,26 @@
 
   <!-- TOP HEADER -->
   <header class="bg-slate-900 text-white sticky top-0 z-40 shadow-sm border-b border-slate-800">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
-      <div class="flex items-center space-x-3">
-        <div class="w-8 h-8 rounded bg-indigo-600 flex items-center justify-center font-bold text-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-3 sm:px-6 min-h-14 py-2 flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center space-x-2.5 sm:space-x-3 min-w-0">
+        <div class="w-8 h-8 rounded bg-indigo-600 flex items-center justify-center font-bold text-white shadow-sm shrink-0">
           <i data-lucide="file-text" class="w-4 h-4"></i>
         </div>
-        <div>
-          <div class="flex items-center space-x-2">
-            <span class="font-bold tracking-tight text-sm sm:text-base">JU Sem-5 Question Paper Archive</span>
-            <span class="bg-indigo-500/20 text-indigo-300 text-[11px] px-2 py-0.5 rounded font-mono border border-indigo-500/30">Official Exam Replica</span>
-          </div>
+        <div class="min-w-0 flex flex-wrap items-center gap-2">
+          <span class="font-bold tracking-tight text-sm sm:text-base whitespace-nowrap">JU Sem-5 Exam Archive</span>
+          <!-- Subject Switcher -->
+          <select
+            id="subject-select"
+            aria-label="Select Subject"
+            class="bg-slate-800 hover:bg-slate-700 text-indigo-200 text-[11px] sm:text-xs font-medium px-2.5 py-1 rounded-md border border-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 max-w-[210px] sm:max-w-[290px] truncate cursor-pointer"
+          >
+            <option>Loading subjects...</option>
+          </select>
         </div>
       </div>
 
-      <!-- Real-time Exam Rule Simulator & Confidence Tracker Summary -->
-      <div class="flex items-center space-x-3">
-        <!-- Confidence Counter Pills -->
+      <!-- Confidence Tracker Summary & DeepSeek -->
+      <div class="flex items-center space-x-2 sm:space-x-3">
         <div class="hidden sm:flex items-center space-x-2 bg-slate-800/90 px-3.5 py-1.5 rounded-lg border border-slate-700/70 text-xs">
           <div class="flex items-center space-x-1.5" title="Questions Mastered">
             <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
@@ -245,12 +317,11 @@
           <span class="text-slate-600">|</span>
           <div class="flex items-center space-x-1.5" title="Unsolved Questions">
             <span class="w-2.5 h-2.5 rounded-full bg-slate-500"></span>
-            <span class="text-slate-300 font-medium"><strong id="summary-unsolved" class="text-slate-400 font-mono">14</strong> Unsolved</span>
+            <span class="text-slate-300 font-medium"><strong id="summary-unsolved" class="text-slate-400 font-mono">0</strong> Unsolved</span>
           </div>
         </div>
 
-        <!-- DeepSeek Config -->
-        <button onclick="openApiModal()" class="flex items-center space-x-1.5 px-3 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-xs font-medium text-slate-200 transition">
+        <button onclick="openApiModal()" class="flex items-center space-x-1.5 px-2.5 sm:px-3 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-xs font-medium text-slate-200 transition">
           <i data-lucide="bot" class="w-3.5 h-3.5 text-indigo-400"></i>
           <span class="hidden md:inline">DeepSeek AI</span>
         </button>
@@ -258,72 +329,72 @@
     </div>
   </header>
 
-  <!-- SUBHEADER / EXAM PAPER CONTROLS -->
+  <!-- SUBHEADER / PAPER YEAR SWITCHER & EXAM CONTROLS -->
   <div class="bg-white border-b border-slate-200 sticky top-14 z-30 shadow-xs top-toolbar">
-    <div class="max-w-5xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-3 text-xs">
-      <div class="flex items-center space-x-2">
-        <span class="text-[11px] uppercase font-bold tracking-wider text-slate-400">Paper:</span>
-        <span class="font-semibold text-slate-900">EE/PC/B/T/316 — Programmable Logic & Microcontroller (2023)</span>
+    <div class="max-w-5xl mx-auto px-3 sm:px-4 py-2 flex flex-wrap items-center justify-between gap-2 text-xs">
+      <!-- Year Pills -->
+      <div id="paper-year-pills" class="flex items-center gap-1.5 overflow-x-auto max-w-full py-0.5">
+        <span class="text-[11px] uppercase font-bold tracking-wider text-slate-400 shrink-0 mr-0.5">Papers:</span>
       </div>
 
-      <div class="flex items-center space-x-3">
-        <!-- Live Choice Validator Tracker -->
-        <div class="flex items-center space-x-3 text-xs font-medium">
-          <span class="text-slate-600">Part I Choice: <strong id="tracker-p1" class="font-mono text-amber-600">0/5</strong></span>
+      <!-- Choice Trackers & Reset -->
+      <div class="flex items-center space-x-2.5 sm:space-x-3 shrink-0">
+        <div id="choice-trackers" class="flex items-center space-x-2.5 text-xs font-medium">
+          <span class="text-slate-600">Part I: <strong id="tracker-p1" class="font-mono text-amber-600">0/5</strong></span>
           <span class="text-slate-300">|</span>
-          <span class="text-slate-600">Part II Choice: <strong id="tracker-p2" class="font-mono text-amber-600">0/4</strong></span>
+          <span class="text-slate-600">Part II: <strong id="tracker-p2" class="font-mono text-amber-600">0/4</strong></span>
         </div>
         <span class="text-slate-300">|</span>
         <button onclick="resetProgress()" class="text-slate-500 hover:text-rose-600 transition flex items-center space-x-1">
           <i data-lucide="rotate-ccw" class="w-3 h-3"></i>
-          <span>Reset Tracking</span>
+          <span class="hidden sm:inline">Reset</span>
         </button>
       </div>
     </div>
   </div>
 
   <!-- MAIN EXAM PAPER CONTAINER -->
-  <main class="flex-1 max-w-4xl w-full mx-auto p-4 sm:p-6 lg:p-8">
+  <main class="flex-1 max-w-4xl w-full mx-auto p-3 sm:p-6 lg:p-8">
 
     <!-- AUTHENTIC EXAM PAPER SHEET -->
-    <div class="printed-paper-sheet rounded-xl p-6 sm:p-10 lg:p-14 mb-16 relative">
-      
+    <div id="paper-sheet-card" class="printed-paper-sheet rounded-xl p-5 sm:p-10 lg:p-14 mb-16 relative">
+
       <!-- EXAM PAPER TOP HEADER -->
       <div class="text-center pb-6 mb-8 border-b-2 border-slate-900 relative z-10">
-        <div class="flex items-center justify-between text-xs text-slate-500 font-mono mb-2">
-          <span>Ref No: EE/PC/B/T/316/2023</span>
-          <span class="border border-slate-300 px-2 py-0.5 rounded text-[11px] text-slate-600 uppercase font-sans">Official Archive</span>
+        <div class="flex items-center justify-between text-xs text-slate-500 font-mono mb-2 gap-2">
+          <span id="sheet-ref-no" class="truncate">Ref No: ...</span>
+          <span id="sheet-badge" class="border border-slate-300 px-2 py-0.5 rounded text-[11px] text-slate-600 uppercase font-sans shrink-0">Official Archive</span>
         </div>
 
-        <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 uppercase paper-font font-serif">
+        <h1 id="sheet-university" class="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 uppercase paper-font font-serif">
           Jadavpur University
         </h1>
-        <p class="text-sm font-semibold text-slate-700 mt-0.5 paper-font">
-          B.E. Electrical Engineering 3rd Year 1st Semester Examination, 2023
+        <p id="sheet-exam-title" class="text-sm font-semibold text-slate-700 mt-0.5 paper-font">
+          B.E. Electrical Engineering 3rd Year 1st Semester Examination
         </p>
-        <h2 class="text-lg sm:text-xl font-bold text-slate-900 tracking-wide mt-2 uppercase paper-font">
-          Subject: Programmable Logic & Microcontroller
+        <h2 id="sheet-subject-title" class="text-lg sm:text-xl font-bold text-slate-900 tracking-wide mt-2 uppercase paper-font">
+          Subject: —
         </h2>
 
         <!-- Marks & Time Matrix Table -->
-        <div class="mt-4 pt-3 border-t border-slate-300 grid grid-cols-3 text-xs sm:text-sm font-medium text-slate-800 paper-font text-center">
-          <div><strong>Full Marks:</strong> 100</div>
-          <div><strong>Time:</strong> Three Hours</div>
-          <div><strong>Distribution:</strong> 50 Marks each Part</div>
+        <div id="sheet-meta-grid" class="mt-4 pt-3 border-t border-slate-300 grid grid-cols-3 text-xs sm:text-sm font-medium text-slate-800 paper-font text-center gap-2">
+          <div id="sheet-full-marks"><strong>Full Marks:</strong> 100</div>
+          <div id="sheet-time"><strong>Time:</strong> Three Hours</div>
+          <div id="sheet-dist"><strong>Distribution:</strong> 50 Marks each Part</div>
         </div>
-        <p class="text-xs italic text-slate-600 mt-2.5 paper-font">
+        <p id="sheet-script-note" class="text-xs italic text-slate-600 mt-2.5 paper-font">
           * Use a separate Answer-Script for each part.
         </p>
       </div>
 
-      <!-- EXAM PAPER BODY: RENDERED IN EXACT EXAM ORDER -->
+      <!-- EXAM PAPER BODY -->
       <div id="exam-paper-content" class="relative z-10 space-y-12">
-        <!-- Rendered by JavaScript -->
+        <div class="py-12 text-center text-sm text-slate-500">Loading database...</div>
       </div>
 
       <!-- EXAM PAPER FOOTER -->
-      <div class="mt-14 pt-6 border-t border-dashed border-slate-400 text-center text-xs text-slate-500 paper-font relative z-10">
-        [ END OF QUESTION PAPER • TOTAL 14 QUESTIONS ]
+      <div id="sheet-footer" class="mt-14 pt-6 border-t border-dashed border-slate-400 text-center text-xs text-slate-500 paper-font relative z-10">
+        [ END OF QUESTION PAPER ]
       </div>
     </div>
   </main>
@@ -334,15 +405,15 @@
     <div id="drawer-backdrop" onclick="closeDrawer()" class="fixed inset-0 bg-slate-900/50 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-200"></div>
 
     <!-- Drawer Panel -->
-    <div id="drawer-panel" class="fixed top-0 right-0 bottom-0 w-full sm:w-[85vw] sm:max-w-[600px] md:w-[75vw] md:max-w-[680px] lg:w-[65vw] lg:max-w-[760px] xl:w-[820px] bg-white shadow-2xl flex flex-col z-50 pointer-events-auto translate-x-full transition-transform duration-300 border-l border-slate-200">
-      
-      <!-- Drawer Header (Responsive Mobile, Tablet, Desktop) -->
+    <div id="drawer-panel" class="fixed top-0 right-0 bottom-0 w-full sm:w-[85vw] sm:max-w-[600px] md:w-[78vw] md:max-w-[740px] lg:w-[75vw] lg:max-w-[880px] xl:w-[960px] bg-white shadow-2xl flex flex-col z-50 pointer-events-auto translate-x-full transition-transform duration-300 border-l border-slate-200">
+
+      <!-- Drawer Header -->
       <div class="px-4 sm:px-6 py-3 sm:py-4 bg-slate-900 text-white flex items-center justify-between border-b border-slate-800 shrink-0 gap-2">
         <div class="flex items-center space-x-2 sm:space-x-3 min-w-0">
           <span id="drawer-q-badge" class="bg-indigo-600 text-white text-xs font-mono font-bold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded shrink-0">Q1</span>
           <div class="min-w-0">
-            <h3 id="drawer-q-title" class="font-bold text-xs sm:text-base text-white truncate max-w-[130px] sm:max-w-xs md:max-w-md">Problem Module</h3>
-            <p id="drawer-q-meta" class="text-[10px] sm:text-xs text-slate-400 truncate">10 Marks • Part I</p>
+            <h3 id="drawer-q-title" class="font-bold text-xs sm:text-base text-white truncate max-w-[140px] sm:max-w-xs md:max-w-md">Question</h3>
+            <p id="drawer-q-meta" class="text-[10px] sm:text-xs text-slate-400 truncate">Marks • Part I</p>
           </div>
         </div>
 
@@ -362,18 +433,18 @@
               <span class="hidden sm:inline">Reset</span>
             </button>
           </div>
-          
+
           <button onclick="closeDrawer()" class="p-1 sm:p-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 transition" title="Close Drawer">
             <i data-lucide="x" class="w-5 h-5"></i>
           </button>
         </div>
       </div>
 
-      <!-- Drawer Tabs: Solution vs DeepSeek (Mobile & Tablet Adaptive) -->
+      <!-- Drawer Tabs -->
       <div class="flex border-b border-slate-200 bg-slate-50 px-3 sm:px-6 pt-1.5 sm:pt-2 shrink-0 gap-1">
         <button id="tab-sol-btn" onclick="switchDrawerTab('solution')" class="py-2 sm:py-2.5 px-2.5 sm:px-4 font-semibold text-xs border-b-2 border-indigo-600 text-indigo-600 flex items-center space-x-1 sm:space-x-1.5">
           <i data-lucide="file-check-2" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
-          <span><span class="hidden sm:inline">Exam-Ready </span>Solution<span class="hidden md:inline"> & Slide Ref</span></span>
+          <span id="tab-sol-label"><span class="hidden sm:inline">Exam-Ready </span>Solution<span class="hidden md:inline"> &amp; Details</span></span>
         </button>
         <button id="tab-ai-btn" onclick="switchDrawerTab('ai')" class="py-2 sm:py-2.5 px-2.5 sm:px-4 font-semibold text-xs border-b-2 border-transparent text-slate-500 hover:text-slate-700 flex items-center space-x-1 sm:space-x-1.5">
           <i data-lucide="bot" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-500"></i>
@@ -385,49 +456,54 @@
       <!-- Drawer Body -->
       <div class="flex-1 overflow-y-auto p-3.5 sm:p-6 space-y-4 sm:space-y-6">
 
-        <!-- TAB 1: SOLUTION VIEW -->
-        <div id="tab-sol-content" class="space-y-6">
-          
+        <!-- TAB 1: QUESTION / SOLUTION VIEW -->
+        <div id="tab-sol-content" class="space-y-5 sm:space-y-6">
+
           <!-- Question Statement Card -->
           <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 text-sm font-medium">
-            <div class="flex items-center justify-between text-xs text-slate-500 font-mono mb-2">
-              <span class="font-bold text-slate-600 uppercase">Question Statement</span>
-              <span id="drawer-statement-marks" class="font-bold text-indigo-700 bg-indigo-50 border border-indigo-200 px-2 py-0.5 rounded">10 Marks</span>
+            <div class="flex items-center justify-between text-xs text-slate-500 font-mono mb-2 gap-2 flex-wrap">
+              <span id="drawer-group-badge" class="font-bold text-slate-600 uppercase">Question</span>
+              <div class="flex items-center gap-2">
+                <button onclick="copyQuestionJson()" class="text-[11px] font-sans font-semibold text-slate-600 hover:text-indigo-700 bg-white border border-slate-200 px-2 py-0.5 rounded transition" title="Copy Question JSON">Copy JSON</button>
+                <button onclick="copyQuestionLatex()" class="text-[11px] font-sans font-semibold text-slate-600 hover:text-indigo-700 bg-white border border-slate-200 px-2 py-0.5 rounded transition" title="Copy Question LaTeX">Copy LaTeX</button>
+                <span id="drawer-statement-marks" class="font-bold text-indigo-700 bg-indigo-50 border border-indigo-200 px-2 py-0.5 rounded">10 Marks</span>
+              </div>
             </div>
-            <p id="drawer-statement-text" class="leading-relaxed paper-font text-base text-slate-900 whitespace-pre-line"></p>
+            <div id="drawer-statement-text" class="q-rich-body leading-relaxed paper-font text-base text-slate-900"></div>
           </div>
 
-          <!-- Official Slide & PDF Pointer -->
-          <div class="p-4 rounded-xl bg-emerald-50/90 border border-emerald-200 text-emerald-950 text-xs sm:text-sm">
-            <div class="flex items-center justify-between font-bold text-emerald-900 mb-2">
+          <!-- Question Images & SVG Diagrams (if present) -->
+          <div id="drawer-media-section" class="hidden space-y-3"></div>
+
+          <!-- Optional Official Slide & PDF Pointer (shown when note_ref is present) -->
+          <div id="drawer-note-section-card" class="hidden p-4 rounded-xl bg-emerald-50/90 border border-emerald-200 text-emerald-950 text-xs sm:text-sm">
+            <div class="flex items-center justify-between font-bold text-emerald-900 mb-2 gap-2">
               <div class="flex items-center space-x-2">
                 <i data-lucide="map-pin" class="w-4 h-4 text-emerald-600"></i>
                 <span>Lecture Note Citation (1-to-1 Syllabus Audit)</span>
               </div>
-              <span id="drawer-repeat-badge" class="font-mono text-xs font-bold bg-amber-100 text-amber-900 px-2.5 py-0.5 rounded border border-amber-300">
-                5x Repeat
-              </span>
+              <span id="drawer-repeat-badge" class="hidden font-mono text-xs font-bold bg-amber-100 text-amber-900 px-2.5 py-0.5 rounded border border-amber-300"></span>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
               <div class="p-2.5 bg-white/90 rounded-lg border border-emerald-100">
                 <span class="text-slate-500 block font-medium mb-0.5">Note PDF:</span>
-                <span id="drawer-note-file" class="font-mono font-bold text-emerald-900">Programmable_Logic_Devices.pdf</span>
+                <span id="drawer-note-file" class="font-mono font-bold text-emerald-900"></span>
               </div>
               <div class="p-2.5 bg-white/90 rounded-lg border border-emerald-100">
                 <span class="text-slate-500 block font-medium mb-0.5">Audited Pages / Slides:</span>
-                <span id="drawer-note-pages" class="font-mono font-bold text-emerald-900">pp. 4–6</span>
+                <span id="drawer-note-pages" class="font-mono font-bold text-emerald-900"></span>
               </div>
             </div>
             <div class="mt-2 text-xs text-emerald-900">
-              <span class="font-semibold text-slate-700">Section: </span><span id="drawer-note-section">Basic structure of a PLD</span>
+              <span class="font-semibold text-slate-700">Section: </span><span id="drawer-note-section"></span>
             </div>
-            <div class="mt-1 text-xs text-emerald-900">
-              <span class="font-semibold text-slate-700">Mandatory Figure in Note: </span><span id="drawer-note-diagram">Fig. 1: Functional block diagram</span>
+            <div id="drawer-note-diagram-row" class="mt-1 text-xs text-emerald-900">
+              <span class="font-semibold text-slate-700">Mandatory Figure in Note: </span><span id="drawer-note-diagram"></span>
             </div>
           </div>
 
-          <!-- Clean Solution Body -->
-          <div class="bg-white rounded-xl border border-slate-200 shadow-xs overflow-hidden">
+          <!-- Model Exam Solution Body (shown only when solution exists) -->
+          <div id="drawer-solution-card" class="hidden bg-white rounded-xl border border-slate-200 shadow-xs overflow-hidden">
             <div class="px-5 py-3.5 bg-slate-50/80 border-b border-slate-200 flex items-center justify-between">
               <div class="flex items-center space-x-2">
                 <i data-lucide="check-check" class="w-4 h-4 text-emerald-600"></i>
@@ -440,10 +516,8 @@
                 <span>Copy</span>
               </button>
             </div>
-            
-            <div id="drawer-solution-body" class="solution-prose p-6 text-slate-800 leading-relaxed overflow-x-auto">
-              <!-- Rendered LaTeX & Clean Markdown -->
-            </div>
+
+            <div id="drawer-solution-body" class="solution-prose p-6 text-slate-800 leading-relaxed overflow-x-auto"></div>
           </div>
 
           <!-- Code Snippet Container (if any) -->
@@ -453,7 +527,7 @@
                 <i data-lucide="code" class="w-4 h-4 text-emerald-400"></i>
                 <span>Complete Embedded C / VHDL Routine</span>
               </div>
-              <span class="text-[11px] text-slate-400">Tested on ATmega2560</span>
+              <span class="text-[11px] text-slate-400">Source Code</span>
             </div>
             <pre class="p-4 bg-slate-950 overflow-x-auto text-xs mono-font"><code id="drawer-code-block" class="language-c"></code></pre>
           </div>
@@ -465,7 +539,7 @@
             <i data-lucide="info" class="w-4 h-4 text-indigo-600 mt-0.5 shrink-0"></i>
             <div>
               <p class="font-semibold text-slate-800">Contextual Tutor Mode</p>
-              <p>DeepSeek is pre-loaded with this exact exam question and professor's slide notes. Ask for step-by-step intuitive derivations or alternative numerical variants.</p>
+              <p>DeepSeek is pre-loaded with this exact exam question and any available note references. Ask for step-by-step derivations or alternative numerical variants.</p>
             </div>
           </div>
 
@@ -476,7 +550,7 @@
               <div class="p-3.5 bg-white rounded-xl border border-slate-200 text-xs leading-relaxed text-slate-800 shadow-xs max-w-[88%]">
                 Hello! Ask me anything regarding this question or try one of these shortcuts:
                 <div class="mt-3 space-y-1.5">
-                  <button onclick="sendQuickPrompt('Explain this in simple terms for 10 marks')" class="block text-left text-indigo-600 hover:underline">👉 "Explain this in simple terms for 10 marks"</button>
+                  <button onclick="sendQuickPrompt('Explain this in simple terms for full marks')" class="block text-left text-indigo-600 hover:underline">👉 "Explain this in simple terms for full marks"</button>
                   <button onclick="sendQuickPrompt('What are common mistakes students make in this question?')" class="block text-left text-indigo-600 hover:underline">👉 "What are common mistakes students make in this question?"</button>
                   <button onclick="sendQuickPrompt('Provide a quick numerical or code variation for practice')" class="block text-left text-indigo-600 hover:underline">👉 "Provide a quick numerical or code variation for practice"</button>
                 </div>
@@ -502,10 +576,10 @@
 
       </div>
 
-      <!-- Drawer Footer Navigation (Responsive) -->
+      <!-- Drawer Footer Navigation -->
       <div class="px-4 sm:px-6 py-2.5 sm:py-3 bg-slate-50 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500 shrink-0">
-        <span class="mono-font font-bold text-slate-700 text-[11px] sm:text-xs" id="drawer-footer-id">2023-P1-Q1</span>
-        <div class="flex space-x-1.5 sm:space-x-2">
+        <span class="mono-font font-bold text-slate-700 text-[11px] sm:text-xs truncate max-w-[55%]" id="drawer-footer-id">—</span>
+        <div class="flex space-x-1.5 sm:space-x-2 shrink-0">
           <button onclick="navigateQuestion(-1)" class="px-2.5 sm:px-3 py-1.5 text-slate-600 hover:text-slate-900 border border-slate-300 rounded-lg font-medium transition flex items-center space-x-1">
             <i data-lucide="chevron-left" class="w-3.5 h-3.5"></i>
             <span>Prev</span>
@@ -546,7 +620,7 @@
         <div>
           <label class="block text-xs font-semibold text-slate-700 mb-1">Selected Model:</label>
           <select id="input-api-model" class="w-full text-xs px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-            <option value="deepseek-chat">deepseek-chat (DeepSeek-V3: Fast & Economical)</option>
+            <option value="deepseek-chat">deepseek-chat (DeepSeek-V3: Fast &amp; Economical)</option>
             <option value="deepseek-reasoner">deepseek-reasoner (DeepSeek-R1: Deep Chain-of-Thought)</option>
           </select>
         </div>
@@ -561,148 +635,621 @@
 
   <!-- MAIN SCRIPT -->
   <script>
+    let dbIndex = null;
+    let currentSubject = null;
+    let currentPaperRef = null;
     let paperData = null;
     let activeQuestion = null;
     let flatQuestions = [];
     let activeQuestionIndex = 0;
+    let paperCache = new Map();
+    let userConfidence = {};
 
-    // Confidence Tracker Storage: 'mastered' | 'review' | 'unsolved' (default)
-    let userConfidence = JSON.parse(localStorage.getItem('ju_sem5_confidence_2023') || '{}');
+    // =========================================================================
+    // HTML / SVG / KATEX HELPERS
+    // =========================================================================
+    function escapeHtml(str) {
+      return String(str ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
 
-    async function loadPaperData() {
-      try {
-        const response = await fetch('data/paper_2023.json');
-        paperData = await response.json();
-        
-        flatQuestions = [];
-        paperData.parts.forEach(part => {
-          part.questions.forEach(q => {
-            flatQuestions.push({ ...q, part_title: part.title, part_id: part.part_id });
-          });
+    function escapeMathSegment(mathStr) {
+      return mathStr.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    function sanitizeHtmlFragment(html) {
+      const allowedTags = new Set([
+        'table', 'thead', 'tbody', 'tfoot', 'tr', 'th', 'td', 'caption', 'colgroup', 'col',
+        'br', 'p', 'div', 'span', 'b', 'strong', 'i', 'em', 'u', 'sup', 'sub',
+        'ul', 'ol', 'li', 'code', 'pre', 'hr'
+      ]);
+      const allowedAttrs = new Set(['class', 'style', 'colspan', 'rowspan', 'align', 'border', 'cellpadding', 'cellspacing', 'type', 'start']);
+      const tpl = document.createElement('template');
+      tpl.innerHTML = html;
+
+      const cleanNode = (node) => {
+        if (node.nodeType === Node.TEXT_NODE) return;
+        if (node.nodeType !== Node.ELEMENT_NODE) {
+          node.remove();
+          return;
+        }
+        const tag = node.tagName.toLowerCase();
+        if (tag === 'script' || tag === 'style' || tag === 'iframe' || tag === 'object' || tag === 'embed') {
+          node.remove();
+          return;
+        }
+        if (!allowedTags.has(tag)) {
+          const frag = document.createDocumentFragment();
+          while (node.firstChild) {
+            const c = node.firstChild;
+            frag.appendChild(c);
+            cleanNode(c);
+          }
+          node.replaceWith(frag);
+          return;
+        }
+        [...node.attributes].forEach(attr => {
+          const name = attr.name.toLowerCase();
+          if (!allowedAttrs.has(name) || name.startsWith('on') || /javascript:/i.test(attr.value)) {
+            node.removeAttribute(attr.name);
+          }
         });
+        [...node.childNodes].forEach(cleanNode);
+      };
+      [...tpl.content.childNodes].forEach(cleanNode);
+      return tpl.innerHTML;
+    }
 
-        renderExamPaper();
-        updateSummaryCounters();
-      } catch (err) {
-        console.error('Failed to load paper data:', err);
+    function sanitizeSvg(svgStr) {
+      if (!svgStr) return '';
+      const tpl = document.createElement('template');
+      tpl.innerHTML = String(svgStr).trim();
+      const svg = tpl.content.querySelector('svg');
+      if (!svg) return '';
+      const cleanSvgNode = (node) => {
+        if (node.nodeType === Node.TEXT_NODE) return;
+        if (node.nodeType !== Node.ELEMENT_NODE) {
+          node.remove();
+          return;
+        }
+        const tag = node.tagName.toLowerCase();
+        if (tag === 'script' || tag === 'foreignobject' || tag === 'iframe') {
+          node.remove();
+          return;
+        }
+        [...node.attributes].forEach(attr => {
+          if (attr.name.toLowerCase().startsWith('on') || /javascript:/i.test(attr.value)) {
+            node.removeAttribute(attr.name);
+          }
+        });
+        [...node.childNodes].forEach(cleanSvgNode);
+      };
+      cleanSvgNode(svg);
+      return svg.outerHTML;
+    }
+
+    function renderRichContent(rawText) {
+      if (!rawText) return '';
+      const text = String(rawText);
+      const mathRegex = /(\$\$[\s\S]*?\$\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|(?<!\\)\$(?:\\.|[^$\\\n])+(?<!\\)\$)/g;
+      const parts = [];
+      let lastIdx = 0;
+      let match;
+
+      while ((match = mathRegex.exec(text)) !== null) {
+        if (match.index > lastIdx) {
+          parts.push({ type: 'html', value: text.slice(lastIdx, match.index) });
+        }
+        parts.push({ type: 'math', value: match[0] });
+        lastIdx = mathRegex.lastIndex;
+      }
+      if (lastIdx < text.length) {
+        parts.push({ type: 'html', value: text.slice(lastIdx) });
+      }
+
+      const combined = parts.map(seg => {
+        if (seg.type === 'math') return escapeMathSegment(seg.value);
+        let h = seg.value
+          .replace(/(<\/?(?:table|thead|tbody|tfoot|tr|th|td|colgroup|col|ul|ol|li|p|div)[^>]*>)\s*\n+\s*/gi, '$1')
+          .replace(/\s*\n+\s*(<\/?(?:table|thead|tbody|tfoot|tr|th|td|colgroup|col|ul|ol|li|p|div)[^>]*>)/gi, '$1')
+          .replace(/\n/g, '<br>');
+        h = h.replace(/c\u0304/g, '<span class="overline-c">c</span>');
+        return h;
+      }).join('');
+
+      return sanitizeHtmlFragment(combined);
+    }
+
+    function runKatex(el) {
+      if (!el || typeof window.renderMathInElement !== 'function') return;
+      try {
+        window.renderMathInElement(el, {
+          delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '\\[', right: '\\]', display: true },
+            { left: '$', right: '$', display: false },
+            { left: '\\(', right: '\\)', display: false }
+          ],
+          macros: { '\\degree': '^\\circ' },
+          throwOnError: false,
+          strict: false
+        });
+      } catch (e) {
+        console.warn('KaTeX warning:', e);
       }
     }
 
+    window.__onKatexLoaded = () => {
+      runKatex(document.getElementById('exam-paper-content'));
+      runKatex(document.getElementById('drawer-panel'));
+    };
+
+    function renderMediaHtml(q, inDrawer = false) {
+      const blocks = [];
+      const imgs = Array.isArray(q.images) ? q.images : (q.image ? [{ src: q.image, caption: q.diagramCaption }] : []);
+      imgs.forEach(item => {
+        const src = typeof item === 'string' ? item : item && item.src;
+        if (!src) return;
+        const caption = typeof item === 'object' ? (item.caption || item.alt || '') : '';
+        const alt = typeof item === 'object' ? (item.alt || caption || 'Question figure') : 'Question figure';
+        blocks.push(`
+          <figure class="diagram-frame my-3 p-2.5 bg-slate-50/80 border border-slate-200 rounded-lg overflow-x-auto">
+            <img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy" class="${inDrawer ? 'max-h-[460px]' : 'max-h-[300px]'} object-contain mx-auto" />
+            ${caption ? `<figcaption class="mt-1.5 text-center text-[11px] italic text-slate-600 font-sans">${renderRichContent(caption)}</figcaption>` : ''}
+          </figure>
+        `);
+      });
+
+      const svgClean = q.diagramSvg ? sanitizeSvg(q.diagramSvg) : '';
+      if (svgClean) {
+        blocks.push(`
+          <figure class="diagram-frame my-3 p-2.5 bg-slate-50/80 border border-slate-200 rounded-lg overflow-x-auto">
+            ${svgClean}
+            ${q.diagramCaption ? `<figcaption class="mt-1.5 text-center text-[11px] italic text-slate-600 font-sans">${renderRichContent(q.diagramCaption)}</figcaption>` : ''}
+          </figure>
+        `);
+      }
+      return blocks.join('');
+    }
+
+    // =========================================================================
+    // SCHEMA NORMALIZER (SUPPORTS BOTH LEGACY paper_2023.json & DB PAPERS)
+    // =========================================================================
+    function getStorageKey(paperId) {
+      if (paperId === 'plm-2023-solved') return 'ju_sem5_confidence_2023';
+      return `ju_sem5_confidence_${paperId}`;
+    }
+
+    function normalizePaper(raw, subjectMeta, paperMeta) {
+      const normalized = {
+        id: (paperMeta && paperMeta.id) || raw.id || 'paper',
+        subjectId: (subjectMeta && subjectMeta.id) || raw.subjectId || 'plm',
+        subjectName: (subjectMeta && subjectMeta.name) || 'Subject',
+        subjectCode: (subjectMeta && subjectMeta.codePrefix) || 'Ex/EE/PC/B/T',
+        paperTitle: (subjectMeta && subjectMeta.paperTitle) || '',
+        yearLabel: (paperMeta && paperMeta.yearLabel) || raw.yearLabel || '',
+        examType: (paperMeta && paperMeta.examType) || raw.examType || 'Regular',
+        refCode: (raw.exam_info && raw.exam_info.subject && `${raw.exam_info.subject.split(':')[0]}/${raw.exam_info.year?.match(/\d{4}/)?.[0] || ''}`) ||
+                 ((raw.parts && raw.parts[0] && raw.parts[0].refCode) || `${subjectMeta.codePrefix}/${Math.floor(raw.year || 0)}`),
+        university: (raw.exam_info && raw.exam_info.university) || 'Jadavpur University',
+        examTitle: (raw.exam_info && `${raw.exam_info.course} — ${raw.exam_info.year}`) ||
+                   (raw.parts && raw.parts[0] && raw.parts[0].headerLines && raw.parts[0].headerLines[0]) ||
+                   `B.E. Electrical Engineering 3rd Year 1st Semester Examination, ${raw.yearLabel || raw.year || ''}`,
+        subjectHeading: (raw.exam_info && raw.exam_info.subject) ||
+                        (raw.parts && raw.parts[0] && raw.parts[0].headerLines && raw.parts[0].headerLines[1]) ||
+                        `Subject: ${subjectMeta.paperTitle}`,
+        timeText: (raw.exam_info && raw.exam_info.time) || (raw.parts && raw.parts[0] && raw.parts[0].timeText) || 'Three Hours',
+        fullMarks: (raw.exam_info && raw.exam_info.full_marks) || (raw.parts && raw.parts[0] && raw.parts[0].marksText) || 'Full Marks: 100',
+        subMarksText: (raw.parts && raw.parts[0] && raw.parts[0].subMarksText) || '50 Marks each Part',
+        scriptNote: (raw.exam_info && raw.exam_info.instructions) || (raw.parts && raw.parts[0] && raw.parts[0].scriptNote) || '* Use a separate Answer-Script for each part.',
+        parts: []
+      };
+
+      const rawParts = Array.isArray(raw.parts) ? raw.parts : [];
+      normalized.parts = rawParts.map((part, pIdx) => {
+        const partId = part.part_id || `part_${pIdx + 1}`;
+        const partTitle = part.title || part.partLabel || `PART ${pIdx + 1}`;
+        const rows = [];
+        let qSeq = 0;
+
+        if (Array.isArray(part.rows)) {
+          let activeGroup = null;
+          part.rows.forEach(r => {
+            if (!r) return;
+            if (r.kind === 'group') {
+              activeGroup = r.label || '';
+              rows.push({ kind: 'group', label: activeGroup });
+            } else if (r.kind === 'or') {
+              rows.push({ kind: 'or', label: r.label || 'OR' });
+            } else if (r.kind === 'question') {
+              qSeq += 1;
+              rows.push({
+                kind: 'question',
+                id: r.questionId || `${normalized.id}-p${pIdx + 1}-q${qSeq}`,
+                q_num: r.qNum || String(qSeq),
+                marks: r.marks ? (String(r.marks).includes('Mark') ? String(r.marks) : `${r.marks} Marks`) : '',
+                rawMarks: r.marks || '',
+                text: r.textLatex || '',
+                module: r.topic || `Question ${r.qNum || qSeq}`,
+                groupLabel: activeGroup,
+                co: r.co || null,
+                repeat_tag: r.repeat_tag || null,
+                note_ref: r.note_ref || null,
+                solution: r.solution || r.solutionLatex || null,
+                code: r.code || null,
+                images: Array.isArray(r.images) ? r.images : [],
+                diagramSvg: r.diagramSvg || null,
+                diagramCaption: r.diagramCaption || null,
+                part_title: partTitle,
+                part_id: partId
+              });
+            }
+          });
+        } else if (Array.isArray(part.questions)) {
+          part.questions.forEach((q, qIdx) => {
+            qSeq += 1;
+            rows.push({
+              kind: 'question',
+              id: q.id || `${normalized.id}-p${pIdx + 1}-q${qIdx + 1}`,
+              q_num: q.q_num || String(qIdx + 1),
+              marks: q.marks || '',
+              rawMarks: q.marks || '',
+              text: q.text || '',
+              module: q.module || `Question ${q.q_num || qIdx + 1}`,
+              groupLabel: null,
+              co: q.co || null,
+              repeat_tag: q.repeat_tag || null,
+              note_ref: q.note_ref || null,
+              solution: q.solution || null,
+              code: q.code || null,
+              images: Array.isArray(q.images) ? q.images : (q.image ? [{ src: q.image }] : []),
+              diagramSvg: q.diagramSvg || null,
+              diagramCaption: q.diagramCaption || null,
+              part_title: partTitle,
+              part_id: partId
+            });
+          });
+        }
+
+        // Infer reasonable required choice target for tracker
+        let ruleRequired = null;
+        const instr = String(part.instructions || '');
+        if (/answer\s+question\s+no\.\s*6.*any\s+three/i.test(instr) || part.part_id === 'part_2' && rawParts.length === 2 && rows.filter(r => r.kind === 'question').length <= 8) {
+          ruleRequired = 4;
+        } else if (/answer\s+any\s+five/i.test(instr) && rows.some(r => /1\./.test(r.q_num || '') && r.kind === 'question')) {
+          // For standard JU sheets with multiple questions/subparts, track count flexibly
+          const matchAny = instr.match(/any\s+(two|three|four|five|six|1|2|3|4|5|6)/i);
+          const wordToNum = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6 };
+          if (matchAny) ruleRequired = wordToNum[matchAny[1].toLowerCase()] || Number(matchAny[1]) || 5;
+        }
+
+        return {
+          part_id: partId,
+          title: partTitle,
+          marks: part.marks || 50,
+          instructions: part.instructions || '',
+          sharedNote: part.sharedNote || null,
+          footerNote: part.footerNote || '',
+          ruleRequired,
+          rows,
+          questions: rows.filter(r => r.kind === 'question')
+        };
+      });
+
+      return normalized;
+    }
+
+    // =========================================================================
+    // DATABASE BOOT & SWITCHING
+    // =========================================================================
+    async function initApp() {
+      try {
+        const res = await fetch('data/index.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        dbIndex = await res.json();
+
+        renderSubjectSelect();
+
+        // Parse hash route (#subjectId/paperId or #subjectId)
+        const rawHash = (window.location.hash || '').replace(/^#\/?/, '');
+        const [hashSubj, hashPaper] = rawHash.split('/').filter(Boolean).map(decodeURIComponent);
+
+        const defaultSubject =
+          dbIndex.subjects.find(s => s.id === hashSubj) ||
+          dbIndex.subjects.find(s => Array.isArray(s.papers) && s.papers.length > 0) ||
+          dbIndex.subjects[0];
+
+        await selectSubject(defaultSubject.id, hashPaper, false);
+      } catch (err) {
+        console.error('Failed to load index.json, falling back to paper_2023.json:', err);
+        // Graceful single-paper fallback if index.json isn't present
+        try {
+          const r2 = await fetch('data/paper_2023.json');
+          const raw2 = await r2.json();
+          const fallbackSubj = { order: 6, id: 'plm', codePrefix: 'Ex/EE/PC/B/T/316', name: 'Prog. Logic & Microcontroller', paperTitle: 'PROGRAMMABLE LOGIC & MICROCONTROLLER', papers: [{ id: 'plm-2023-solved', yearLabel: '2023', path: 'data/paper_2023.json' }] };
+          dbIndex = { subjects: [fallbackSubj] };
+          currentSubject = fallbackSubj;
+          renderSubjectSelect();
+          await loadPaper(fallbackSubj.papers[0], raw2, false);
+        } catch (err2) {
+          document.getElementById('exam-paper-content').innerHTML = `<div class="p-8 text-center text-sm text-rose-600">Could not load archive data (${escapeHtml(err.message)}).</div>`;
+        }
+      }
+    }
+
+    function renderSubjectSelect() {
+      const sel = document.getElementById('subject-select');
+      sel.innerHTML = dbIndex.subjects.map(s => {
+        const count = Array.isArray(s.papers) ? s.papers.length : 0;
+        const selected = currentSubject && currentSubject.id === s.id ? 'selected' : '';
+        return `<option value="${escapeHtml(s.id)}" ${selected}>${s.order}. ${escapeHtml(s.name)} (${count})</option>`;
+      }).join('');
+
+      sel.onchange = () => selectSubject(sel.value, null, true);
+    }
+
+    async function selectSubject(subjectId, preferredPaperId = null, updateHash = true) {
+      const subj = dbIndex.subjects.find(s => s.id === subjectId) || dbIndex.subjects[0];
+      if (!subj) return;
+      currentSubject = subj;
+      renderSubjectSelect();
+      renderPaperPills();
+
+      const papers = Array.isArray(subj.papers) ? subj.papers : [];
+      if (!papers.length) {
+        currentPaperRef = null;
+        paperData = null;
+        flatQuestions = [];
+        userConfidence = {};
+        renderEmptySubjectSheet(subj);
+        updateSummaryCounters();
+        if (updateHash) window.location.hash = `#/${encodeURIComponent(subj.id)}`;
+        return;
+      }
+
+      const targetRef = (preferredPaperId && papers.find(p => p.id === preferredPaperId)) || papers[0];
+      await selectPaper(targetRef.id, updateHash);
+    }
+
+    function renderPaperPills() {
+      const bar = document.getElementById('paper-year-pills');
+      const papers = (currentSubject && Array.isArray(currentSubject.papers)) ? currentSubject.papers : [];
+      if (!papers.length) {
+        bar.innerHTML = `<span class="text-[11px] uppercase font-bold tracking-wider text-slate-400">Subject:</span> <span class="font-semibold text-slate-800">${escapeHtml(currentSubject.codePrefix)} — ${escapeHtml(currentSubject.name)}</span>`;
+        return;
+      }
+      bar.innerHTML = `
+        <span class="text-[11px] uppercase font-bold tracking-wider text-slate-400 shrink-0 mr-0.5">Year:</span>
+        ${papers.map(p => {
+          const isActive = currentPaperRef && currentPaperRef.id === p.id;
+          return `
+            <button
+              onclick="selectPaper('${escapeHtml(p.id)}')"
+              class="shrink-0 px-2.5 py-1 rounded-md text-[11px] font-semibold transition ${
+                isActive
+                  ? 'bg-slate-900 text-white shadow-2xs'
+                  : 'bg-slate-100 text-slate-700 hover:bg-indigo-50 hover:text-indigo-700'
+              }"
+            >${escapeHtml(p.yearLabel || String(p.year || ''))}</button>
+          `;
+        }).join('')}
+      `;
+    }
+
+    async function selectPaper(paperId, updateHash = true) {
+      if (!currentSubject) return;
+      const ref = (currentSubject.papers || []).find(p => p.id === paperId) || (currentSubject.papers || [])[0];
+      if (!ref) return;
+      currentPaperRef = ref;
+      renderPaperPills();
+      closeDrawer();
+
+      if (updateHash) {
+        window.location.hash = `#/${encodeURIComponent(currentSubject.id)}/${encodeURIComponent(ref.id)}`;
+      }
+
+      let raw = paperCache.get(ref.path);
+      if (!raw) {
+        document.getElementById('exam-paper-content').innerHTML = `<div class="py-12 text-center text-sm text-slate-400">Loading paper...</div>`;
+        const res = await fetch(ref.path, { cache: 'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status} loading ${ref.path}`);
+        raw = await res.json();
+        paperCache.set(ref.path, raw);
+      }
+
+      await loadPaper(ref, raw);
+    }
+
+    async function loadPaper(ref, raw) {
+      paperData = normalizePaper(raw, currentSubject, ref);
+      userConfidence = JSON.parse(localStorage.getItem(getStorageKey(paperData.id)) || '{}');
+
+      flatQuestions = [];
+      paperData.parts.forEach(part => {
+        part.questions.forEach(q => flatQuestions.push(q));
+      });
+
+      document.title = `JU Archive — ${currentSubject.name} (${paperData.yearLabel || ''})`;
+      document.getElementById('sheet-ref-no').textContent = `Ref No: ${paperData.refCode}`;
+      document.getElementById('sheet-badge').textContent = paperData.examType === 'Annotated' ? 'Solved Archive' : (paperData.examType || 'Official Archive');
+      document.getElementById('sheet-university').textContent = paperData.university;
+      document.getElementById('sheet-exam-title').textContent = paperData.examTitle;
+      document.getElementById('sheet-subject-title').textContent = paperData.subjectHeading;
+      document.getElementById('sheet-full-marks').innerHTML = String(paperData.fullMarks).includes(':') ? escapeHtml(paperData.fullMarks) : `<strong>Full Marks:</strong> ${escapeHtml(String(paperData.fullMarks).replace(/Full Marks\s*/i, ''))}`;
+      document.getElementById('sheet-time').innerHTML = String(paperData.timeText).includes(':') ? escapeHtml(paperData.timeText) : `<strong>Time:</strong> ${escapeHtml(paperData.timeText)}`;
+      document.getElementById('sheet-dist').innerHTML = paperData.subMarksText ? `<strong>Distribution:</strong> ${escapeHtml(paperData.subMarksText.replace(/[()]/g, ''))}` : '';
+      document.getElementById('sheet-script-note').textContent = paperData.scriptNote || '';
+      document.getElementById('sheet-footer').textContent = `[ END OF QUESTION PAPER • TOTAL ${flatQuestions.length} QUESTIONS ]`;
+
+      renderExamPaper();
+      updateSummaryCounters();
+    }
+
+    function renderEmptySubjectSheet(subj) {
+      document.title = `JU Archive — ${subj.name}`;
+      document.getElementById('sheet-ref-no').textContent = `Ref No: ${subj.codePrefix}`;
+      document.getElementById('sheet-badge').textContent = 'Upcoming';
+      document.getElementById('sheet-university').textContent = 'Jadavpur University';
+      document.getElementById('sheet-exam-title').textContent = 'B.E. Electrical Engineering 3rd Year 1st Semester Examination';
+      document.getElementById('sheet-subject-title').textContent = `Subject: ${subj.paperTitle || subj.name}`;
+      document.getElementById('sheet-full-marks').innerHTML = '<strong>Full Marks:</strong> 100';
+      document.getElementById('sheet-time').innerHTML = '<strong>Time:</strong> Three Hours';
+      document.getElementById('sheet-dist').innerHTML = '<strong>Distribution:</strong> 50 Marks each Part';
+      document.getElementById('sheet-script-note').textContent = '* Use a separate Answer-Script for each part.';
+      document.getElementById('sheet-footer').textContent = '[ NO PAPERS LOADED YET ]';
+      document.getElementById('exam-paper-content').innerHTML = `
+        <div class="py-12 px-4 text-center border border-dashed border-slate-300 rounded-xl bg-white/70">
+          <p class="text-base font-semibold text-slate-700 paper-font">No question papers added yet for ${escapeHtml(subj.name)}.</p>
+          <p class="text-xs text-slate-500 mt-1">Papers added under <code class="mono-font bg-slate-100 px-1 py-0.5 rounded">data/papers/${escapeHtml(subj.id)}/</code> will appear here automatically.</p>
+        </div>
+      `;
+    }
+
+    // =========================================================================
+    // PAPER SHEET RENDERING
+    // =========================================================================
     function renderExamPaper() {
       const container = document.getElementById('exam-paper-content');
+      if (!paperData) return;
       container.innerHTML = '';
 
-      paperData.parts.forEach((part, partIndex) => {
+      paperData.parts.forEach((part, partIdx) => {
         const partSection = document.createElement('div');
-        partSection.className = 'border-b border-slate-300 pb-10';
+        partSection.className = 'border-b border-slate-300 pb-10 last:border-b-0 last:pb-0';
 
-        // Official Part Header & Instructions Block
-        const isPart1 = part.part_id === 'part_1';
-        const ruleRequired = isPart1 ? 5 : 4; // Part I: 5 Qs; Part II: 4 Qs (Q6 + 3)
         const attemptedCount = getPartAttemptCount(part.part_id);
-        const ruleMet = attemptedCount === ruleRequired;
+        const ruleRequired = part.ruleRequired;
+        const ruleMet = ruleRequired && attemptedCount === ruleRequired;
 
         const headerDiv = document.createElement('div');
         headerDiv.className = 'mb-6 pb-3 border-b-2 border-slate-900 flex flex-col sm:flex-row sm:items-center justify-between gap-3';
-        
+
+        const titleChunks = String(part.title || '').split(':');
+        const mainTag = titleChunks[0] || `PART ${partIdx + 1}`;
+        const subTitle = titleChunks.slice(1).join(':').trim();
+
         headerDiv.innerHTML = `
           <div>
             <div class="flex items-center space-x-2">
               <span class="text-xs font-mono font-bold tracking-wider uppercase px-2 py-0.5 rounded bg-slate-900 text-white">
-                ${part.title.split(':')[0]}
+                ${escapeHtml(mainTag)}
               </span>
               <span class="text-xs text-slate-500 font-serif font-bold uppercase tracking-wider">(50 Marks)</span>
             </div>
-            <h3 class="text-lg font-bold text-slate-900 mt-1 uppercase paper-font font-serif tracking-wide">
-              ${part.title.split(':')[1] || part.title}
-            </h3>
+            ${subTitle ? `
+              <h3 class="text-lg font-bold text-slate-900 mt-1 uppercase paper-font font-serif tracking-wide">
+                ${escapeHtml(subTitle)}
+              </h3>
+            ` : ''}
           </div>
 
-          <!-- Official Exam Instruction Callout Box -->
-          <div class="bg-amber-50/80 border border-amber-300/80 rounded-lg p-2.5 sm:text-right shrink-0">
-            <div class="text-xs font-bold text-amber-950 paper-font uppercase tracking-wide flex sm:justify-end items-center space-x-1.5">
-              <i data-lucide="alert-circle" class="w-3.5 h-3.5 text-amber-600"></i>
-              <span>Exam Instruction:</span>
+          ${part.instructions ? `
+            <div class="bg-amber-50/80 border border-amber-300/80 rounded-lg p-2.5 sm:text-right shrink-0">
+              <div class="text-xs font-bold text-amber-950 paper-font uppercase tracking-wide flex sm:justify-end items-center space-x-1.5">
+                <i data-lucide="alert-circle" class="w-3.5 h-3.5 text-amber-600"></i>
+                <span>Exam Instruction:</span>
+              </div>
+              <div class="text-xs text-amber-900 paper-font font-semibold mt-0.5">
+                ${renderRichContent(part.instructions)}
+              </div>
+              <div class="text-[11px] font-mono mt-1 ${ruleMet ? 'text-emerald-700 font-bold' : (ruleRequired && attemptedCount > ruleRequired) ? 'text-rose-600 font-bold' : 'text-slate-600'}">
+                Tracked in part: <strong>${attemptedCount}</strong>${ruleRequired ? ` / ${ruleRequired}` : ''} ${ruleMet ? '✓' : (ruleRequired && attemptedCount > ruleRequired) ? '⚠️' : ''}
+              </div>
             </div>
-            <div class="text-xs text-amber-900 paper-font font-semibold mt-0.5">
-              ${part.instructions}
-            </div>
-            <div class="text-[11px] font-mono mt-1 ${ruleMet ? 'text-emerald-700 font-bold' : attemptedCount > ruleRequired ? 'text-rose-600 font-bold' : 'text-slate-600'}">
-              Selected in choices: <strong>${attemptedCount}</strong> / ${ruleRequired} ${ruleMet ? '✓ (Choice satisfied)' : attemptedCount > ruleRequired ? '⚠️ (Exceeds required)' : ''}
-            </div>
-          </div>
+          ` : ''}
         `;
         partSection.appendChild(headerDiv);
 
-        // Questions List
         const listDiv = document.createElement('div');
         listDiv.className = 'space-y-4';
 
-        part.questions.forEach((q) => {
+        part.rows.forEach(r => {
+          if (r.kind === 'group') {
+            const gEl = document.createElement('div');
+            gEl.className = 'px-3 py-2 rounded-lg bg-slate-100/90 border border-slate-200 text-xs sm:text-sm font-bold text-slate-800 paper-font';
+            gEl.innerHTML = renderRichContent(r.label || '');
+            listDiv.appendChild(gEl);
+            return;
+          }
+          if (r.kind === 'or') {
+            const orEl = document.createElement('div');
+            orEl.className = 'flex items-center justify-center py-1 text-xs font-bold tracking-widest italic text-slate-500 paper-font';
+            orEl.innerHTML = `<span class="px-4 py-0.5 border-y border-dashed border-slate-300">${escapeHtml(r.label || 'OR')}</span>`;
+            listDiv.appendChild(orEl);
+            return;
+          }
+          if (r.kind !== 'question') return;
+
+          const q = r;
           const status = userConfidence[q.id] || 'unsolved';
-          const isCompulsory = q.text.toLowerCase().includes('(compulsory)') || q.id === '2023-P2-Q6';
+          const isCompulsory = String(q.text || '').toLowerCase().includes('(compulsory)') || q.id === '2023-P2-Q6';
 
           const row = document.createElement('div');
           row.id = `q-row-${q.id}`;
           row.className = `question-row group p-4 sm:p-5 rounded-lg border cursor-pointer status-${status}`;
           row.onclick = () => openDrawer(q.id);
 
-          // Status Badge Pill
           let statusBadge = '';
           if (status === 'mastered') {
             statusBadge = `<span class="inline-flex items-center text-[10px] font-bold text-emerald-800 bg-emerald-100 border border-emerald-300 px-2 py-0.5 rounded"><span class="w-1.5 h-1.5 rounded-full bg-emerald-600 mr-1.5"></span>Mastered</span>`;
           } else if (status === 'review') {
             statusBadge = `<span class="inline-flex items-center text-[10px] font-bold text-amber-800 bg-amber-100 border border-amber-300 px-2 py-0.5 rounded"><span class="w-1.5 h-1.5 rounded-full bg-amber-600 mr-1.5"></span>Review</span>`;
           } else {
-            // Subtle, non-intrusive unsolved badge
             statusBadge = `<span class="inline-flex items-center text-[10px] font-medium text-slate-400 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">Unsolved</span>`;
           }
 
+          const mediaHtml = renderMediaHtml(q, false);
+
           row.innerHTML = `
-            <div class="flex items-start justify-between gap-4">
-              <div class="flex items-start space-x-3.5 flex-1">
-                
-                <!-- Quick 3-State Confidence Switcher on Paper Row -->
-                <div class="mt-1 flex items-center space-x-1 shrink-0" onclick="event.stopPropagation();" title="Quick Confidence Toggle">
-                  <button onclick="cycleStatus('${q.id}')" class="w-6 h-6 rounded border flex items-center justify-center transition shadow-2xs ${
-                    status === 'mastered' ? 'bg-emerald-600 border-emerald-600 text-white' : 
-                    status === 'review' ? 'bg-amber-500 border-amber-500 text-white' : 
+            <div class="flex items-start justify-between gap-3 sm:gap-4">
+              <div class="flex items-start space-x-3 sm:space-x-3.5 flex-1 min-w-0">
+                <!-- Quick 3-State Confidence Switcher -->
+                <div class="mt-1 flex items-center shrink-0" onclick="event.stopPropagation();" title="Confidence Toggle">
+                  <button onclick="cycleStatus('${escapeHtml(q.id)}')" class="w-6 h-6 rounded border flex items-center justify-center transition shadow-2xs ${
+                    status === 'mastered' ? 'bg-emerald-600 border-emerald-600 text-white' :
+                    status === 'review' ? 'bg-amber-500 border-amber-500 text-white' :
                     'bg-white border-slate-300 text-slate-300 hover:border-slate-400 hover:text-slate-400'
                   }">
                     <i data-lucide="${status === 'mastered' ? 'check' : status === 'review' ? 'bookmark' : 'circle'}" class="w-3.5 h-3.5"></i>
                   </button>
                 </div>
 
-                <!-- Question Number (Official Paper Style) -->
-                <span class="font-serif font-bold text-base text-slate-900 shrink-0 w-6 pt-0.5">
-                  ${q.q_num}.
+                <!-- Question Number -->
+                <span class="font-serif font-bold text-base text-slate-900 shrink-0 min-w-[2.2rem] pt-0.5">
+                  ${escapeHtml(q.q_num)}${String(q.q_num || '').endsWith('.') ? '' : '.'}
                 </span>
 
-                <!-- Question Text -->
-                <div class="flex-1">
-                  <p class="text-sm sm:text-base text-slate-900 paper-font leading-relaxed whitespace-pre-line">
-                    ${q.text}
-                  </p>
+                <!-- Question Body + Media + Discrete Footnote -->
+                <div class="flex-1 min-w-0">
+                  <div class="q-rich-body text-sm sm:text-base text-slate-900 paper-font leading-relaxed">
+                    ${renderRichContent(q.text)}
+                  </div>
+                  ${mediaHtml}
 
-                  <!-- Minimal Discrete Footnote -->
                   <div class="mt-2.5 flex flex-wrap items-center gap-2 text-xs text-slate-500 font-mono">
-                    <span class="bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-semibold text-[11px]">
-                      ${q.marks}
-                    </span>
+                    ${q.marks ? `<span class="bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-semibold text-[11px]">${escapeHtml(q.marks)}</span>` : ''}
                     ${isCompulsory ? '<span class="bg-rose-100 text-rose-800 border border-rose-200 px-2 py-0.5 rounded font-semibold text-[11px]">Compulsory</span>' : ''}
+                    ${q.co ? `<span class="bg-slate-100 text-slate-600 border border-slate-200 px-2 py-0.5 rounded text-[11px]">${escapeHtml(q.co)}</span>` : ''}
                     ${statusBadge}
-                    <span class="text-slate-400">•</span>
-                    <span class="text-emerald-700 flex items-center">
-                      <i data-lucide="book" class="w-3 h-3 mr-1"></i>
-                      ${q.note_ref.pdf_file} (${q.note_ref.pages})
-                    </span>
-                    <span class="text-slate-400">•</span>
-                    <span class="text-amber-700">${q.repeat_tag}</span>
+                    ${q.note_ref ? `
+                      <span class="text-slate-400">•</span>
+                      <span class="text-emerald-700 flex items-center">
+                        <i data-lucide="book" class="w-3 h-3 mr-1"></i>
+                        ${escapeHtml(q.note_ref.pdf_file)} (${escapeHtml(q.note_ref.pages)})
+                      </span>
+                    ` : ''}
+                    ${q.repeat_tag ? `
+                      <span class="text-slate-400">•</span>
+                      <span class="text-amber-700">${escapeHtml(q.repeat_tag)}</span>
+                    ` : ''}
                   </div>
                 </div>
               </div>
 
-              <!-- Clean Arrow indicator on Hover -->
               <div class="shrink-0 pt-1 text-slate-400 group-hover:text-indigo-600 transition">
                 <i data-lucide="chevron-right" class="w-5 h-5"></i>
               </div>
@@ -713,10 +1260,27 @@
         });
 
         partSection.appendChild(listDiv);
+
+        if (part.sharedNote) {
+          const noteDiv = document.createElement('div');
+          noteDiv.className = 'shared-note-prose mt-5 p-4 rounded-lg bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-700 overflow-x-auto';
+          noteDiv.innerHTML = renderRichContent(part.sharedNote);
+          partSection.appendChild(noteDiv);
+        }
+
         container.appendChild(partSection);
       });
 
       lucide.createIcons();
+      runKatex(container);
+    }
+
+    // =========================================================================
+    // CONFIDENCE TRACKING (PERSISTED PER PAPER)
+    // =========================================================================
+    function saveConfidence() {
+      if (!paperData) return;
+      localStorage.setItem(getStorageKey(paperData.id), JSON.stringify(userConfidence));
     }
 
     function cycleStatus(qId) {
@@ -726,27 +1290,21 @@
       else if (current === 'mastered') next = 'review';
       else if (current === 'review') next = 'unsolved';
 
-      if (next === 'unsolved') {
-        delete userConfidence[qId];
-      } else {
-        userConfidence[qId] = next;
-      }
-      localStorage.setItem('ju_sem5_confidence_2023', JSON.stringify(userConfidence));
+      if (next === 'unsolved') delete userConfidence[qId];
+      else userConfidence[qId] = next;
+
+      saveConfidence();
       updateSummaryCounters();
       renderExamPaper();
-      if (activeQuestion && activeQuestion.id === qId) {
-        updateDrawerStatusBtns();
-      }
+      if (activeQuestion && activeQuestion.id === qId) updateDrawerStatusBtns();
     }
 
     function setDrawerStatus(status) {
       if (!activeQuestion) return;
-      if (status === 'unsolved') {
-        delete userConfidence[activeQuestion.id];
-      } else {
-        userConfidence[activeQuestion.id] = status;
-      }
-      localStorage.setItem('ju_sem5_confidence_2023', JSON.stringify(userConfidence));
+      if (status === 'unsolved') delete userConfidence[activeQuestion.id];
+      else userConfidence[activeQuestion.id] = status;
+
+      saveConfidence();
       updateSummaryCounters();
       updateDrawerStatusBtns();
       renderExamPaper();
@@ -755,127 +1313,156 @@
     function updateDrawerStatusBtns() {
       if (!activeQuestion) return;
       const status = userConfidence[activeQuestion.id] || 'unsolved';
-
       const btnM = document.getElementById('drawer-btn-mastered');
       const btnR = document.getElementById('drawer-btn-review');
       const btnU = document.getElementById('drawer-btn-unsolved');
 
-      btnM.className = `status-btn px-2.5 py-1 rounded font-medium flex items-center space-x-1 ${
+      btnM.className = `status-btn px-2 sm:px-2.5 py-1 rounded font-medium flex items-center space-x-1 ${
         status === 'mastered' ? 'bg-emerald-600 text-white' : 'text-slate-400 hover:text-emerald-400'
       }`;
-      btnR.className = `status-btn px-2.5 py-1 rounded font-medium flex items-center space-x-1 ${
+      btnR.className = `status-btn px-2 sm:px-2.5 py-1 rounded font-medium flex items-center space-x-1 ${
         status === 'review' ? 'bg-amber-600 text-white' : 'text-slate-400 hover:text-amber-400'
       }`;
-      btnU.className = `status-btn px-2.5 py-1 rounded font-medium flex items-center space-x-1 ${
+      btnU.className = `status-btn px-2 sm:px-2.5 py-1 rounded font-medium flex items-center space-x-1 ${
         status === 'unsolved' ? 'bg-slate-700 text-white' : 'text-slate-400 hover:text-slate-200'
       }`;
     }
 
     function getPartAttemptCount(partId) {
       if (!paperData) return 0;
-      let count = 0;
       const part = paperData.parts.find(p => p.part_id === partId);
-      if (part) {
-        part.questions.forEach(q => {
-          // Counted if either Mastered or Review
-          const st = userConfidence[q.id];
-          if (st === 'mastered' || st === 'review') count++;
-        });
-      }
-      return count;
+      if (!part) return 0;
+      return part.questions.reduce((acc, q) => {
+        const st = userConfidence[q.id];
+        return acc + ((st === 'mastered' || st === 'review') ? 1 : 0);
+      }, 0);
     }
 
     function updateSummaryCounters() {
       let mastered = 0;
       let review = 0;
-      let total = flatQuestions.length || 14;
+      const total = flatQuestions.length;
 
-      Object.values(userConfidence).forEach(st => {
+      flatQuestions.forEach(q => {
+        const st = userConfidence[q.id];
         if (st === 'mastered') mastered++;
-        if (st === 'review') review++;
+        else if (st === 'review') review++;
       });
-      let unsolved = Math.max(0, total - (mastered + review));
+      const unsolved = Math.max(0, total - (mastered + review));
 
       document.getElementById('summary-mastered').textContent = mastered;
       document.getElementById('summary-review').textContent = review;
       document.getElementById('summary-unsolved').textContent = unsolved;
 
-      // Update Subheader Part choice trackers
-      const p1 = getPartAttemptCount('part_1');
-      const p2 = getPartAttemptCount('part_2');
-
-      const el1 = document.getElementById('tracker-p1');
-      const el2 = document.getElementById('tracker-p2');
-
-      if (el1) {
-        el1.textContent = `${p1}/5`;
-        el1.className = `font-mono font-bold ${p1 === 5 ? 'text-emerald-600' : p1 > 5 ? 'text-rose-600' : 'text-amber-600'}`;
+      const trackerWrap = document.getElementById('choice-trackers');
+      if (!paperData || !paperData.parts.length) {
+        trackerWrap.innerHTML = '';
+        return;
       }
-      if (el2) {
-        el2.textContent = `${p2}/4`;
-        el2.className = `font-mono font-bold ${p2 === 4 ? 'text-emerald-600' : p2 > 4 ? 'text-rose-600' : 'text-amber-600'}`;
-      }
+
+      trackerWrap.innerHTML = paperData.parts.map((part, idx) => {
+        const count = getPartAttemptCount(part.part_id);
+        const req = part.ruleRequired;
+        const colorCls = !req
+          ? 'text-slate-700'
+          : count === req
+            ? 'text-emerald-600'
+            : count > req
+              ? 'text-rose-600'
+              : 'text-amber-600';
+        const sep = idx > 0 ? '<span class="text-slate-300">|</span>' : '';
+        return `${sep}<span class="text-slate-600">Part ${idx === 0 ? 'I' : idx === 1 ? 'II' : idx + 1}: <strong class="font-mono font-bold ${colorCls}">${count}${req ? '/' + req : ''}</strong></span>`;
+      }).join(' ');
     }
 
     function resetProgress() {
-      if (confirm("Reset all question confidence statuses and choices?")) {
+      if (!paperData) return;
+      if (confirm('Reset question confidence statuses for this paper?')) {
         userConfidence = {};
-        localStorage.removeItem('ju_sem5_confidence_2023');
+        localStorage.removeItem(getStorageKey(paperData.id));
         updateSummaryCounters();
         renderExamPaper();
         if (activeQuestion) updateDrawerStatusBtns();
       }
     }
 
+    // =========================================================================
+    // DRAWER OPEN / CLOSE / NAVIGATION
+    // =========================================================================
     function openDrawer(qId) {
       activeQuestion = flatQuestions.find(q => q.id === qId);
       activeQuestionIndex = flatQuestions.findIndex(q => q.id === qId);
       if (!activeQuestion) return;
 
-      // Populate Header & Metas
       document.getElementById('drawer-q-badge').textContent = `Q${activeQuestion.q_num}`;
-      document.getElementById('drawer-q-title').textContent = activeQuestion.module;
-      document.getElementById('drawer-q-meta').textContent = `${activeQuestion.marks} • ${activeQuestion.part_title}`;
-      document.getElementById('drawer-statement-marks').textContent = activeQuestion.marks;
-      document.getElementById('drawer-statement-text').textContent = activeQuestion.text;
+      document.getElementById('drawer-q-title').textContent = activeQuestion.module || `Question ${activeQuestion.q_num}`;
+      document.getElementById('drawer-q-meta').textContent = `${activeQuestion.marks || 'Question'} • ${activeQuestion.part_title}`;
+      document.getElementById('drawer-group-badge').textContent = activeQuestion.groupLabel || 'Question Statement';
+      document.getElementById('drawer-statement-marks').textContent = activeQuestion.marks || '—';
+      document.getElementById('drawer-statement-text').innerHTML = renderRichContent(activeQuestion.text);
+      document.getElementById('drawer-footer-id').textContent = `${activeQuestion.id} (${activeQuestionIndex + 1}/${flatQuestions.length})`;
 
-      // Note pointer info
-      document.getElementById('drawer-note-file').textContent = activeQuestion.note_ref.pdf_file;
-      document.getElementById('drawer-note-pages').textContent = activeQuestion.note_ref.pages;
-      document.getElementById('drawer-note-section').textContent = activeQuestion.note_ref.section;
-      document.getElementById('drawer-note-diagram').textContent = activeQuestion.note_ref.verified_diagram;
-      document.getElementById('drawer-repeat-badge').textContent = activeQuestion.repeat_tag;
-      document.getElementById('drawer-footer-id').textContent = activeQuestion.id;
+      // Media (Images & Diagrams)
+      const mediaSection = document.getElementById('drawer-media-section');
+      const mediaHtml = renderMediaHtml(activeQuestion, true);
+      if (mediaHtml) {
+        mediaSection.innerHTML = mediaHtml;
+        mediaSection.classList.remove('hidden');
+      } else {
+        mediaSection.innerHTML = '';
+        mediaSection.classList.add('hidden');
+      }
 
-      // Render Markdown / LaTeX Solution
-      const solutionContainer = document.getElementById('drawer-solution-body');
-      solutionContainer.innerHTML = marked.parse(activeQuestion.solution);
-      
-      // KaTeX Auto-render with full delimiters
-      renderMathInElement(solutionContainer, {
-        delimiters: [
-          { left: '$$', right: '$$', display: true },
-          { left: '$', right: '$', display: false },
-          { left: '\\[', right: '\\]', display: true },
-          { left: '\\(', right: '\\)', display: false }
-        ],
-        throwOnError: false
-      });
+      // Optional Lecture Note Citation Card
+      const noteCard = document.getElementById('drawer-note-section-card');
+      if (activeQuestion.note_ref) {
+        noteCard.classList.remove('hidden');
+        document.getElementById('drawer-note-file').textContent = activeQuestion.note_ref.pdf_file || '—';
+        document.getElementById('drawer-note-pages').textContent = activeQuestion.note_ref.pages || '—';
+        document.getElementById('drawer-note-section').textContent = activeQuestion.note_ref.section || '—';
+        const diagRow = document.getElementById('drawer-note-diagram-row');
+        if (activeQuestion.note_ref.verified_diagram) {
+          diagRow.classList.remove('hidden');
+          document.getElementById('drawer-note-diagram').textContent = activeQuestion.note_ref.verified_diagram;
+        } else {
+          diagRow.classList.add('hidden');
+        }
+        const repeatBadge = document.getElementById('drawer-repeat-badge');
+        if (activeQuestion.repeat_tag) {
+          repeatBadge.textContent = activeQuestion.repeat_tag;
+          repeatBadge.classList.remove('hidden');
+        } else {
+          repeatBadge.classList.add('hidden');
+        }
+      } else {
+        noteCard.classList.add('hidden');
+      }
 
-      // Code Block
+      // Optional Solution Card
+      const solCard = document.getElementById('drawer-solution-card');
+      const solContainer = document.getElementById('drawer-solution-body');
+      if (activeQuestion.solution) {
+        solCard.classList.remove('hidden');
+        solContainer.innerHTML = marked.parse(activeQuestion.solution);
+      } else {
+        solCard.classList.add('hidden');
+        solContainer.innerHTML = '';
+      }
+
+      // Optional Code Block
       const codeSection = document.getElementById('drawer-code-section');
       const codeBlock = document.getElementById('drawer-code-block');
       if (activeQuestion.code) {
         codeSection.classList.remove('hidden');
         codeBlock.textContent = activeQuestion.code;
-        hljs.highlightElement(codeBlock);
+        if (window.hljs) hljs.highlightElement(codeBlock);
       } else {
         codeSection.classList.add('hidden');
       }
 
+      runKatex(document.getElementById('tab-sol-content'));
       updateDrawerStatusBtns();
 
-      // Show Drawer
       const backdrop = document.getElementById('drawer-backdrop');
       const panel = document.getElementById('drawer-panel');
       backdrop.classList.remove('opacity-0', 'pointer-events-none');
@@ -895,6 +1482,7 @@
     }
 
     function navigateQuestion(offset) {
+      if (!flatQuestions.length) return;
       let nextIndex = activeQuestionIndex + offset;
       if (nextIndex < 0) nextIndex = flatQuestions.length - 1;
       if (nextIndex >= flatQuestions.length) nextIndex = 0;
@@ -908,13 +1496,13 @@
       const aiContent = document.getElementById('tab-ai-content');
 
       if (tab === 'solution') {
-        solBtn.className = "py-2.5 px-4 font-semibold text-xs border-b-2 border-indigo-600 text-indigo-600 flex items-center space-x-1.5";
-        aiBtn.className = "py-2.5 px-4 font-semibold text-xs border-b-2 border-transparent text-slate-500 hover:text-slate-700 flex items-center space-x-1.5";
+        solBtn.className = 'py-2 sm:py-2.5 px-2.5 sm:px-4 font-semibold text-xs border-b-2 border-indigo-600 text-indigo-600 flex items-center space-x-1 sm:space-x-1.5';
+        aiBtn.className = 'py-2 sm:py-2.5 px-2.5 sm:px-4 font-semibold text-xs border-b-2 border-transparent text-slate-500 hover:text-slate-700 flex items-center space-x-1 sm:space-x-1.5';
         solContent.classList.remove('hidden');
         aiContent.classList.add('hidden');
       } else {
-        aiBtn.className = "py-2.5 px-4 font-semibold text-xs border-b-2 border-indigo-600 text-indigo-600 flex items-center space-x-1.5";
-        solBtn.className = "py-2.5 px-4 font-semibold text-xs border-b-2 border-transparent text-slate-500 hover:text-slate-700 flex items-center space-x-1.5";
+        aiBtn.className = 'py-2 sm:py-2.5 px-2.5 sm:px-4 font-semibold text-xs border-b-2 border-indigo-600 text-indigo-600 flex items-center space-x-1 sm:space-x-1.5';
+        solBtn.className = 'py-2 sm:py-2.5 px-2.5 sm:px-4 font-semibold text-xs border-b-2 border-transparent text-slate-500 hover:text-slate-700 flex items-center space-x-1 sm:space-x-1.5';
         solContent.classList.add('hidden');
         aiContent.classList.remove('hidden');
       }
@@ -922,12 +1510,40 @@
     }
 
     function copySolutionText() {
-      if (!activeQuestion) return;
+      if (!activeQuestion || !activeQuestion.solution) return;
       navigator.clipboard.writeText(activeQuestion.solution);
-      alert("Exam solution copied to clipboard!");
+      alert('Exam solution copied to clipboard!');
     }
 
+    function copyQuestionLatex() {
+      if (!activeQuestion) return;
+      const text = `Q${activeQuestion.q_num} (${activeQuestion.marks}) [${activeQuestion.part_title}]\n${activeQuestion.text}`;
+      navigator.clipboard.writeText(text);
+    }
+
+    function copyQuestionJson() {
+      if (!activeQuestion || !currentSubject || !paperData) return;
+      const record = {
+        questionId: activeQuestion.id,
+        subjectId: currentSubject.id,
+        subjectName: currentSubject.name,
+        subjectCode: currentSubject.codePrefix,
+        paperId: paperData.id,
+        yearLabel: paperData.yearLabel,
+        part: activeQuestion.part_title,
+        qNum: activeQuestion.q_num,
+        marks: activeQuestion.rawMarks || activeQuestion.marks,
+        topic: activeQuestion.module,
+        textLatex: activeQuestion.text,
+        images: activeQuestion.images || [],
+        diagramSvg: activeQuestion.diagramSvg || null
+      };
+      navigator.clipboard.writeText(JSON.stringify(record, null, 2));
+    }
+
+    // =========================================================================
     // DEEPSEEK CHAT SIMULATION & LIVE API CALL
+    // =========================================================================
     async function sendMessage() {
       const input = document.getElementById('chat-input');
       const text = input.value.trim();
@@ -938,31 +1554,32 @@
 
       const apiKey = localStorage.getItem('deepseek_api_key');
       const selectedModel = localStorage.getItem('deepseek_model') || 'deepseek-chat';
+      const noteRef = activeQuestion.note_ref || {};
 
       if (!apiKey) {
         setTimeout(() => {
-          let simulatedAnswer = "";
-          if (text.toLowerCase().includes("simple") || text.toLowerCase().includes("easy")) {
-            simulatedAnswer = `**In Simple Terms for 10 Marks:**\nFor **${activeQuestion.id}**, structure your answer into 3 clean blocks:\n1. **Core Working Principle:** 2-3 precise statements citing the physics/switching mechanism.\n2. **Neat Schematic Diagram:** Always draw ${activeQuestion.note_ref.verified_diagram}. Label all input rails, AND/OR planes, and buffers.\n3. **Key Equations / Register State:** Write the boolean equation or SFR bit format with active reset states.`;
-          } else if (text.toLowerCase().includes("mistake")) {
-            simulatedAnswer = `**Common Student Exam Pitfalls:**\n1. Forgetting to specify the prescaler value $N$ or oscillator frequency ($16\\text{ MHz}$).\n2. Confusing active-high vs active-low enable pins.\n3. Missing the exact page derivation steps given in **${activeQuestion.note_ref.pdf_file}** (${activeQuestion.note_ref.pages}).`;
+          let simulatedAnswer = '';
+          if (text.toLowerCase().includes('simple') || text.toLowerCase().includes('easy')) {
+            simulatedAnswer = `**In Simple Terms:**\nFor **${activeQuestion.id}**, break the answer into:\n1. **Core Principle / Definition**\n2. **Neat Circuit / Block Diagram**${noteRef.verified_diagram ? ` (${noteRef.verified_diagram})` : ''}\n3. **Key Equation / Timing / Derivation**`;
+          } else if (text.toLowerCase().includes('mistake')) {
+            simulatedAnswer = `**Common Student Exam Pitfalls:**\n1. Missing assumptions, clock frequencies, or units.\n2. Confusing active-high vs active-low control pins.\n3. Omitting labeled circuit/waveform steps${noteRef.pdf_file ? ` from **${noteRef.pdf_file}** (${noteRef.pages})` : ''}.`;
           } else {
-            simulatedAnswer = `**DeepSeek Technical Analysis:**\nRegarding **${activeQuestion.text.slice(0, 50)}...**:\n\n* **Note Reference:** Cites directly to **${activeQuestion.note_ref.pdf_file}** (${activeQuestion.note_ref.section}).\n* **Exam Presentation:** Follow the bold numbered headings provided in the solution tab. Would you like a step-by-step breakdown of the timing calculation or logic table?`;
+            simulatedAnswer = `**DeepSeek Analysis:**\nRegarding **${activeQuestion.text.slice(0, 60)}...** (${activeQuestion.marks || 'Exam Question'}):\nAdd your DeepSeek API key from the top-right button for full live step-by-step tutoring.`;
           }
           appendChatMessage('DeepSeek', simulatedAnswer, false);
-        }, 600);
+        }, 500);
       } else {
         try {
           const loadingMsg = appendChatMessage('DeepSeek', 'Thinking...', false);
-          
           const systemPrompt = `You are an expert Electrical Engineering Professor tutoring students for their Jadavpur University semester examinations.
-Current Subject: EE/PC/B/T/316 Programmable Logic & Microcontroller.
-Current Question: "${activeQuestion.text}"
+Subject: ${currentSubject ? `${currentSubject.codePrefix} ${currentSubject.name}` : 'EE'}
+Paper: ${paperData ? paperData.yearLabel : ''}
+Current Question (${activeQuestion.q_num}): "${activeQuestion.text}"
 Marks: ${activeQuestion.marks}
-Official Note Reference: ${activeQuestion.note_ref.pdf_file}, Pages: ${activeQuestion.note_ref.pages}, Section: ${activeQuestion.note_ref.section}.
-Official Solution Excerpt: ${activeQuestion.solution}
+${noteRef.pdf_file ? `Note Reference: ${noteRef.pdf_file}, Pages: ${noteRef.pages}, Section: ${noteRef.section}` : ''}
+${activeQuestion.solution ? `Reference Solution: ${activeQuestion.solution}` : ''}
 
-Provide precise, mathematically rigorous, and exam-focused responses formatted in clean markdown and LaTeX.`;
+Provide precise, mathematically rigorous, exam-focused responses in clean Markdown and LaTeX.`;
 
           const res = await fetch('https://api.deepseek.com/chat/completions', {
             method: 'POST',
@@ -982,7 +1599,7 @@ Provide precise, mathematically rigorous, and exam-focused responses formatted i
           const data = await res.json();
           if (data.choices && data.choices[0]) {
             loadingMsg.innerHTML = marked.parse(data.choices[0].message.content);
-            renderMathInElement(loadingMsg, { throwOnError: false });
+            runKatex(loadingMsg);
           } else {
             loadingMsg.textContent = 'Error from DeepSeek API: ' + (data.error ? data.error.message : 'Unknown response');
           }
@@ -1005,9 +1622,7 @@ Provide precise, mathematically rigorous, and exam-focused responses formatted i
 
       if (isUser) {
         msgDiv.innerHTML = `
-          <div class="p-3 bg-indigo-600 text-white rounded-xl text-xs leading-relaxed max-w-[85%] shadow-xs">
-            ${content}
-          </div>
+          <div class="p-3 bg-indigo-600 text-white rounded-xl text-xs leading-relaxed max-w-[85%] shadow-xs">${escapeHtml(content)}</div>
           <div class="w-6 h-6 rounded-full bg-slate-800 text-white flex items-center justify-center shrink-0 text-xs font-bold">You</div>
         `;
       } else {
@@ -1017,7 +1632,7 @@ Provide precise, mathematically rigorous, and exam-focused responses formatted i
             ${marked.parse(content)}
           </div>
         `;
-        renderMathInElement(msgDiv, { throwOnError: false });
+        runKatex(msgDiv);
       }
 
       container.appendChild(msgDiv);
@@ -1044,23 +1659,27 @@ Provide precise, mathematically rigorous, and exam-focused responses formatted i
         localStorage.setItem('deepseek_api_key', key);
         localStorage.setItem('deepseek_model', model);
         document.getElementById('api-status-badge').textContent = `Active (${model})`;
-        document.getElementById('api-status-badge').className = "text-emerald-600 font-mono font-medium";
-        alert("DeepSeek API configuration saved successfully!");
+        document.getElementById('api-status-badge').className = 'text-emerald-600 font-mono font-medium';
+        alert('DeepSeek API configuration saved successfully!');
       } else {
         localStorage.removeItem('deepseek_api_key');
-        document.getElementById('api-status-badge').textContent = `Simulated Demo Mode`;
-        document.getElementById('api-status-badge').className = "text-amber-600 font-mono";
+        document.getElementById('api-status-badge').textContent = 'Simulated Demo Mode';
+        document.getElementById('api-status-badge').className = 'text-amber-600 font-mono';
       }
       closeApiModal();
     }
 
+    window.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeDrawer();
+    });
+
     window.addEventListener('DOMContentLoaded', () => {
-      loadPaperData();
+      initApp();
       const key = localStorage.getItem('deepseek_api_key');
       const model = localStorage.getItem('deepseek_model') || 'deepseek-chat';
       if (key) {
         document.getElementById('api-status-badge').textContent = `Active (${model})`;
-        document.getElementById('api-status-badge').className = "text-emerald-600 font-mono font-medium";
+        document.getElementById('api-status-badge').className = 'text-emerald-600 font-mono font-medium';
       }
     });
   </script>

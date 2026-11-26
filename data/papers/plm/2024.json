@@ -1,0 +1,337 @@
+{
+  "id": "plm-2024",
+  "subjectId": "plm",
+  "year": 2024,
+  "sortKey": 2024.2,
+  "yearLabel": "2024",
+  "examType": "Regular",
+  "sourcePdf": "2024 - Programmable Logic & Microcontroller.pdf",
+  "hasDiagram": false,
+  "parts": [
+    {
+      "partLabel": "PART I",
+      "refCode": "Ex/EE/PC/B/T/316/2024",
+      "headerLines": [
+        "B.E. ELECTRICAL ENGINEERING THIRD YEAR FIRST SEMESTER - 2024",
+        "Subject: PROGRAMMABLE LOGIC & MICROCONTROLLER"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Answer any FIVE:",
+      "sharedNote": null,
+      "footerNote": "[ Turn over",
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.",
+          "marks": "10",
+          "co": null,
+          "topic": "PLD Switching Technologies & MOS Memory Switch",
+          "textLatex": "Name different switching tehnologies used in PLD. Describe the structure and functionality of any one of the switch used in MOS memory device with proper diagram.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024-p1-1",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "5",
+          "co": null,
+          "topic": "PLA Implementation of Full Adder",
+          "textLatex": "Develop a circuit by using PLA to implement the full adder.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024-p1-2a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "5",
+          "co": null,
+          "topic": "Macrocell Versatility in Configurable Hardware",
+          "textLatex": "How does macrocell add to the versatility of a configurable hardware? Explain with example.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024-p1-2b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.",
+          "marks": "10",
+          "co": null,
+          "topic": "CAD Simulation & Synthesis",
+          "textLatex": "Discuss the different steps involved in simulation and synthesis in a typical CAD system.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024-p1-3",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "7",
+          "co": null,
+          "topic": "JTAG Cable & Device Programming",
+          "textLatex": "What is JTAG cable? What is its role in context with device programming? Write the pin details of JTAG cable.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024-p1-4a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "3",
+          "co": null,
+          "topic": "Advantages of FPGAs over CPLDs",
+          "textLatex": "What are the advantages of FPGAs over CPLDs?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024-p1-4b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.",
+          "marks": "10",
+          "co": null,
+          "topic": "FPGA Logic Block Technologies & Transistor Pair Logic",
+          "textLatex": "Name different types of technologies adopted in FPGA logic blocks. Draw and explain a circuit diagram to implement the logic function $f = ab + \\bar{c}$ using transistor pair logic in FPGA.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024-p1-5",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "6.",
+          "marks": "10",
+          "co": null,
+          "topic": "Commercial CPLD Architecture",
+          "textLatex": "Describe with neat circuit diagram, the functionality of a commercially available CPLD chip.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024-p1-6",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "7.",
+          "marks": "10",
+          "co": null,
+          "topic": "VHDL XOR Gate, Testbench & Timing Diagrams",
+          "textLatex": "Write a program in VHDL to develop an XOR gate. Write a testbench program to test it. Draw the timing diagrams for input and output signals.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024-p1-7",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "8.",
+          "marks": "10",
+          "co": null,
+          "topic": "IEEE 1164 Standard Logic States in VHDL",
+          "textLatex": "How many different states are available as per IEEE standards in VHDL? Write down their names and symbols. Write their priority list.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024-p1-8",
+          "images": []
+        }
+      ]
+    },
+    {
+      "partLabel": "PART II",
+      "refCode": "EX/EE/PC/B/T/316/2024",
+      "headerLines": [
+        "B. E. ELECTRICAL ENGINEERING 3RD YEAR 1ST SEMESTER EXAMINATION",
+        "SUBJECT: - PROGRAMMABLE LOGIC AND MICROCONTROLLER"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": null,
+      "sharedNote": null,
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.(a)(i)",
+          "marks": "6",
+          "co": "CO1-K1",
+          "topic": "Microcontroller vs Microprocessor",
+          "textLatex": "How do you recognize and differentiate a microcontroller from a set of available microprocessors?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024-p2-1ai",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(a)(ii)",
+          "marks": "4",
+          "co": "CO1-K1",
+          "topic": "ROM vs RAM",
+          "textLatex": "State key differences between a ROM and a RAM.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024-p2-1aii",
+          "images": []
+        },
+        {
+          "kind": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "5x2=10",
+          "co": "CO1-K1",
+          "topic": "Microcontroller Architecture & Memory MCQs",
+          "textLatex": "Identify the correct option(s) and justify in favour of your answer:<br><br><strong>(i)</strong> Most of the microcontrollers with the state of the art technology is a<br>(A) RISC processor of Princeton architecture<br>(B) RISC processor of Harvard architecture<br>(C) CISC processor of Princeton architecture<br>(D) CISC processor of Harvard architecture<br><br><strong>(ii)</strong> Flash memory of a processor is generally used to store<br>(A) Data even when power is off<br>(B) Temporary variable defined in the code<br>(C) Program or opcode<br>(D) Data when power is on only.<br><br><strong>(iii)</strong> The EPROM with quartz window offers<br>(A) Slow erasing and out of board programming<br>(B) Slow erasing and in-system programming<br>(C) Fast erasing and out of board programming<br>(D) Fast erasing and in-system programming<br><br><strong>(iv)</strong> The operation of Memory read is not supported during<br>(A) Refreshing of DRAM<br>(B) The absence of external power supply in NV-RAM<br>(C) Discharge of capacitor in DRAM<br>(D) Interrupt driven execution with SRAM<br><br><strong>(v)</strong> The port pin must carry a logic-1 to turn on LEDs that are connected in<br>(A) Common Anode configuration when common terminal is at +5V<br>(B) Common Anode configuration when common terminal is at 0V<br>(C) Common Cathode configuration when common terminal is at +5V<br>(D) Common Cathode configuration when common terminal is at 0V",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024-p2-1b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)(i)",
+          "marks": "3",
+          "co": "CO2-K1",
+          "topic": "ATmega2560 Communication Protocols",
+          "textLatex": "Write the names of communication interfaces (protocol) that are supported by ATmega2560 microcontroller directly.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024-p2-2ai",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)(ii)",
+          "marks": "3+1",
+          "co": "CO2-K1",
+          "topic": "Bootloader & PC Communication Port",
+          "textLatex": "What is a bootloader? What is the most common communication port through which a bootloader interacts with PC?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024-p2-2aii",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)(iii)",
+          "marks": "3",
+          "co": "CO2-K1",
+          "topic": "Compiler vs Programmer",
+          "textLatex": "State differences between a compiler and a programmer.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024-p2-2aiii",
+          "images": []
+        },
+        {
+          "kind": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "10",
+          "co": "CO2-K1",
+          "topic": "Generalized Microcontroller Architecture",
+          "textLatex": "Draw the generalized block diagram that shows the architecture of a microcontroller with all necessary functional components and features. Explain the diagram.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024-p2-2b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "5x2=10",
+          "co": "CO3-K2",
+          "topic": "AVR I/O Port Bit Manipulation & Timing",
+          "textLatex": "Write a program segment to<br>(i) read bit-3 of PORTB<br>(ii) set bit-2 and reset bit-5 of PORTA keeping other bits unchanged<br>(iii) shift the content of PORTC by a variable amount as decided in program<br>(iv) send the number 6 as a character to PORTA.<br>(v) calculate the time consumed to execute a block of commands",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024-p2-3a",
+          "images": []
+        },
+        {
+          "kind": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "10",
+          "co": "CO3-K2",
+          "topic": "PORTD Pulse Generation from Truth Table",
+          "textLatex": "Read pin-0 and pin-1 of PORTD. In reference to the truth table shown in Table-1:<table style=\"border-collapse:collapse;margin:10px auto;text-align:center;font-size:0.92em;\"><thead><tr><th style=\"border:1px solid #333;padding:4px 10px;\">Pin-1</th><th style=\"border:1px solid #333;padding:4px 10px;\">Pin-0</th><th style=\"border:1px solid #333;padding:4px 10px;\">Duty cycle</th><th style=\"border:1px solid #333;padding:4px 10px;\">Frequency</th></tr></thead><tbody><tr><td style=\"border:1px solid #333;padding:4px 10px;\">0</td><td style=\"border:1px solid #333;padding:4px 10px;\">0</td><td style=\"border:1px solid #333;padding:4px 10px;\">80%</td><td style=\"border:1px solid #333;padding:4px 10px;\">4Hz</td></tr><tr><td style=\"border:1px solid #333;padding:4px 10px;\">0</td><td style=\"border:1px solid #333;padding:4px 10px;\">1</td><td style=\"border:1px solid #333;padding:4px 10px;\">80%</td><td style=\"border:1px solid #333;padding:4px 10px;\">50Hz</td></tr><tr><td style=\"border:1px solid #333;padding:4px 10px;\">1</td><td style=\"border:1px solid #333;padding:4px 10px;\">0</td><td style=\"border:1px solid #333;padding:4px 10px;\">50%</td><td style=\"border:1px solid #333;padding:4px 10px;\">4Hz</td></tr><tr><td style=\"border:1px solid #333;padding:4px 10px;\">1</td><td style=\"border:1px solid #333;padding:4px 10px;\">1</td><td style=\"border:1px solid #333;padding:4px 10px;\">50%</td><td style=\"border:1px solid #333;padding:4px 10px;\">50Hz</td></tr></tbody><caption style=\"caption-side:bottom;padding-top:4px;font-size:0.92em;\">Table-1</caption></table>write a program to generate a pulse at pin-7 of PORTD. The duty cycle and frequency of the pulse is shown in Table-1. Write a program accordingly.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024-p2-3b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "10",
+          "co": "CO4-K3",
+          "topic": "Timer-5 Pulse Generation",
+          "textLatex": "Write a program using Timer-5 to generate a pulse of 2Hz at a duty cycle of 50%. Explain your solution stating necessary assumptions, if any.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024-p2-4a",
+          "images": []
+        },
+        {
+          "kind": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "10",
+          "co": "CO4-K3",
+          "topic": "Continuous Analog Channel Reading & ADC Conversion Time",
+          "textLatex": "Read an analog channel continuously to receive data. The channel voltage is in the range of 0-5V. Send the data read to serial monitor. Estimate the overall conversion time of analog voltage to its digital equivalent. Write a program accordingly.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024-p2-4b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(a)",
+          "marks": "10",
+          "co": "CO5-K4",
+          "topic": "Serial Bit-by-Bit Reception & LED Timing",
+          "textLatex": "Receive a byte of data serially (one bit at a time) via D5 pin of PORTA. The LSB of the data should come in first. The LED connected to PORTB.7 should glow for 2s after receiving a bit and 5s after completion of reception of the entire byte. The received byte should be sent to PORTC. Write a program to implement the requirement.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024-p2-5a",
+          "images": []
+        },
+        {
+          "kind": "or"
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(b)",
+          "marks": "10",
+          "co": "CO5-K4",
+          "topic": "Concurrent LED Blinking & Timer-3 Interrupt",
+          "textLatex": "An LED connected to PORTB.7 blinks continuously with a duty cycle of 50% nad frequency of 100Hz. When the main program continues to run, an interrupt is generated by timer-3 at every 1s interval. On appearance of the interrupt, an LED connected to PORTA.7 toggles. Write a program to implement the requirement.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2024-p2-5b",
+          "images": []
+        }
+      ]
+    }
+  ]
+}

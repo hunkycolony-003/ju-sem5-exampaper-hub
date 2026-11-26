@@ -1,0 +1,214 @@
+{
+  "id": "plm-2017_plm",
+  "subjectId": "plm",
+  "year": 2017,
+  "sortKey": 2017.1,
+  "yearLabel": "2017 (S)",
+  "examType": "Supplementary",
+  "sourcePdf": "2017 - Programmable Logic & Microcontroller.pdf",
+  "hasDiagram": false,
+  "parts": [
+    {
+      "partLabel": "PART I",
+      "refCode": "EE/T/316/2017(S)",
+      "headerLines": [
+        "B. ELE. ENGG. 3RD YR 1ST SEMESTER SUPPLE EXAMINATION, 2017",
+        "SUBJECT: - PROGRAMMABLE LOGIC & MICROCONTROLLER"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Answer any FIVE: (5×10)",
+      "sharedNote": null,
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.",
+          "marks": "10",
+          "co": null,
+          "topic": "Programmable Array Logic (PAL)",
+          "textLatex": "Give a complete circuit of PAL and explain the working principle of each part.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_plm-p1-1",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.",
+          "marks": "10",
+          "co": null,
+          "topic": "Diode-Transistor PLA Full Adder",
+          "textLatex": "Using a diode-based AND matrix and transistorized OR matrix, draw a complete circuit to implement a full-adder block. Explain your solution.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_plm-p1-2",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.",
+          "marks": "7+3",
+          "co": null,
+          "topic": "Macrocell & SRAM-Based Switches",
+          "textLatex": "Draw a macrocell and show how it is used to implement different types of circuits. What are the disadvantages of SRAM based switch?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_plm-p1-3",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.",
+          "marks": "10",
+          "co": null,
+          "topic": "FPGA Chip Architecture",
+          "textLatex": "Describe with neat circuit diagram, the functionality of a commercially available FPGA chip.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_plm-p1-4",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.",
+          "marks": "5+5",
+          "co": null,
+          "topic": "Multiplexer-Based Logic Implementation",
+          "textLatex": "How can the different functions be implemented using multiplexer? Draw two commercial models using multiplexers and show how they are used for the purpose.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_plm-p1-5",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "6.",
+          "marks": "7+3",
+          "co": null,
+          "topic": "VHDL ROM & Triangular Wave LUT",
+          "textLatex": "Write a complete program in VHDL to generate a ROM containing one LUT of triangular wave. Size of the LUT is 8-byte. Show the mathematical expression as well as the resulting data used in LUT.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_plm-p1-6",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "7.",
+          "marks": "10",
+          "co": null,
+          "topic": "VHDL 12-Bit Up/Down Counter",
+          "textLatex": "Write a program in VHDL to implement one 12-bit up/down counter. The counter will be triggered by negative edge of a clock. The downcount command will have higher priority over upcount.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_plm-p1-7",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "8.",
+          "marks": "2×5",
+          "co": null,
+          "topic": "Short Notes (Antifuse, VHDL, FPGA LUT, JTAG)",
+          "textLatex": "Write short notes on any TWO of the following:<br>a) Antifuse;<br>b) Process flow in VHDL;<br>c) Look-Up Table in FPGA structure;<br>d) JTAG Cable.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_plm-p1-8",
+          "images": []
+        }
+      ]
+    },
+    {
+      "partLabel": "PART II",
+      "refCode": "EX/EE/T/316/2017(S)",
+      "headerLines": [
+        "B. ELE. ENGG. 3RD YEAR 1ST SEMESTER (SUPPLEMENTARY) EXAMINATION, 2017",
+        "SUBJECT: - PROGRAMMABLE LOGIC AND MICROCONTROLLER"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Answer any three. Two marks reserved for neatness.",
+      "sharedNote": null,
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.",
+          "marks": "16",
+          "co": null,
+          "topic": "8051 Rotate Instructions",
+          "textLatex": "Write the mnemonics of various rotate instructions available in context with the programming of 8051. Explain each of them along with appropriate examples.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_plm-p2-1",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.",
+          "marks": "4×4",
+          "co": null,
+          "topic": "8051 Instruction Set",
+          "textLatex": "Explain the operation of following instructions:<br>i) <code>JBC 03H, 04H</code> &nbsp;&nbsp;&nbsp;&nbsp; ii) <code>CJNE @R0, 05H, 06H</code><br>iii) <code>DJNZ 08H, 09H</code> &nbsp;&nbsp;&nbsp;&nbsp; iv) <code>MUL AB</code>",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_plm-p2-2",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "8051 Square Wave Generation (Timer)",
+          "textLatex": "Write a program to generate a square wave of $1\\text{ kHz}$ frequency at pin P2.3 of 8051 on crystal frequency of $11.0592\\text{ MHz}$.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_plm-p2-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "8051 Arithmetic & Port I/O Programming",
+          "textLatex": "Write a program to implement the following function:<br>$$y(x) = 3x^2 + 5x, \\quad 0 \\le x \\le 5$$<br>Input $x$ is received from port-3 and the output $y$ is delivered to port-1.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_plm-p2-3b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.",
+          "marks": "2×8",
+          "co": null,
+          "topic": "8051 Ports, Timers & Interrupts",
+          "textLatex": "Write short notes on any <strong>two</strong>:<br>a) Ports of 8051.<br>b) Modes of Timer in 8051.<br>c) Activation of Interrupts in 8051.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_plm-p2-4",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.",
+          "marks": "4×4",
+          "co": null,
+          "topic": "8051 Special Function Registers (TCON, PSW, IE, SCON)",
+          "textLatex": "Write the bit formats of following SFRs and mention in short their functions:<br>a) TCON &nbsp;&nbsp;&nbsp;&nbsp; b) PSW &nbsp;&nbsp;&nbsp;&nbsp; c) IE &nbsp;&nbsp;&nbsp;&nbsp; d) SCON",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_plm-p2-5",
+          "images": []
+        }
+      ]
+    }
+  ]
+}

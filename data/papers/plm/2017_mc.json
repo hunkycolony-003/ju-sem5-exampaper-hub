@@ -1,0 +1,250 @@
+{
+  "id": "plm-2017_mc",
+  "subjectId": "plm",
+  "year": 2017,
+  "sortKey": 2017.0,
+  "yearLabel": "2017 (MC)",
+  "examType": "Supplementary",
+  "sourcePdf": "2017 - Microprocessors and Microcontrollers.pdf",
+  "hasDiagram": false,
+  "parts": [
+    {
+      "partLabel": "PART I",
+      "refCode": "Ex/EE/T/316/2017(OLD)(S)",
+      "headerLines": [
+        "BACHELOR OF ELE ENGG 3RD YEAR 1ST SEM SUPPLEMENTARY EXAMINATION, 2017(OLD)",
+        "MICROPROCESSORS AND MICROCONTROLLERS"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks: 100",
+      "subMarksText": "(50 marks for each Part)",
+      "scriptNote": "Use a separate Answer-Script for each Part",
+      "instructions": "Answer any three questions. Two marks are reserved for neatness and well organized answers.",
+      "sharedNote": null,
+      "footerNote": "[ Turn over",
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "6 x 2",
+          "co": null,
+          "topic": "8085 Instruction Set & Addressing Modes",
+          "textLatex": "Mention the functions and the addressing modes of the following instructions of 8085 microprocessor:<br>i. <code>LXI H, 8000H</code><br>ii. <code>ORA B</code><br>iii. <code>RLC</code><br>iv. <code>DCR C</code><br>v. <code>LDAX B</code><br>vi. <code>JMP 8050H</code>",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_mc-p1-1a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "8085 Pin Functions",
+          "textLatex": "Explain the function of the following pins of 8085 microprocessor (i) $S_1$, $S_0$ (ii) $\\overline{\\text{RESETIN}}$",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_mc-p1-1b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.",
+          "marks": "8 x 2",
+          "co": null,
+          "topic": "8085 Architecture, Pin Diagram & Interrupts",
+          "textLatex": "Write short notes on <strong>any two</strong> of the following:<br>i) Pin diagram of 8085 microprocessor<br>ii) 8085 interrupts<br>iii) Flag register of 8085 microprocessor",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_mc-p1-2",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "8085 Stack & Subroutine Execution",
+          "textLatex": "Discuss in detail the operation when instruction <code>RET</code> is executed.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_mc-p1-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "2",
+          "co": null,
+          "topic": "8085 T-State & Clock Timing",
+          "textLatex": "What is T-state? What will be the value of one t-state if the clock frequency of the microprocessor is 3MHz.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_mc-p1-3b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(c)",
+          "marks": "8",
+          "co": null,
+          "topic": "8085 Machine Cycles & Timing Diagram",
+          "textLatex": "How many machine cycles and T-states are needed to execute <code>LXI H, 2000H</code>? Also draw the timing diagram considering the hex code for <code>LXI H</code> to be <code>21H</code>.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_mc-p1-3c",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "6",
+          "co": null,
+          "topic": "8251 USART Operating Modes",
+          "textLatex": "What are the various operating modes of 8251?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_mc-p1-4a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "8155 vs 8255 Peripheral Chips",
+          "textLatex": "Compare 8155 and 8255",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_mc-p1-4b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(c)",
+          "marks": "6",
+          "co": null,
+          "topic": "8155 Handshake Input Timing",
+          "textLatex": "Explain and draw a neat timing waveform of 8155 I/O ports with handshake input mode.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_mc-p1-4c",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.",
+          "marks": "4+3+5+4",
+          "co": null,
+          "topic": "8085 Assembly Language Programming",
+          "textLatex": "Write assembly language program in 8085 to perform the following operations:<br>(i) To perform same as <code>XCHG</code> instruction.<br>(ii) To see the content of flag register<br>(iii) To obtain $100\\ \\mu\\text{s}$ delay time.<br>(iv) To find the sum of first 50 natural numbers",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_mc-p1-5",
+          "images": []
+        }
+      ]
+    },
+    {
+      "partLabel": "PART II",
+      "refCode": "EX/EE/T/316/2017(OLD)(S)",
+      "headerLines": [
+        "B. ELE. ENGG. 3RD YEAR 1ST SEMESTER (SUPPLEMENTARY) EXAMINATION, 2017(OLD)",
+        "MICROPROCESSORS AND MICROCONTROLLERS"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Answer any three. Two marks reserved for neatness.",
+      "sharedNote": null,
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "8051 Addressing Modes",
+          "textLatex": "What are the different addressing modes available in an 8051 microcontroller? State them along with example for each type.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_mc-p2-1a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "8051 On-Chip Memory Organization",
+          "textLatex": "Draw and explain the on-chip memory organization of 8051.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_mc-p2-1b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.",
+          "marks": "4 x 4",
+          "co": null,
+          "topic": "8051 Instruction Set",
+          "textLatex": "Explain the operation of following instructions:<br>i) <code>JBC 07H, 08H</code><br>ii) <code>DA A</code><br>iii) <code>DJNZ 03H, 06H</code><br>iv) <code>DIV AB</code>",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_mc-p2-2",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "8051 Timer Programming & Square Wave Generation",
+          "textLatex": "Write a program to generate a square wave of 2kHz frequency at pin P2.4 of 8051 on crystal frequency of 11.0592MHz.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_mc-p2-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "8",
+          "co": null,
+          "topic": "8051 Arithmetic & I/O Port Programming",
+          "textLatex": "Write a program to implement the following function:<br>$$y(x) = 4x^2 + 5x + 10, \\quad 0 \\le x \\le 5$$<br>Input $x$ is received from port-3 and the output $y$ is delivered to port-1.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_mc-p2-3b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.",
+          "marks": "2 x 8",
+          "co": null,
+          "topic": "8051 Flags, LED Interfacing & Interrupts",
+          "textLatex": "Write short notes on <strong>any two</strong>:<br>a) Flags of 8051.<br>b) Interfacing of LED with 8051.<br>c) Interrupt sequence in 8051.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_mc-p2-4",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.",
+          "marks": "4 x 4",
+          "co": null,
+          "topic": "8051 Special Function Registers (SFRs)",
+          "textLatex": "Write the bit formats of following SFRs and mention in short their functions:<br>a) <code>TMOD</code><br>b) <code>PSW</code><br>c) <code>IP</code><br>d) <code>SCON</code>",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2017_mc-p2-5",
+          "images": []
+        }
+      ]
+    }
+  ]
+}

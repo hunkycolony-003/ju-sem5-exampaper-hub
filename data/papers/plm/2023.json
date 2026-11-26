@@ -1,0 +1,286 @@
+{
+  "id": "plm-2023",
+  "subjectId": "plm",
+  "year": 2023,
+  "sortKey": 2023.0,
+  "yearLabel": "2023",
+  "examType": "Regular",
+  "sourcePdf": "2023 - Programmable Logic & Microcontroller.pdf",
+  "hasDiagram": false,
+  "parts": [
+    {
+      "partLabel": "PART I",
+      "refCode": "EE/PC/B/T/316/2023",
+      "headerLines": [
+        "B. E. ELECTRICAL ENGINEERING 3RD YR 1ST SEMESTER EXAMINATION, 2023",
+        "SUBJECT: - PROGRAMMABLE LOGIC & MICROCONTROLLER"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Answer any FIVE Questions.",
+      "sharedNote": null,
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.",
+          "marks": "10",
+          "co": null,
+          "topic": "Programmable Logic Devices (PLD)",
+          "textLatex": "Describe the basic structure and working principle of a programmable logic device with the help of necessary circuit diagram.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2023-p1-1",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.",
+          "marks": "2+8",
+          "co": null,
+          "topic": "MOS Devices & FPGA Switching Technologies",
+          "textLatex": "Why are diodes or transistors not used for MOS devices? Describe any one switching technology adopted in FPGA to implement configurable hardware.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2023-p1-2",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.",
+          "marks": "10",
+          "co": null,
+          "topic": "PAL Architecture",
+          "textLatex": "With the help of a block diagram discuss the functions of different components of a PAL device.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2023-p1-3",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "3",
+          "co": null,
+          "topic": "IC Speed Performance",
+          "textLatex": "State the reasons for different speed performance of ICs.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2023-p1-4a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "7",
+          "co": null,
+          "topic": "Altera MAX 7000 Macrocell",
+          "textLatex": "Draw and describe the structure of a macrocell used in Altera MAX 7000.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2023-p1-4b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.",
+          "marks": "10",
+          "co": null,
+          "topic": "CAD System & SPLD Configuration",
+          "textLatex": "Explain the process used in CAD system for configuring SPLD.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2023-p1-5",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "6.",
+          "marks": "10",
+          "co": null,
+          "topic": "FPGA Transistor Pair Logic",
+          "textLatex": "With a simple example describe the transistor pair logic used is FPGA.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2023-p1-6",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "7.",
+          "marks": "10",
+          "co": null,
+          "topic": "VHDL Data Types & IEEE 1164 States",
+          "textLatex": "What is difference between 'bit' and 'std_logic'? How many different states are available as per IEEE standards in VHDL? Write down their names and symbols. Write their priority list.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2023-p1-7",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "8.",
+          "marks": "10",
+          "co": null,
+          "topic": "VHDL Tri-State Gate & Testbench",
+          "textLatex": "Write a VHDL program to develop one Tri-stated gate with proper circuit diagram and truth table. Also write a proper test bench program for the decoder.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2023-p1-8",
+          "images": []
+        }
+      ]
+    },
+    {
+      "partLabel": "PART II",
+      "refCode": "EX/EE/PC/B/T/316/2023",
+      "headerLines": [
+        "B. E. ELECTRICAL ENGINEERING 3RD YEAR 1ST SEMESTER EXAMINATION, 2023",
+        "SUBJECT: - PROGRAMMABLE LOGIC AND MICROCONTROLLER"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Answer question no.6 and any three from rest.",
+      "sharedNote": null,
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "question",
+          "qNum": "1.(i)",
+          "marks": "3×3=9",
+          "co": null,
+          "topic": "Microcontroller Fundamentals & Comparisons",
+          "textLatex": "Compare (any Three):<br>(a) Harvard architecture and Von Neumann architecture.<br>(b) Microprocessor and microcontroller.<br>(c) Subroutine and ISR<br>(d) Timer and counter<br>(e) Internal RAM and Special Function Register",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2023-p2-1i",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(ii)",
+          "marks": "5",
+          "co": null,
+          "topic": "Microcontroller Memory Architecture",
+          "textLatex": "What are the different types of memories available in a microcontroller?",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2023-p2-1ii",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(a)",
+          "marks": "7",
+          "co": null,
+          "topic": "Timer Special Function Registers",
+          "textLatex": "Mention the names of Special Function Registers in context with Timer operation. Draw schematically and write the bit formats of these registers for configuring a timer. State the functions of each of the bits.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2023-p2-2a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "7",
+          "co": null,
+          "topic": "Timer Programming & LED Blinking",
+          "textLatex": "Write a program to have a blinking display of LED using the in-built timer of microcontroller. The LED blinks with a frequency of $200\\text{ Hz}$. Mention all the required assumptions and requirements in your solution.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2023-p2-2b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "10",
+          "co": null,
+          "topic": "Timer Interrupts & Multi-Rate LED Blinking",
+          "textLatex": "Write a program to generate blinking display of two LEDs. One LED toggling with a frequency of $400\\text{ Hz}$ is controlled by the main program. A second LED blinking with a frequency of $100\\text{ Hz}$ is controlled by a timer in interrupt driven mode. Mention all the required assumptions and requirements in your solution.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2023-p2-3a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "4",
+          "co": null,
+          "topic": "Counter Programming & Pulse Counting",
+          "textLatex": "Write a program to count the number of pulses occurring at a pin of microcontroller. Use in-built counter of the microcontroller. Mention the resources used in your application.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2023-p2-3b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "ADC Configuration Registers",
+          "textLatex": "Mention the names of registers involved in configuring ADC of the microcontroller. How do you select a particular input channel and alter sampling frequency of ADC.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2023-p2-4a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "Continuous ADC Sampling Program",
+          "textLatex": "Write a program to grab samples continuously from an analog channel of ADC. Send the result continuously to an 8-bit digital port.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2023-p2-4b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(a)",
+          "marks": "8",
+          "co": null,
+          "topic": "Switch-Controlled Logic Operations (I/O Port)",
+          "textLatex": "Two switches are connected to two pins of one port of a microcontroller. If the switches generate bit patterns as mentioned in the following table, another pin of the microcontroller will deliver output as a result of the action taken by the microcontroller:<table border=\"1\" cellspacing=\"0\" cellpadding=\"6\" style=\"border-collapse:collapse;margin:8px auto;text-align:center;font-size:0.92em;\"><thead><tr><th>Switching bits (input)</th><th>Output as a result of the action</th></tr></thead><tbody><tr><td>00</td><td>AND</td></tr><tr><td>01</td><td>OR</td></tr><tr><td>10</td><td>XOR</td></tr><tr><td>11</td><td>NAND</td></tr></tbody></table>Write an appropriate program. Explain your solution.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2023-p2-5a",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(b)",
+          "marks": "6",
+          "co": null,
+          "topic": "8-Bit Parity Detection",
+          "textLatex": "An 8-bit data is available at a port of microcontroller. Write a program to determine its parity. For even parity detected, one LED should glow.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2023-p2-5b",
+          "images": []
+        },
+        {
+          "kind": "question",
+          "qNum": "6.",
+          "marks": "8",
+          "co": null,
+          "topic": "PORT Programming & RISC/CISC Processors",
+          "textLatex": "Write short notes on any One:<br>(a) PORT programming<br>(b) RISC and CISC processor.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "questionId": "plm-2023-p2-6",
+          "images": []
+        }
+      ]
+    }
+  ]
+}
