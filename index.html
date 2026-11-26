@@ -448,16 +448,7 @@
         <div id="tab-sol-content" class="max-w-3xl mx-auto space-y-5">
           <!-- Question Statement Card -->
           <div class="pb-4 border-b border-stone-200 text-slate-800 text-sm font-medium">
-            <div class="flex items-center justify-between text-xs text-slate-500 font-mono mb-2 gap-2 flex-wrap">
-              <span id="drawer-group-badge" class="font-bold text-slate-600 uppercase">Question Statement</span>
-              <details class="relative">
-                <summary class="cursor-pointer font-sans">Export question</summary>
-                <div class="absolute right-0 z-10 mt-2 flex gap-2 whitespace-nowrap rounded-md border border-stone-200 bg-white p-2 shadow-sm">
-                <button onclick="copyQuestionJson()" class="text-[11px] font-sans font-semibold text-slate-600 hover:text-indigo-700 bg-white border border-slate-200 px-2 py-0.5 rounded transition">Copy JSON</button>
-                <button onclick="copyQuestionLatex()" class="text-[11px] font-sans font-semibold text-slate-600 hover:text-indigo-700 bg-white border border-slate-200 px-2 py-0.5 rounded transition">Copy LaTeX</button>
-                </div>
-              </details>
-            </div>
+            <p id="drawer-group-badge" class="mb-2 font-mono text-xs font-bold uppercase text-slate-600">Question Statement</p>
             <div id="drawer-statement-text" class="q-rich-body leading-relaxed paper-font text-base text-slate-900"></div>
           </div>
 
@@ -1862,7 +1853,6 @@
       panel.inert = false;
       setDrawerBackgroundInert(true);
       switchDrawerTab('solution');
-      document.querySelector('#tab-sol-content details').open = false;
       document.getElementById('drawer-scroll').scrollTop = 0;
       panel.focus({ preventScroll: true });
     }
@@ -1914,32 +1904,6 @@
       if (!activeQuestion || !activeQuestion.solution) return;
       navigator.clipboard.writeText(activeQuestion.solution);
       alert('Exam solution copied to clipboard!');
-    }
-
-    function copyQuestionLatex() {
-      if (!activeQuestion) return;
-      const text = `Q${activeQuestion.q_num} (${activeQuestion.marks}) [${activeQuestion.part_title}]\n${activeQuestion.text}`;
-      navigator.clipboard.writeText(text);
-    }
-
-    function copyQuestionJson() {
-      if (!activeQuestion || !currentSubject || !paperData) return;
-      const record = {
-        questionId: activeQuestion.id,
-        subjectId: currentSubject.id,
-        subjectName: currentSubject.name,
-        subjectCode: currentSubject.codePrefix,
-        paperId: paperData.id,
-        yearLabel: paperData.yearLabel,
-        part: activeQuestion.part_title,
-        qNum: activeQuestion.q_num,
-        marks: activeQuestion.rawMarks || activeQuestion.marks,
-        topic: activeQuestion.module,
-        textLatex: activeQuestion.text,
-        images: activeQuestion.images || [],
-        diagramSvg: activeQuestion.diagramSvg || null
-      };
-      navigator.clipboard.writeText(JSON.stringify(record, null, 2));
     }
 
     // =========================================================================
