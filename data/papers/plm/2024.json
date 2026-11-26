@@ -33,7 +33,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2024-p1-1",
-          "images": []
+          "images": [],
+          "solution": "**PLD switching technologies.** The notes describe fusible links, avalanche-induced diode and bipolar links, MOS charge-storage elements such as FAMOS and MAOS, SRAM-controlled pass gates, and antifuses. A fuse starts conducting and can be opened permanently. An antifuse starts open and can be closed permanently. SRAM permits fast reconfiguration and must be reloaded after power loss.\n\n**Example: FAMOS (Floating-gate Avalanche Injection MOS).** The illustrated device has p-type source and drain diffusions in an n-type substrate. Insulating dielectric surrounds floating gate G1. In the electrically erasable version, gate G2 aids programming and erasure.\n\n```text\n                 G2: second / erase gate\n                 ───────────────────────\n                        dielectric\n                    ┌───────────┐\n                    │ G1, float │\n                    └───────────┘\n                        dielectric\n Al source S ── p⁺ source   channel   p⁺ drain ── Al drain D\n               └────── n-type silicon substrate X ─────────┘\n```\n\nDuring programming, avalanche conditions at the junctions inject electrons onto G1. The trapped charge changes the transistor threshold and permits a channel at the read conditions. The insulating layer retains the charge after power removal, giving a nonvolatile state. Erasure removes or neutralizes the stored charge. In a UV-erasable EPROM, ultraviolet light through a quartz window discharges the floating gate.",
+          "note_ref": {
+            "pdf_file": "Programmable_ Logic_ Devices.pdf",
+            "pages": "PDF pp. 7–12, 36–37",
+            "section": "Programmable links, MOS switches and FPGA configuration technologies",
+            "verified_diagram": "Figs. 8–9: FAMOS cross-section and programming connections. Fig. 49: comparison of switch types."
+          }
         },
         {
           "kind": "question",
@@ -45,7 +52,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2024-p1-2a",
-          "images": []
+          "images": [],
+          "solution": "Let $A$ and $B$ be the operands and $C$ the carry input. The sum is 1 for an odd number of asserted inputs. The carry $C_y$ is 1 when at least two inputs are asserted.\n\n$$S=\\bar A\\bar B C+\\bar A B\\bar C+A\\bar B\\bar C+ABC,\\qquad C_y=AB+BC+CA.$$\n\nSupply both polarities of the three inputs to the programmable AND plane. Program the seven columns as in Fig. 34.\n\n| AND output | Connected literals | OR output |\n| :--- | :--- | :--- |\n| $P_1$ | $\\bar A,\\bar B,C$ | $S$ |\n| $P_2$ | $\\bar A,B,\\bar C$ | $S$ |\n| $P_3$ | $A,\\bar B,\\bar C$ | $S$ |\n| $P_4$ | $A,B,C$ | $S$ |\n| $P_5$ | $A,B$ | $C_y$ |\n| $P_6$ | $B,C$ | $C_y$ |\n| $P_7$ | $C,A$ | $C_y$ |\n\n```text\nA, B, C → Input buffers → Programmable AND plane\n                             ├ P1 P2 P3 P4 → Programmable OR → S\n                             └ P5 P6 P7    → Programmable OR → Cy\n```\n\nAn omitted literal makes no connection to that AND term. Connect each product line only to the displayed OR output.",
+          "note_ref": {
+            "pdf_file": "Programmable_ Logic_ Devices.pdf",
+            "pages": "PDF pp. 21–22",
+            "section": "PLA output network and full-adder example",
+            "verified_diagram": "Figs. 33–34: full-adder block and programmed AND/OR planes."
+          }
         },
         {
           "kind": "question",
@@ -57,7 +71,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2024-p1-2b",
-          "images": []
+          "images": [],
+          "solution": "A macrocell sits between the OR plane and the output pin. One selector chooses the immediate OR result or the output of a D flip-flop. Another selects the output polarity. An enable term controls the output buffer, and the feedback MUX returns the register or pin signal to the logic array.\n\n```text\nOR plane ─┬─ direct ─┐\n          └─ D FF ───┴─ Path MUX → Polarity select → Enabled buffer → pin\n              Register / pin → Feedback MUX → Logic array\n```\n\n**Example.** In Fig. 39, opening both switches gives the direct, non-inverted combinational output (form d). Leaving both intact selects the registered, inverted output (form a). The same physical cell can therefore provide a combinational output or a clocked state signal with feedback.",
+          "note_ref": {
+            "pdf_file": "Programmable_ Logic_ Devices.pdf",
+            "pages": "PDF pp. 23–25",
+            "section": "PAL macrocell and configurable output and feedback paths",
+            "verified_diagram": "Figs. 37–39: MUX, sample macrocell, and four programmed forms."
+          }
         },
         {
           "kind": "question",
@@ -69,7 +90,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2024-p1-3",
-          "images": []
+          "images": [],
+          "solution": "### CAD flow for an SPLD\n\n```text\n Design entry → Merge and translate → Optimize equations\n      ▲                                      │\n      │                                      ▼\n      └───────── Fix errors ─────────── Device fitter\n                          ▲                  │\n                          │                  ▼\n                          └─────────── Simulate SPLD\n                                             │\n                                             ▼\n                                     Configuration file\n                                             │\n                                             ▼\n                                      Programming unit\n```\n\n1. **Design entry.** Enter the required logic as an HDL description, a schematic, or a combination of both.\n2. **Merge and translate.** Combine the design inputs and convert them to a representation suitable for the next stage.\n3. **Equation optimization.** Simplify the logic equations and reduce required gates, flip-flops and connections where possible.\n4. **Device fitting.** Map the equations into the target device's available logic and route the connections. Check pin assignments and timing constraints. Fitting determines the configuration bits that specify the switch states and reports any constraints it cannot meet.\n5. **Simulation.** Apply testbench inputs and check the resulting waveforms against the intended operation. Correct any errors before programming. The notes also permit an earlier functional simulation after design entry.\n6. **Configuration and download.** Send the configuration file or fuse map to the programming unit to configure the device. For a device supporting in-system programming, the notes show downloading through its JTAG port.\n\n**Synthesis and simulation.** Translation and optimization form the logic implementation from the design. The fitter maps it onto target resources and checks implementation constraints. Simulation applies test inputs and compares the waveforms with the required behavior. Functional simulation can run before fitting. A fitted-design simulation can also check timing if the simulator supports delay models.",
+          "note_ref": {
+            "pdf_file": "Programmable_ Logic_ Devices.pdf",
+            "pages": "PDF pp. 31–33",
+            "section": "CAD flow: entry, translation, optimization, fitting and simulation",
+            "verified_diagram": "Figs. 43–44: design flow and test-signal simulation."
+          }
         },
         {
           "kind": "question",
@@ -81,7 +109,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2024-p1-4a",
-          "images": []
+          "images": [],
+          "solution": "A JTAG cable links the host programmer to the board's JTAG test access port (TAP). For a compatible part, the programmer transfers the CAD-generated configuration or fuse map through the serial JTAG path with the target still soldered in place.\n\n| Signal | Function |\n| :--- | :--- |\n| `TCK` | Test clock from the programmer. |\n| `TMS` | Test Mode Select, which controls TAP state transitions. |\n| `TDI` | Serial test data into the target, including instructions or configuration data. |\n| `TDO` | Serial data from the target to the programmer, including data shifted out for checking. |\n| `VCC` | Supply or target-voltage reference connection. |\n| `GND` | Common reference ground. |\n\nPhysical connector pin numbers and whether an adapter senses or supplies the reference voltage depend on the cable and target.",
+          "note_ref": {
+            "pdf_file": "Programmable_ Logic_ Devices.pdf",
+            "pages": "PDF pp. 30–34",
+            "section": "In-system programming and the six signals of the lecture-note JTAG cable",
+            "verified_diagram": "JTAG signal list on p. 33 and connection illustrations on p. 34."
+          }
         },
         {
           "kind": "question",
@@ -93,7 +128,13 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2024-p1-4b",
-          "images": []
+          "images": [],
+          "solution": "1. **Higher capacity.** An FPGA provides more configurable logic and sequential elements for large designs.\n2. **On-chip resources.** FPGA families can provide embedded memory blocks and flexible logic cells, making data paths and soft processors practical.\n3. **Mapping and clocking flexibility.** CAD tools map, place and route larger designs. FPGAs generally offer dedicated clock-distribution resources. Availability of a clock source is device-dependent.\n\nThe notes contrast these capabilities with the predictable timing of smaller wide-logic designs mapped onto CPLDs.",
+          "note_ref": {
+            "pdf_file": "Programmable_ Logic_ Devices.pdf",
+            "pages": "PDF pp. 34–35, 38",
+            "section": "CPLD limitations and FPGA capacity, embedded memory and fabric"
+          }
         },
         {
           "kind": "question",
@@ -105,7 +146,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2024-p1-5",
-          "images": []
+          "images": [],
+          "solution": "### FPGA logic-block technologies\n\nThe notes list transistor pairs, small gates such as NAND/XOR, multiplexers, lookup tables (LUTs), and wide fan-in AND/OR structures.\n\n### FPGA transistor-pair logic\n\nThe notes use the **Crosspoint Solutions FPGA** as an example. Its transistor pairs have a primed device in the upper path and an unprimed device in the lower path. For a shared logic input, the upper device conducts when the input is 0 and the lower device conducts when the input is 1. Programmable connections join the required pairs. The notes turn both devices of pair 3 off to isolate neighboring sections.\n\n### Example from the notes\n\nThe wired circuit in Figs. 54–56 implements $f=ab+\\overline c$ for its labeled input $c$. The following switch diagram groups the parallel and series connections of those figures. Brackets identify the devices using the figure's numbering and give their closed-switch conditions.\n\n```text\n +5 V ──┬──[1′: a=0]──┬── m ──[1: a=1]──[2: b=1]── GND\n        └──[2′: b=0]──┘\n\n +5 V ──┬──[4′: m=0]──┬── f ──[4: m=1]──[5: c=1]── GND\n        └──[5′: c=0]──┘\n\n Pair 3 and 3′ are biased off between the two sections.\n```\n\n1. **First stage.** If $a=b=1$, devices 1 and 2 provide a series path from $m$ to ground. If either input is 0, device 1′ or 2′ connects $m$ to $+5\\,\\mathrm V$. Therefore $m=\\overline{ab}$.\n2. **Second stage.** If $m=0$ or $c=0$, device 4′ or 5′ pulls $f$ high. If both are 1, devices 4 and 5 pull $f$ low. Thus $f=\\overline{mc}=ab+\\overline c$.\n\nThe introductory expression on p. 38 writes $ab+c$. To realize that expression with the wiring shown, feed $\\overline c$ to the circuit's $c$ terminal. The inversion follows directly from the closed-switch conditions above.",
+          "note_ref": {
+            "pdf_file": "Programmable_ Logic_ Devices.pdf",
+            "pages": "pp. 38–41",
+            "section": "FPGA Structure: transistor-pair logic and the complemented input in the worked example",
+            "verified_diagram": "Figs. 50–56. The equivalent switch diagram follows the wiring and conditions in Figs. 54–56."
+          }
         },
         {
           "kind": "question",
@@ -117,7 +165,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2024-p1-6",
-          "images": []
+          "images": [],
+          "solution": "### Altera MAX 7000 CPLD\n\n```text\nExternal pins ⇄ I/O blocks ⇄ PIA (programmable switch matrix)\n                             ├── LAB 1: 16 macrocells\n                             ├── LAB 2: 16 macrocells\n                             └── Other LABs\n```\n\nA Logic Array Block (LAB) is an SPLD-like collection of macrocells. The I/O blocks interface with the pins. The Programmable Interconnect Array (PIA) routes signals among LABs and to I/O resources. Configuration sets the routing and logic. The MAX 7000 EPROM/EEPROM configuration is nonvolatile.\n\n### Signal path inside one macrocell\n\nEach LAB has two groups of eight macrocells.\n\n```text\n PIA and local LAB interconnect\n               │\n     Programmable AND plane ── five local product terms\n               │\n               ▼                 Terms from other LAB macrocells\n      Product select matrix ◀─────────────────────┘\n         │         │\n         │         └── Set, clear and array-clock paths\n         ▼\n      OR → XOR → Programmable register ──┐\n            └── Combinational path ──────┤\n                                         ▼\n                         Output select → To PIA\n```\n\n1. **AND plane and product select matrix.** The AND plane forms product terms. The matrix selects terms from the AND plane or local LAB interconnect. The OR gate can use the five local terms and up to 15 extra product terms from other macrocells in the same LAB.\n2. **OR and XOR stages.** The OR stage sums the selected product terms. The XOR stage supplies the next logic result to the register or to the combinational output path.\n3. **Register and controls.** The notes show a programmable flip-flop with D, JK, T, and SR configurations, or transparent operation. The figure shows a selection between global and array clock paths and the set and clear control paths.\n4. **Output selection.** The selector returns the registered or combinational result to the PIA for routing to other logic.",
+          "note_ref": {
+            "pdf_file": "Programmable_ Logic_ Devices.pdf",
+            "pages": "PDF pp. 27–29",
+            "section": "Commercial CPLD example: Altera MAX 7000",
+            "verified_diagram": "Fig. 41: LABs, I/O blocks and PIA. Fig. 42: macrocell."
+          }
         },
         {
           "kind": "question",
@@ -129,7 +184,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2024-p1-7",
-          "images": []
+          "images": [],
+          "solution": "The notes implement $c=\\bar a b+a\\bar b$ with two inverters, two AND gates and an OR gate. This dataflow version keeps the internal gate signals and requires no additional component files.\n\n```vhdl\nentity xor2 is\n    port (a, b : in bit; c : out bit);\nend entity xor2;\n\narchitecture exm1 of xor2 is\n    signal p, q, r, s : bit;\nbegin\n    p <= not a;\n    q <= not b;\n    r <= p and b;\n    s <= a and q;\n    c <= r or s;\nend architecture exm1;\n\nentity tb_xor2 is\nend entity tb_xor2;\n\narchitecture io of tb_xor2 is\n    signal u, v, w : bit;\nbegin\n    dut: entity work.xor2(exm1) port map (a => u, b => v, c => w);\n    u <= '0', '1' after 100 ns, '0' after 200 ns;\n    v <= '0', '1' after 150 ns, '0' after 300 ns, '1' after 420 ns;\n\n    check: process\n    begin\n        wait for 1 ns;\n        assert w = '0' severity failure;\n        wait for 100 ns;\n        assert w = '1' severity failure;\n        wait for 50 ns;\n        assert w = '0' severity failure;\n        wait for 50 ns;\n        assert w = '1' severity failure;\n        wait for 100 ns;\n        assert w = '0' severity failure;\n        wait for 120 ns;\n        assert w = '1' severity failure;\n        wait;\n    end process;\nend architecture io;\n```\n\n**Timing diagram** (aligned intervals, widths not time-scaled):\n\n```text\nt (ns)       0      100    150    200    300    420\n             │      │      │      │      │      │\na            _______|‾‾‾‾‾‾|‾‾‾‾‾‾|______|______|______\nb            _______|______|‾‾‾‾‾‾|‾‾‾‾‾‾|______|‾‾‾‾‾‾\nc            _______|‾‾‾‾‾‾|______|‾‾‾‾‾‾|______|‾‾‾‾‾‾\n```\n\nFrom left to right the input pairs are `00`, `10`, `11`, `01`, `00` and `01`. The output is high only when the inputs differ.",
+          "note_ref": {
+            "pdf_file": "VHDL_BjB.pdf",
+            "pages": "PDF pp. 6–8",
+            "section": "Example 4: XOR from NOT, AND and OR gates",
+            "verified_diagram": "The timing diagram follows the stimulus on p. 8."
+          }
         },
         {
           "kind": "question",
@@ -141,7 +203,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2024-p1-8",
-          "images": []
+          "images": [],
+          "solution": "### Nine logic states\n\nIEEE 1164 specifies nine values for the VHDL type `std_ulogic`. Its resolved subtype is `std_logic`.\n\n| Symbol | Meaning |\n| :--- | :--- |\n| `'U'` | Uninitialized |\n| `'X'` | Forcing (strong) unknown |\n| `'0'` | Forcing 0 |\n| `'1'` | Forcing 1 |\n| `'Z'` | High impedance |\n| `'W'` | Weak unknown |\n| `'L'` | Weak 0 |\n| `'H'` | Weak 1 |\n| `'-'` | Don't care |\n\n### Driver resolution\n\nFor the usual driven values, the table gives **forcing > weak > high impedance**. `'U'` dominates every driver value. Forcing `'0'` and `'1'` have equal strength, and a conflict gives `'X'`. A driver of `'X'` gives `'X'` unless a driver is `'U'`. In the weak group, opposing `'L'` and `'H'` give `'W'`. `'Z'` leaves an ordinary driver unchanged, and all `'Z'` drivers give `'Z'`.\n\nA single `'-'` driver remains `'-'`. With multiple drivers, `'-'` gives `'X'` unless a driver is `'U'`. For example, `'-'` with `'Z'` gives `'X'`. The table on p. 10 gives these pairwise results. Its explanatory priority list has inconsistent entries for `'-'` and `'Z'`.",
+          "note_ref": {
+            "pdf_file": "VHDL_BjB.pdf",
+            "pages": "pp. 8–10",
+            "section": "Signal types and logic states. The p. 10 table governs the examples.",
+            "verified_diagram": "Nine-value resolution table, p. 10."
+          }
         }
       ]
     },
@@ -170,7 +239,13 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2024-p2-1ai",
-          "images": []
+          "images": [],
+          "solution": "Identify the part number and compare the datasheet block diagrams and memory/peripheral specifications.\n\n| Feature | Microprocessor | Microcontroller |\n| :--- | :--- | :--- |\n| Focus | General-purpose processing core | Embedded control system on one chip |\n| Memory | In the generalized note diagram, memory sits outside the CPU and connects by a system bus | Typically integrates program Flash and data RAM, often with nonvolatile data memory |\n| I/O and peripherals | The generalized processor uses external I/O devices | Integrates GPIO, timers, interrupts and serial interfaces, often with ADC or PWM |\n| Board requirements | May need external memory and interface chips | Small controllers can work with few external components |\n\nFor example, the AVR ATmega2560 integrates program Flash, SRAM, GPIO and timer/counters. Integrated control peripherals and memory are more reliable clues than package or instruction set alone.",
+          "note_ref": {
+            "pdf_file": "1_ATmega2560_overview.pdf",
+            "pages": "PDF pp. 16, 20, 38–39",
+            "section": "Generalized processor and microcontroller architectures and selection criteria"
+          }
         },
         {
           "kind": "question",
@@ -182,7 +257,13 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2024-p2-1aii",
-          "images": []
+          "images": [],
+          "solution": "| Property | ROM or program memory | RAM or read/write working memory |\n| :--- | :--- | :--- |\n| Normal access | Read frequently. Programming or erasing, where supported, uses a special procedure. | Read and write as part of normal operation. |\n| Retention | Keeps its contents without power. | Ordinary SRAM and DRAM lose data without power. NV-RAM is an exception. |\n| Use | Firmware, opcodes or persistent constants. | Temporary variables, the stack and intermediate results. |\n| Examples | Mask ROM, PROM, EPROM, EEPROM and Flash. | SRAM and DRAM. DRAM needs refresh. |\n\nOn the ATmega2560, opcodes are in program Flash and working variables are in SRAM.",
+          "note_ref": {
+            "pdf_file": "1_ATmega2560_overview.pdf",
+            "pages": "PDF pp. 22–33, 55",
+            "section": "ROM and read/write memory categories and AVR Flash/SRAM roles"
+          }
         },
         {
           "kind": "or"
@@ -197,7 +278,20 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2024-p2-1b",
-          "images": []
+          "images": [],
+          "solution": "| Item | Answer | Justification |\n| :--- | :--- | :--- |\n| (i) | **B** | In the notes' AVR/PIC-style examples, a RISC core uses Harvard organization, with separate program and data paths. This is the intended choice for the examples, since other microcontroller architectures also exist. |\n| (ii) | **C** | The question asks the normal role of Flash in the processor. The notes assign Flash to opcodes, SRAM to temporary variables and EEPROM to persistent user data. Flash is nonvolatile and can hold constant data too, so A describes a capability without identifying its usual role here. |\n| (iii) | **A** | The quartz window permits UV erasure of the entire EPROM. The notes describe a slow erase and out-of-board reprogramming. |\n| (iv) | **A**. **B** can also apply to a battery-backed NV-RAM in backup mode. | The notes explicitly say DRAM cannot be read during refresh. The NV-RAM backup battery retains the contents, but ordinary read access when external power is absent depends on the device. A standard power-fail write-protect/standby implementation also disables external access. The notes establish retention and do not specify the interface behavior for every NV-RAM. |\n| (v) | **D** | With common cathodes grounded, the pin goes high to source current through the LED and its series resistor. Common anodes at +5 V instead use a low pin that sinks current. |",
+          "note_ref": {
+            "pdf_file": "1_ATmega2560_overview.pdf",
+            "pages": "PDF pp. 24–28, 32–38, 55",
+            "section": "Memory types, Harvard/RISC architectures and AVR program-memory roles"
+          },
+          "note_refs": [
+            {
+              "pdf_file": "3_ATmega2560_IO_programming.pdf",
+              "pages": "PDF pp. 15–16",
+              "section": "Common-cathode and common-anode LED wiring"
+            }
+          ]
         },
         {
           "kind": "question",
@@ -209,7 +303,13 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2024-p2-2ai",
-          "images": []
+          "images": [],
+          "solution": "The ATmega2560 provides **four USARTs** (USART0–USART3), **SPI** (Serial Peripheral Interface), and **TWI** (Two-Wire Interface, compatible with I²C). An USART can run in asynchronous UART or synchronous serial mode.",
+          "note_ref": {
+            "pdf_file": "2_ATmega2560_HARDWARE_ORGANIZATION.pdf",
+            "pages": "PDF pp. 6–7",
+            "section": "ATmega2560 serial communication interfaces"
+          }
         },
         {
           "kind": "question",
@@ -221,7 +321,20 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2024-p2-2aii",
-          "images": []
+          "images": [],
+          "solution": "A **bootloader** is a small program in a reserved area of the AVR's Flash. When invoked, it receives application data and uses the AVR Flash self-programming instructions to write the new program. The notes name the **UART serial port** as the usual port to the PC. On an Arduino Mega 2560 the PC normally connects using USB through an onboard USB-to-serial bridge.",
+          "note_ref": {
+            "pdf_file": "2_ATmega2560_HARDWARE_ORGANIZATION.pdf",
+            "pages": "PDF pp. 16–18",
+            "section": "Flash bootloader and its serial host connection"
+          },
+          "note_refs": [
+            {
+              "pdf_file": "3_ATmega2560_IO_programming.pdf",
+              "pages": "PDF p. 7",
+              "section": "Arduino IDE upload via USB and the onboard bootloader"
+            }
+          ]
         },
         {
           "kind": "question",
@@ -233,7 +346,20 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2024-p2-2aiii",
-          "images": []
+          "images": [],
+          "solution": "A **compiler** translates source code into target machine instructions. The assembler and linker complete the build, producing a firmware image such as a HEX file. The IDE's Verify button builds the image and reports build errors.\n\nA **device programmer** transfers the built image to target program memory and can verify the write. It talks to hardware through a supported interface such as ISP. The IDE Upload action can also send the image to the board's bootloader over its serial connection.",
+          "note_ref": {
+            "pdf_file": "3_ATmega2560_IO_programming.pdf",
+            "pages": "PDF p. 7",
+            "section": "IDE Verify/compile versus Upload"
+          },
+          "note_refs": [
+            {
+              "pdf_file": "2_ATmega2560_HARDWARE_ORGANIZATION.pdf",
+              "pages": "PDF pp. 11–12, 16",
+              "section": "ISP programming and serial bootloader"
+            }
+          ]
         },
         {
           "kind": "or"
@@ -248,7 +374,21 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2024-p2-2b",
-          "images": []
+          "images": [],
+          "solution": "```text\n           ┌─────────── Microcontroller ───────────┐\nClock ────→│ CPU: ALU, control unit and registers   │\n           │               ↕ internal buses        │\n           │     ┌─────────┼────────────────┐      │\n           │     ↕         ↕                ↕      │\n           │ ROM/Flash   RAM (RWM)       I/O ports ├─→ GPIO / serial\n           │    code     working data       ↕      │\n           │           timer/counters, ADC, etc.   │←─ analog input\n           │           interrupt and timing logic  │\n           └──────────────────┬────────────────────┘\n                              ↕ optional system-bus expansion\n                       External ROM/RWM, if supported\n```\n\nThe control unit fetches program instructions and sequences the ALU and registers. On-chip ROM or Flash holds code, and read/write memory holds working data. Internal buses carry data, addresses and control signals between the CPU, memory and peripherals. Parallel ports handle logic-level I/O, while USART, SPI or TWI exchange serial data. Timers use the clock or external pulses. An ADC samples analog inputs where fitted. The interrupt controller routes peripheral events to service routines. The clock synchronizes operation, and support for external memory is optional.",
+          "note_ref": {
+            "pdf_file": "1_ATmega2560_overview.pdf",
+            "pages": "PDF p. 20",
+            "section": "Simplified microcontroller architecture",
+            "verified_diagram": "Redraw of the CPU, on-chip code and data memory, I/O, timer/counter, clock and external-bus option."
+          },
+          "note_refs": [
+            {
+              "pdf_file": "2_ATmega2560_HARDWARE_ORGANIZATION.pdf",
+              "pages": "PDF pp. 6–8",
+              "section": "ATmega2560 serial ports and analog conversion peripherals"
+            }
+          ]
         },
         {
           "kind": "question",
@@ -260,7 +400,20 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2024-p2-3a",
-          "images": []
+          "images": [],
+          "solution": "Place the following Arduino Mega 2560 program segments inside `setup()`, `loop()`, or separate functions, with `Serial.begin(9600)` before printing. Use `PINx` to sample a pin. Use `PORTx` to read or modify the output latch.\n\n```cpp\n#include <Arduino.h>\n\n// (i) Sample PB3. Supply a defined external logic level.\nDDRB &= ~_BV(DDB3);\nPORTB &= ~_BV(PORTB3);\nconst bool pb3 = (PINB & _BV(PINB3)) != 0;\n\n// (ii) Set PA2, clear PA5 and preserve the other latch bits.\nPORTA = (PORTA | _BV(PORTA2)) & ~_BV(PORTA5);\nDDRA |= _BV(DDA2) | _BV(DDA5);\n\n// (iii) Shift the PORTC latch left by a program-selected amount.\nconst uint8_t shift = 3;\nconst uint8_t previous = PORTC;\nPORTC = (shift < 8) ? static_cast<uint8_t>(previous << shift) : 0;\n\n// (iv) Place ASCII '6' (0x36) on the eight PORTA outputs.\nPORTA = static_cast<uint8_t>('6');\nDDRA = 0xFF;\n\n// (v) Place the commands to be measured between timestamps.\nDDRB |= _BV(DDB7);    // Configure the example output before timing\nconst uint32_t startUs = micros();\nPORTB ^= _BV(PORTB7);  // Example observable operation\nconst uint32_t elapsedUs = micros() - startUs;\nSerial.println(elapsedUs);  // Serial.begin(9600) runs in setup()\n```\n\nThe exercise does not specify the direction in (iii). Right shift uses `>>`. For (v), subtraction is safe across the unsigned timestamp rollover for intervals shorter than one rollover. At 16 MHz the Arduino Mega's `micros()` advances in 4 µs steps, so repeat a very short operation many times or count CPU cycles to resolve sub-tick times. Keep serial printing outside the measurement.",
+          "note_ref": {
+            "pdf_file": "3_ATmega2560_IO_programming.pdf",
+            "pages": "PDF pp. 20–23, 35–46",
+            "section": "DDR/PIN/PORT registers, shifts and bit masks"
+          },
+          "note_refs": [
+            {
+              "pdf_file": "5_ATmega2560_ADC_programming.pdf",
+              "pages": "PDF pp. 36, 40–42",
+              "section": "The worked ADC sketch measures a command interval using micros()"
+            }
+          ]
         },
         {
           "kind": "or"
@@ -275,7 +428,20 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2024-p2-3b",
-          "images": []
+          "images": [],
+          "solution": "Assume an ATmega2560 board running the 16 MHz Arduino core. Provide defined logic levels at `PD0` and `PD1`, for example external pull-downs and switches to +5 V. Share ground. Drive `PD7` as specified. On a standard Mega header, `PD7` is not generally broken out, so this pin requires access to the MCU pin or a suitable breakout. Use the MCU port names, which differ from Arduino's D-pin numbering.\n\nWith `PD1` as the most significant bit, each switch word sets the period $T=1/f$ and high time $T_H=DT$. Read both inputs once per cycle.\n\n| PD1 PD0 | Period (µs) | High (µs) | Low (µs) |\n| :---: | ---: | ---: | ---: |\n| 00 | 250000 | 200000 | 50000 |\n| 01 | 20000 | 16000 | 4000 |\n| 10 | 250000 | 125000 | 125000 |\n| 11 | 20000 | 10000 | 10000 |\n\n```cpp\n#include <Arduino.h>\n\nconstexpr uint8_t selectorMask = _BV(PD1) | _BV(PD0);\nconstexpr uint8_t pulseMask = _BV(PD7);\nconstexpr uint32_t periodUs[] = {250000, 20000, 250000, 20000};\nconstexpr uint32_t highUs[] = {200000, 16000, 125000, 10000};\n\nvoid setup() {\n    DDRD &= ~selectorMask;\n    PORTD &= ~(selectorMask | pulseMask);\n    DDRD |= pulseMask;\n}\n\nstatic void waitUntilElapsed(uint32_t startUs, uint32_t intervalUs) {\n    while (static_cast<uint32_t>(micros() - startUs) < intervalUs) {\n        // Keep the same timing origin for both edges.\n    }\n}\n\nvoid loop() {\n    const uint8_t setting = PIND & selectorMask;\n    const uint32_t startUs = micros();\n    PORTD |= pulseMask;\n    waitUntilElapsed(startUs, highUs[setting]);\n    PORTD &= ~pulseMask;\n    waitUntilElapsed(startUs, periodUs[setting]);\n}\n```\n\nThis is a software pulse generator derived from the GPIO notes. Timing has normal polling and clock-resolution error. Switch changes take effect on the next cycle.",
+          "note_ref": {
+            "pdf_file": "3_ATmega2560_IO_programming.pdf",
+            "pages": "PDF pp. 18–23, 43–46",
+            "section": "Pulse trains, GPIO direction and masked bit access"
+          },
+          "note_refs": [
+            {
+              "pdf_file": "4_ATmega2560_TC_programming.pdf",
+              "pages": "PDF p. 18",
+              "section": "The Arduino core uses Timer0 for micros(), millis() and delay()"
+            }
+          ]
         },
         {
           "kind": "question",
@@ -287,7 +453,13 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2024-p2-4a",
-          "images": []
+          "images": [],
+          "solution": "Assume $f_{\\mathrm{CPU}}=16\\,\\mathrm{MHz}$ and take the pulse from PA4 (Arduino Mega D26), the GPIO used by the notes' CTC example. A 2 Hz, 50% waveform has a period of 0.5 s. Toggle the output every 0.25 s. Use Timer5 in CTC mode, prescaler $N=256$.\n\n$$f_{\\rm tick}=16{,}000{,}000/256=62{,}500~\\mathrm{Hz},\\qquad\n\\mathrm{OCR5A}=0.25(62{,}500)-1=15{,}624.$$\n\nTimer5 counts from 0 through `OCR5A`, sets the compare flag and restarts the count. Poll and clear the flag on each match. Disable any library that already uses Timer5.\n\n```cpp\n#include <Arduino.h>\n\nconstexpr uint8_t pulseMask = _BV(PA4);\n\nvoid setup() {\n    PORTA &= ~pulseMask;\n    DDRA |= pulseMask;\n\n    TCCR5B = 0;                       // Stop Timer5 during setup\n    TCCR5A = 0;                       // GPIO supplies the output\n    TIMSK5 = 0;                       // Poll the match flag\n    TCNT5 = 0;\n    OCR5A = 15624;\n    TIFR5 = _BV(OCF5A);               // Write one to clear stale flag\n    TCCR5B = _BV(WGM52) | _BV(CS52);  // CTC mode 4, clk / 256\n}\n\nvoid loop() {\n    if (TIFR5 & _BV(OCF5A)) {\n        TIFR5 = _BV(OCF5A);\n        PORTA ^= pulseMask;\n    }\n}\n```",
+          "note_ref": {
+            "pdf_file": "4_ATmega2560_TC_programming.pdf",
+            "pages": "PDF pp. 9, 18, 54–62",
+            "section": "16-bit timer registers and CTC polling example, transferred from Timer3 to Timer5"
+          }
         },
         {
           "kind": "or"
@@ -302,7 +474,13 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2024-p2-4b",
-          "images": []
+          "images": [],
+          "solution": "Use ADC0 on PF0, Arduino Mega A0, as a single-ended input with common ground. Choose AVCC (nominally 5 V) as the reference and leave the 10-bit result right-adjusted. A 16 MHz oscillator divided by 128 gives $f_{\\rm ADC}=125\\,\\mathrm{kHz}$. A normal conversion takes 13 ADC clocks:\n\n$$t_{\\rm conv}=13/(125{,}000)=104\\,\\mu\\mathrm{s}.$$\n\nThe first conversion after enabling the ADC takes 25 clocks, about 200 µs. Alignment to the ADC clock, register access and polling add a small amount. The lecture sketch reports about 110 µs for a measured normal conversion. Serial output is excluded from the timed interval and slows the effective loop sampling rate.\n\n```cpp\n#include <Arduino.h>\n\nconstexpr uint8_t adcMode =\n    _BV(ADEN) | _BV(ADPS2) | _BV(ADPS1) | _BV(ADPS0);\n\nvoid setup() {\n    DDRF &= ~_BV(PF0);\n    PORTF &= ~_BV(PF0);                // No internal pull-up\n    ADCSRB = 0;                       // MUX5 = 0\n    ADMUX = _BV(REFS0);                // AVCC, ADC0, right-adjusted\n    ADCSRA = adcMode | _BV(ADIF);      // Enable ADC and clear stale flag\n    Serial.begin(9600);\n}\n\nvoid loop() {\n    const uint32_t startUs = micros();\n    ADCSRA = adcMode | _BV(ADSC);\n    while ((ADCSRA & _BV(ADIF)) == 0) {\n        // Wait for a new result.\n    }\n    const uint8_t low = ADCL;\n    const uint8_t high = ADCH;         // Read after ADCL\n    const uint16_t sample = (static_cast<uint16_t>(high) << 8) | low;\n    const uint32_t elapsedUs = micros() - startUs;\n\n    ADCSRA = adcMode | _BV(ADIF);      // Clear completion flag\n    Serial.print(\"ADC = \");\n    Serial.print(sample);\n    Serial.print(\", time = \");\n    Serial.print(elapsedUs);\n    Serial.println(\" us\");\n}\n```",
+          "note_ref": {
+            "pdf_file": "5_ATmega2560_ADC_programming.pdf",
+            "pages": "PDF pp. 13, 19–21, 35–44",
+            "section": "ADC0 setup and tutorial_19 polling with Serial and micros()"
+          }
         },
         {
           "kind": "question",
@@ -314,7 +492,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2024-p2-5a",
-          "images": []
+          "images": [],
+          "solution": "Read bit 5 of **PORTA** at `PA5` (Arduino Mega D27), not Arduino pin D5. Use `PB7` (D13) for an active-high LED and the eight `PORTC` pins for parallel output.\n\n**Synchronization assumption.** The question provides one data line and no clock. Follow the notes' paced-sampling procedure: the source supplies the next bit in each 500 ms LED-off window and holds it through the sampling instant. It can be a manual source responding to the LED or another circuit timed to this pattern. At each sample, shift the accumulated byte right and put the new input in bit 7. After eight samples the first received bit is at bit 0.\n\n```text\nPA5 → sampled bit → right-shifting register → PORTC\n                               │\n                               └── bit/byte indication → PB7 LED\n```\n\n```cpp\n#include <Arduino.h>\n\nconstexpr uint8_t dataMask = _BV(PA5);\nconstexpr uint8_t ledMask = _BV(PB7);\n\nvoid setup() {\n    DDRA &= ~dataMask;\n    PORTA &= ~dataMask;   // Well-defined external logic source\n    PORTB &= ~ledMask;\n    DDRB |= ledMask;\n    PORTC = 0;\n    DDRC = 0xFF;\n}\n\nvoid loop() {\n    uint8_t received = 0;\n    for (uint8_t bit = 0; bit < 8; ++bit) {\n        PORTB &= ~ledMask;\n        delay(500);      // Allow the external source to set its next bit\n        received >>= 1;\n        if (PINA & dataMask) {\n            received |= 0x80;\n        }\n\n        PORTB |= ledMask;\n        if (bit == 7) {\n            PORTC = received;\n            delay(5000);  // Extend final bit's indication to 5 s total\n        } else {\n            delay(2000);\n        }\n    }\n    PORTB &= ~ledMask;\n}\n```\n\nThe final high interval is extended from the normal 2 s to 5 s, as the note's final-byte indication extends its final bit. If the examiner intends a separate 5 s indication, insert a short off gap after the final 2 s pulse and then issue a new 5 s pulse.",
+          "note_ref": {
+            "pdf_file": "3_ATmega2560_IO_programming.pdf",
+            "pages": "PDF pp. 20, 74–78",
+            "section": "LSB-first shift accumulation and LED indication in tutorial_10",
+            "verified_diagram": "Redrawn serial-to-parallel data path with the examination ports."
+          }
         },
         {
           "kind": "or"
@@ -329,7 +514,21 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2024-p2-5b",
-          "images": []
+          "images": [],
+          "solution": "Connect active-high LEDs to PB7 (Mega D13) and PA7 (Mega D29), with series resistors where the LEDs are external. Assume a 16 MHz Mega 2560. In the foreground, toggle PB7 every 5 ms. This gives 5 ms high and 5 ms low, or 100 Hz. Timer3 is independent of the foreground. Use CTC rather than reloading an overflow counter in the ISR. With a prescaler of 256, the timer gets 62,500 ticks per second:\n\n$$\\mathrm{OCR3A}=62{,}500-1=62{,}499.$$\n\n```text\nMain loop  ──────────────→ PB7   toggle every 5 ms\nTimer3 CTC → COMPA ISR ──→ PA7   toggle every 1 s\n```\n\n```cpp\n#include <Arduino.h>\n#include <avr/interrupt.h>\n\nconstexpr uint8_t foregroundLED = _BV(PB7);\nconstexpr uint8_t interruptLED = _BV(PA7);\nconstexpr uint32_t halfPeriodUs = 5000;\nstatic uint32_t lastEdgeUs;\n\nISR(TIMER3_COMPA_vect) {\n    PORTA ^= interruptLED;\n}\n\nvoid setup() {\n    PORTB &= ~foregroundLED;\n    DDRB |= foregroundLED;\n    PORTA &= ~interruptLED;\n    DDRA |= interruptLED;\n\n    cli();\n    TCCR3B = 0;\n    TCCR3A = 0;\n    TCNT3 = 0;\n    OCR3A = 62499;\n    TIFR3 = _BV(OCF3A);              // Clear a pending compare flag\n    TIMSK3 = _BV(OCIE3A);\n    TCCR3B = _BV(WGM32) | _BV(CS32); // CTC mode 4, clk / 256\n    sei();\n\n    lastEdgeUs = micros();\n}\n\nvoid loop() {\n    if (static_cast<uint32_t>(micros() - lastEdgeUs) >= halfPeriodUs) {\n        lastEdgeUs += halfPeriodUs;\n        PORTB ^= foregroundLED;\n    }\n}\n```\n\nCompare A interrupts occur at 1 s intervals. The PA7 LED therefore completes one full blink cycle in 2 s.",
+          "note_ref": {
+            "pdf_file": "6_ATmega2560_INTERRUPT_programming.pdf",
+            "pages": "PDF pp. 20–26",
+            "section": "Timer3 ISR toggles a second LED while foreground code runs",
+            "verified_diagram": "The foreground/ISR wiring on p. 23 is adapted to the examination pins."
+          },
+          "note_refs": [
+            {
+              "pdf_file": "4_ATmega2560_TC_programming.pdf",
+              "pages": "PDF pp. 18, 54–62",
+              "section": "Arduino Timer0 timekeeping and the Timer3 CTC worked example, with count recomputed for this solution"
+            }
+          ]
         }
       ]
     }

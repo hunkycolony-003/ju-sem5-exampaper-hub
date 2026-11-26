@@ -37,7 +37,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p1-1a",
-          "images": []
+          "images": [],
+          "solution": "A PLA input buffer draws little current from the external input source and drives the internal AND plane with a stronger output. Each buffer provides both polarities, $A$ and $\\overline A$, so a product term can use either literal without adding an external inverter. Figure 17 shows this true/complement output pair.",
+          "note_ref": {
+            "pdf_file": "Programmable_ Logic_ Devices.pdf",
+            "pages": "PDF p. 14",
+            "section": "Input Buffer",
+            "verified_diagram": "Fig. 17, complementary input-buffer outputs."
+          }
         },
         {
           "kind": "question",
@@ -49,7 +56,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p1-1b",
-          "images": []
+          "images": [],
+          "solution": "The notes summarize these configurable-switch technologies in Fig. 49.\n\n| Technology | How it programs the connection | Retention |\n|---|---|---|\n| Fuse | Opens a conducting link permanently. | Nonvolatile, one-time programmable |\n| Antifuse | Makes a permanent connection through a previously insulating link. | Nonvolatile, one-time programmable |\n| EPROM | Floating-gate storage controls the switch; the device can be erased with UV and reprogrammed. | Nonvolatile |\n| EEPROM | Electrically erasable storage controls the switch. | Nonvolatile, electrically reprogrammable |\n| SRAM | A stored bit controls a pass gate or multiplexer. | Volatile, reload on power-up |",
+          "note_ref": {
+            "pdf_file": "Programmable_ Logic_ Devices.pdf",
+            "pages": "PDF pp. 7–12, 36–37",
+            "section": "Programmable memory links and FPGA switching technologies",
+            "verified_diagram": "Figs. 13 and 47–49, pass-gate control, antifuses and the technology summary."
+          }
         },
         {
           "kind": "question",
@@ -61,7 +75,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p1-1c",
-          "images": []
+          "images": [],
+          "solution": "The statement is false. **In-system programming (ISP)** configures a supported device while it stays on its target board, for example through the JTAG connection shown in Fig. 45. It avoids removing a large, fragile package and buying a programming socket. The CAD tools produce configuration bits for the completed design. ISP is useful for prototypes and later updates.\n\n**Out-of-board programming** can still be appropriate when the device lacks ISP support or when parts must be programmed and verified before assembly. The choice depends on the device and manufacturing process.",
+          "note_ref": {
+            "pdf_file": "Programmable_ Logic_ Devices.pdf",
+            "pages": "PDF pp. 30–34",
+            "section": "Programming a CPLD, reasons for employing ISP and design download",
+            "verified_diagram": "Fig. 45, in-system programming connection."
+          }
         },
         {
           "kind": "question",
@@ -73,7 +94,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p1-1d",
-          "images": []
+          "images": [],
+          "solution": "Treat the $p$ input variables as address bits and each of the $N$ logic functions as one ROM data output. Program each address with the $N$-bit word specified by the truth table. A full ROM uses $2^p$ words of $N$ bits. The fixed address decoder selects one minterm and the stored bits specify which outputs are true for it.\n\n```text\np input bits → address decoder → selected ROM word → N logic outputs\n```\n\nExample: for $F=A\\oplus B$, store `0, 1, 1, 0` at addresses `00, 01, 10, 11`. This is the one-output version of the ROM block in Fig. 15.",
+          "note_ref": {
+            "pdf_file": "Programmable_ Logic_ Devices.pdf",
+            "pages": "PDF pp. 4–6, 13",
+            "section": "Stored truth table and ROM as a PLD",
+            "verified_diagram": "Fig. 15, ROM with address inputs and data outputs."
+          }
         },
         {
           "kind": "question",
@@ -85,7 +113,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p1-1e",
-          "images": []
+          "images": [],
+          "solution": "| Feature | SPLD | CPLD |\n|---|---|---|\n| Organization | One small programmable structure such as a PAL or PLA. | Several SPLD-like logic blocks connected by programmable interconnect. |\n| Capacity | Fewer I/O pins, product terms and macrocells. | More resources for larger functions, with additional routing options and more flexible macrocells. |\n| Example | PAL 16R8 or 22V10. | Altera MAX 7000, with LABs and a programmable interconnect array. |\n\nThe notes describe many CPLDs as EEPROM-based, but the underlying memory technology does not by itself distinguish an SPLD from a CPLD.",
+          "note_ref": {
+            "pdf_file": "Programmable_ Logic_ Devices.pdf",
+            "pages": "PDF pp. 12–13, 26–29",
+            "section": "SPLD examples and Altera CPLD organization",
+            "verified_diagram": "Fig. 40, CPLD block organization."
+          }
         },
         {
           "kind": "question",
@@ -97,7 +132,13 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p1-1f",
-          "images": []
+          "images": [],
+          "solution": "An **application-specific integrated circuit (ASIC)** is an IC designed and fabricated for a particular application or class of applications. A foundry manufactures the circuit to the design specification. An ASIC can reduce board area and power, and it can have a low unit cost in high-volume production. It has a high up-front design and verification cost. A hardware redesign can require another fabrication run.",
+          "note_ref": {
+            "pdf_file": "Programmable_ Logic_ Devices.pdf",
+            "pages": "PDF p. 3",
+            "section": "ASIC features, advantages and disadvantages"
+          }
         },
         {
           "kind": "question",
@@ -109,7 +150,13 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p1-1g",
-          "images": []
+          "images": [],
+          "solution": "IEEE 1164 defines nine values in `std_ulogic` and its resolved subtype `std_logic`.\n\n| Value | Meaning |\n|---|---|\n| `'U'` | Uninitialized |\n| `'X'` | Forcing unknown |\n| `'0'` | Forcing low |\n| `'1'` | Forcing high |\n| `'Z'` | High impedance |\n| `'W'` | Weak unknown |\n| `'L'` | Weak low |\n| `'H'` | Weak high |\n| `'-'` | Don't care |",
+          "note_ref": {
+            "pdf_file": "VHDL_BjB.pdf",
+            "pages": "PDF pp. 8–10",
+            "section": "The std_logic type and the IEEE 1164 resolution table"
+          }
         },
         {
           "kind": "question",
@@ -121,7 +168,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p1-2a",
-          "images": []
+          "images": [],
+          "solution": "The macrocell in Fig. 38 takes an OR-plane sum $S$ and feeds it to both a D flip-flop and a bypass path. Two fuse-controlled multiplexers select the source and its polarity. An intact fuse holds the respective select at 0. With the fuse open, the pull-up makes the select 1.\n\n```text\n                  ┌── D flip-flop ── Q ── [0] ┐\nOR-plane sum S ───┤                           MUX S1 ── T ──┬─ [0] ┐\n                  └── bypass S ────────── [1] ┘              └─ NOT → [1] → MUX S0 → buffer → pin\n                                                  Selected feedback → AND-plane input buffer\n```\n\n| S1 fuse | S0 fuse | Pin value when enabled |\n|---|---|---|\n| Intact | Intact | $\\overline Q$ |\n| Intact | Open | $Q$ |\n| Open | Intact | $\\overline S$ |\n| Open | Open | $S$ |\n\nThese are the four Fig. 39 configurations. In the schematic, the final inversion comes from the output buffer, so the direct MUX branch gives an inverted pin value. The flip-flop gives registered operation and the bypass gives combinational operation. The output-enable term controls the three-state driver. The feedback multiplexer selects the complemented register output or the pin-side signal. That selected signal then passes through the feedback inverter shown in Fig. 38.",
+          "note_ref": {
+            "pdf_file": "Programmable_ Logic_ Devices.pdf",
+            "pages": "PDF pp. 24–25",
+            "section": "Sample macrocell and four fuse configurations",
+            "verified_diagram": "Fig. 38 and Fig. 39(a–d), registered/bypass and polarity selection."
+          }
         },
         {
           "kind": "question",
@@ -133,7 +187,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p1-2b",
-          "images": []
+          "images": [],
+          "solution": "Fig. 11 uses a cross-coupled MOS latch to store one bit as complementary internal nodes $D$ and $\\overline D$. Positive feedback keeps the stored value while power is supplied. The addressing and read/write transistors connect the latch to the appropriate data lines.\n\n```text\n                      ┌── cross-coupled MOS latch ──┐\nData in → T9 → T7 → T5 → D                     D̅ → T6 → T8 → T10 → Data out (complement)\n          W    Ay   Ax                               Ax   Ay    R\n```\n\n- **Hold.** With the cell disconnected, the latch retains its bit while powered.\n- **Write.** Set `W=1`, `Ay=1`, `Ax=1`. The input reaches the latch through T9, T7 and T5.\n- **Read.** Set `R=1`, `Ay=1`, `Ax=1`. The complementary value is available through T6, T8 and T10 and can be inverted if the true output is required.\n- **Use in a PLD.** The stored configuration bit controls a pass gate between routing segments. A stored 0 leaves the path at high resistance. SRAM is volatile, so a design needs configuration after power-up.",
+          "note_ref": {
+            "pdf_file": "Programmable_ Logic_ Devices.pdf",
+            "pages": "PDF pp. 11–12",
+            "section": "Static MOS RAM cell and configuration use",
+            "verified_diagram": "Figs. 11–14, storage cell, control lines and pass-gate use."
+          }
         },
         {
           "kind": "question",
@@ -145,7 +206,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p1-3a",
-          "images": []
+          "images": [],
+          "solution": "### PAL architecture\n\n```text\nInputs → Input buffers → Programmable AND plane\n         (I and NOT I)       │ product terms\n                             ▼\n                         Fixed OR plane → Output buffer → Outputs\n                             │\n                             └─ Optional register or feedback to AND plane\n```\n\n**Input buffers.** Each external input supplies both its true and complemented values to the AND plane.\n\n**Programmable AND plane.** Select the input literals for each product term by retaining the required connections and opening the others. For example, a term that retains $A$ and $\\overline B$ realizes $A\\overline B$. With $M$ inputs and $n$ product terms, the array has $2Mn$ possible fusible connections.\n\n**Fixed OR plane.** Each OR gate receives a predetermined subset of the product terms. Thus each output is a sum of its assigned terms. The groups of fixed connections are shown by solid dots in Fig. 35.\n\n**Output and feedback.** A buffer drives the output pin. A registered PAL can feed an OR output through a flip-flop. Depending on the device, an output can return to the AND plane, with optional inversion, for use in another product term. Fig. 36 shows this feedback arrangement.\n\nExample: retain the links for $A,\\overline B$ in one AND column, and $B,C$ in another. If the fixed OR gate receives those two columns, it produces $Y=A\\overline B+BC$. Opening a literal link removes that literal from the product. The figure distinguishes the programmable AND links from the fixed OR links.",
+          "note_ref": {
+            "pdf_file": "Programmable_ Logic_ Devices.pdf",
+            "pages": "pp. 23–24",
+            "section": "Programmable Array Logic (PAL) as PLD",
+            "verified_diagram": "Fig. 35 (AND and OR planes) and Fig. 36 (feedback and register). Diagram simplified from the notes."
+          }
         },
         {
           "kind": "question",
@@ -157,7 +225,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p1-3b",
-          "images": []
+          "images": [],
+          "solution": "An OR plane has product terms on its columns and output sums on its rows. In Figs. 23–26, each available crosspoint is a transistor path with a programmable link. A high product term whose link is intact pulls the corresponding sum line high. An open link removes that term from the sum. The pull-down returns an undriven row to 0.\n\n```text\n             product-term inputs\n              m0   m1   m2   m3\nY0 (OR row)    ×    ·    ×    ·\nY1 (OR row)    ·    ×    ×    ×\n\n× = intact/programmed link    · = open link\n```\n\nThus $Y_0=m_0+m_2$ and $Y_1=m_1+m_2+m_3$. The matrix uses minterms as inputs in this example. A PLA can also feed it minimized product terms.",
+          "note_ref": {
+            "pdf_file": "Programmable_ Logic_ Devices.pdf",
+            "pages": "PDF pp. 17–20",
+            "section": "OR matrix operation and compact notation",
+            "verified_diagram": "Figs. 23–26, transistor OR plane and crosspoint representation."
+          }
         },
         {
           "kind": "question",
@@ -169,7 +244,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p1-4a",
-          "images": []
+          "images": [],
+          "solution": "**Example: Xilinx XC4000.** The SRAM-based FPGA contains an array of configurable logic blocks (CLBs), peripheral I/O blocks and horizontal/vertical routing channels. Configuration bits set LUT contents and programmable connections. On power-up an SRAM-based device needs the configuration loaded again.\n\n```text\nI/O blocks ↔ programmable channel switches ↔ CLB array ↔ I/O blocks\n                short / medium / long routing wires\n\nInside one XC4000 CLB (simplified from Fig. 65)\nF1–F4 → LUT F ───┬─→ local output or register\n                  ├─→ LUT H → combined output or register\nG1–G4 → LUT G ───┘      ↑ S1\n                    two flip-flops available\n```\n\nThe two four-input LUTs implement arbitrary four-input Boolean functions independently. The third LUT combines the F and G outputs with another input when required. For example, a two-input XOR is made by loading the XOR truth-table bits into a LUT and ignoring its unused inputs. Flip-flops support sequential outputs. Programmable switches connect block pins to tracks and join selected tracks. The fitter chooses routes, which influences propagation delay. The notes also describe fast carry hardware for arithmetic.",
+          "note_ref": {
+            "pdf_file": "Programmable_ Logic_ Devices.pdf",
+            "pages": "PDF pp. 46–48",
+            "section": "Xilinx XC4000 CLB, LUTs, carry logic and programmable routing",
+            "verified_diagram": "Figs. 65–66, XC4000 CLB and wire segments."
+          }
         },
         {
           "kind": "question",
@@ -181,7 +263,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p1-4b",
-          "images": []
+          "images": [],
+          "solution": "For an odd-parity generator, the parity bit makes the total number of 1s in the four-bit transmitted word odd. Thus $P=1$ when the three data bits contain an even number of 1s.\n\n$$P=\\overline{A\\oplus B\\oplus C}=\\overline A\\,\\overline B\\,\\overline C+\\overline A BC+A\\overline BC+AB\\overline C=\\sum m(0,3,5,6).$$\n\n| ABC | P | ABC | P |\n|---|---:|---|---:|\n| 000 | 1 | 100 | 0 |\n| 001 | 0 | 101 | 1 |\n| 010 | 0 | 110 | 1 |\n| 011 | 1 | 111 | 0 |\n\n```text\n                 programmable AND plane          OR plane\n                 A A̅   B B̅   C C̅                to P\nm0               · ×   · ×   · ×                  ×\nm3               · ×   × ·   × ·                  ×\nm5               × ·   · ×   × ·                  ×\nm6               × ·   × ·   · ×                  ×\n\n× = connection present     · = open\n```\n\nThis adapts the notes' PLA full-adder layout. The full-adder sum output is the detector for an odd number of input 1s. Inverting that output gives the odd-parity **bit** required here.",
+          "note_ref": {
+            "pdf_file": "Programmable_ Logic_ Devices.pdf",
+            "pages": "PDF pp. 14–22",
+            "section": "PLA input literals, AND/OR matrix and full-adder worked example, adapted to generate an odd-parity bit",
+            "verified_diagram": "Figs. 22–29 and 34, PLA interconnection notation."
+          }
         },
         {
           "kind": "question",
@@ -193,7 +282,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p1-5a",
-          "images": []
+          "images": [],
+          "solution": "The output order is `Z3 Z2 Z1 Z0`. Only the selected output is high. The testbench applies all four inputs and checks the one-hot output after each transition.\n\n| A1 A0 | Z3 Z2 Z1 Z0 |\n|---|---|\n| 00 | 0001 |\n| 01 | 0010 |\n| 10 | 0100 |\n| 11 | 1000 |\n\n```vhdl\nlibrary ieee;\nuse ieee.std_logic_1164.all;\n\nentity decoder2to4 is\n    port (\n        a : in  std_logic_vector(1 downto 0);\n        z : out std_logic_vector(3 downto 0)\n    );\nend entity decoder2to4;\n\narchitecture exm1 of decoder2to4 is\nbegin\n    z <= \"0001\" when a = \"00\" else\n         \"0010\" when a = \"01\" else\n         \"0100\" when a = \"10\" else\n         \"1000\" when a = \"11\" else\n         \"XXXX\";\nend architecture exm1;\n\nlibrary ieee;\nuse ieee.std_logic_1164.all;\n\nentity test_decoder2to4 is\nend entity test_decoder2to4;\n\narchitecture io of test_decoder2to4 is\n    signal ain  : std_logic_vector(1 downto 0);\n    signal zout : std_logic_vector(3 downto 0);\nbegin\n    dut : entity work.decoder2to4(exm1)\n        port map (a => ain, z => zout);\n\n    ain <= \"00\", \"01\" after 150 ns, \"10\" after 300 ns, \"11\" after 450 ns;\n\n    check_output : process\n    begin\n        wait for 1 ns;\n        assert zout = \"0001\" report \"Failed for input 00\" severity failure;\n        wait for 150 ns;\n        assert zout = \"0010\" report \"Failed for input 01\" severity failure;\n        wait for 150 ns;\n        assert zout = \"0100\" report \"Failed for input 10\" severity failure;\n        wait for 150 ns;\n        assert zout = \"1000\" report \"Failed for input 11\" severity failure;\n        wait;\n    end process;\nend architecture io;\n```",
+          "note_ref": {
+            "pdf_file": "VHDL_BjB.pdf",
+            "pages": "PDF pp. 12–14",
+            "section": "Example 6, decoder entity and architecture, conditional assignment and testbench. The tests below cover all four binary addresses.",
+            "verified_diagram": "Decoder symbol on p. 12 and truth table on p. 13."
+          }
         },
         {
           "kind": "question",
@@ -205,7 +301,13 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p1-5b",
-          "images": []
+          "images": [],
+          "solution": "Use the note's `BIT` ports and concurrent `or` assignment. A separate testbench instantiates the gate and checks `00`, `01`, `10`, and `11`.\n\n```vhdl\nentity or21 is\n    port (x, y : in bit; z : out bit);\nend entity or21;\n\narchitecture exm1 of or21 is\nbegin\n    z <= x or y;\nend architecture exm1;\n\nentity tb_or21 is\nend entity tb_or21;\n\narchitecture io of tb_or21 is\n    signal a, b, c : bit;\nbegin\n    dut : entity work.or21(exm1)\n        port map (x => a, y => b, z => c);\n\n    stimulus : process\n    begin\n        a <= '0'; b <= '0'; wait for 10 ns;\n        assert c = '0' report \"OR failed for 00\" severity failure;\n        a <= '0'; b <= '1'; wait for 10 ns;\n        assert c = '1' report \"OR failed for 01\" severity failure;\n        a <= '1'; b <= '0'; wait for 10 ns;\n        assert c = '1' report \"OR failed for 10\" severity failure;\n        a <= '1'; b <= '1'; wait for 10 ns;\n        assert c = '1' report \"OR failed for 11\" severity failure;\n        wait;\n    end process;\nend architecture io;\n```",
+          "note_ref": {
+            "pdf_file": "VHDL_BjB.pdf",
+            "pages": "PDF pp. 3–6",
+            "section": "Example 2 OR gate and testbench pattern from the preceding AND example. Assertions extend the note’s waveform test."
+          }
         }
       ]
     },
@@ -238,7 +340,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p2-1a",
-          "images": []
+          "images": [],
+          "solution": "| Feature | Harvard | Princeton (Von Neumann) |\n|---|---|---|\n| Instruction/data storage | Separate program and data spaces. | Shared address space and memory. |\n| CPU connection | Separate instruction and data paths. | Shared transfer path. |\n| Access | An instruction fetch and data access can occur concurrently. | They compete for the shared path in the simplified architecture. |\n| Example | AVR uses separate program Flash and data space. | A basic stored-program computer with a single common memory. |\n\n```text\nHarvard:   program memory ←→ CPU ←→ data memory\nPrinceton: program + data memory ←→ CPU\n```",
+          "note_ref": {
+            "pdf_file": "1_ATmega2560_overview.pdf",
+            "pages": "PDF pp. 34–35, 55",
+            "section": "Princeton and Harvard organization and the AVR example",
+            "verified_diagram": "The separate and shared bus diagrams on pp. 34–35."
+          }
         },
         {
           "kind": "question",
@@ -250,7 +359,13 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p2-1b",
-          "images": []
+          "images": [],
+          "solution": "| Feature | Volatile memory | Nonvolatile memory |\n|---|---|---|\n| Power removed | Loses stored contents. | Retains stored contents. |\n| Examples | SRAM and DRAM. | ROM, EEPROM and Flash. |\n| Typical use in AVR | SRAM holds live data, variables and the stack. | Flash stores instructions and EEPROM retains settings. |\n\nOrdinary SRAM needs no periodic refresh while powered. DRAM needs refresh even while it is powered. Both are volatile.",
+          "note_ref": {
+            "pdf_file": "1_ATmega2560_overview.pdf",
+            "pages": "PDF pp. 24–33",
+            "section": "ROM, EEPROM, Flash and read/write memory families"
+          }
         },
         {
           "kind": "question",
@@ -262,7 +377,13 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p2-1c",
-          "images": []
+          "images": [],
+          "solution": "| Feature | RISC | CISC |\n|---|---|---|\n| Instruction design | Emphasizes simple operations and fairly regular encodings. | Offers more complex instructions, often with several addressing or encoding forms. |\n| Memory access | Commonly uses explicit load/store instructions, with arithmetic on registers. | Some instructions can operate directly on memory operands. |\n| Implementation | Simple instruction forms help decoding and pipelining. | A single instruction may combine operations that need several simpler instructions. |\n| Example | AVR. | x86. |\n\nInstruction count alone does not determine execution time. The clocks per instruction, clock period and actual instruction sequence also matter.",
+          "note_ref": {
+            "pdf_file": "1_ATmega2560_overview.pdf",
+            "pages": "PDF pp. 36–37, 55",
+            "section": "RISC and CISC comparison and AVR architecture example"
+          }
         },
         {
           "kind": "question",
@@ -274,7 +395,21 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p2-2a",
-          "images": []
+          "images": [],
+          "solution": "Use **16-bit Timer/Counter1** as the example from the notes. Other timers have analogous registers with width and channel differences.\n\n```text\nbits       7       6       5       4       3       2       1       0\nTCCR1A    COM1A1  COM1A0  COM1B1  COM1B0  COM1C1  COM1C0  WGM11   WGM10\nTCCR1B    ICNC1   ICES1   —       WGM13   WGM12   CS12    CS11    CS10\nTCCR1C    FOC1A   FOC1B   FOC1C   —       —       —       —       —\nTIFR1     —       —       ICF1    —       OCF1C   OCF1B   OCF1A   TOV1\nTIMSK1    —       —       ICIE1   —       OCIE1C  OCIE1B  OCIE1A  TOIE1\n```\n\n- `TCCR1A`: each `COM` pair controls the action of its `OC1A/B/C` pin on compare. `WGM11:10` and `WGM13:12` together select the waveform/counting mode, such as Normal, CTC or PWM.\n- `TCCR1B`: `ICNC1` enables the input-capture noise filter and `ICES1` selects the capture edge. `CS12:10 = 000` stops the timer. `001`–`101` select internal clock divisions 1, 8, 64, 256, 1024. `110` or `111` selects falling or rising edges at external `T1`, respectively.\n- `TCCR1C`: writing 1 to a `FOC` strobe forces the respective compare-output action in a non-PWM mode.\n- `TCNT1` holds the live count. `OCR1A/B/C` are compare values and `ICR1` captures the count on the configured edge. Some modes also use `OCR1A` or `ICR1` as TOP.\n- `TIFR1`: `ICF1` signals capture, `OCF1A/B/C` signal compare events, and `TOV1` signals overflow or the mode-specific rollover event. Write 1 directly to the relevant flag bit to clear it. `TIMSK1` enables the respective interrupt requests and the global `I` bit must also be set to enter an ISR.",
+          "note_ref": {
+            "pdf_file": "4_ATmega2560_TC_programming.pdf",
+            "pages": "PDF pp. 5–9, 19–24, 43–46, 66–69",
+            "section": "Timer/counter schematic, Timer1 control and flag registers, CTC and external clocking",
+            "verified_diagram": "16-bit Timer1 control and flag bit rows."
+          },
+          "note_refs": [
+            {
+              "pdf_file": "6_ATmega2560_INTERRUPT_programming.pdf",
+              "pages": "PDF pp. 20–21",
+              "section": "16-bit Timer/Counter compare path and interrupt enable bits"
+            }
+          ]
         },
         {
           "kind": "or"
@@ -289,7 +424,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p2-2b",
-          "images": []
+          "images": [],
+          "solution": "Each I/O pin has a `DDRx` direction bit, a `PORTx` latch bit, and a `PINx` read bit. `DDRx[n]=1` enables the output driver and the `PORTx[n]` latch drives the pin. `DDRx[n]=0` disables that driver, and software reads the pin level from `PINx[n]`. With the pin configured as input, setting `PORTx[n]` enables its pull-up when global pull-ups are enabled. Clearing it leaves the input high impedance.\n\n```text\n                      DDRx[n] → output enable\n                                       │\nPORTx[n] output latch ───────────→ [driver] ───●── Px.n\n                                               │\n     VCC ─ optional weak pull-up ──────────────┤\n                                               └── [input buffer] → PINx[n] read\n```\n\nOn the ATmega2560, writing a one to `PINx[n]` toggles the corresponding `PORTx` latch. Ordinary input sampling just reads `PINx`.",
+          "note_ref": {
+            "pdf_file": "3_ATmega2560_IO_programming.pdf",
+            "pages": "PDF pp. 20–23, 43–46",
+            "section": "DDR, PORT and PIN functions and masked register operations",
+            "verified_diagram": "Port direction and read/write paths on pp. 20–23."
+          }
         },
         {
           "kind": "group",
@@ -305,7 +447,13 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p2-3a",
-          "images": []
+          "images": [],
+          "solution": "Assume eight active-high LEDs on `PORTA` (Mega D22–D29) with series resistors, and a maintained switch on `PC0` (D37) connected to 5 V when closed and held low by an external pull-down when open. Read `PINC` each loop. At HIGH, `0x55` lights PA0, PA2, PA4 and PA6. At LOW, all eight alternate on and off every 500 ms. The nonblocking timer lets the switch be read continuously.\n\n```cpp\n#include <Arduino.h>\n\nconstexpr uint8_t switchMask = _BV(PC0);\nconstexpr unsigned long halfPeriodMs = 500;\n\nvoid setup() {\n    PORTA = 0;\n    DDRA = 0xFF;\n    DDRC &= ~switchMask;\n    PORTC &= ~switchMask;\n}\n\nvoid loop() {\n    const uint8_t allBlink = ((millis() / halfPeriodMs) & 1U) ? 0xFF : 0x00;\n    PORTA = (PINC & switchMask) ? 0x55 : allBlink;\n}\n```",
+          "note_ref": {
+            "pdf_file": "3_ATmega2560_IO_programming.pdf",
+            "pages": "PDF pp. 12, 15–20, 26–29, 57–62",
+            "section": "Multiple LED wiring, toggling a port and testing a digital input. The conditional patterns apply those examples."
+          }
         },
         {
           "kind": "question",
@@ -317,7 +465,20 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p2-3b",
-          "images": []
+          "images": [],
+          "solution": "Assume input on ADC0 (PF0/A0), AVCC measured at 5 V as reference, and a 16 MHz Mega 2560. With division by 128 the ADC clock is 125 kHz. Use the right-adjusted ten-bit result. The ideal halfway code is $2.5\\times1024/5=512$. Output `'L'` below 512 and `'H'` at or above it. Accuracy at the boundary depends on the reference and ADC tolerance.\n\n```cpp\n#include <Arduino.h>\n\nconstexpr uint8_t adcControl = _BV(ADEN) | _BV(ADPS2) | _BV(ADPS1) | _BV(ADPS0);\n\nvoid setup() {\n    PORTA = 0;\n    DDRA = 0xFF;\n    DDRF &= ~_BV(PF0);\n    PORTF &= ~_BV(PF0);\n    DIDR0 |= _BV(ADC0D);\n    ADCSRB = 0;\n    ADMUX = _BV(REFS0);\n    ADCSRA = adcControl | _BV(ADIF);\n}\n\nvoid loop() {\n    ADCSRA = adcControl | _BV(ADSC);\n    while (!(ADCSRA & _BV(ADIF))) {}\n    const uint16_t sample = ADC;           // ADCL then ADCH\n    ADCSRA = adcControl | _BV(ADIF);       // Write one to clear the flag.\n    PORTA = (sample < 512) ? 'L' : 'H';\n}\n```",
+          "note_ref": {
+            "pdf_file": "5_ATmega2560_ADC_programming.pdf",
+            "pages": "PDF pp. 27–38",
+            "section": "ADMUX, timing setup and the polled ADC0 sampling exercise, adapted to a threshold"
+          },
+          "note_refs": [
+            {
+              "pdf_file": "3_ATmega2560_IO_programming.pdf",
+              "pages": "PDF pp. 85–86",
+              "section": "Writing ASCII character codes directly to PORTA"
+            }
+          ]
         },
         {
           "kind": "question",
@@ -329,7 +490,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p2-3c",
-          "images": []
+          "images": [],
+          "solution": "Configure all of port B as input and PC0 (Mega D37) as output. Sample `PINB` once per byte. Send the least significant bit first, as in the note's parallel-to-serial example. Assume the receiver agrees on the bit interval and byte boundary. This is raw clocked-by-agreement data, with no UART framing. On a Mega 2560, PB0 through PB7 map to D53, D52, D51, D50, D10, D11, D12 and D13 respectively. Use a source that drives all eight inputs and shares ground.\n\n```cpp\n#include <Arduino.h>\n\nconstexpr uint8_t serialMask = _BV(PC0);\nconstexpr unsigned bitTimeUs = 1000;\n\nvoid setup() {\n    DDRB = 0;\n    PORTB = 0;              // Input source drives all bits.\n    PORTC &= ~serialMask;\n    DDRC |= serialMask;\n}\n\nvoid loop() {\n    uint8_t value = PINB;\n    for (uint8_t bit = 0; bit < 8; ++bit) {\n        if (value & 1U) PORTC |= serialMask;\n        else PORTC &= ~serialMask;\n        delayMicroseconds(bitTimeUs);\n        value >>= 1;\n    }\n}\n```",
+          "note_ref": {
+            "pdf_file": "3_ATmega2560_IO_programming.pdf",
+            "pages": "PDF pp. 20–26, 63–67",
+            "section": "Port input and LSB-first serial output. The source byte and output pin are adapted to the question.",
+            "verified_diagram": "Parallel-in/serial-out bit sequence on pp. 63–65."
+          }
         },
         {
           "kind": "group",
@@ -345,7 +513,20 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p2-4a",
-          "images": []
+          "images": [],
+          "solution": "Assume a 16 MHz Mega 2560 and use PA4 (D26) as the pulse output. At 4 Hz the period is 250 ms and 60% duty requires 150 ms high and 100 ms low. Use Timer3 CTC with a 1 ms time base. At prescaler 64 the timer tick is 4 µs, so $\\mathrm{OCR3A}=1000/4-1=249$. The compare-A ISR counts 150 ticks high and 100 low. This adapts the notes' Timer3 CTC and interrupt examples.\n\n```cpp\n#include <Arduino.h>\n#include <avr/interrupt.h>\n\nconstexpr uint8_t outputMask = _BV(PA4);\n\nISR(TIMER3_COMPA_vect) {\n    static uint8_t phaseMs = 0;\n    if (++phaseMs == 150) {\n        PORTA &= ~outputMask;\n    } else if (phaseMs == 250) {\n        phaseMs = 0;\n        PORTA |= outputMask;\n    }\n}\n\nvoid setup() {\n    cli();\n    TCCR3B = 0;\n    TCCR3A = 0;\n    TCNT3 = 0;\n    OCR3A = 249;\n    TIFR3 = _BV(OCF3A);\n    TIMSK3 = _BV(OCIE3A);\n    DDRA |= outputMask;\n    PORTA |= outputMask;\n    TCCR3B = _BV(WGM32) | _BV(CS31) | _BV(CS30);\n    sei();\n}\n\nvoid loop() {}\n```",
+          "note_ref": {
+            "pdf_file": "4_ATmega2560_TC_programming.pdf",
+            "pages": "PDF pp. 54–62",
+            "section": "Timer3 CTC configuration and compare-A flag, adapted to a 1 ms tick"
+          },
+          "note_refs": [
+            {
+              "pdf_file": "6_ATmega2560_INTERRUPT_programming.pdf",
+              "pages": "PDF pp. 20–26",
+              "section": "16-bit timer interrupts and Timer3 ISR setup"
+            }
+          ]
         },
         {
           "kind": "question",
@@ -357,7 +538,20 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p2-4b",
-          "images": []
+          "images": [],
+          "solution": "Assume 16 MHz, 5 V AVCC reference, analog input ADC1 on PF1/A1, and an active-high LED at PB7 (D13). Use a 128 divider for the 125 kHz ADC clock. Set `ADLAR` so `ADCH` provides the top eight bits, which fit `PORTA`. The note starts a new conversion inside each ISR. This version adapts it to free-running auto-triggering so the next conversion starts automatically. The ADC ISR copies `ADCH`; the main loop changes the LED every 5 ms for a 100 Hz on/off cycle. No ADC polling delays the foreground task.\n\n```cpp\n#include <Arduino.h>\n#include <avr/interrupt.h>\n\nconstexpr uint8_t ledMask = _BV(PB7);\nstatic unsigned long lastLedToggle;\n\nISR(ADC_vect) {\n    PORTA = ADCH;\n}\n\nvoid setup() {\n    cli();\n    PORTA = 0;\n    DDRA = 0xFF;\n    PORTB &= ~ledMask;\n    DDRB |= ledMask;\n    DDRF &= ~_BV(PF1);\n    PORTF &= ~_BV(PF1);\n    DIDR0 |= _BV(ADC1D);\n\n    ADCSRA = 0;\n    ADCSRB = 0;  // MUX5 = 0 and ADTS = 000 (free running)\n    ADMUX = _BV(REFS0) | _BV(ADLAR) | _BV(MUX0);\n    ADCSRA = _BV(ADEN) | _BV(ADATE) | _BV(ADIE) | _BV(ADIF)\n           | _BV(ADPS2) | _BV(ADPS1) | _BV(ADPS0);\n    ADCSRA |= _BV(ADSC);\n    sei();\n    lastLedToggle = micros();\n}\n\nvoid loop() {\n    if (micros() - lastLedToggle >= 5000UL) {\n        lastLedToggle += 5000UL;\n        PINB = ledMask;\n    }\n}\n```",
+          "note_ref": {
+            "pdf_file": "6_ATmega2560_INTERRUPT_programming.pdf",
+            "pages": "PDF pp. 48–51, 65–71",
+            "section": "ADC ISR example with software restart, adapted to hardware free running and parallel byte output."
+          },
+          "note_refs": [
+            {
+              "pdf_file": "5_ATmega2560_ADC_programming.pdf",
+              "pages": "PDF pp. 27–35",
+              "section": "ADC channel selection, left adjustment and prescaler"
+            }
+          ]
         },
         {
           "kind": "group",
@@ -373,7 +567,20 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p2-5a",
-          "images": []
+          "images": [],
+          "solution": "`TIFRn` stores timer event flags. Using a 16-bit timer such as Timer1, its bit order from bit 7 to bit 0 is `— — ICF1 — OCF1C OCF1B OCF1A TOV1`.\n\n| Flag | Meaning |\n|---|---|\n| `TOVn` | Overflow or the rollover specified by the selected waveform mode. In Normal mode a 16-bit count goes from `0xFFFF` to zero. |\n| `OCFnA/B/C` | The live counter matches the channel's output-compare value. Only channels implemented by that timer are present. |\n| `ICFn` | An input-capture event has copied the counter value into `ICRn` on a timer with capture hardware. |\n\nThe flags can be polled even when their interrupts are masked. To acknowledge a polled compare-A event, write only its mask with `TIFR1 = _BV(OCF1A);`. An ISR requires the corresponding `TIMSKn` enable and the global interrupt bit. Hardware clears the corresponding flag when it executes that interrupt vector. Avoid rewriting other flag bits when clearing one.",
+          "note_ref": {
+            "pdf_file": "4_ATmega2560_TC_programming.pdf",
+            "pages": "PDF pp. 19–24, 43–46, 59–60",
+            "section": "TIFR bit layout, overflow flag and compare flag"
+          },
+          "note_refs": [
+            {
+              "pdf_file": "6_ATmega2560_INTERRUPT_programming.pdf",
+              "pages": "PDF pp. 15–21",
+              "section": "8-bit and 16-bit timer events, flag and enable path"
+            }
+          ]
         },
         {
           "kind": "question",
@@ -385,7 +592,25 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "questionId": "plm-2025-p2-5b",
-          "images": []
+          "images": [],
+          "solution": "Assume a 16 MHz ATmega2560, a low-voltage isolated detector whose output is high on supply failure, and an independent supply for the MCU and buzzer. The exam specifies the MCU port pins. On an Arduino Mega 2560, `PD7` is D38, `PD0` is D21 and `PB0` is D53. PD0 is the MCU port name and does not mean Arduino digital pin 0.\n\n```text\nPD7 → gate resistor → low-side MOSFET driver → motor field winding\n      Put a flyback diode across the winding, cathode to its positive rail.\nIsolated failure detector → PD0         PB0 → active-low buzzer input\n```\n\nThe pulse period is 50 ms, with 40 ms high and 10 ms low. Timer1 CTC at division by 64 gives a 4 µs tick. Set `OCR1A = 249` for a 1 ms compare interrupt. The ISR generates the pulse on the specified GPIO. The main loop reads `PIND` and continuously drives the alarm. Neither the winding nor mains goes directly to a GPIO. Use a suitable separate driver if the buzzer input exceeds GPIO ratings.\n\n```cpp\n#include <Arduino.h>\n#include <avr/interrupt.h>\n\nconstexpr uint8_t fieldMask = _BV(PD7);\nconstexpr uint8_t failureMask = _BV(PD0);\nconstexpr uint8_t buzzerMask = _BV(PB0);\n\nISR(TIMER1_COMPA_vect) {\n    static uint8_t phaseMs = 0;\n    if (++phaseMs == 40) {\n        PORTD &= ~fieldMask;\n    } else if (phaseMs == 50) {\n        phaseMs = 0;\n        PORTD |= fieldMask;\n    }\n}\n\nvoid setup() {\n    cli();\n    DDRD &= ~failureMask;\n    PORTD &= ~failureMask;       // Detector actively drives PD0.\n    PORTB |= buzzerMask;        // Alarm off before enabling output.\n    DDRB |= buzzerMask;\n\n    TCCR1B = 0;\n    TCCR1A = 0;\n    TCNT1 = 0;\n    OCR1A = 249;\n    TIFR1 = _BV(OCF1A);\n    TIMSK1 = _BV(OCIE1A);\n    DDRD |= fieldMask;\n    PORTD |= fieldMask;\n    TCCR1B = _BV(WGM12) | _BV(CS11) | _BV(CS10);\n    sei();\n}\n\nvoid loop() {\n    if (PIND & failureMask) PORTB &= ~buzzerMask;\n    else PORTB |= buzzerMask;\n}\n```\n\nThe notes supply the timer and GPIO techniques. The motor driver, isolated detector and alarm supply are circuit assumptions added for the exam scenario.",
+          "note_ref": {
+            "pdf_file": "4_ATmega2560_TC_programming.pdf",
+            "pages": "PDF pp. 43–46, 54–62",
+            "section": "CTC compare operation and setting a timer interval, adapted to 1 ms"
+          },
+          "note_refs": [
+            {
+              "pdf_file": "6_ATmega2560_INTERRUPT_programming.pdf",
+              "pages": "PDF pp. 20–26",
+              "section": "Foreground/interrupt division and 16-bit timer mask/flag path"
+            },
+            {
+              "pdf_file": "3_ATmega2560_IO_programming.pdf",
+              "pages": "PDF pp. 14, 20–23, 57–62",
+              "section": "Indirect load driving and testing an input to update an output"
+            }
+          ]
         }
       ]
     }

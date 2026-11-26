@@ -483,9 +483,7 @@
           </div>
           <aside id="drawer-note-section-card" class="hidden border-t border-stone-200 pt-4 text-sm leading-relaxed text-stone-600" aria-label="Lecture notes">
             <h4 class="font-semibold text-stone-800">Lecture notes</h4>
-            <p class="mt-1 break-words"><cite id="drawer-note-file" class="not-italic font-medium"></cite> · <span id="drawer-note-pages"></span></p>
-            <p id="drawer-note-section"></p>
-            <p id="drawer-note-diagram-row"><span class="font-medium">Figures: </span><span id="drawer-note-diagram"></span></p>
+            <ul id="drawer-note-sources" class="mt-2 space-y-2 break-words"></ul>
           </aside>
         </div>
 
@@ -907,6 +905,7 @@
                 co: r.co || null,
                 repeat_tag: r.repeat_tag || null,
                 note_ref: r.note_ref || null,
+                note_refs: Array.isArray(r.note_refs) ? r.note_refs : [],
                 solution: r.solution || r.solutionLatex || null,
                 code: r.code || null,
                 images: Array.isArray(r.images) ? r.images : [],
@@ -934,6 +933,7 @@
               co: q.co || null,
               repeat_tag: q.repeat_tag || null,
               note_ref: q.note_ref || null,
+              note_refs: Array.isArray(q.note_refs) ? q.note_refs : [],
               solution: q.solution || null,
               code: q.code || null,
               images: Array.isArray(q.images) ? q.images : (q.image ? [{ src: q.image }] : []),
@@ -1461,11 +1461,26 @@
       }).join('');
     }
 
+    function renderWorkedPaperLinks() {
+      const solvedPapers = (currentSubject?.papers || []).filter(
+        paper => paper.hasSolutions && paper.id !== currentPaperRef?.id
+      );
+      return solvedPapers.map(paper => {
+        const path = `#/${encodeURIComponent(currentSubject.id)}/${encodeURIComponent(paper.id)}`;
+        const label = paper.year ? String(paper.year) : paper.yearLabel;
+        return `<a class="inline-block font-semibold text-indigo-700 underline underline-offset-2" href="${path}" data-paper-id="${escapeHtml(paper.id)}" onclick="if (!event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) { event.preventDefault(); openPaper(currentSubject.id, this.dataset.paperId); }">Open ${escapeHtml(label)} worked solutions</a>`;
+      }).join(' · ');
+    }
+
     function renderPaperShellAndContent() {
       const main = document.getElementById('app-main');
       if (!paperData) return;
 
+      const solutionsLink = paperData.hasSolutions ? '' : renderWorkedPaperLinks();
       main.innerHTML = `
+        ${solutionsLink ? `<aside class="mb-4 rounded-lg border border-stone-200 bg-white px-4 py-3 text-sm text-stone-700">
+          <p>Worked solutions are available for a different paper in this subject. ${solutionsLink}</p>
+        </aside>` : ''}
         <div class="printed-paper-sheet rounded-xl p-5 sm:p-10 lg:p-14 mb-16 relative">
           <div class="text-center pb-6 mb-8 border-b-2 border-slate-900 relative z-10">
             <div class="flex items-center justify-between text-xs text-slate-500 mono-font mb-2 gap-2">
@@ -1630,13 +1645,7 @@
                     ${isCompulsory ? '<span class="bg-rose-100 text-rose-800 border border-rose-200 px-2 py-0.5 rounded font-semibold text-[11px]">Compulsory</span>' : ''}
                     ${q.co ? `<span class="bg-slate-100 text-slate-600 border border-slate-200 px-2 py-0.5 rounded text-[11px]">${escapeHtml(q.co)}</span>` : ''}
                     ${statusBadge}
-                    ${q.note_ref ? `
-                      <span class="text-slate-400">•</span>
-                      <span class="text-emerald-700 flex items-center">
-                        <i data-lucide="book" class="w-3 h-3 mr-1"></i>
-                        ${escapeHtml(q.note_ref.pdf_file)} (${escapeHtml(q.note_ref.pages)})
-                      </span>
-                    ` : ''}
+                    ${q.solution ? '<span class="font-sans font-semibold text-indigo-700 group-hover:underline">View solution</span>' : ''}
                     ${q.repeat_tag ? `
                       <span class="text-slate-400">•</span>
                       <span class="text-amber-700">${escapeHtml(q.repeat_tag)}</span>
@@ -1807,28 +1816,24 @@
       }
 
       const noteCard = document.getElementById('drawer-note-section-card');
-      if (activeQuestion.note_ref) {
-        noteCard.classList.remove('hidden');
-        document.getElementById('drawer-note-file').textContent = activeQuestion.note_ref.pdf_file || '—';
-        document.getElementById('drawer-note-pages').textContent = activeQuestion.note_ref.pages || '—';
-        document.getElementById('drawer-note-section').textContent = activeQuestion.note_ref.section || '—';
-        const diagRow = document.getElementById('drawer-note-diagram-row');
-        if (activeQuestion.note_ref.verified_diagram) {
-          diagRow.classList.remove('hidden');
-          document.getElementById('drawer-note-diagram').textContent = activeQuestion.note_ref.verified_diagram;
-        } else {
-          diagRow.classList.add('hidden');
-        }
-      } else {
-        noteCard.classList.add('hidden');
-      }
+      const noteSources = [activeQuestion.note_ref, ...activeQuestion.note_refs].filter(Boolean);
+      noteCard.classList.toggle('hidden', !noteSources.length);
+      document.getElementById('drawer-note-sources').innerHTML = noteSources.map(note => `
+        <li>
+          <p><cite class="not-italic font-medium">${escapeHtml(note.pdf_file || '')}</cite>${note.pages ? ` · ${escapeHtml(note.pages)}` : ''}</p>
+          ${note.section ? `<p>${escapeHtml(note.section)}</p>` : ''}
+          ${note.verified_diagram ? `<p><span class="font-medium">Figures</span> · ${escapeHtml(note.verified_diagram)}</p>` : ''}
+        </li>
+      `).join('');
 
       const solContainer = document.getElementById('drawer-solution-body');
       document.getElementById('drawer-copy-solution').classList.toggle('hidden', !activeQuestion.solution);
       if (activeQuestion.solution) {
         renderSolution(solContainer, activeQuestion.solution);
       } else {
-        solContainer.textContent = 'No worked solution is available for this question.';
+        const solutionsLink = renderWorkedPaperLinks();
+        solContainer.innerHTML = `<p>No worked solution is available for this question.</p>
+          ${solutionsLink ? `<p>${solutionsLink}</p>` : ''}`;
       }
 
       const codeSection = document.getElementById('drawer-code-section');
@@ -1836,7 +1841,10 @@
       if (activeQuestion.code) {
         codeSection.classList.remove('hidden');
         codeBlock.textContent = activeQuestion.code;
-        if (window.hljs) hljs.highlightElement(codeBlock);
+        if (window.hljs) {
+          delete codeBlock.dataset.highlighted;
+          hljs.highlightElement(codeBlock);
+        }
       } else {
         codeSection.classList.add('hidden');
       }

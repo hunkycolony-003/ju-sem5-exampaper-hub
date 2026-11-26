@@ -37,7 +37,13 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "images": [],
-          "questionId": "plm-2026-p1-1a"
+          "questionId": "plm-2026-p1-1a",
+          "solution": "| General-purpose processor | Special-purpose processor |\n| :--- | :--- |\n| Open-ended processor that executes software for a wide range of applications. | Includes hardware selected for a particular class of work. |\n| A general-purpose microprocessor commonly uses external memory and I/O to build the complete system. | The chip may include domain-specific computation or interfacing peripherals, reducing the external circuitry needed for the task. |\n| Typical use is general computing and software-defined processing. | A DSP accelerates signal computations. A microcontroller integrates memory and peripheral interfaces for embedded control. |",
+          "note_ref": {
+            "pdf_file": "1_ATmega2560_overview.pdf",
+            "pages": "PDF pp. 6–7, 10–14, 16",
+            "section": "Processor categories, general-purpose architecture, DSP and microcontroller examples"
+          }
         },
         {
           "kind": "question",
@@ -49,7 +55,13 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "images": [],
-          "questionId": "plm-2026-p1-1b"
+          "questionId": "plm-2026-p1-1b",
+          "solution": "**ROM family.** Data is retained without power and ordinarily read during execution.\n\n| Variant | Programming and erasure |\n| :--- | :--- |\n| ROM / mask ROM | Fixed contents. A mask ROM's pattern is set during fabrication. |\n| PROM | User-programmable once. |\n| EPROM | Electrically programmed. The common UV-EPROM type is erased using ultraviolet light. |\n| EEPROM | Electrically erasable and rewritable, generally at byte granularity. |\n| Flash EPROM | Electrically programmed and electrically erased in blocks. |\n\n**Read/write memory (RWM).** Contents can be updated during normal operation.\n\n| Variant | Storage and retention |\n| :--- | :--- |\n| SRAM | Uses a bistable cell. It needs no refresh while powered. Ordinary SRAM is volatile. |\n| NV-RAM | Retains data without the normal power supply, for example by backing SRAM with a battery. |\n| DRAM | Stores bits as capacitor charge, requiring periodic refresh. This trades refresh circuitry for higher density. |",
+          "note_ref": {
+            "pdf_file": "1_ATmega2560_overview.pdf",
+            "pages": "PDF pp. 22–33",
+            "section": "ROM and RAM families including mask ROM, PROM, EPROM, EEPROM, Flash, SRAM, NV-RAM and DRAM"
+          }
         },
         {
           "kind": "question",
@@ -61,7 +73,13 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "images": [],
-          "questionId": "plm-2026-p1-1c"
+          "questionId": "plm-2026-p1-1c",
+          "solution": "| RISC | CISC |\n| :--- | :--- |\n| Reduced Instruction Set Computer. Uses relatively simple operations and generally more regular instruction encodings. | Complex Instruction Set Computer. Provides richer operations and generally more varied encodings and addressing modes. |\n| Typically uses separate load/store instructions for memory and performs arithmetic on registers. | An instruction may combine arithmetic with memory access. |\n| Simpler decoding helps pipelining. A task may take several simple instructions. | One instruction can perform several operations. Its decoding and timing can be more involved. |\n| AVR is the RISC example in this course. | Intel x86 and Motorola 68k are the CISC examples in the notes. |\n\nThese are tendencies. RISC processors access memory through load/store instructions, and implementation determines the exact execution time.",
+          "note_ref": {
+            "pdf_file": "1_ATmega2560_overview.pdf",
+            "pages": "PDF pp. 36–37",
+            "section": "Instruction organization and execution. The notes’ absolute statements are treated as architectural tendencies."
+          }
         },
         {
           "kind": "group",
@@ -77,7 +95,20 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "images": [],
-          "questionId": "plm-2026-p1-2b"
+          "questionId": "plm-2026-p1-2b",
+          "solution": "**I²C** is a synchronous two-wire serial bus. The Mega 2560 uses TWI on PD1/D20 for SDA and PD0/D21 for SCL. Each line has its own pull-up. Open-drain outputs pull a line low or release it to let its resistor take it high.\n\n```text\n               VCC                         VCC\n                │                           │\n                R                           R\n                │                           │\nMega SDA ───────┴────── target SDA         │\nMega SCL ───────────────────────────────────┴── target SCL\nMega GND ────────────────────────────────────── target GND\n```\n\n1. **START:** SDA falls while SCL is high.\n2. The controller transmits the seven-bit target address and the read/write bit, MSB first. The receiver pulls SDA low during the ninth clock for **ACK**. A released SDA gives **NACK**.\n3. Every data byte is followed by ACK/NACK. SDA stays stable while SCL is high during an ordinary bit. During a read, the controller NACKs the final byte.\n4. **STOP:** SDA rises while SCL is high. A repeated START lets the controller continue without releasing the bus.\n\nThe notes identify the peripheral and pin assignments. See [Microchip AVR310 for the transaction sequence](https://onlinedocs.microchip.com/oxy/GUID-2BC8F654-C789-4AE6-809A-DA829B46B46E-en-US-2/GUID-1FC41A15-94E4-4480-9140-F8B528832554.html).",
+          "note_ref": {
+            "pdf_file": "2_ATmega2560_HARDWARE_ORGANIZATION.pdf",
+            "pages": "PDF p. 7",
+            "section": "TWI/I²C interface"
+          },
+          "note_refs": [
+            {
+              "pdf_file": "6_ATmega2560_INTERRUPT_programming.pdf",
+              "pages": "PDF p. 40",
+              "section": "Mega pin assignments PD0/SCL and PD1/SDA"
+            }
+          ]
         },
         {
           "kind": "question",
@@ -89,7 +120,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "images": [],
-          "questionId": "plm-2026-p1-2c"
+          "questionId": "plm-2026-p1-2c",
+          "solution": "The same Timer/Counter hardware can run from either of two clock sources.\n\n```text\nInternal oscillator → Prescaler ──┐\n                                 ├→ Source select → TCNTn → Compare / overflow flags\nExternal Tn input → Edge detector ┘\n```\n\n| Timer mode | Counter mode |\n| :--- | :--- |\n| Clock comes from the oscillator through a prescaler. | Clock comes from rising or falling transitions on input `Tn`. |\n| Each increment represents $N/f_{\\mathrm{CPU}}$ seconds. | Each qualifying edge adds one count, subject to the counting mode and range. |\n| Used for time intervals, delays and waveforms. | Used for event or pulse counting. |",
+          "note_ref": {
+            "pdf_file": "4_ATmega2560_TC_programming.pdf",
+            "pages": "PDF pp. 3–7, 65–70",
+            "section": "Internal clock path and external edge counting",
+            "verified_diagram": "Timer/Counter clock paths, PDF p. 7"
+          }
         },
         {
           "kind": "group",
@@ -105,7 +143,25 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "images": [],
-          "questionId": "plm-2026-p1-3a"
+          "questionId": "plm-2026-p1-3a",
+          "solution": "The ATmega2560 register names are from `<avr/io.h>`. Set the desired waveform/counting modes independently. The clock-select commands preserve the other control bits.\n\n```cpp\n#include <avr/io.h>\n\n// (i) Toggle the PC3 output latch.\nDDRC |= _BV(PC3);\nPORTC ^= _BV(PC3);\n\n// (ii) Timer5, internal clock divided by 64: CS52:0 = 011.\nTCCR5B = (TCCR5B & ~(_BV(CS52) | _BV(CS51) | _BV(CS50)))\n       | _BV(CS51) | _BV(CS50);\n\n// (iii) Timer1, external rising edges on T1 (PD6): CS12:0 = 111.\nDDRD &= ~_BV(PD6);\nTCCR1B |= _BV(CS12) | _BV(CS11) | _BV(CS10);\n\n// (iv) Internal 2.56 V reference: REFS1:0 = 11.\nADMUX |= _BV(REFS1) | _BV(REFS0);\n\n// (v) Left-adjust the ADC result.\nADMUX |= _BV(ADLAR);\n```\n\nUse the chip's actual T1 pin. `ICES1` selects the separate input-capture edge. For the internal reference, use the AREF bypass capacitor and leave any external reference voltage disconnected. Allow the reference to settle. [Microchip ATmega2560 datasheet, ADMUX register](https://ww1.microchip.com/downloads/en/devicedoc/atmega640-1280-1281-2560-2561-datasheet-ds40002211a.pdf#page=281).",
+          "note_ref": {
+            "pdf_file": "4_ATmega2560_TC_programming.pdf",
+            "pages": "PDF pp. 69–70, 79–81",
+            "section": "Timer1 and Timer5 clock-select fields"
+          },
+          "note_refs": [
+            {
+              "pdf_file": "3_ATmega2560_IO_programming.pdf",
+              "pages": "PDF pp. 20, 43–49",
+              "section": "Direction registers and masked GPIO updates"
+            },
+            {
+              "pdf_file": "5_ATmega2560_ADC_programming.pdf",
+              "pages": "PDF pp. 18–19, 34–40",
+              "section": "ADC reference selection and result justification"
+            }
+          ]
         },
         {
           "kind": "question",
@@ -117,7 +173,20 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "images": [],
-          "questionId": "plm-2026-p1-3b"
+          "questionId": "plm-2026-p1-3b",
+          "solution": "For a fixed instruction sequence, divide the sum of instruction cycles by the CPU frequency. For a measurement in a sketch, subtract the `micros()` timestamp taken before the group from the timestamp taken after it. Print after the second timestamp so the serial transmission does not enter the measurement.\n\nFor example, `ldi` takes one cycle, each `dec` takes one, and `brne` takes two cycles when taken and one otherwise. The group below takes $1+200+199\\times2+1=600$ cycles, or $37.5\\,\\mu\\mathrm{s}$ at 16 MHz.\n\n```cpp\n#include <Arduino.h>\n\nvoid setup() {\n    Serial.begin(9600);\n}\n\nvoid loop() {\n    const uint32_t startUs = micros();\n    asm volatile (\n        \"ldi r18, 200\\n\\t\"\n        \"1: dec r18\\n\\t\"\n        \"brne 1b\\n\\t\"\n        ::: \"r18\", \"cc\"\n    );\n    const uint32_t elapsedUs = micros() - startUs;\n    Serial.print(F(\"Measured time (us): \"));\n    Serial.println(elapsedUs);\n    delay(1000);\n}\n```\n\nThe 16 MHz Mega's standard `micros()` resolution is $4\\,\\mu\\mathrm{s}$. The result includes timer-read overhead and any interrupt during the interval. Measuring several repetitions improves the average for a short sequence. This adapts the lecture's ADC timing measurement.",
+          "note_ref": {
+            "pdf_file": "5_ATmega2560_ADC_programming.pdf",
+            "pages": "PDF pp. 35–42",
+            "section": "Timing with micros() and sending the result to the Serial Monitor"
+          },
+          "note_refs": [
+            {
+              "pdf_file": "4_ATmega2560_TC_programming.pdf",
+              "pages": "PDF p. 18",
+              "section": "Timer0 supplies the Arduino timing functions"
+            }
+          ]
         },
         {
           "kind": "question",
@@ -129,7 +198,20 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "images": [],
-          "questionId": "plm-2026-p1-3c"
+          "questionId": "plm-2026-p1-3c",
+          "solution": "**External interrupt requests** come from dedicated `INT0`–`INT7` inputs or supported pin-change groups. **Internal requests** include timer compare and overflow, input capture, ADC conversion complete, serial peripherals and the watchdog.\n\n| Timer event | Flag in timer flag register |\n| :--- | :--- |\n| Counter overflow | `TOVn` |\n| Output compare A, B | `OCFnA`, `OCFnB` |\n| Output compare C on timers with channel C | `OCFnC` |\n| Input capture on 16-bit timers | `ICFn` |\n\nEach flag signals its event. The corresponding peripheral interrupt mask and global interrupt-enable bit must allow the ISR to run.",
+          "note_ref": {
+            "pdf_file": "6_ATmega2560_INTERRUPT_programming.pdf",
+            "pages": "PDF pp. 5, 11–13, 16–21, 35–40",
+            "section": "Interrupt types, external requests and timer event flags"
+          },
+          "note_refs": [
+            {
+              "pdf_file": "4_ATmega2560_TC_programming.pdf",
+              "pages": "PDF pp. 69–71, 79–82",
+              "section": "Timer1 and Timer5 flag-register diagrams including capture flags"
+            }
+          ]
         },
         {
           "kind": "group",
@@ -145,7 +227,14 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "images": [],
-          "questionId": "plm-2026-p1-4a"
+          "questionId": "plm-2026-p1-4a",
+          "solution": "Assume active-high outputs, a 5 V Mega 2560 and a common ground. Use the lecture's direct-source connection for the low-current LED and low-side NPN driver for the higher-current LED. PB4 is D10 and PB5 is D11.\n\n```text\nPB4 / D10 ── Rlow ──── low-current LED ── GND\n\n +5 V ────── Rhigh ─── high-current LED ── collector\nPB5 / D11 ── Rbase ─── base                 NPN\n                                          emitter ── GND\n```\n\nSize the series resistors for the actual forward voltages and desired currents. For example, $V_F\\approx2\\,\\mathrm V$ and 1 mA gives $R_\\mathrm{low}\\approx3\\,\\mathrm{k\\Omega}$. For 10 mA, with a saturated transistor dropping about 0.2 V, $R_\\mathrm{high}\\approx280\\,\\Omega$ (300 or 330 Ω is suitable for this example). A 3.9 kΩ base resistor supplies about 1.1 mA at $V_{BE}\\approx0.7\\,\\mathrm V$. Verify the selected device's drive and saturation ratings. The base resistor limits GPIO current.\n\n```cpp\n#include <Arduino.h>\n\nconstexpr uint8_t lowLed = _BV(PB4);\nconstexpr uint8_t highLed = _BV(PB5);\nconstexpr uint8_t ledMask = lowLed | highLed;\n\nvoid setup() {\n    PORTB &= ~ledMask;\n    DDRB |= ledMask;\n}\n\nvoid loop() {\n    PORTB = (PORTB & ~ledMask) | lowLed;\n    delay(500);\n    PORTB = (PORTB & ~ledMask) | highLed;\n    delay(500);\n}\n```\n\nEach update sets one LED bit and clears the other without changing the remaining port bits.",
+          "note_ref": {
+            "pdf_file": "3_ATmega2560_IO_programming.pdf",
+            "pages": "PDF pp. 12–15, 20, 43–49",
+            "section": "LED wiring, GPIO direction, masking and blink examples",
+            "verified_diagram": "Direct-drive LED, p. 12, and NPN driver, p. 14."
+          }
         },
         {
           "kind": "question",
@@ -157,7 +246,13 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "images": [],
-          "questionId": "plm-2026-p1-4b"
+          "questionId": "plm-2026-p1-4b",
+          "solution": "**Assumptions.** A 16 MHz Mega 2560 with Timer4 reserved for this task. Use non-inverting PWM on **OC4A (PH3, D6)**. Select phase-and-frequency-correct PWM, mode 8, where `ICR4` is TOP, and divide the clock by 64.\n\nThe counter goes from BOTTOM to TOP and back. OC4A clears on the upward compare and sets on the downward compare. Thus\n\n$$\nf_{\\mathrm{PWM}}=\\frac{16\\,000\\,000}{2\\cdot64\\cdot\\mathrm{ICR4}}.\n$$\n\n`ICR4 = 12500` gives 10 Hz. `OCR4A = 10000` gives a duty ratio of $10000/12500=0.8$. The steady-state high and low times are 80 ms and 20 ms.\n\n```cpp\n#include <Arduino.h>\n\nvoid setup() {\n    TCCR4B = 0;  // Stop the timer.\n    TCCR4A = 0;\n    TIMSK4 = 0;  // Hardware generates the waveform.\n    PORTH &= ~_BV(PH3);\n    DDRH |= _BV(PH3);\n    TCNT4 = 0;\n\n    TCCR4B = _BV(WGM43);  // Mode 8, clock still stopped.\n    ICR4 = 12500;\n    OCR4A = 10000;\n    TCCR4A = _BV(COM4A1);\n    TCCR4B = _BV(WGM43) | _BV(CS41) | _BV(CS40);\n}\n\nvoid loop() {}\n```\n\nThe notes give the timer and prescaler setup. The dual-slope output mode is an extension from the [ATmega2560 datasheet, §17.9.5](https://ww1.microchip.com/downloads/en/devicedoc/atmega640-1280-1281-2560-2561-datasheet-ds40002211a.pdf#page=150).",
+          "note_ref": {
+            "pdf_file": "4_ATmega2560_TC_programming.pdf",
+            "pages": "PDF pp. 5, 9, 18, 54–62",
+            "section": "Timer4 width and the worked Timer3 prescaler and compare configuration. PWM mode is a datasheet-based extension."
+          }
         },
         {
           "kind": "question",
@@ -169,7 +264,20 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "images": [],
-          "questionId": "plm-2026-p1-4c"
+          "questionId": "plm-2026-p1-4c",
+          "solution": "Use **ADC2 (PF2/A2)**, 5 V AVCC as the reference, the usual AREF bypass capacitor and a shared ground. Keep the analog input between ground and AVCC. A divider of 64 gives $16\\,\\mathrm{MHz}/64=250\\,\\mathrm{kHz}$, so `ADPS2:0=110`.\n\nSet `ADLAR=1`, so `ADCH` holds result bits 9–2 for the eight-bit `PORTC`. The requested clock is above the recommended range for maximum 10-bit resolution. [ATmega2560 datasheet, ADC prescaling and conversion timing](https://ww1.microchip.com/downloads/en/devicedoc/atmega640-1280-1281-2560-2561-datasheet-ds40002211a.pdf#page=271).\n\n```cpp\n#include <Arduino.h>\n\nconstexpr uint8_t adcControl = _BV(ADEN) | _BV(ADPS2) | _BV(ADPS1);\n\nvoid setup() {\n    PORTC = 0;\n    DDRC = 0xFF;\n    DDRF &= ~_BV(PF2);\n    PORTF &= ~_BV(PF2);\n    DIDR0 |= _BV(ADC2D);\n\n    ADCSRB = 0;  // MUX5 = 0, software triggering.\n    ADMUX = _BV(REFS0) | _BV(ADLAR) | _BV(MUX1);\n    ADCSRA = adcControl | _BV(ADIF);  // Clear any old completion flag.\n}\n\nvoid loop() {\n    ADCSRA = adcControl | _BV(ADSC);\n    while (!(ADCSRA & _BV(ADIF))) {}\n    PORTC = ADCH;\n    ADCSRA = adcControl | _BV(ADIF);  // Clear ADIF by writing one.\n}\n```\n\nThis adapts the notes' ADC polling example to channel 2, a different prescaler and an eight-bit output port.",
+          "note_ref": {
+            "pdf_file": "5_ATmega2560_ADC_programming.pdf",
+            "pages": "PDF pp. 10–20, 24–28, 34–40",
+            "section": "ADC registers, reference and pin selection, prescaler, and polling"
+          },
+          "note_refs": [
+            {
+              "pdf_file": "3_ATmega2560_IO_programming.pdf",
+              "pages": "PDF pp. 20, 52–53",
+              "section": "Configuring and writing an eight-bit output port"
+            }
+          ]
         },
         {
           "kind": "group",
@@ -185,7 +293,20 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "images": [],
-          "questionId": "plm-2026-p1-5a"
+          "questionId": "plm-2026-p1-5a",
+          "solution": "**Assumptions.** The question mentions three switches but specifies two input pins and four states. Use two externally pulled-down switches for PB5/PB4, with a closed switch reading 1. Generate one active-high pulse on PC3 at startup and after each stable change of selector value. Assume 16 MHz and exclusive use of Timers 1 and 3.\n\nIn CTC the compare interval is $(\\mathrm{OCRnA}+1)N/f_{\\mathrm{CPU}}$. For one second:\n\n| PB5:PB4 | Timer | Prescaler | CS bits | OCRnA |\n| :---: | :---: | ---: | :---: | ---: |\n| 00 | 1 | 256 | 100 | 62499 |\n| 01 | 1 | 1024 | 101 | 15624 |\n| 10 | 3 | 256 | 100 | 62499 |\n| 11 | 3 | 1024 | 101 | 15624 |\n\n```cpp\n#include <Arduino.h>\n\nconstexpr uint8_t selectorMask = _BV(PB5) | _BV(PB4);\nconstexpr uint8_t pulseMask = _BV(PC3);\n\nuint8_t readSelection() {\n    return (PINB & selectorMask) >> PB4;\n}\n\nvoid pulseFor(uint8_t selection) {\n    const bool timer3 = selection & 2;\n    const bool div1024 = selection & 1;\n    const uint16_t compare = div1024 ? 15624 : 62499;\n\n    if (timer3) {\n        TCCR3B = 0;\n        TCNT3 = 0;\n        OCR3A = compare;\n        TIFR3 = _BV(OCF3A);\n        PORTC |= pulseMask;\n        TCCR3B = _BV(WGM32) | _BV(CS32) | (div1024 ? _BV(CS30) : 0);\n        while (!(TIFR3 & _BV(OCF3A))) {}\n        PORTC &= ~pulseMask;\n        TCCR3B = 0;\n        TIFR3 = _BV(OCF3A);\n    } else {\n        TCCR1B = 0;\n        TCNT1 = 0;\n        OCR1A = compare;\n        TIFR1 = _BV(OCF1A);\n        PORTC |= pulseMask;\n        TCCR1B = _BV(WGM12) | _BV(CS12) | (div1024 ? _BV(CS10) : 0);\n        while (!(TIFR1 & _BV(OCF1A))) {}\n        PORTC &= ~pulseMask;\n        TCCR1B = 0;\n        TIFR1 = _BV(OCF1A);\n    }\n}\n\nvoid setup() {\n    DDRB &= ~selectorMask;\n    PORTB &= ~selectorMask;  // External pull-downs.\n    PORTC &= ~pulseMask;\n    DDRC |= pulseMask;\n    TCCR1B = 0;\n    TCCR3B = 0;\n    TCCR1A = 0;\n    TCCR3A = 0;\n    TIMSK1 = 0;\n    TIMSK3 = 0;\n}\n\nvoid loop() {\n    static uint8_t lastSelection = 0xFF;\n    const uint8_t selection = readSelection();\n    if (selection == lastSelection) return;\n    delay(20);\n    if (selection != readSelection()) return;\n\n    pulseFor(selection);\n    lastSelection = selection;\n}\n```\n\nPC3 is software-driven. The timer sets a nominal one-second interval with small software edge latency. The counts are derived independently for each exam prescaler.",
+          "note_ref": {
+            "pdf_file": "4_ATmega2560_TC_programming.pdf",
+            "pages": "PDF pp. 50–62, 69–71",
+            "section": "Timer3 one-second CTC polling example and Timer1 clock/control/flag registers"
+          },
+          "note_refs": [
+            {
+              "pdf_file": "3_ATmega2560_IO_programming.pdf",
+              "pages": "PDF pp. 20, 43–46, 54–56",
+              "section": "Port direction, reading external inputs and port-bit masking"
+            }
+          ]
         },
         {
           "kind": "question",
@@ -197,7 +318,20 @@
           "diagramSvg": null,
           "diagramCaption": null,
           "images": [],
-          "questionId": "plm-2026-p1-5b"
+          "questionId": "plm-2026-p1-5b",
+          "solution": "Use **ADC0/PF0/A0**, **ADC1/PF1/A1** and **ADC3/PF3/A3** with low-impedance sources and a shared ground. Assume a 16 MHz Mega 2560, a 5 V AVCC reference with an AREF bypass capacitor and a divider of 128 for 125 kHz. Send the upper eight bits from left-adjusted `ADCH` to `PORTA`.\n\nUse active-high LEDs with series resistors on PB2, PB3 and PB4. Turn off the other two whenever the selected channel's result is displayed.\n\n```cpp\n#include <Arduino.h>\n\nconstexpr uint8_t adcControl = _BV(ADEN) | _BV(ADPS2) |\n                               _BV(ADPS1) | _BV(ADPS0);\nconstexpr uint8_t adcPins = _BV(PF0) | _BV(PF1) | _BV(PF3);\nconstexpr uint8_t ledMask = _BV(PB2) | _BV(PB3) | _BV(PB4);\nconstexpr uint8_t channels[] = {0, 1, 3};\nconstexpr uint8_t ledBits[] = {_BV(PB2), _BV(PB3), _BV(PB4)};\n\nuint8_t convert() {\n    ADCSRA = adcControl | _BV(ADSC);\n    while (!(ADCSRA & _BV(ADIF))) {}\n    const uint8_t sample = ADCH;\n    ADCSRA = adcControl | _BV(ADIF);\n    return sample;\n}\n\nvoid setup() {\n    DDRF &= ~adcPins;\n    PORTF &= ~adcPins;\n    DIDR0 |= _BV(ADC0D) | _BV(ADC1D) | _BV(ADC3D);\n    PORTA = 0;\n    DDRA = 0xFF;\n    PORTB &= ~ledMask;\n    DDRB |= ledMask;\n\n    ADCSRB = 0;  // MUX5 = 0 for channels 0 to 7.\n    ADMUX = _BV(REFS0) | _BV(ADLAR);\n    ADCSRA = adcControl | _BV(ADIF);\n}\n\nvoid loop() {\n    for (uint8_t i = 0; i < 3; ++i) {\n        ADMUX = _BV(REFS0) | _BV(ADLAR) | channels[i];\n        (void)convert();  // Extra settling sample after changing channel.\n        PORTA = convert();\n        PORTB = (PORTB & ~ledMask) | ledBits[i];\n        delay(250);       // Keep this channel's LED visibly illuminated.\n    }\n}\n```\n\nThe order is ADC0/PB2, ADC1/PB3, ADC3/PB4, then repeat. Shorten the display dwell if a higher update rate is required.",
+          "note_ref": {
+            "pdf_file": "5_ATmega2560_ADC_programming.pdf",
+            "pages": "PDF pp. 10–20, 24–28, 34–40",
+            "section": "ADC channel selection, reference, divider and polling. The scan sequence adapts the single-channel example."
+          },
+          "note_refs": [
+            {
+              "pdf_file": "3_ATmega2560_IO_programming.pdf",
+              "pages": "PDF pp. 12–15, 20, 43–46, 52–53",
+              "section": "LED connection, GPIO direction, masked updates and whole-port output"
+            }
+          ]
         }
       ]
     }

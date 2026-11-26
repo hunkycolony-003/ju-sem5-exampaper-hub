@@ -105,6 +105,7 @@ def rebuild() -> None:
 
                 q_count = 0
                 has_diagram = bool(paper.get("hasDiagram"))
+                has_solutions = False
                 used_ids = set()
 
                 for p_idx, part in enumerate(paper.get("parts") or [], start=1):
@@ -120,6 +121,7 @@ def rebuild() -> None:
                             current_group = row.get("label") or None
                         elif kind == "question":
                             q_count += 1
+                            has_solutions = has_solutions or bool(row.get("solution") or row.get("solutionLatex"))
                             base_qid = f"{paper['id']}-p{p_idx}-{slug_qnum(row.get('qNum'), q_count)}"
                             qid = base_qid
                             suffix = 2
@@ -231,7 +233,7 @@ def rebuild() -> None:
                         "examType": paper.get("examType") or "Regular",
                         "sourcePdf": paper.get("sourcePdf"),
                         "hasDiagram": has_diagram,
-                        "hasSolutions": False,
+                        "hasSolutions": has_solutions,
                         "partCount": len(paper.get("parts") or []),
                         "questionCount": q_count,
                         "path": rel_path,
