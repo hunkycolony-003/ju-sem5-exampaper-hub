@@ -11,6 +11,7 @@ PAPERS_DIR = DATA_DIR / "papers"
 INDEX_PATH = DATA_DIR / "index.json"
 QUESTIONS_PATH = DATA_DIR / "questions.json"
 SOLVED_2023_PATH = DATA_DIR / "paper_2023.json"
+MIN_YEAR = 2022
 
 SUBJECT_CATALOG = [
     {
@@ -76,6 +77,8 @@ def rebuild() -> None:
             loaded_papers = []
             for pfile in sorted(subj_dir.glob("*.json")):
                 paper = json.loads(pfile.read_text(encoding="utf-8"))
+                if int(paper.get("year") or 0) < MIN_YEAR:
+                    continue
                 paper["subjectId"] = sid
                 rel_path = f"data/papers/{sid}/{pfile.name}"
 

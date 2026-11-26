@@ -3,7 +3,7 @@
   "university": "Jadavpur University",
   "program": "B.E. Electrical Engineering · 3rd Year 1st Semester",
   "assetsDir": "data/assets",
-  "updatedAt": "2026-11-26T18:18:10+00:00",
+  "updatedAt": "2026-11-26T18:33:07+00:00",
   "subjects": [
     {
       "order": 1,
@@ -116,58 +116,6 @@
           "partCount": 2,
           "questionCount": 20,
           "path": "data/papers/plm/2023.json"
-        },
-        {
-          "id": "plm-2019",
-          "year": 2019,
-          "sortKey": 2019.0,
-          "yearLabel": "2019",
-          "examType": "Regular",
-          "sourcePdf": "2019 - Programmable Logic & Microcontroller.pdf",
-          "hasDiagram": false,
-          "hasSolutions": false,
-          "partCount": 2,
-          "questionCount": 44,
-          "path": "data/papers/plm/2019.json"
-        },
-        {
-          "id": "plm-2018",
-          "year": 2018,
-          "sortKey": 2018.0,
-          "yearLabel": "2018",
-          "examType": "Regular",
-          "sourcePdf": "2018 - Programmable Logic & Microcontroller.pdf",
-          "hasDiagram": false,
-          "hasSolutions": false,
-          "partCount": 2,
-          "questionCount": 15,
-          "path": "data/papers/plm/2018.json"
-        },
-        {
-          "id": "plm-2017_plm",
-          "year": 2017,
-          "sortKey": 2017.1,
-          "yearLabel": "2017 (S)",
-          "examType": "Supplementary",
-          "sourcePdf": "2017 - Programmable Logic & Microcontroller.pdf",
-          "hasDiagram": false,
-          "hasSolutions": false,
-          "partCount": 2,
-          "questionCount": 14,
-          "path": "data/papers/plm/2017_plm.json"
-        },
-        {
-          "id": "plm-2017_mc",
-          "year": 2017,
-          "sortKey": 2017.0,
-          "yearLabel": "2017 (MC)",
-          "examType": "Supplementary",
-          "sourcePdf": "2017 - Microprocessors and Microcontrollers.pdf",
-          "hasDiagram": false,
-          "hasSolutions": false,
-          "partCount": 2,
-          "questionCount": 17,
-          "path": "data/papers/plm/2017_mc.json"
         }
       ]
     }
