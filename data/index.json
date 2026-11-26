@@ -3,7 +3,7 @@
   "university": "Jadavpur University",
   "program": "B.E. Electrical Engineering · 3rd Year 1st Semester",
   "assetsDir": "data/assets",
-  "updatedAt": "2026-11-26T20:04:21+00:00",
+  "updatedAt": "2026-11-26T20:15:58+00:00",
   "subjects": [
     {
       "order": 1,
@@ -421,6 +421,19 @@
       "name": "Prog. Logic & Microcontroller",
       "paperTitle": "PROGRAMMABLE LOGIC & MICROCONTROLLER",
       "papers": [
+        {
+          "id": "plm-2026",
+          "year": 2026,
+          "sortKey": 2026.0,
+          "yearLabel": "2026",
+          "examType": "Regular",
+          "sourcePdf": "2026 - Programmable Logic & Microcontroller.pdf",
+          "hasDiagram": false,
+          "hasSolutions": false,
+          "partCount": 1,
+          "questionCount": 13,
+          "path": "data/papers/plm/2026.json"
+        },
         {
           "id": "plm-2025",
           "year": 2025,

@@ -1,0 +1,210 @@
+{
+  "id": "plm-2026",
+  "subjectId": "plm",
+  "year": 2026,
+  "sortKey": 2026.0,
+  "yearLabel": "2026",
+  "examType": "Regular",
+  "sourcePdf": "2026 - Programmable Logic & Microcontroller.pdf",
+  "hasDiagram": false,
+  "parts": [
+    {
+      "partLabel": "PART II",
+      "refCode": "EX/EE/PC/B/T/316/2026",
+      "headerLines": [
+        "B. E. ELECTRICAL ENGINEERING 3RD YEAR 1ST SEMESTER EXAMINATION 2026",
+        "SUBJECT: - PROGRAMMABLE LOGIC AND MICROCONTROLLER"
+      ],
+      "timeText": "Time: Three hours",
+      "marksText": "Full Marks 100",
+      "subMarksText": "(50 marks for each part)",
+      "scriptNote": "Use a separate Answer-Script for each part",
+      "instructions": "Please note that in present case, ‘Microcontroller’ refers to ATmega2560 in particular.",
+      "sharedNote": "<strong>Source coverage.</strong> The supplied scan contains Part II only. Question 2(a) concerns general processor power reduction, outside the listed syllabus topics.",
+      "footerNote": null,
+      "rows": [
+        {
+          "kind": "group",
+          "label": "1. Compare (any TWO): (5+5)"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(a)",
+          "marks": "5",
+          "co": "CO1-K1",
+          "topic": "Microcontroller architecture and memory",
+          "textLatex": "General Purpose Processor and Special Purpose Processor",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "plm-2026-p1-1a"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(b)",
+          "marks": "5",
+          "co": "CO1-K1",
+          "topic": "Microcontroller architecture and memory",
+          "textLatex": "Variants of Read Only memory and Read Write memory",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "plm-2026-p1-1b"
+        },
+        {
+          "kind": "question",
+          "qNum": "1.(c)",
+          "marks": "5",
+          "co": "CO1-K1",
+          "topic": "Microcontroller architecture and memory",
+          "textLatex": "RISC and CISC processor",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "plm-2026-p1-1c"
+        },
+        {
+          "kind": "group",
+          "label": "2. Answer questions (any TWO) presented below: (2×4=8)"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(b)",
+          "marks": "4",
+          "co": "CO2-K1",
+          "topic": "Interrupts and peripheral interfacing",
+          "textLatex": "Explain with appropriate block diagram the I²C communication protocol.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "plm-2026-p1-2b"
+        },
+        {
+          "kind": "question",
+          "qNum": "2.(c)",
+          "marks": "4",
+          "co": "CO2-K1",
+          "topic": "Microcontroller architecture and memory",
+          "textLatex": "Compare on-chip Timer and Counter of microcontroller.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "plm-2026-p1-2c"
+        },
+        {
+          "kind": "group",
+          "label": "3. Answer any TWO: (2×5=10)"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(a)",
+          "marks": "5",
+          "co": "CO3-K2",
+          "topic": "Addressing, instructions and I/O programming",
+          "textLatex": "Write command (instructions) for the microcontroller to:<br>(i) Toggle PC3<br>(ii) Set the prescalar of Timer-5 at 64<br>(iii) Set the input pulse of Counter-1 sensitive to rising edge<br>(iv) Set the reference voltage of ADC at 2.56V internal<br>(v) Set ADC output in left-justified format",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "plm-2026-p1-3a"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(b)",
+          "marks": "5",
+          "co": "CO3-K2",
+          "topic": "Assembly and C programming",
+          "textLatex": "How do you find the execution time of a group of instructions? Explain with an example showing execution time in serial monitor.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "plm-2026-p1-3b"
+        },
+        {
+          "kind": "question",
+          "qNum": "3.(c)",
+          "marks": "5",
+          "co": "CO3-K2",
+          "topic": "Interrupts and peripheral interfacing",
+          "textLatex": "What are the different types of interrupt signals available in a microcontroller? Write the name of timer flags that are directly associated with interrupt.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "plm-2026-p1-3c"
+        },
+        {
+          "kind": "group",
+          "label": "4. Answer the following questions (any TWO): (2×6=12)"
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(a)",
+          "marks": "6",
+          "co": "CO4-K3",
+          "topic": "Interrupts and peripheral interfacing",
+          "textLatex": "One low current LED and one high current LED are connected to PB4 and PB5 pin of microcontroller, respectively. Draw the interfacing circuit. Write a program to blink both of the LEDs in such a way so as to make only one LED glow at a time.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "plm-2026-p1-4a"
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(b)",
+          "marks": "6",
+          "co": "CO4-K3",
+          "topic": "Assembly and C programming",
+          "textLatex": "Write a program using on-chip Timer-4 of microcontroller to generate a pulse of 10Hz at a duty cycle of 80%. Explain your solution stating necessary assumptions and clarification.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "plm-2026-p1-4b"
+        },
+        {
+          "kind": "question",
+          "qNum": "4.(c)",
+          "marks": "6",
+          "co": "CO4-K3",
+          "topic": "Interrupts and peripheral interfacing",
+          "textLatex": "Write a program to read analog data continuously through channel-2 of the on-chip ADC of microcontroller. The analog data once received by the ADC should be sent to PORTC. Use 5V as reference and configure ADC clock at 250kHz. The system clock pulsates with 16MHz frequency. Explain your solution.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "plm-2026-p1-4c"
+        },
+        {
+          "kind": "group",
+          "label": "5. Answer any ONE: (1×10=10)"
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(a)",
+          "marks": "10",
+          "co": "CO5-K4",
+          "topic": "Addressing, instructions and I/O programming",
+          "textLatex": "Three switches are connected to 2-pins namely PB4 and PB5 of microcontroller. Depending on the status of input pins, following action should be taken:<br><table><thead><tr><th>PB5</th><th>PB4</th><th>Activated Timer</th><th>Prescalar</th><th>Time delay</th></tr></thead><tbody><tr><td>0</td><td>0</td><td>Timer-1</td><td>256</td><td rowspan=\"4\">1s</td></tr><tr><td>0</td><td>1</td><td>Timer-1</td><td>1024</td></tr><tr><td>1</td><td>0</td><td>Timer-3</td><td>256</td></tr><tr><td>1</td><td>1</td><td>Timer-3</td><td>1024</td></tr></tbody></table><br>The output pulse should be available at PC3. State necessary assumption, if any, and write a program.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "plm-2026-p1-5a"
+        },
+        {
+          "kind": "question",
+          "qNum": "5.(b)",
+          "marks": "10",
+          "co": "CO5-K4",
+          "topic": "Interrupts and peripheral interfacing",
+          "textLatex": "It is required to read three channels (ch-0, ch-1 and ch-3) of on-chip ADC sequentially and send the result at PORTA. Three LEDS connected to PB2, PB3 and PB4 should glow, one at a time, depending on the channel read, respectively. State necessary assumption, if any, and write a program.",
+          "diagramSvg": null,
+          "diagramCaption": null,
+          "images": [],
+          "questionId": "plm-2026-p1-5b"
+        }
+      ]
+    }
+  ],
+  "sourceNotes": [
+    "The supplied two-page scan contains Part II, questions 1–5. The second scan page is numbered 3 in print.",
+    "Question 2(a) on techniques for reducing processor power consumption is outside the listed syllabus topics.",
+    "Question 5(a) says “Three switches” and specifies two pins. Both quantities are preserved as printed."
+  ]
+}

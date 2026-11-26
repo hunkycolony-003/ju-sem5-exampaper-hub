@@ -10,8 +10,9 @@ All six subjects are populated in the local 2022–2026 database. This pass adde
 | Linear Control System | 5 | 98 |
 | Power Electronics | 6 | 99 |
 
-The rebuilt database has 33 paper entries, including the existing annotated PLM paper. The flat database contains 694 questions and 13 image references.
+The rebuilt database has 34 paper entries, including the existing annotated PLM paper. The flat database contains 707 questions and 13 image references. The 2026 Programmable Logic and Microcontroller scan contributes 13 syllabus-mapped entries from Part II.
 
+- The 2026 Programmable Logic and Microcontroller scan contains Part II only. The hub flags the missing Part I and records the question excluded by the syllabus.
 - The 2025 Linear Control System scan lacks printed pages 4–5. The hub includes the available pages and flags the gap.
 - Power Electronics 2022 contains only Part II, and 2023 contains only Part I. The 2024 regular paper's Part I heading says 2023, while its reference and Part II say 2024. The hub records these differences.
 
